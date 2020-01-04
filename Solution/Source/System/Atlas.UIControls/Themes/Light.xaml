@@ -1,0 +1,243 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!-- DEFAULTS -->
+    <FontFamily x:Key="Default.FontFamily">Source Sans Pro</FontFamily>
+    <system:Double x:Key="Default.FontSize">14</system:Double>
+    <SolidColorBrush x:Key="Default.Foreground" Color="#FF6F6F6F"/>
+    <!-- Presentation -->
+    <SolidColorBrush x:Key="Presentation.Background" Color="#000000"/>
+    <SolidColorBrush x:Key="Presentation.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="Atlas.Default.Foreground" Color="White"/>
+
+    <!-- ICONS -->
+    <Path x:Key="Timeline.Icon" Stretch="Uniform" Fill="{DynamicResource CategoriesTabControl.Static.Foreground}"
+          Data="F1 M 18,25L 36,25L 36,40L 18,40L 18,25 Z M 40,25L 58,25L 58,40L 40,40L 40,25 Z M 43,28L 43,37L 55,37L 55,28L 43,28 Z M 43.4999,43L 48,47.5001L 48,43L 51,43L 51,54L 48,54L 48,49.5L 43.5,54L 38.5,54L 42.4999,50.0001L 26,50L 26,43L 29,43L 29,47L 42.5,47.0001L 38.5,43L 43.4999,43 Z "/>
+    <Path x:Key="FiscalYearPeriods.Icon" Stretch="Uniform" Fill="{DynamicResource CategoriesTabControl.Static.Foreground}"
+          Data="F1 M 18.0025,57.0081L 18.0025,23.0032L 23.0032,23.0032L 23.0032,20.0028C 23.0033,18.898 23.8988,18.0025 25.0035,18.0025L 29.004,18.0025C 30.1087,18.0025 31.0042,18.898 31.0043,20.0026L 31.0043,23.0032L 45.0063,23.0032L 45.0062,20.0026C 45.0062,18.8978 45.9018,18.0023 47.0065,18.0023L 51.0071,18.0023C 52.1118,18.0023 53.0074,18.8978 53.0074,20.0026L 53.0074,23.0032L 58.0081,23.0032L 58.0081,57.0081L 18.0025,57.0081 Z M 21.0029,54.0077L 55.0076,54.0077L 55.0076,31.0044L 21.0029,31.0044L 21.0029,54.0077 Z M 23.0032,47.0066L 29.004,47.0066L 29.004,52.0073L 23.0032,52.0073L 23.0032,47.0066 Z M 31.0043,47.0066L 37.0051,47.0066L 37.0051,52.0073L 31.0043,52.0073L 31.0043,47.0066 Z M 39.0054,47.0066L 45.0062,47.0066L 45.0062,52.0073L 39.0054,52.0073L 39.0054,47.0066 Z M 47.0065,47.0066L 53.0074,47.0066L 53.0074,52.0073L 47.0065,52.0073L 47.0065,47.0066 Z M 23.0032,40.0056L 29.004,40.0056L 29.004,45.0063L 23.0032,45.0063L 23.0032,40.0056 Z M 31.0043,40.0056L 37.0051,40.0056L 37.0051,45.0063L 31.0043,45.0063L 31.0043,40.0056 Z M 39.0054,40.0056L 45.0062,40.0056L 45.0062,45.0063L 39.0054,45.0063L 39.0054,40.0056 Z M 47.0065,40.0056L 53.0074,40.0056L 53.0074,45.0063L 47.0065,45.0063L 47.0065,40.0056 Z M 31.0043,33.0048L 37.0051,33.0048L 37.0051,38.0055L 31.0043,38.0055L 31.0043,33.0048 Z M 39.0054,33.0048L 45.0062,33.0048L 45.0062,38.0055L 39.0054,38.0055L 39.0054,33.0048 Z M 47.0065,33.0048L 53.0074,33.0048L 53.0074,38.0055L 47.0065,38.0055L 47.0065,33.0048 Z M 48.5067,20.0029C 47.6782,20.0029 47.0065,20.6745 47.0065,21.5031L 47.0065,24.5035C 47.0065,25.332 47.6782,26.0037 48.5067,26.0037L 49.5068,26.0037C 50.3354,26.0037 51.0071,25.332 51.0071,24.5035L 51.0071,21.5031C 51.0071,20.6745 50.3354,20.0029 49.5068,20.0029L 48.5067,20.0029 Z M 26.5037,20.0028C 25.6751,20.0028 25.0035,20.6745 25.0035,21.503L 25.0035,24.5035C 25.0035,25.332 25.6751,26.0037 26.5037,26.0037L 27.5038,26.0037C 28.3324,26.0037 29.004,25.332 29.004,24.5035L 29.004,21.503C 29.004,20.6745 28.3324,20.0028 27.5038,20.0028L 26.5037,20.0028 Z M 32.0045,41.0057L 32.0045,44.0061L 36.005,44.0061L 36.005,41.0057L 32.0045,41.0057 Z "/>
+    <Path x:Key="DataGridDeleteButton.Icon" Stretch="Uniform" Fill="{DynamicResource DataGrid.Static.Foreground}"
+          Data="F1 M 25.3333,23.75L 50.6667,23.75C 51.5411,23.75 51.8541,27.3125 51.8541,27.3125L 24.1458,27.3125C 24.1458,27.3125 24.4589,23.75 25.3333,23.75 Z M 35.625,19.7917L 40.375,19.7917C 40.8122,19.7917 41.9583,20.9378 41.9583,21.375C 41.9583,21.8122 40.8122,22.9584 40.375,22.9584L 35.625,22.9584C 35.1878,22.9584 34.0416,21.8122 34.0416,21.375C 34.0416,20.9378 35.1878,19.7917 35.625,19.7917 Z M 27.7083,28.5L 48.2916,28.5C 49.1661,28.5 49.875,29.2089 49.875,30.0834L 48.2916,53.8334C 48.2916,54.7078 47.5828,55.4167 46.7083,55.4167L 29.2917,55.4167C 28.4172,55.4167 27.7083,54.7078 27.7083,53.8334L 26.125,30.0834C 26.125,29.2089 26.8339,28.5 27.7083,28.5 Z M 30.0833,31.6667L 30.4792,52.25L 33.25,52.25L 32.8542,31.6667L 30.0833,31.6667 Z M 36.4167,31.6667L 36.4167,52.25L 39.5833,52.25L 39.5833,31.6667L 36.4167,31.6667 Z M 43.1458,31.6667L 42.75,52.25L 45.5208,52.25L 45.9167,31.6667L 43.1458,31.6667 Z "/>
+    <SolidColorBrush x:Key="NavigationIcon.Fill" Color="White"/> 
+    <!-- WINDOW -->
+    <SolidColorBrush x:Key="Window.Default.BorderBrush" Color="#252526"/>
+    <SolidColorBrush x:Key="Window.Default.Background" Color="White"/>
+    
+    <!-- STATUS BAR -->
+    <SolidColorBrush x:Key="StatusBar.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="StatusBar.Foreground" Color="WhiteSmoke"/>
+    <system:Double x:Key="StatusBar.FontSize">14</system:Double>
+
+    <SolidColorBrush x:Key="SystemButton.Static.Foreground" Color="#FF5A708C"/>
+    <SolidColorBrush x:Key="SystemButton.MouseOver.Background" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="SystemButton.Pressed.Background" Color="#FF5A708C"/>
+    <SolidColorBrush x:Key="SystemButton.Pressed.Foreground" Color="#FFEAEAEA"/>
+    <SolidColorBrush x:Key="CloseSystemButton.MouseOver.Foreground" Color="#FFF55757"/>
+
+    <!-- LOGO Brushes -->
+    <SolidColorBrush x:Key="LogoButton.Static.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="LogoButton.Static.Foreground" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="LogoButton.MouseOver.Foreground" Color="White"/>
+    <SolidColorBrush x:Key="LogoButton.MouseOver.Background" Color="#202429"/>
+    <SolidColorBrush x:Key="LogoButton.Pressed.Background" Color="#071417"/>
+    <SolidColorBrush x:Key="LogoCollapser.Static.Foreground" Color="WhiteSmoke"/>
+
+
+    
+
+    <!-- SECTIONS COMBO BOX Brushes -->
+    <SolidColorBrush x:Key="SectionComboBox.Static.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="SectionComboBox.Static.Foreground" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="SectionComboBox.MouseOver.Background" Color="#6f6f6f"/>
+    <SolidColorBrush x:Key="SectionComboBox.Selected.Background" Color="#3f3f3f"/>
+
+    <SolidColorBrush x:Key="CategoriesTabControl.Static.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="CategoriesTabControl.Static.Foreground" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="CategoriesTabItem.Static.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="CategoriesTabItem.Static.Foreground" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="CategoriesTabItem.MouseOver.Background" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="CategoriesTabItem.MouseOver.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="CategoriesTabItem.Selected.Background" Color="#2c2c2d"/>
+    <SolidColorBrush x:Key="CategoriesTabItem.Selected.Foreground" Color="#52a9ff"/>
+    
+
+
+
+    <!-- DATA GRIDS -->
+    <SolidColorBrush x:Key="DataGrid.Static.Background" Color="#f3f2e9"/>
+    <SolidColorBrush x:Key="DataGrid.Static.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.Static.Background" Color="#9e9e9e"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.Dark.Background" Color="#5a5a5a"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.Dark.Foreground" Color="#f3f2e9"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.Static.Foreground" Color="#252526"/>
+    <SolidColorBrush x:Key="DataGridRowBottomLine.Static.Background" Color="#b3b3b3"/>
+
+    <SolidColorBrush x:Key="DataGridCell.MouseOver.Background" Color="#e4e4e4"/>
+    <SolidColorBrush x:Key="DataGridCell.MouseOver.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="DataGridCell.Selected.Background" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="DataGridCell.Selected.Foreground" Color="#FF6F6F6F"/>
+
+    <system:Double x:Key="DataGrid.Static.FontSize">14</system:Double>
+    <SolidColorBrush x:Key="DataGridTextColumn.SelectionBrush" Color="Gray"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.Static.Background" Color="#FFE2E2E2"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.Static.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.MouseOver.Foreground" Color="#FFEB7466"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.Pressed.Foreground" Color="#FF3E3E3E"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.Disabled.Foreground" Color="#FF9B9B9B"/>
+
+    <SolidColorBrush x:Key="DataGridAddButton.Background" Color="#0059b3"/>
+    <SolidColorBrush x:Key="DataGridAddButton.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="DataGridAddButton.Pressed.Background" Color="#FFD1D1D1"/>
+    
+    
+    <!-- TOOLTIPS -->
+    <SolidColorBrush x:Key="Tooltip.Background" Color="#FF303030"/>
+    <SolidColorBrush x:Key="Tooltip.Foreground" Color="White"/>
+
+    <!-- MENU -->
+    <SolidColorBrush x:Key="Menu.Static.Background" Color="White"/>
+    <SolidColorBrush x:Key="Menu.Static.Foreground" Color="#343434"/>
+    <SolidColorBrush x:Key="Menu.MouseOver.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="Menu.MouseOver.Background" Color="#343434"/>
+    <FontFamily x:Key="Menu.FontFamily">Source Sans Pro</FontFamily>
+    <SolidColorBrush x:Key="Menu.Disabled.Foreground" Color="#ededed"/>
+
+    <SolidColorBrush x:Key="MenuItem.GlyphColor" Color="#ededed"/>
+    <SolidColorBrush x:Key="MenuItem.Highlighted.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="MenuItem.Highlighted.Background" Color="#343434"/>
+
+
+    <SolidColorBrush x:Key="SubMenu.IsOpen.Background" Color="#ededed"/>
+    <SolidColorBrush x:Key="SubMenu.IsOpen.BorderBrush" Color="#343434"/>
+
+    <SolidColorBrush x:Key="TopMenuItem.IsOpen.Background" Color="#343434"/>
+    <SolidColorBrush x:Key="TopMenuItem.IsOpen.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="TopMenuItem.MouseOver.Background" Color="Transparent"/>
+    <SolidColorBrush x:Key="TopMenuItem.MouseOver.Foreground" Color="#151516"/>
+    <SolidColorBrush x:Key="TopMenuItem.Pressed.Background" Color="#FFEEEEEE"/>
+    <system:Double x:Key="MenuItem.Height">40</system:Double>
+
+  
+    
+    <!-- ROUTE TEXT BOX -->
+    <FontFamily x:Key="RouteTextBox.FontFamily">Source Sans Pro Light</FontFamily>
+    <FontFamily x:Key="MidRoute.Static.FontFamily">Source Sans Pro Light</FontFamily>
+    <FontFamily x:Key="RootNode.Static.FontFamily">Source Sans Pro Light</FontFamily>
+    <system:Double x:Key="RouteTextBox.Static.FontSize">14</system:Double>
+    <system:Double x:Key="MidRoute.Static.FontSize">12</system:Double>
+    <SolidColorBrush x:Key="RouteTextBox.Static.Foreground" Color="#FF707070"/>
+    <SolidColorBrush x:Key="MidRoute.Static.Foreground" Color="#FF878787"/>
+    <SolidColorBrush x:Key="RootNode.Static.Foreground" Color="#FFAEAEAE"/>
+    <!-- Buttons -->
+    <SolidColorBrush x:Key="Buttom.MouseOver.Foreground" Color="#0059b3"/>
+    <SolidColorBrush x:Key="Buttom.Static.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="Buttom.Pressed.Foreground" Color="#e99501"/>
+    <SolidColorBrush x:Key="AtlasContextButton.Static.Foreground" Color="#52a9ff"/>
+    <SolidColorBrush x:Key="AtlasContextButton.Disabled.Foreground" Color="#FF6F6F6F"/>
+    <!-- FILTER BOX -->
+    <SolidColorBrush x:Key="FilterBoxSeparator.Stroke" Color="#727576"/>
+    <SolidColorBrush x:Key="FilterBox.Background" Color="White"/>
+    <SolidColorBrush x:Key="FilterBox.Foreground" Color="#FFBFBFBF"/>
+    <SolidColorBrush x:Key="FilterBox.Disabled.Foreground" Color="#FF686868"/>
+    <SolidColorBrush x:Key="FilterButton.Static.Foreground" Color="#FFC3C3C3"/>
+    <SolidColorBrush x:Key="FilterButton.MouseOver.Foreground" Color="#FF636363"/>
+    <SolidColorBrush x:Key="FilterButton.Pressed.Foreground" Color="#FFA2A2A2"/>
+    <SolidColorBrush x:Key="FilterButton.Disabled.Foreground" Color="#FFDEDEDE"/>
+    <SolidColorBrush x:Key="FilterClearButton.MouseOver.Foreground" Color="#FFEB7466"/>
+    
+    <!-- ATLAS TIMELINE -->
+    <SolidColorBrush x:Key="AtlasTimelineCommandBar.Static.Border" Color="#FFE0E0E0"/>
+    <SolidColorBrush x:Key="AtlasTimelineCommandBar.Static.Background" Color="#FFD5D5D5"/>
+
+    <SolidColorBrush x:Key="AtlasTimelineGrid.Static.Background" Color="#f3f2e9"/>
+    
+    <SolidColorBrush x:Key="AtlasTimelineGridHeader.Static.Border" Color="#FFE0E0E0"/>
+    <SolidColorBrush x:Key="AtlasTimelineGridHeader.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="AtlasTimelineGridHeader.Static.Background" Color="#9e9e9e"/>
+
+    <SolidColorBrush x:Key="AtlasTimelineGridColumnBody.Static.Background" Color="#f3f2e9"/>
+    <SolidColorBrush x:Key="AtlasTimelineGridColumnBody.Static.Border" Color="#FFE0E0E0"/>
+
+    <SolidColorBrush x:Key="AtlasTimelineGridTopHeaderText.Static.Background" Color="#343434"/>
+    <SolidColorBrush x:Key="AtlasTimelineGridTopHeaderText.Static.Foreground" Color="WhiteSmoke"/>
+    <SolidColorBrush x:Key="AtlasTimelineGridTopHeaderText.Static.Border" Color="#FFC2C2C2"/>
+    <FontFamily x:Key="AtlasTimelineGridTopHeaderText.Static.FontFamily">Source Sans Pro Light</FontFamily>
+    <system:Double x:Key="AtlasTimelineGridTopHeaderText.Static.FontSize">14</system:Double>
+    
+    <SolidColorBrush x:Key="AtlasTimelineScrollButton.Static.Background" Color="#FFD5D5D5" />
+    <SolidColorBrush x:Key="AtlasTimelineScrollButton.Static.Foreground" Color="#FFA7A7A7" />
+    <SolidColorBrush x:Key="AtlasTimelineScrollButton.MouseOver.Foreground" Color="#FF999999" />
+    <SolidColorBrush x:Key="AtlasTimelineScrollButton.Pressed.Foreground" Color="#FF6E6E6E" />
+    <SolidColorBrush x:Key="AtlasTimelineScrollButton.Disabled.Foreground" Color="#FFC1C1C1" />
+    
+    <SolidColorBrush x:Key="AtlasTimelineLifelineControl.Static.Background" Color="#FFDDDDDD"/>
+    <SolidColorBrush x:Key="AtlasTimelineLifelineControl.Static.Foreground" Color="#FF999999"/>
+    
+    <SolidColorBrush x:Key="AtlasLifelineExpanderButton.Static.Background" Color="Transparent"/>
+    <SolidColorBrush x:Key="AtlasLifelineExpanderButton.Static.Foreground" Color="#FF999999"/>
+    <SolidColorBrush x:Key="AtlasLifelineExpanderButton.MouseOver.Foreground" Color="#FF444444"/>
+    <SolidColorBrush x:Key="AtlasLifelineExpanderButton.Pressed.Foreground" Color="#FF888888"/>
+
+    <SolidColorBrush x:Key="AtlasTimelineDateTimeScaleSelector.Static.Background" Color="Transparent"/>
+    <SolidColorBrush x:Key="AtlasTimelineDateTimeScaleSelector.Static.Foreground" Color="DarkGray"/>
+    <SolidColorBrush x:Key="AtlasTimelineDateTimeScaleSelector.MouseOver.Foreground" Color="#FF898989"/>
+    <SolidColorBrush x:Key="AtlasTimelineDateTimeScaleSelector.Pressed.Foreground" Color="#FFB2B2B2"/>
+    <SolidColorBrush x:Key="AtlasTimelineDateTimeScaleSelector.Checked.Foreground" Color="#FF4F4F4F"/>
+    <SolidColorBrush x:Key="AtlasTimelineDateTimeScaleSelectionIndicator.Static.Background" Color="#252526"/>
+
+    <!-- TreeView -->
+    <SolidColorBrush x:Key="InvestmentElement.Default.Foreground" Color="#ededed"/>
+    <FontFamily x:Key="InvestmentElement.Default.FontFamily">Source Sans Pro Light</FontFamily>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Static.Background" Color="#0059b3"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.MouseOver.Background" Color="#2d70b3"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Pressed.Background" Color="#5986b3"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Disabled.Background" Color="#394f65"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Disabled.Foreground" Color="#252526"/>
+
+    <SolidColorBrush x:Key="InvestmentElementTreeView.Static.Background" Color="#0059b3"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeView.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.Static.Background" Color="#2d70b3"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.MouseOver.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.MouseOver.Foreground" Color="#252526"/>
+    <!--<SolidColorBrush x:Key="InvestmentElementTreeViewItem.MouseOver.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.MouseOver.Foreground" Color="WhiteSmoke"/>-->
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.Selected.Background" Color="White"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.Selected.Foreground" Color="#343434"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItemBottomLine.Stroke" Color="#f3f2e9"/>
+
+    <system:Double x:Key="InvestmentElementCommandAddRootInvestmentElementButton.Static.StrokeThickness">1</system:Double>
+    <SolidColorBrush x:Key="InvestmentElementAddCommandAddRootInvestmentElementButton.MouseOver.Foreground" Color="#FF09A596"/>
+    <SolidColorBrush x:Key="InvestmentElementEditCommandAddRootInvestmentElementButton.MouseOver.Foreground" Color="#FF707070"/>
+    <SolidColorBrush x:Key="InvestmentElementDeleteCommandAddRootInvestmentElementButton.MouseOver.Foreground" Color="#FFEB7466"/>
+    <SolidColorBrush x:Key="InvestmentElementCommandAddRootInvestmentElementButton.Pressed.Background" Color="#FF09A596"/>
+    <SolidColorBrush x:Key="InvestmentElementCommandAddRootInvestmentElementButton.Pressed.Foreground" Color="#FF474747"/>
+
+    <!-- ATLAS TEXTBOX -->
+    
+    <SolidColorBrush x:Key="AtlasTextBox.Static.Foreground" Color="#FF4F4F4F"/>
+    <SolidColorBrush x:Key="AtlasTextBox.Static.BorderBrush" Color="#FF999999"/>
+    <SolidColorBrush x:Key="AtlasTextBox.Pressed.Foreground" Color="#FFB2B2B2"/>
+    <SolidColorBrush x:Key="AtlasTextBox.MouseOver.Foreground" Color="#FF4F4F4F"/>
+    <SolidColorBrush x:Key="AtlasTextBox.MouseOver.BorderBrush" Color="#FF888888"/>
+    
+    <!-- SCROLL BAR -->
+    <SolidColorBrush x:Key="ScrollBarBackground" Color="Transparent" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackground" Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundDragging" Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ScrollBarThumbBackgroundHover" Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ScrollBarThumbBorder" Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ScrollBarThumbForeground" Color="#FFC2C2C2" />
+    <SolidColorBrush x:Key="ScrollBarThumbForegroundDragging" Color="#d1d1d1" />
+    <SolidColorBrush x:Key="ScrollBarThumbForegroundHover" Color="#c9c9c9" />
+
+    <!-- GENERALS -->
+    <SolidColorBrush x:Key="Accent" Color="#e99501"/>
+    <SolidColorBrush x:Key="PopupBackground" Color="#e4e4e4" />
+    <SolidColorBrush x:Key="InputBackground" Color="#FFE2E2E2" />
+    <SolidColorBrush x:Key="ShadowText" Color="#b3b3b3"/>
+    <SolidColorBrush x:Key="WatherMark" Color="#dedede"/>
+    <SolidColorBrush x:Key="ProgressBackground" Color="#dddddd" />
+
+</ResourceDictionary>

@@ -1,0 +1,20 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CompanyName.Atlas.Investments.Properties">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Atlas.Investments;component/Presentation/Views/Themes/Light.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/Paginator.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/DataGrid.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/Button.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/ComboBox.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/EditableTextBlock.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/AtlasEasyTextBox.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/LeveredComboBox.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/AtlasDatetimePicker.xaml"/>
+        <ResourceDictionary Source="/Atlas.Investments;component/Presentation/Views/Assets/Icons.xaml"/>
+        <ResourceDictionary Source="/Atlas.Investments;component/Presentation/Views/Assets/TabControls.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/FilterBox.xaml"/>
+        <ResourceDictionary Source="/Atlas.Configuration;component/Presentation/Views/Themes/Light.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

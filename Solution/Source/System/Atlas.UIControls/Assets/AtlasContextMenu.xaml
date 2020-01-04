@@ -1,0 +1,39 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls">
+
+
+
+    <Style  TargetType="uiControls:AtlasContextMenu">
+        <Setter Property="PopupAnimation" Value="Slide"></Setter>
+        <Setter Property="Placement" Value="Top"></Setter>
+        <Setter Property="PlacementTarget" Value="{Binding RelativeSource={RelativeSource Self},Path=Parent}"></Setter>
+        <!--<Setter Property="StaysOpen" Value="False"></Setter>-->
+        <Setter Property="IsOpen" Value="False"></Setter>
+
+        <Setter Property="Child">
+            <Setter.Value>
+
+                <StackPanel >
+                    <Button Background="{DynamicResource StatusBar.Background}" Command="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasContextMenu}, Path=PrintCommand}">
+                        <TextBlock Text="Imprimir"></TextBlock>
+                    </Button>
+                    <Line Fill="{DynamicResource Default.Foreground}" Margin="5,0"></Line>
+                    <Button Background="{DynamicResource StatusBar.Background}" Command="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasContextMenu}, Path=ImportCommand}">
+                        <TextBlock Text="Importar"></TextBlock>
+                    </Button>
+                    <Line Fill="{DynamicResource Default.Foreground}" Margin="5,0"></Line>
+                    <Button Background="{DynamicResource StatusBar.Background}" Command="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasContextMenu}, Path=ExportCommand}">
+                        <TextBlock Text="Exportar"></TextBlock>
+                    </Button>
+                    <Line Fill="{DynamicResource Default.Foreground}" Margin="5,0"></Line>
+                    <Button Background="{DynamicResource StatusBar.Background}" IsEnabled="False" Command="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasContextMenu}, Path=ExportCommand}">
+                        <TextBlock Text="      "></TextBlock>
+                    </Button>
+                </StackPanel>
+               
+
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

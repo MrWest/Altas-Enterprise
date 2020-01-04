@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls"
+                    xmlns:shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
+                    xmlns:properties="clr-namespace:CompanyName.Atlas.UIControls.Properties">
+
+    <Style TargetType="uiControls:AtlasOptionalContent">
+
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="uiControls:AtlasOptionalContent">
+
+                    <Grid>
+                        <ContentControl Content="{Binding ElementsTreeView, RelativeSource={RelativeSource AncestorType={x:Type uiControls:AtlasOptionalContent}}}"/>
+                    </Grid>
+
+
+                    <ControlTemplate.Triggers>
+
+
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

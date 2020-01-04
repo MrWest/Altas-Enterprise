@@ -1,0 +1,32 @@
+﻿<prism:PrismUserControlBase x:Class="CompanyName.Atlas.Investments.Presentation.Views.WageScaleEditor"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                        xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+                        xmlns:prism="clr-namespace:CompanyName.Atlas.Contracts.Presentation.Prism;assembly=Atlas.Contracts"
+                        xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
+                        xmlns:viewModels="clr-namespace:CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels"
+                        xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+                        mc:Ignorable="d"
+                        d:DesignHeight="400" d:DesignWidth="600"
+                        d:DataContext="{d:DesignInstance viewModels:WageScaleViewModel}"
+                        mvvm:ViewModelLocator.AutoWireViewModel="True">
+    
+    <DockPanel>
+
+        <uiControls:AtlasDataGrid ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}"
+                                  AddButtonCommand="{Binding AddCommand}"
+                                  DeleteButtonCommand="{Binding DeleteCommand}" ShowTotal="Collapsed">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static properties:Resources.Name}" Width="3*"
+                                    Binding="{Binding Name}"
+                                    EditingElementStyle="{DynamicResource DataGridTextColumnEditingElementStyle}"/>
+                <DataGridTextColumn Header="{x:Static properties:Resources.Retribution}" Width="*"
+                                    Binding="{Binding Retribution}"
+                                    EditingElementStyle="{DynamicResource DataGridTextColumnEditingElementStyle}" />
+            </DataGrid.Columns>
+        </uiControls:AtlasDataGrid>
+    </DockPanel>
+
+</prism:PrismUserControlBase>

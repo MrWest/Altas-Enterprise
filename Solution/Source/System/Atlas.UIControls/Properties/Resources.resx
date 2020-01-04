@@ -1,0 +1,486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="AddRootSubjectTooltip" xml:space="preserve">
+    <value>Añadir Nuevo Tópico a la Raíz</value>
+  </data>
+  <data name="AddSubjectTooltip" xml:space="preserve">
+    <value>Añadir Nuevo Tópico</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Avanzado</value>
+  </data>
+  <data name="Allowed" xml:space="preserve">
+    <value>Permitido</value>
+  </data>
+  <data name="AllowedModules" xml:space="preserve">
+    <value>Acceso a Modulos</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Attributos</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Author_Emiter" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Atras</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Chat" xml:space="preserve">
+    <value>Mensajeria</value>
+  </data>
+  <data name="Chat_ToolTip" xml:space="preserve">
+    <value>Servicios de Mensajeria</value>
+  </data>
+  <data name="CleanFilter" xml:space="preserve">
+    <value>Limpiar Filtro</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Codigo</value>
+  </data>
+  <data name="Concepts" xml:space="preserve">
+    <value>Conceptos</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmar?...</value>
+  </data>
+  <data name="Conf_MenuItem" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="Content" xml:space="preserve">
+    <value>Contenido</value>
+  </data>
+  <data name="ContextMenu" xml:space="preserve">
+    <value>Menu Contextual</value>
+  </data>
+  <data name="ConvertionFactor" xml:space="preserve">
+    <value>Factor de Conversion</value>
+  </data>
+  <data name="Convertions" xml:space="preserve">
+    <value>Conversiones</value>
+  </data>
+  <data name="Copy" xml:space="preserve">
+    <value>Copiar</value>
+  </data>
+  <data name="Copy_ToolTip" xml:space="preserve">
+    <value>Copiar (Ctrl+C)</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="DataAccess" xml:space="preserve">
+    <value>Acceso a Datos</value>
+  </data>
+  <data name="Definition" xml:space="preserve">
+    <value>Definicion</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="DeleteSubjectTooltip" xml:space="preserve">
+    <value>Eliminar Tópico</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripcion</value>
+  </data>
+  <data name="Disabled" xml:space="preserve">
+    <value>Deshabilitado</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edicion</value>
+  </data>
+  <data name="Edit_MenuItem" xml:space="preserve">
+    <value>Edición</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Habilitado</value>
+  </data>
+  <data name="Example" xml:space="preserve">
+    <value>Ejemplo</value>
+  </data>
+  <data name="Exit_MenuItem" xml:space="preserve">
+    <value>_Salir</value>
+  </data>
+  <data name="ExportableElements" xml:space="preserve">
+    <value>Elementos Exportables</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Archivo</value>
+  </data>
+  <data name="FilePath" xml:space="preserve">
+    <value>Ruta del Archivo</value>
+  </data>
+  <data name="File_MenuItem" xml:space="preserve">
+    <value>_Archivo</value>
+  </data>
+  <data name="Filtred_Search" xml:space="preserve">
+    <value>Filtro de Busqueda</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Terminar</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="Help_MenuItem" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="Intranet" xml:space="preserve">
+    <value>Intranet</value>
+  </data>
+  <data name="Intranet_ToolTip" xml:space="preserve">
+    <value>Servicios de Intranet</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Lenguage</value>
+  </data>
+  <data name="LastUpdate" xml:space="preserve">
+    <value>Ultima Actualizacion</value>
+  </data>
+  <data name="Letters" xml:space="preserve">
+    <value>Siglas</value>
+  </data>
+  <data name="Loading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="Mail" xml:space="preserve">
+    <value>Correo</value>
+  </data>
+  <data name="Mail_ToolTip" xml:space="preserve">
+    <value>Servicios de Correo</value>
+  </data>
+  <data name="Maximize" xml:space="preserve">
+    <value>Maximize</value>
+  </data>
+  <data name="MeasurementUnit" xml:space="preserve">
+    <value>Unidad de Medida</value>
+  </data>
+  <data name="Minimize" xml:space="preserve">
+    <value>Minimizar</value>
+  </data>
+  <data name="Modularity" xml:space="preserve">
+    <value>Modularidad</value>
+  </data>
+  <data name="ModuleHelpContent" xml:space="preserve">
+    <value>Contenido de Ayuda</value>
+  </data>
+  <data name="ModuleHelpContent_ToolTip" xml:space="preserve">
+    <value>Contenido de Ayuda Referente al Modulo</value>
+  </data>
+  <data name="ModuleName" xml:space="preserve">
+    <value>Nombre Modulo</value>
+  </data>
+  <data name="ModuleState" xml:space="preserve">
+    <value>Estado</value>
+  </data>
+  <data name="ModuleType" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="Module_Access_Update" xml:space="preserve">
+    <value>Modificar Acceso al Modulo</value>
+  </data>
+  <data name="Module_Management" xml:space="preserve">
+    <value>Modulos</value>
+  </data>
+  <data name="Module_Management_Tooltip" xml:space="preserve">
+    <value>Administracion de Modulos Atlas</value>
+  </data>
+  <data name="Month" xml:space="preserve">
+    <value>Mes</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="New_Module_Access" xml:space="preserve">
+    <value>Nuevo Acceso al Modulo</value>
+  </data>
+  <data name="New_Module_Subject" xml:space="preserve">
+    <value>Nuevo Contenido para el Modulo</value>
+  </data>
+  <data name="Next" xml:space="preserve">
+    <value>Siguiente</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="No_Installed_Modules" xml:space="preserve">
+    <value>No existen modulos instalados para Atlas Suite...</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Numero</value>
+  </data>
+  <data name="Number_Abr" xml:space="preserve">
+    <value> # </value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="Paste" xml:space="preserve">
+    <value>Pegar</value>
+  </data>
+  <data name="Paste_ToolTip" xml:space="preserve">
+    <value>Pegar (Ctrl+V)</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>Permisos</value>
+  </data>
+  <data name="Preferences" xml:space="preserve">
+    <value>Preferencias</value>
+  </data>
+  <data name="Preferences_Tooltip" xml:space="preserve">
+    <value>Edicion de Preferencias de Interfaz de Usuario</value>
+  </data>
+  <data name="Previous" xml:space="preserve">
+    <value>Anterior</value>
+  </data>
+  <data name="PriceSystems" xml:space="preserve">
+    <value>Siatema de Precios</value>
+  </data>
+  <data name="PublishDate" xml:space="preserve">
+    <value>Fecha de Publicacion</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Listo</value>
+  </data>
+  <data name="Related" xml:space="preserve">
+    <value>Relacionados</value>
+  </data>
+  <data name="RelatedConcepts" xml:space="preserve">
+    <value>Conceptos Relacionados</value>
+  </data>
+  <data name="RelatedDocuments" xml:space="preserve">
+    <value>Documentos Relacionados</value>
+  </data>
+  <data name="Restore" xml:space="preserve">
+    <value>Restaurar</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar...</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Seguridad</value>
+  </data>
+  <data name="Security1" xml:space="preserve">
+    <value>Seguridad</value>
+  </data>
+  <data name="Security_Tooltip" xml:space="preserve">
+    <value>Administracion de Usuarios</value>
+  </data>
+  <data name="Settings_Tooltip" xml:space="preserve">
+    <value>Configurarion Visual</value>
+  </data>
+  <data name="Source" xml:space="preserve">
+    <value>Fuente</value>
+  </data>
+  <data name="Start" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="Start_Tooltip" xml:space="preserve">
+    <value>Interfaz de Inicio de Atlas Suite</value>
+  </data>
+  <data name="SystemManagement" xml:space="preserve">
+    <value>Administracion Atlas</value>
+  </data>
+  <data name="SystemManagement_Tooltip" xml:space="preserve">
+    <value>Administracion Avanzada Atlas</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Herramientas</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="UnsuccessfullText" xml:space="preserve">
+    <value>Error de Inicio de Sesión en Atlas</value>
+  </data>
+  <data name="User" xml:space="preserve">
+    <value>Usuario</value>
+  </data>
+  <data name="UserInterface" xml:space="preserve">
+    <value>Interfaz de Usuario</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Nombre de Usuario</value>
+  </data>
+  <data name="UserRol" xml:space="preserve">
+    <value>Rol de Usuario</value>
+  </data>
+  <data name="View_MenuItem" xml:space="preserve">
+    <value>_VER</value>
+  </data>
+  <data name="WebSite" xml:space="preserve">
+    <value>Sitio Web</value>
+  </data>
+  <data name="Week" xml:space="preserve">
+    <value>Semana</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Bienvenido</value>
+  </data>
+  <data name="Year" xml:space="preserve">
+    <value>Año</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
+  </data>
+  <data name="WantToSpreadChanges" xml:space="preserve">
+    <value>Desea extender los cambios?..</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="SelectAll" xml:space="preserve">
+    <value>Seleccionar Todo</value>
+  </data>
+  <data name="ActivationEnded" xml:space="preserve">
+    <value>Su Activacion ha terminado.</value>
+  </data>
+  <data name="ActivationEndsOn" xml:space="preserve">
+    <value>Su Activación culmina en:</value>
+  </data>
+  <data name="ActivationEndsToday" xml:space="preserve">
+    <value>Su Activación termina hoy.</value>
+  </data>
+  <data name="ActivationNeverEnds" xml:space="preserve">
+    <value>Su Activación no termina.</value>
+  </data>
+  <data name="ActivationNotAviable" xml:space="preserve">
+    <value>Periodo de Activacion No Disponible</value>
+  </data>
+  <data name="Proccessing" xml:space="preserve">
+    <value>Procesando...</value>
+  </data>
+</root>

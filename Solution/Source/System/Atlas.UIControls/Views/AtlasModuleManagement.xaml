@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="CompanyName.Atlas.UIControls.Views.AtlasModuleManagement"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.UIControls.Properties"
+             xmlns:views="clr-namespace:CompanyName.Atlas.UIControls.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" 
+             >
+    <Grid DataContext="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasWindow},Path=ModuleCatalog}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Text="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Module_Management_Tooltip}" VerticalAlignment="Bottom" Margin="5,0"></TextBlock>
+
+        <uiControls:AtlasDataGrid x:Name="AtlasDataGrid" Grid.Row="1" ItemsSource="{Binding Path=Modules}"
+                                  DeleteButtonCommand="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasModuleManagement},Path=DeleteButtonCommand}" 
+                                  AddButtonCommand="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasModuleManagement},Path=AddButtonCommand}" ShowTotal="Collapsed" CanUserAddRows="False" CanUserReorderColumns="False"  CanUserResizeColumns="False"
+                      CanUserSortColumns="False" CanUserDeleteRows="False"  Margin="5" CellEditEnding="ModulesDataGrid_OnCellEditEnding">
+            <!--   <uiControls:AtlasDataGrid.Resources>
+                    <ResourceDictionary Source="Themes/"></ResourceDictionary>
+                </uiControls:AtlasDataGrid.Resources>-->
+            <DataGrid.Columns>
+                <DataGridTextColumn  Header="{x:Static properties:Resources.ModuleName}" IsReadOnly="True" Binding="{Binding ModuleName}" Width="*"></DataGridTextColumn>
+                <DataGridTextColumn  Header="{x:Static properties:Resources.ModuleType}" IsReadOnly="True" Binding="{Binding ModuleType}" ></DataGridTextColumn>
+                <DataGridTextColumn  Header="{x:Static properties:Resources.ModuleState}" IsReadOnly="True" Binding="{Binding State}" ></DataGridTextColumn>
+                <!--<DataGridCheckBoxColumn Header="{x:Static properties:Resources.Allowed}"  Width="Auto"
+                                           Binding="{Binding ModuleName,Converter={StaticResource AllowedModuleToBooleanConverter},ConverterParameter={x:Reference UserAtlasDataGrid}}" ></DataGridCheckBoxColumn>-->
+                <!--<DataGridTemplateColumn Header="{x:Static properties:Resources.Allowed}"  Width="Auto">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <CheckBox IsChecked="{Binding ModuleName,Converter={StaticResource AllowedModuleToBooleanConverter},ConverterParameter={x:Reference UserAtlasDataGrid}}" Checked="ToggleButton_OnChecked" Unchecked="ToggleButton_OnChecked" ></CheckBox>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    --><!--<DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding ModuleName,Converter={StaticResource AllowedModuleToBooleanConverter},ConverterParameter={x:Reference UserAtlasDataGrid}}" ></CheckBox>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>--><!--
+                </DataGridTemplateColumn>-->
+            </DataGrid.Columns>
+        </uiControls:AtlasDataGrid>
+    </Grid>
+
+</UserControl>

@@ -1,0 +1,20 @@
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL.Web\bin\TestApplicationSL.Web.dll
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL.Web\bin\TestApplicationSL.Web.pdb
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.dll
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.pdb
+D:\TFS2010\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.dll
+D:\TFS2010\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.pdb
+D:\TFS2010\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.csprojResolveAssemblyReference.cache
+D:\TFS2010\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.dll
+D:\TFS2010\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.csprojResolveAssemblyReference.cache
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.pdb
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.dll.config
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.dll
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.pdb
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.csprojResolveAssemblyReference.cache
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.dll
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\obj\Debug\TestApplicationSL.Web.pdb

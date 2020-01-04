@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A29B4A7A-9DDD-42F2-B157-D0F086CE4DF9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CompanyName.Atlas.Contracts</RootNamespace>
+    <AssemblyName>Atlas.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Db4objects.Db4o">
+      <HintPath>..\..\..\References\Db4objects.Db4o.dll</HintPath>
+    </Reference>
+    <Reference Include="Db4objects.Db4o.Linq">
+      <HintPath>..\..\..\References\Db4objects.Db4o.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching">
+      <HintPath>..\..\..\References\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common">
+      <HintPath>..\..\..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling">
+      <HintPath>..\..\..\References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+      <HintPath>..\..\..\References\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Composition, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.PubSubEvents.1.1.2\lib\portable-sl5+windowsphone8+windows8+net40+wpa81\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.TestSupport">
+      <HintPath>..\..\..\References\Microsoft.Practices.Prism.TestSupport.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions, Version=5.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.UnityExtensions.5.0.1\lib\NET45\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Interception.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Unity.Interception.3.5.1404.0\lib\Net45\Microsoft.Practices.Unity.Interception.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\Common\IAtlasGenericModuleAccessManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IAtlasMainModuleAccessManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IAtlasModuleAccessManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IAtlasModuleGenericSubjectManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IAtlasModuleMainSubjectManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IAtlasModuleRoleManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IAtlasModuleSubjectManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IAtlasUserMangerApplicationService.cs" />
+    <Compile Include="Application\Common\IConvertibleEntityManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\ICurrencyManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\ICustomReportSettingsApplicationServices.cs" />
+    <Compile Include="Application\Common\IDocumentManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IExportable.cs" />
+    <Compile Include="Application\Common\IMeasurementUnitManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IReferenceDocumentManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IChangesSpreadder.cs" />
+    <Compile Include="Application\INomenclatorManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IPeriodManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\ISubjectConceptContentManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\ISubjectConceptDefinitionManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\ISubjectConceptExampleManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\ISubjectConceptManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IWeightManagerApplicationServices.cs" />
+    <Compile Include="Application\ICommonManagerApplicationServices.cs" />
+    <Compile Include="Application\IEntityProviderManagerApplicationServices.cs" />
+    <Compile Include="Application\IItemManagerApplicationServices.cs" />
+    <Compile Include="Application\IUnitConverterManagerApplicationServices.cs" />
+    <Compile Include="Domain\AtlasModulePermission.cs" />
+    <Compile Include="Domain\AtlasUserRol.cs" />
+    <Compile Include="Domain\Common\IAtlasGenericModuleAccess.cs" />
+    <Compile Include="Domain\Common\IAtlasModuleGenericSubject.cs" />
+    <Compile Include="Domain\Common\IAtlasMainModuleAccess.cs" />
+    <Compile Include="Domain\Common\IAtlasMainModuleSubject.cs" />
+    <Compile Include="Domain\Common\IAtlasModuleRole.cs" />
+    <Compile Include="Domain\Common\IAtlasModuleSubject.cs" />
+    <Compile Include="Domain\Common\ICodedNomenclator.cs" />
+    <Compile Include="Domain\Common\ICustomReportSettings.cs" />
+    <Compile Include="Domain\Common\IDocument.cs" />
+    <Compile Include="Domain\Common\IReferenceDocument.cs" />
+    <Compile Include="Domain\Common\IRelatedConcept.cs" />
+    <Compile Include="Domain\Common\ISubjectConcept.cs" />
+    <Compile Include="Domain\Common\ISubjectConceptContent.cs" />
+    <Compile Include="Domain\Common\ISubjectConceptDefinition.cs" />
+    <Compile Include="Domain\Common\ISubjectConceptExample.cs" />
+    <Compile Include="Domain\IAtlasGenericModuleAccessDomainServices.cs" />
+    <Compile Include="Domain\IAtlasModuleMainSubjectDomainServices.cs" />
+    <Compile Include="Domain\IAtlasModuleSubjectDomainServices.cs" />
+    <Compile Include="Domain\Common\IAtlasUser.cs" />
+    <Compile Include="Domain\Common\IConvertibleEntity.cs" />
+    <Compile Include="Domain\Common\ICosttable.cs" />
+    <Compile Include="Domain\Common\ICurrenciable.cs" />
+    <Compile Include="Domain\Common\ICurrency.cs" />
+    <Compile Include="Domain\Common\IMeasurableUnit.cs" />
+    <Compile Include="Domain\Common\IOwnable.cs" />
+    <Compile Include="Domain\Common\IPeriodCalculator.cs" />
+    <Compile Include="Domain\Common\IVolume.cs" />
+    <Compile Include="Domain\Common\IWeight.cs" />
+    <Compile Include="Domain\Common\IAtlasModuleAccess.cs" />
+    <Compile Include="Domain\IAtlasModuleGenericSubjectDomainServices.cs" />
+    <Compile Include="Domain\IAtlasUserDomainService.cs" />
+    <Compile Include="Domain\ICommonDomainService.cs" />
+    <Compile Include="Domain\IConvertibleEntityDomainService.cs" />
+    <Compile Include="Domain\ICurrencyDomainService.cs" />
+    <Compile Include="Domain\ICustomReportSettingsDomainServices.cs" />
+    <Compile Include="Domain\IDomainServices.cs" />
+    <Compile Include="Domain\Common\IEntity.cs" />
+    <Compile Include="Domain\Common\IMeasurementUnit.cs" />
+    <Compile Include="Domain\Common\INomenclator.cs" />
+    <Compile Include="Domain\Common\IPeriod.cs" />
+    <Compile Include="Domain\IDocumentDomainService.cs" />
+    <Compile Include="Domain\IMeasurableUnitDomainService.cs" />
+    <Compile Include="Domain\IMeasurementUnitDomainService.cs" />
+    <Compile Include="Domain\IPeriodDomainService.cs" />
+    <Compile Include="Domain\IReferenceDocumentDomainService.cs" />
+    <Compile Include="Domain\IRelatedConceptDomainServices.cs" />
+    <Compile Include="Domain\Specification\EntityFramework\IEntityFrameworkQueriable.cs" />
+    <Compile Include="Implementation\Application\Common\AtlasUserMangerApplicationService.cs" />
+    <Compile Include="Implementation\Application\Common\CustomReportSettingsApplicationServices.cs" />
+    <Compile Include="Implementation\Domain\Entities\CustomReportSettings.cs" />
+    <Compile Include="Implementation\Domain\EntityFramework\EntityFrameworkQueryable.cs" />
+    <Compile Include="Implementation\Domain\Services\CustomReportSettingsDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Specifications\AtlasModuleInfoOfQueryable.cs" />
+    <Compile Include="Implementation\Domain\Specifications\ChildCustomReportSettingsofSpecification.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\CustomReportSettingsRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\QueryableRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\EntityFramework\EntityFrameworkDbContext.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\EntityFramework\EntityFrameworkRepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\EntityFramework\EntityFrameworkUnitOfWork.cs" />
+    <Compile Include="Implementation\Presentation\Data\Reporting\CustomReportSettingsPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Reporting\CustomReportSettingsViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Reporting\EasyTimeNode.cs" />
+    <Compile Include="Infrastructure\Data\Common\ICustomReportSettingsRepository.cs" />
+    <Compile Include="Infrastructure\Data\Db4O\IQueryableRepository.cs" />
+    <Compile Include="Infrastructure\Data\EntityFramework\IEntityFrameworkDbContext.cs" />
+    <Compile Include="Infrastructure\Data\IRepository.cs" />
+    <Compile Include="Domain\Specification\ISpecification.cs" />
+    <Compile Include="Domain\Common\IUnitConverter.cs" />
+    <Compile Include="Domain\ISubjectConceptContentDomainServices.cs" />
+    <Compile Include="Domain\ISubjectConceptDefinitionDomainServices.cs" />
+    <Compile Include="Domain\ISubjectConceptDomainServices.cs" />
+    <Compile Include="Domain\ISubjectConceptExampleDomainServices.cs" />
+    <Compile Include="Domain\IUnitConverterDomainService.cs" />
+    <Compile Include="Domain\IVolumeDomainService.cs" />
+    <Compile Include="Domain\IWeightDomainService.cs" />
+    <Compile Include="Implementation\Application\Common\DocumentManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\ReferenceDocumentManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\NomenclatorManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Domain\Comparer\CodeNomenclatorComaprer.cs" />
+    <Compile Include="Implementation\Domain\Entities\CodedNomenclatorBase.cs" />
+    <Compile Include="Implementation\Domain\Entities\Document.cs" />
+    <Compile Include="Implementation\Domain\Entities\ReferenceDocument.cs" />
+    <Compile Include="Implementation\Domain\Services\CodedNomenclatorDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\DocumentDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\ReferenceDocumentDomainService.cs" />
+    <Compile Include="Implementation\Domain\Specifications\DocumentOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\NomenclatorByContainsSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\PeriodOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\WeightOfSpecification.cs" />
+    <Compile Include="Domain\Validation\IValidator.cs" />
+    <Compile Include="Domain\Validation\IValidatorFactory.cs" />
+    <Compile Include="Domain\Validation\Validations.cs" />
+    <Compile Include="Exceptions\UnexpectedErrorException.cs" />
+    <Compile Include="GlobalParameters.cs" />
+    <Compile Include="Implementation\Application\CommonManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\AtlasGenericModuleAccessManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\AtlasMainModuleAccessManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\AtlasModuleAccessManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\AtlasModuleGenericSubjectManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\AtlasModuleMainSubjectManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\AtlasModuleRoleManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\AtlasModuleSubjectManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\ConvertibleEntityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\CurrencyManagerApplicationServices.cs" />
+    <Compile Include="Application\Common\IRelatedConceptManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\MeasurementUnitManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\PeriodManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\RelatedConceptManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\SubjectConceptContentManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\SubjectConceptDefinitionManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\SubjectConceptExampleManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\SubjectConceptManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Common\WeightManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\EntityProviderManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\ItemManagerApplicationServicesBase.cs" />
+    <Compile Include="Implementation\Application\UnitConverterManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Domain\Entities\AtlasGenericModuleAccess.cs" />
+    <Compile Include="Implementation\Domain\Entities\AtlasModuleGenericSubject.cs" />
+    <Compile Include="Implementation\Domain\Entities\AtlasMainModuleAccess.cs" />
+    <Compile Include="Implementation\Domain\Entities\AtlasModuleMainSubject.cs" />
+    <Compile Include="Implementation\Domain\Entities\AtlasModuleRole.cs" />
+    <Compile Include="Implementation\Domain\Entities\AtlasModuleSubject.cs" />
+    <Compile Include="Implementation\Domain\Entities\AtlasUser.cs" />
+    <Compile Include="Implementation\Domain\Entities\ConvertibleEntity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Domain\Entities\Currency.cs" />
+    <Compile Include="Implementation\Domain\Entities\EntityBase.cs" />
+    <Compile Include="Implementation\Domain\Entities\AtlasModuleAccess.cs" />
+    <Compile Include="Implementation\Domain\Entities\MeasurableUnit.cs" />
+    <Compile Include="Implementation\Domain\Entities\MeasurementUnit.cs" />
+    <Compile Include="Implementation\Domain\Entities\NomenclatorBase.cs" />
+    <Compile Include="Implementation\Domain\Entities\Period.cs" />
+    <Compile Include="Implementation\Domain\Entities\RelatedConcept.cs" />
+    <Compile Include="Implementation\Domain\Entities\SubjectConcept.cs" />
+    <Compile Include="Implementation\Domain\Entities\SubjectConceptContent.cs" />
+    <Compile Include="Implementation\Domain\Entities\SubjectConceptDefinition.cs" />
+    <Compile Include="Implementation\Domain\Entities\SubjectConceptExample.cs" />
+    <Compile Include="Implementation\Domain\Entities\UnitConverter.cs" />
+    <Compile Include="Implementation\Domain\Entities\Volume.cs" />
+    <Compile Include="Implementation\Domain\Entities\Weight.cs" />
+    <Compile Include="Implementation\Domain\ExpressionBuilder.cs" />
+    <Compile Include="Implementation\Domain\Services\AtlasGenericModuleAccessDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\AtlasGenericModuleSubjectDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\AtlasModuleMainSubjectDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\AtlasModuleSubjectDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\AtlasUserDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\CommonDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\ConvertibleEntityDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\CurrencyDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\MeasurableUnitDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\MeasurementUnitDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\PeriodDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\RelatedConceptDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Specifications\RelatedConceptOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Services\StandarDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\SubjectConceptContentDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\SubjectConceptDefinitionDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\SubjectConceptDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\SubjectConceptExampleDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\UnitConverterDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\VolumeDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\WeightDomainService.cs" />
+    <Compile Include="Implementation\Domain\Specifications\AtlasMainModuleAccessOfSpecifcation.cs" />
+    <Compile Include="Implementation\Domain\Specifications\AtlasModuleAccessOfSpecifcation.cs" />
+    <Compile Include="Implementation\Domain\Specifications\AtlasModuleMainSubjectOfSpecifcation.cs" />
+    <Compile Include="Implementation\Domain\Specifications\AtlasModuleRoleOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\AtlasModuleSubjectOfSpecifcation.cs" />
+    <Compile Include="Implementation\Domain\Specifications\EntitiesByIdSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\NomenclatorByNameSpecification.cs" />
+    <Compile Include="Implementation\Domain\Services\DomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Specification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\NomenclatorHavingInItsNameSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\SubjectConceptContentOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\SubjectConceptOfSpecifcation.cs" />
+    <Compile Include="Implementation\Domain\Specifications\UnitConverterOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Validation\EnterpriseLibrary\EntLibValidator.cs" />
+    <Compile Include="Implementation\Domain\Validation\EnterpriseLibrary\EntLibValidatorFactory.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\AtlasGenericModuleAccessRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\AtlasMainModuleAccessRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\AtlasModuleAccessRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\AtlasModuleMainSubjectRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\AtlasModuleRoleRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\AtlasModuleSubjectRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\AtlasUserRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\AtlasModuleGenericSubjectRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\CodedNomenclatorRepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\ConvertibleEntityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\DocumentRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\MeasurableUnitRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\ReferenceDocumentRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\NomenclatorRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\RelatedConceptRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\SubjectConceptContentRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\SubjectConceptDefinitionRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\SubjectConceptExampleRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\SubjectConceptRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\BehaviorExtensions.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\Caching\CachingBehavior.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\Caching\CachingBridge.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\Data\DataBasePathContainer.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\Data\UnitOfWorkBehavior.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\ExceptionHandling\HandleSystemExceptionBehavior.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\ExceptionHandling\IEmailExceptionHandler.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\ExceptionHandling\ILogExceptionHandler.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\ExceptionHandling\IReplaceHandler.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\ExceptionHandling\LogExceptionHandler.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\ExceptionHandling\NullEmailExceptionHandler.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\ExceptionHandling\ReplaceHandlerBridge.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\Logging\Logger.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\Security\AtlasSecurity.cs" />
+    <Compile Include="Implementation\Infrastructure\CrossCutting\Validation\ValidationBehavior.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\CommonRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Db4ODatabaseContext.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Db4ODatabaseContextExtensions.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Db4ORepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Db4OUnitOfWork.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\RelatedRepositoryExtensions.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\StandarRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\RepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\UnitConverterRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Common\PeriodRepository.cs" />
+    <Compile Include="Implementation\Modularity\CommonBootstrapper.cs" />
+    <Compile Include="Implementation\Modularity\SubsystemBase.cs" />
+    <Compile Include="Implementation\Presentation\Data\CommonViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasGenericModuleAccessPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasMainModuleAccessPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasMainModuleAccessViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleAccessPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleAccessViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleGenericSubjectPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleGenericSubjectViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleMainSubjectPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleRolePresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleRoleViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleSubjectPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleSubjectViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasUserAllowedModulePresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasUserPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasUserViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\CodedNomenclatorPresenterBase.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\ConvertibleEntityPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\ConvertibleEntityProvider.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\ConvertibleEntityViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\CurrencyEntityProvider.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\CurrencyPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\CurrencyViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\DocumentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\DocumentViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\MeasurableUnitPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\MeasurementUnitEntityProvider.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\MeasurementUnitViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\MeasuremetUnitPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\NavigableNomenclator.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\NavigableViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\PeriodPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\ReferenceDocumentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\ReferenceDocumentViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\RelatedConceptPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\RelatedConceptViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptContentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptContentViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptDefinitionPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptDefinitionViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptExamplePresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptExampleViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptForNomenclatorViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\SubjectConceptViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\UnitConverterPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\UnitConverterViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\VolumePresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\WeightPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\CrudViewModelBase.cs" />
+    <Compile Include="Implementation\Presentation\Data\EnableableCrudViewModelBase.cs" />
+    <Compile Include="Implementation\Presentation\Data\EntityPresenterBase.cs" />
+    <Compile Include="Implementation\Presentation\Data\NomenclatorPresenter.cs" />
+    <Compile Include="Implementation\Presentation\Data\NomenclatorPresenterBase.cs" />
+    <Compile Include="Implementation\Presentation\Data\NomenclatorViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\Reporting\DataClass.cs" />
+    <Compile Include="Implementation\Presentation\Data\Reporting\SeriesData.cs" />
+    <Compile Include="Implementation\Presentation\Data\ServiceBackedViewModel.cs" />
+    <Compile Include="Implementation\Presentation\Data\ViewModelBase.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Caching\CacheableObjectExtensions.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Caching\CachesResultAttribute.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Caching\ICache.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Caching\ICacheableObject.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Caching\ResetsCacheAttribute.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Policies.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Validation\IValidationServices.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Validation\ValidateAttribute.cs" />
+    <Compile Include="Infrastructure\CrossCutting\Validation\ValidationException.cs" />
+    <Compile Include="Infrastructure\Data\CommitsUnitOfWorkAttribute.cs" />
+    <Compile Include="Infrastructure\Data\Common\IAtlasGenericModuleAccessRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IAtlasMainModuleAccessRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IAtlasModuleAccessRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IAtlasModuleGenericSubjectRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IAtlasModuleMainSubjectRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IAtlasModuleRoleRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IAtlasModuleSubjectRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IAtlasUserRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IDocumentRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IMeasurableUnitRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IReferenceDocumentRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\IRelatedConceptRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\ISubjectConceptContentRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\ISubjectConceptDefinitionRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\ISubjectConceptExampleRepository.cs" />
+    <Compile Include="Infrastructure\Data\Common\ISubjectConceptRepository.cs" />
+    <Compile Include="Infrastructure\Data\Db4O\INomenclatorRepository.cs" />
+    <Compile Include="Infrastructure\Data\Db4O\ICommonRepository.cs" />
+    <Compile Include="Infrastructure\Data\Db4O\IDb4ODatabaseContext.cs" />
+    <Compile Include="Infrastructure\Data\IDatabaseContext.cs" />
+    <Compile Include="Infrastructure\Data\Common\IPeriodRepository.cs" />
+    <Compile Include="Infrastructure\Data\IRelatedRepository.cs" />
+    <Compile Include="Infrastructure\Data\IUnitConverterRepository.cs" />
+    <Compile Include="Infrastructure\Data\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\Data\SkipUnitOfWorkAttribute.cs" />
+    <Compile Include="Migrations\201805311527276_UniDB Schema.cs" />
+    <Compile Include="Migrations\201805311527276_UniDB Schema.Designer.cs">
+      <DependentUpon>201805311527276_UniDB Schema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Modularity\ISubsystem.cs" />
+    <Compile Include="Implementation\Presentation\Data\Common\AtlasModuleMainSubjectViewModel.cs" />
+    <Compile Include="Presentation\Common\IAtlasGenericModuleAccessPresenter.cs" />
+    <Compile Include="Presentation\Common\IAtlasMainModuleAccessPresenter.cs" />
+    <Compile Include="Presentation\Common\IAtlasMainModuleAccessViewModel.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleAccessPresenter.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleAccessViewModel.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleGenericSubjectPresenter.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleGenericSubjectViewModel.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleMainSubjectPresenter.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleMainSubjectViewModel.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleRolePresenter.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleRoleViewModel.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleSubjectPresenter.cs" />
+    <Compile Include="Presentation\Common\IAtlasModuleSubjectViewModel.cs" />
+    <Compile Include="Presentation\Common\IAtlasUserPresenter.cs" />
+    <Compile Include="Presentation\Common\IConvertibleEntityPresenter.cs" />
+    <Compile Include="Infrastructure\Data\Common\IConvertibleEntityRepository.cs" />
+    <Compile Include="Presentation\Common\IConvertibleEntityProvider.cs" />
+    <Compile Include="Presentation\Common\IConvertibleEntityViewModel.cs" />
+    <Compile Include="Presentation\Common\ICurrenciable.cs" />
+    <Compile Include="Presentation\Common\ICurrencyPresenter.cs" />
+    <Compile Include="Presentation\Common\ICurrencyProvider.cs" />
+    <Compile Include="Presentation\Common\ICurrencyViewModel.cs" />
+    <Compile Include="Presentation\Common\IDocumentPresenter.cs" />
+    <Compile Include="Presentation\Common\IDocumentViewModel.cs" />
+    <Compile Include="Presentation\Common\IMeasurableUnitPresenter.cs" />
+    <Compile Include="Presentation\Common\IMeasurementUnitPresenter.cs" />
+    <Compile Include="Presentation\Common\IMeasurementUnitProvider.cs" />
+    <Compile Include="Presentation\Common\IMeasurementUnitViewModel.cs" />
+    <Compile Include="Presentation\Common\INavigableViewModel.cs" />
+    <Compile Include="Presentation\Common\IReferenceDocumentPresenter.cs" />
+    <Compile Include="Presentation\Common\IReferenceDocumentViewModel.cs" />
+    <Compile Include="Presentation\Common\IRelatedConceptPresenter.cs" />
+    <Compile Include="Presentation\Common\IRelatedConceptViewModel.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptContentPresenter.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptContentViewModel.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptDefinitionPresenter.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptDefinitionViewModel.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptExamplePresenter.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptExampleViewModel.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptForNomenclatorViewModel.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptPresenter.cs" />
+    <Compile Include="Presentation\Common\ISubjectConceptViewModel.cs" />
+    <Compile Include="Presentation\Common\ITreeNode.cs" />
+    <Compile Include="Presentation\Common\IUnitConverterPresenter.cs" />
+    <Compile Include="Presentation\Common\IUnitConverterViewModel.cs" />
+    <Compile Include="Presentation\Common\IVolumePresenter.cs" />
+    <Compile Include="Presentation\Common\IWeightPresenter.cs" />
+    <Compile Include="Presentation\Data\ICommonViewModel.cs" />
+    <Compile Include="Presentation\Data\IConfirmable.cs" />
+    <Compile Include="Presentation\Data\ICrudViewModel.cs" />
+    <Compile Include="Presentation\Common\IPeriodPresenter.cs" />
+    <Compile Include="Presentation\Data\INavigable.cs" />
+    <Compile Include="Presentation\Data\INomenclatorPresenter.cs" />
+    <Compile Include="Presentation\Data\INomenclatorViewModel.cs" />
+    <Compile Include="Presentation\Data\IPresenter.cs" />
+    <Compile Include="Presentation\Data\ItemEventArgs.cs" />
+    <Compile Include="Presentation\Common\IAtlasUserViewModel.cs" />
+    <Compile Include="Presentation\Data\NavigableState.cs" />
+    <Compile Include="Presentation\Features\ActivationStatus.cs" />
+    <Compile Include="Presentation\Features\ConvinientReportPaginator.cs" />
+    <Compile Include="Presentation\Features\ICopyPasteable.cs" />
+    <Compile Include="Presentation\Features\ICopyPasteableController.cs" />
+    <Compile Include="Presentation\Features\IPrinttableContainer.cs" />
+    <Compile Include="Presentation\Prism\InteractionRequestHelpers.cs" />
+    <Compile Include="Presentation\Prism\PrismUserControl.cs" />
+    <Compile Include="Presentation\Prism\PrismUserControlBase.cs" />
+    <Compile Include="Presentation\Prism\ConfirmationWithReason.cs" />
+    <Compile Include="Presentation\Prism\IInteractionRequester.cs" />
+    <Compile Include="Presentation\Prism\INotificationWithReason.cs" />
+    <Compile Include="Presentation\Prism\NotificationReason.cs" />
+    <Compile Include="Presentation\Prism\NotificationWithReason.cs" />
+    <Compile Include="Presentation\Prism\ViewExtensions.cs" />
+    <Compile Include="Presentation\Reporting\ICustomReportSettingsPresenter.cs" />
+    <Compile Include="Presentation\Reporting\ICustomReportSettingsViewModel.cs" />
+    <Compile Include="Presentation\Reporting\IDataClass.cs" />
+    <Compile Include="Presentation\Reporting\ISeriesData.cs" />
+    <Compile Include="Presentation\Services\IMainMenuServices.cs" />
+    <Compile Include="Presentation\Services\INavigationServices.cs" />
+    <Compile Include="Presentation\Services\IStatusBarServices.cs" />
+    <Compile Include="Presentation\Services\IVisualResourcesServices.cs" />
+    <Compile Include="Presentation\Transfer\IExportable.cs" />
+    <Compile Include="Presentation\Utility\AsyncEventListener.cs" />
+    <Compile Include="Presentation\Visuals\ConfirmableWindow.cs" />
+    <Compile Include="Presentation\Visuals\ConfirmLayout.cs" />
+    <Compile Include="Presentation\Data\IFiltrable.cs" />
+    <Compile Include="Presentation\Visuals\IItemeable.cs" />
+    <Compile Include="Presentation\Visuals\ILeverable.cs" />
+    <Compile Include="Presentation\Visuals\InteractionWindow.xaml.cs">
+      <DependentUpon>InteractionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Visuals\Structures\InteractionStructure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.en.Designer.cs">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="Implementation\Presentation\Data\Base view models.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201805311527276_UniDB Schema.resx">
+      <DependentUpon>201805311527276_UniDB Schema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Common\Common.csproj">
+      <Project>{6b91944d-b123-41df-8ba8-0ce7dcdbebed}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Domain\EFMapping\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Presentation\Visuals\InteractionWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Atlas.Help_Content</name>
+    </assembly>
+    <members>
+        <member name="T:CompanyName.Atlas_App_Help.ConfigurationSubsystem">
+            <summary>
+            This is the representant of the current subsystem: Investments. Through this class the Atlas suite will detect, load and initialize
+            such subsystem, to them be able to use its logic.
+            </summary>
+        </member>
+        <member name="F:CompanyName.Atlas_App_Help.ConfigurationSubsystem.SubsystemName">
+            <summary>
+            Public name of the Investments subsystem.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas_App_Help.ConfigurationSubsystem.#ctor(Microsoft.Practices.Unity.IUnityContainer,CompanyName.Atlas.Contracts.Presentation.Services.INavigationServices,CompanyName.Atlas.Contracts.Presentation.Services.IVisualResourcesServices,Microsoft.Practices.Prism.Logging.ILoggerFacade)">
+            <summary>
+            Initializes a new instance of the Investments module (representing by the class <see cref="!:InvestmentsSubsystem"/>) given some services.
+            </summary>
+            <param name="container">The unity container to use for dependency injection.</param>
+            <param name="navigationServices">The services allowing to configure and interact the navigation to the resources of the current subsystem.</param>
+            <param name="visualResourcesServices">
+            The visual resource services used to handle the resource dictionaries this subsystem needs to integrate to those in the suite.
+            </param>
+            <param name="logger">The facade ysed used to access to the logging features.</param>
+            <exception cref="T:System.ArgumentNullException">
+            Either <paramref name="container"/>, <paramref name="visualResourcesServices"/> or <paramref name="logger"/> is null.
+            </exception>
+        </member>
+        <member name="M:CompanyName.Atlas_App_Help.ConfigurationSubsystem.Initialize">
+            <summary>
+            Initializes the current subsystem.
+            </summary>
+        </member>
+        <member name="T:CompanyName.Atlas_App_Help.Presentation.Views.AtlasSubSystemMenu">
+            <summary>
+            Interaction logic for ConfigurationMenu.xaml
+            </summary>
+            <summary>
+            AtlasSubSystemMenu
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas_App_Help.Presentation.Views.AtlasSubSystemMenu.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CompanyName.Atlas_App_Help.Presentation.Views.DefaultContent">
+            <summary>
+            Interaction logic for DefaultContent.xaml
+            </summary>
+            <summary>
+            DefaultContent
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas_App_Help.Presentation.Views.DefaultContent.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CompanyName.Atlas_App_Help.Presentation.Views.ModuleSubjectPresentationView">
+            <summary>
+            Interaction logic for ModuleSubjectPresentationView.xaml
+            </summary>
+            <summary>
+            ModuleSubjectPresentationView
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas_App_Help.Presentation.Views.ModuleSubjectPresentationView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CompanyName.Atlas_App_Help.Presentation.Views.ModuleSubjectView">
+            <summary>
+            Interaction logic for ModuleSubjectView.xaml
+            </summary>
+            <summary>
+            ModuleSubjectView
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas_App_Help.Presentation.Views.ModuleSubjectView.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:CompanyName.Atlas_App_Help.Presentation.Views.ModuleSubjectView"/>.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas_App_Help.Presentation.Views.ModuleSubjectView.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CompanyName.Atlas_App_Help.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.ModuleHelpContent">
+            <summary>
+              Looks up a localized string similar to GNesis.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.ModuleHelpContent_ToolTip">
+            <summary>
+              Looks up a localized string similar to Contenido Referente al Modulo.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.ModuleRemark">
+            <summary>
+              Looks up a localized string similar to This is the assembly containing all the resources and logic regarding to the Atlas Enviroment Management functionalities.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.Preferences">
+            <summary>
+              Looks up a localized string similar to Preferencias.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.Preferences_Tooltip">
+            <summary>
+              Looks up a localized string similar to Edicion de Preferencias de Interfaz de Usuario.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.Security">
+            <summary>
+              Looks up a localized string similar to Seguridad.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.SystemManagement">
+            <summary>
+              Looks up a localized string similar to Administracion Atlas.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas_App_Help.Properties.Resources.SystemManagement_Tooltip">
+            <summary>
+              Looks up a localized string similar to Administracion Avanzada Atlas.
+            </summary>
+        </member>
+    </members>
+</doc>

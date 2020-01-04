@@ -1,0 +1,1308 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Common</name>
+    </assembly>
+    <members>
+        <member name="T:System.Collections.Generic.CollectionHelpersFactory">
+            <summary>
+            This class exposes some extensions for collections.
+            </summary>
+        </member>
+        <member name="M:System.Collections.Generic.CollectionHelpersFactory.GetCollectionAdapterFor``2(System.Collections.Generic.ICollection{``0})">
+            <summary>
+                Creates a collection adapter of items of the first type to pass the interactions it receives from its
+                callers an underlying collection.
+            </summary>
+            <typeparam name="TFrom">The type of the items in the adapted collection.</typeparam>
+            <typeparam name="TTo">
+                The type of the items in teh adaptee collection. This type must me an inheritor of
+                <typeparamref name="TFrom" />.
+            </typeparam>
+            <param name="collection">The collection to adapt.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="collection"/> is null.</exception>
+            <returns>
+                A wrapper in form of a collection of items of the deriver, containing the items those of type
+                <typeparamref name="TFrom" /> in the given collection
+                which will be casted when returned from the result collection to the type
+                <typeparamref name="TTo" />.
+            </returns>
+        </member>
+        <member name="T:System.Collections.Generic.CollectionHelpersFactory.CollectionAdapter`2">
+            <summary>
+                This is the real adapter collection.
+            </summary>
+        </member>
+        <member name="T:System.Collections.Generic.DefaultKeyedCollection`2">
+            <summary>
+                Represents a default keyed collection. This is a collection where all items can be identified by a given key. BEWARE that there cannot be in the collection two items with the same key.
+            </summary>
+            <typeparam name="TKey">The type of the key.</typeparam>
+            <typeparam name="TItem">The type of the items.</typeparam>
+        </member>
+        <member name="M:System.Collections.Generic.DefaultKeyedCollection`2.#ctor(System.Func{`1,`0})">
+            <summary>
+                Initializes a new instance of a default keyed collection.
+            </summary>
+            <param name="keySelector">The function that allows to select the key from an item.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="keySelector"/> is null.</exception>
+        </member>
+        <member name="M:System.Collections.Generic.DefaultKeyedCollection`2.GetKeyForItem(`1)">
+            <summary>
+                Gets the value of the key from the given item.
+            </summary>
+            <param name="item">The item which key will be returned.</param>
+            <returns>The value of the item's key.</returns>
+        </member>
+        <member name="T:System.Collections.Generic.ITree`1">
+            <summary>
+            Describes the specification of a recursive tree, a non-lineal collection of subtrees where the root node of
+            each tree has a value in it.
+            </summary>
+            <typeparam name="TValue">The root node's value type.</typeparam>
+        </member>
+        <member name="P:System.Collections.Generic.ITree`1.Value">
+            <summary>
+            Gets or sets the value of the root node of this tree.
+            </summary>
+        </member>
+        <member name="P:System.Collections.Generic.ITree`1.PrefixedOrder">
+            <summary>
+            Gets the enumerable of subtress which is the result of traveling this tree in pre-order where there comes
+            first the current tree value and then the same traveling process of each subtree of its.
+            </summary>
+        </member>
+        <member name="P:System.Collections.Generic.ITree`1.MiddleOrder">
+            <summary>
+            Gets the enumerable of subtress which is the result of traveling this tree in in-order where there comes
+            the first subtree's in-order traveling, following the current tree vale and then the rest of the
+            traveling process of each remaining subtree of its.
+            </summary>
+        </member>
+        <member name="P:System.Collections.Generic.ITree`1.SuffixedOrder">
+            <summary>
+            Gets the enumerable of subtress which is the result of traveling this tree in post-order where there comes
+            first the post-order traveling process of the current tree and then its value.
+            </summary>
+        </member>
+        <member name="T:System.Collections.Generic.Tree`1">
+            <summary>
+            Provides the default implementation of a recursive tree. Contains three properties that allows to gets the
+            enumerable of trees composing the result of the three classic tree travels ways: pre-order, in-order,
+            post-order.
+            </summary>
+            <typeparam name="TValue">The type of the node's value.</typeparam>
+        </member>
+        <member name="M:System.Collections.Generic.Tree`1.#ctor(`0)">
+            <summary>
+            Initializes a new instance of a tree with its root node's value.
+            </summary>
+            <param name="value">The value of the root node.</param>
+        </member>
+        <member name="P:System.Collections.Generic.Tree`1.Value">
+            <summary>
+            Gets or sets the value of the root node of this tree.
+            </summary>
+        </member>
+        <member name="P:System.Collections.Generic.Tree`1.PrefixedOrder">
+            <summary>
+            Gets the enumerable of subtress which is the result of traveling this tree in pre-order.
+            </summary>
+        </member>
+        <member name="P:System.Collections.Generic.Tree`1.MiddleOrder">
+            <summary>
+            Gets the enumerable of subtress which is the result of traveling this tree in in-order.
+            </summary>
+        </member>
+        <member name="P:System.Collections.Generic.Tree`1.SuffixedOrder">
+            <summary>
+            Gets the enumerable of subtress which is the result of traveling this tree in post-order.
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.Edition.EditableViewModel`1">
+            <summary>
+                This class represents the base class of all the ediatable view models. But edition logic ins not contained
+                in this class, but it's injected and defined somewhere else.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditableViewModel`1.#ctor(`0,System.ComponentModel.Edition.IEditionStrategy{`0})">
+            <summary>
+                Initializes a new instance of <see cref="T:System.ComponentModel.Edition.EditableViewModel`1" /> with an object
+                and an edition strategy.
+            </summary>
+            <param name="obj">The object to be edited.</param>
+            <param name="strategy">An strategy to be used when engaging edition.</param>
+            <exception cref="T:System.ArgumentNullException">
+                Either <paramref name="obj" /> or <paramref name="strategy" /> is null.
+            </exception>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditableViewModel`1.#ctor">
+            <summary>
+                Initializes a new instance of <see cref="T:System.ComponentModel.Edition.EditableViewModel`1" />.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditableViewModel`1.Strategy">
+            <summary>
+                Gets the strategy used to handle edition cycles.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditableViewModel`1.Object">
+            <summary>
+                Gets the object to edit.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditableViewModel`1.HasChanges">
+            <summary>
+                Gets whether there were changes made to this editable object.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditableViewModel`1.BeginEdit">
+            <summary>
+                Establishes a snapshot of the current state of this object.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditableViewModel`1.EndEdit">
+            <summary>
+                Makes effective the changes there were made to this object since the last call to BeginEdit.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditableViewModel`1.CancelEdit">
+            <summary>
+                Cancels the changes there were made to this object since the last call to BeginEdit by restoring the
+                state this object was at when started the edition.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditableViewModel`1.OnPropertyChanged(System.Object,System.ComponentModel.PropertyChangedEventArgs)">
+            <summary>
+            Invoked when the PropertyChanged event has been raised handling such event.
+            </summary>
+            <param name="sender">The object sending the event.</param>
+            <param name="e">The argument of the event.</param>
+        </member>
+        <member name="T:System.ComponentModel.Edition.EditionOverCopyStrategy`1">
+            <summary>
+                Describes the strategy of edition where modifications are actually done over the copy of the original
+                editable object. After the edition starts, the object exposed through the EditingObject property is the
+                copy, not the original object given to the BeginEdition method.
+            </summary>
+            <typeparam name="T">The type of object to manage its edition process.</typeparam>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditionOverCopyStrategy`1.OriginalObject">
+            <summary>
+                Gets or sets the original object.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditionOverCopyStrategy`1.Properties">
+            <summary>
+                Gets the properties there should be copied for edition.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditionOverCopyStrategy`1.HasChanges">
+            <summary>
+                Gets a value saying whether there were changes made to this editable object.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionOverCopyStrategy`1.DetermineWasModified``1(``0,``0,System.String[])">
+            <summary>
+                Determines whether there made modifications to an object, given its two versions: the original and the current one.
+            </summary>
+            <param name="original">
+                The original version object, which properties values are exactly as they were before edition
+                started.
+            </param>
+            <param name="current">
+                The current version of the object, which properties may be already altered because of edition
+                operations.
+            </param>
+            <param name="propertiesNames">
+                The properties which changes are going to be used as reference to determine whether the
+                object has been modified or not.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+                Either <paramref name="current" />, <paramref name="propertiesNames" /> or <paramref name="original" /> is
+                null.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+                <paramref name="propertiesNames" /> contains nulls or properties not owned by the object's type.
+            </exception>
+            <returns>true if there were changes made to the object; false otherwise</returns>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionOverCopyStrategy`1.InternalBeginEdition">
+            <summary>
+                Starts the edition in the specified editable object.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionOverCopyStrategy`1.InternalEndEdition">
+            <summary>
+                Performs the edition ending logic by copying the new values to the original object.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionOverCopyStrategy`1.InternalCancelEdition">
+            <summary>
+                Performs the edition cancellation logic.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionOverCopyStrategy`1.CreateCopy">
+            <summary>
+                Creates a copy of the editable object and passes to the copy the value of all the public properties of
+                the editing object.
+            </summary>
+            <returns>A new instance of <typeparamref name="T" />.</returns>
+        </member>
+        <member name="T:System.ComponentModel.Edition.EditionStrategyBase`1">
+            <summary>
+                Base class of the edition strategies.
+            </summary>
+            <typeparam name="T">The type of the object to be edited by this strategy.</typeparam>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.#ctor">
+            <summary>
+                Initializes a new instance of <see cref="T:System.ComponentModel.Edition.EditionStrategyBase`1" />.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditionStrategyBase`1.EditingObject">
+            <summary>
+                Gets the object to control its edition.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditionStrategyBase`1.Values">
+            <summary>
+                Gets a dictionary to be used to set predefined values for properties in the editable object. These
+                properties will get the values defined here when the edition is ended.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditionStrategyBase`1.HasChanges">
+            <summary>
+                When overridden in a deriver it gets whether there were changes made to this editable object.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.EditionStrategyBase`1.InEdition">
+            <summary>
+                Gets whether the current editing object is in edition;
+            </summary>
+        </member>
+        <member name="E:System.ComponentModel.Edition.EditionStrategyBase`1.BeganEdition">
+            <summary>
+                Occurs when there has been started the edition.
+            </summary>
+        </member>
+        <member name="E:System.ComponentModel.Edition.EditionStrategyBase`1.EndedEdition">
+            <summary>
+                Occurs when there has been ended the edition.
+            </summary>
+        </member>
+        <member name="E:System.ComponentModel.Edition.EditionStrategyBase`1.CancelledEdition">
+            <summary>
+                Occurs when there has been cancelled the edition.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.BeginEdition">
+            <summary>
+                Records the state of the given object to start its edition.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.CancelEdition">
+            <summary>
+                Rolls back the changes made to the editable object during the
+                edition.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.EndEdition">
+            <summary>
+                Makes effective the changes made to the editable object during
+                the edition.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.InternalBeginEdition">
+            <summary>
+                When overridden in a derived class it performs the edition begining logic.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.InternalEndEdition">
+            <summary>
+                When overridden in a derived class it performs the edition ending logic.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.InternalCancelEdition">
+            <summary>
+                When overridden in a derived class it performs the edition cancellation logic.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.OnBeganEdition(System.Object,System.EventArgs)">
+            <summary>
+                When overridden in a derived class it handles the BeganEdition event.
+            </summary>
+            <param name="sender">The object sending the event.</param>
+            <param name="e">
+                An instance of <see cref="T:System.EventArgs" /> containing information regarding to the event.
+            </param>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.OnEndedEdition(System.Object,System.EventArgs)">
+            <summary>
+                When overridden in a derived class it handles the EndedEdition event.
+            </summary>
+            <param name="sender">The object sending the event.</param>
+            <param name="e">
+                An instance of <see cref="T:System.EventArgs" /> containing information regarding to the event.
+            </param>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionStrategyBase`1.OnCancelledEdition(System.Object,System.EventArgs)">
+            <summary>
+                When overridden in a derived class it handles the CancelledEdition event.
+            </summary>
+            <param name="sender">The object sending the event.</param>
+            <param name="e">
+                An instance of <see cref="T:System.EventArgs" /> containing information regarding to the event.
+            </param>
+        </member>
+        <member name="T:System.ComponentModel.Edition.EditionOverCopyStrategyExtensions">
+            <summary>
+                Contains extensions to enhance the <see cref="T:System.ComponentModel.Edition.EditionStrategyBase`1" />
+                type.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionOverCopyStrategyExtensions.MergeOwnedCollection``2(System.ComponentModel.Edition.EditionOverCopyStrategy{``0},``0,System.Func{``0,System.Collections.Generic.ICollection{``1}},System.Collections.Generic.IEqualityComparer{``1},System.Func{``1,System.Boolean},System.Action{``1,``0},System.String[])">
+            <summary>
+                Merges the collection of entities owned by the object being edited, passing the values from the
+                collection of the edited object to the the collection of the original.
+            </summary>
+            <typeparam name="T">The type of the object being edited.</typeparam>
+            <typeparam name="TEntity">The type of the owned entities.</typeparam>
+            <param name="strategy">
+                The strategy which editing object is going to get one its collection of entities merged.
+            </param>
+            <param name="original">The object being edited.</param>
+            <param name="getCollection">
+                A function that allows to the get the collection of owned entities given an object of the same type as
+                the one being edited.
+            </param>
+            <param name="comparer">A comparer to be used when determining whether two owned entities are equal.</param>
+            <param name="isNew">A function to determine whether an owned entity is new or not.</param>
+            <param name="setOwner">
+                A method that allows an owned entity to set its reference to its owner one.
+            </param>
+            <param name="propertiesNames">
+                The names of the properties of the owned entities to be set in their homologous is the owner object.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+                Either <paramref name="strategy" />, <paramref name="original" />, <paramref name="getCollection" />,
+            <paramref name="comparer" />,
+                <paramref name="isNew" />, <paramref name="setOwner" />, <paramref name="propertiesNames" />.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+                <paramref name="propertiesNames" /> contains null strings.
+            </exception>
+        </member>
+        <member name="M:System.ComponentModel.Edition.EditionOverCopyStrategyExtensions.CopyOwnedCollection``2(System.ComponentModel.Edition.EditionOverCopyStrategy{``0},``0,``0,System.Collections.Generic.IEnumerable{``1},System.Action{``0,System.Collections.Generic.IEnumerable{``1}},System.String[])">
+            <summary>
+                Puts a copy of a collection of entities contained in an objet of a type in the same collection member
+                of another object of the same type, copying all defined properties of the entities in the collection of
+                object being the source.
+            </summary>
+            <typeparam name="T">The type of the objects having its collections copied from and to.</typeparam>
+            <typeparam name="TEntity">The type of the entities contained in the collections.</typeparam>
+            <param name="strategy">
+                The edition making the edition of the one of the object using the other as a copy of such object and to
+                be the target of the changes made in the edition.
+            </param>
+            <param name="original">The object being edited.</param>
+            <param name="copy">The copy made of the edited object to be the target of the changes.</param>
+            <param name="originalCollection">The collection in the editing object, which entities will be copied.</param>
+            <param name="setCollection">A method that sets tothe copy the copied collection of copied entities.</param>
+            <param name="propertiesNames">The names of the properties of the entities that will be copied.</param>
+        </member>
+        <member name="T:System.ComponentModel.Edition.IEditionStrategy`1">
+            <summary>
+                Describes the behavior of an edition strategy.
+            </summary>
+            <typeparam name="T">The type of the editable object to edit in a customized way.</typeparam>
+        </member>
+        <member name="P:System.ComponentModel.Edition.IEditionStrategy`1.EditingObject">
+            <summary>
+                Gets or sets the object to control its edition.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.IEditionStrategy`1.Values">
+            <summary>
+                Gets a dictionary to be used to set predefined values for properties in the editable object. These
+                properties will get the values defined here when the edition is ended.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.Edition.IEditionStrategy`1.HasChanges">
+            <summary>
+                Gets whether there were changes made to the editable object.
+            </summary>
+        </member>
+        <member name="E:System.ComponentModel.Edition.IEditionStrategy`1.BeganEdition">
+            <summary>
+                Occurs when there has been started the edition.
+            </summary>
+        </member>
+        <member name="E:System.ComponentModel.Edition.IEditionStrategy`1.EndedEdition">
+            <summary>
+                Occurs when there has been ended the edition.
+            </summary>
+        </member>
+        <member name="E:System.ComponentModel.Edition.IEditionStrategy`1.CancelledEdition">
+            <summary>
+                Occurs when there has been cancelled the edition.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.IEditionStrategy`1.BeginEdition">
+            <summary>
+                Records the state of the given object to start its edition.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.IEditionStrategy`1.CancelEdition">
+            <summary>
+                Rollbacks the changes made to the editable object during the edition.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.Edition.IEditionStrategy`1.EndEdition">
+            <summary>
+                Makes effective the changes made to the editable object during the edition.
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.IAppliable">
+            <summary>
+                Describes a contract of an object that can be applied.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.IAppliable.Apply">
+            <summary>
+                Applies transformations.
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.IEnableable">
+            <summary>
+            Describes the interface of an object that can be disabled and enabled.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.IEnableable.IsEnabled">
+            <summary>
+            Gets or sets wether this object is enabled or disabled.
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.IInitializable">
+            <summary>
+                Describes the contract of a initializable object which is linked to other types like type.
+            </summary>
+        </member>
+        <member name="E:System.ComponentModel.IInitializable.Loaded">
+            <summary>
+                Occurs when this initializable object has loaded.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.IInitializable.Initializing">
+            <summary>
+                Gets whether the current object is initializing.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.IInitializable.Load">
+            <summary>
+                Triggers the initialization of the current object.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.IInitializable.Reload(System.Boolean)">
+            <summary>
+                Reloads the current initializable object.
+            </summary>
+            <param name="full">If true, all the initializable objects are reloaded as well.</param>
+        </member>
+        <member name="T:System.ComponentModel.IInterval`1">
+            <summary>
+                Describes the behavior of an interval. It's an object containing two limits defined by two values and all times
+                the second value is greater than the first.
+            </summary>
+            <typeparam name="TValue">The type of the values serving as interval limits.</typeparam>
+        </member>
+        <member name="P:System.ComponentModel.IInterval`1.Start">
+            <summary>
+                Gets or sets the lower limit of the interval.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.IInterval`1.End">
+            <summary>
+                Gets or sets the upper limit of the interval.
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.IIntervalCollection`1">
+            <summary>
+                Describes the behavior of an object containing a collection of
+                <see cref="T:System.ComponentModel.IInterval`1" /> objects.
+            </summary>
+            <typeparam name="TValue">
+                The type of values representing the limits of the contained intervals.
+            </typeparam>
+        </member>
+        <member name="P:System.ComponentModel.IIntervalCollection`1.Intervals">
+            <summary>
+                Gets the collection of <see cref="T:System.ComponentModel.IInterval`1" /> contained in this
+                collection.
+            </summary>
+        </member>
+        <member name="T:System.ComponentModel.IntervalCollectionExtensions">
+            <summary>
+            Contains some extension for the implementors or <see cref="T:System.ComponentModel.IIntervalCollection`1"/>
+            interface.
+            </summary>
+        </member>
+        <member name="M:System.ComponentModel.IntervalCollectionExtensions.ValidateIntervals``1(System.ComponentModel.IIntervalCollection{``0})">
+            <summary>
+            Determines whether there are overlapping intervals in the given interval collection.
+            </summary>
+            <typeparam name="TValue">The type of limits of the intervals in the collection.</typeparam>
+            <param name="collection">The interval collection to validate the limits of its periods.</param>
+            <returns>A <see cref="T:System.Tuple`2"/> which the two first
+            <see cref="T:System.ComponentModel.IInterval`1"/> with their limits overlaped in some
+            way.</returns>
+        </member>
+        <member name="T:System.ComponentModel.IPaginator">
+            <summary>
+                Describes the contract of a paginator object.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.IPaginator.Page">
+            <summary>
+                Gets or sets the current page.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.IPaginator.ItemsPerPage">
+            <summary>
+                Gets or sets the count of items per page.
+            </summary>
+        </member>
+        <member name="P:System.ComponentModel.IPaginator.TotalPages">
+            <summary>
+                Gets the total pages.
+            </summary>
+        </member>
+        <member name="T:System.DateTimeExtensions">
+            <summary>
+                Contains extensions and helpers to aid the work with datetime.
+            </summary>
+        </member>
+        <member name="M:System.DateTimeExtensions.GetMonthDelta(System.DateTime,System.DateTime)">
+            <summary>
+                Determines the month delta there is between two dates.
+            </summary>
+            <param name="from">The datetime to calculate the delta from.</param>
+            <param name="to">The datetime to calculate the delta to.</param>
+            <returns>
+                The quantity of months there are from <paramref name="from" /> to the datetime given at <paramref name="to" />.
+            </returns>
+        </member>
+        <member name="T:System.DateTimeScale">
+            <summary>
+                Represents the different datetime scale.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeScale.Yearly">
+            <summary>
+                This is a year date time scale.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeScale.Monthly">
+            <summary>
+                This is a month date time scale.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeScale.Weekly">
+            <summary>
+                This is a week date time scale.
+            </summary>
+        </member>
+        <member name="F:System.DateTimeScale.Daily">
+            <summary>
+                This is a day date time scale.
+            </summary>
+        </member>
+        <member name="T:System.DateTimeUtilities">
+            <summary>
+                Utilities container class. The utilities here are used when working with dates and elements related to it, like
+                weeks, months, etc.
+            </summary>
+        </member>
+        <member name="P:System.DateTimeUtilities.MonthNames">
+            <summary>
+                Gets all the names already localized of the year.
+            </summary>
+        </member>
+        <member name="T:System.Enumable.ResourceEnumConverter">
+            <summary>
+            Defines a type converter for enum values that converts enum values to 
+            and from string representations using resources
+            </summary>
+            <remarks>
+            This class makes localization of display values for enums in a project easy.  Simply
+            derive a class from this class and pass the ResourceManagerin the constructor.  
+            
+            <code lang="C#" escaped="true" >
+            class LocalizedEnumConverter : ResourceEnumConverter
+            {
+               public LocalizedEnumConverter(Type type)
+                   : base(type, Properties.Resources.ResourceManager)
+               {
+               }
+            }    
+            </code>
+            
+            <code lang="Visual Basic" escaped="true" >
+            Public Class LocalizedEnumConverter
+            
+               Inherits ResourceEnumConverter
+               Public Sub New(ByVal sType as Type)
+                   MyBase.New(sType, My.Resources.ResourceManager)
+               End Sub
+            End Class    
+            </code>
+            
+            Then define the enum values in the resource editor.   The names of
+            the resources are simply the enum value prefixed by the enum type name with an
+            underscore separator eg MyEnum_MyValue.  You can then use the TypeConverter attribute
+            to make the LocalizedEnumConverter the default TypeConverter for the enums in your
+            project.
+            </remarks>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.GetLookupTable(System.Globalization.CultureInfo)">
+            <summary>
+            Get the lookup table for the given culture (creating if necessary)
+            </summary>
+            <param name="culture"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.GetValueText(System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Return the text to display for a simple value in the given culture
+            </summary>
+            <param name="culture">The culture to get the text for</param>
+            <param name="value">The enum value to get the text for</param>
+            <returns>The localized text</returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.ToString(System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Return the text to display for a simple value in the given culture
+            </summary>
+            <param name="culture">The culture to get the text for</param>
+            <param name="value">The enum value to get the text for</param>
+            <returns>The localized text</returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.IsSingleBitValue(System.UInt64)">
+            <summary>
+            Return true if the given value is can be represented using a single bit
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.GetFlagValueText(System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Return the text to display for a flag value in the given culture
+            </summary>
+            <param name="culture">The culture to get the text for</param>
+            <param name="value">The flag enum value to get the text for</param>
+            <returns>The localized text</returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.GetValue(System.Globalization.CultureInfo,System.String)">
+            <summary>
+            Return the Enum value for a simple (non-flagged enum)
+            </summary>
+            <param name="culture">The culture to convert using</param>
+            <param name="text">The text to convert</param>
+            <returns>The enum value</returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.GetFlagValue(System.Globalization.CultureInfo,System.String)">
+            <summary>
+            Return the Enum value for a flagged enum
+            </summary>
+            <param name="culture">The culture to convert using</param>
+            <param name="text">The text to convert</param>
+            <returns>The enum value</returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.#ctor(System.Type,System.Resources.ResourceManager)">
+            <summary>
+            Create a new instance of the converter using translations from the given resource manager
+            </summary>
+            <param name="type"></param>
+            <param name="resourceManager"></param>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <summary>
+            Convert string values to enum values
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <summary>
+            Convert the enum value to a string
+            </summary>
+            <param name="context"></param>
+            <param name="culture"></param>
+            <param name="value"></param>
+            <param name="destinationType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.ConvertToString(System.Enum)">
+            <summary>
+            Convert the given enum value to string using the registered type converter
+            </summary>
+            <param name="value">The enum value to convert to string</param>
+            <returns>The localized string value for the enum</returns>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.GetValues(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            Return a list of the enum values and their associated display text for the given enum type
+            </summary>
+            <param name="enumType">The enum type to get the values for</param>
+            <param name="culture">The culture to get the text for</param>
+            <returns>
+            A list of KeyValuePairs where the key is the enum value and the value is the text to display
+            </returns>
+            <remarks>
+            This method can be used to provide localized binding to enums in ASP.NET applications.   Unlike 
+            windows forms the standard ASP.NET controls do not use TypeConverters to convert from enum values
+            to the displayed text.   You can bind an ASP.NET control to the list returned by this method by setting
+            the DataValueField to "Key" and theDataTextField to "Value". 
+            </remarks>
+        </member>
+        <member name="M:System.Enumable.ResourceEnumConverter.GetValues(System.Type)">
+            <summary>
+            Return a list of the enum values and their associated display text for the given enum type in the current UI Culture
+            </summary>
+            <param name="enumType">The enum type to get the values for</param>
+            <returns>
+            A list of KeyValuePairs where the key is the enum value and the value is the text to display
+            </returns>
+            <remarks>
+            This method can be used to provide localized binding to enums in ASP.NET applications.   Unlike 
+            windows forms the standard ASP.NET controls do not use TypeConverters to convert from enum values
+            to the displayed text.   You can bind an ASP.NET control to the list returned by this method by setting
+            the DataValueField to "Key" and theDataTextField to "Value". 
+            </remarks>
+        </member>
+        <member name="T:System.Enumable.LocalizedEnumConverter">
+            <summary>
+            Defines a type converter for enum types defined in this project
+            </summary>
+        </member>
+        <member name="M:System.Enumable.LocalizedEnumConverter.#ctor(System.Type)">
+            <summary>
+            Create a new instance of the converter using translations from the given resource manager
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="T:System.EventHandlerManager`1">
+            <summary>
+            This class allows to manage the event handlers registrations and unregistrations for an event existing in some other object. This class is thread-safe.
+            </summary>
+            <typeparam name="TEventArgs">
+            The type of the event arguments that the event handlers can get passed.
+            </typeparam>
+        </member>
+        <member name="M:System.EventHandlerManager`1.op_Addition(System.EventHandlerManager{`0},System.EventHandler{`0})">
+            <summary>
+            Registers the given event handler in the handlers list.
+            </summary>
+            <param name="manager">The manager to which the event <paramref name="handler"/> will be registered.</param>
+            <param name="handler">The event handler to register.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="handler"/> is null.</exception>
+            <returns>
+            The given event handler manager given at <paramref name="manager"/> with the handler given at
+            <paramref name="handler"/> registered in it.
+            </returns>
+        </member>
+        <member name="M:System.EventHandlerManager`1.op_Subtraction(System.EventHandlerManager{`0},System.EventHandler{`0})">
+            <summary>
+            Unregisters the given event handler from the handlers list.
+            </summary>
+            <param name="manager">The manager to which the event <paramref name="handler"/> will be unregistered.</param>
+            <param name="handler">The event handler to unregister.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="handler"/> is null.</exception>
+            <returns>
+            The given event handler manager given at <paramref name="manager"/> with the handler given at
+            <paramref name="handler"/> unregistered from it.
+            </returns>
+        </member>
+        <member name="M:System.EventHandlerManager`1.CallEventHandlers(System.Object,`0)">
+            <summary>
+            Invokes all the event handlers registered in the current event handler manager passing a sender and arguments.
+            </summary>
+            <param name="sender">
+            The object sending the event calling this method to invoke all of its registered handlers.
+            </param>
+            <param name="args">The arguments that are meant to be passed to the event handlers.</param>
+        </member>
+        <member name="M:System.EventHandlerManager`1.GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the event handlers registered in the current event handler
+            manager.
+            </summary>
+            <returns>
+            A enumerator that can be used to iterate through the event handlers registered in the current event handler
+            manager.
+            </returns>
+        </member>
+        <member name="M:System.EventHandlerManager`1.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an enumerator that iterates through the event handlers registered in the current event handler
+            manager.
+            </summary>
+            <returns>
+            A enumerator that can be used to iterate through the event handlers registered in the current event handler
+            manager.
+            </returns>
+        </member>
+        <member name="T:System.Notifications.INotifiyer">
+            <summary>
+            represents an class which notifies changes to presentation
+            </summary>
+        </member>
+        <member name="M:System.Notifications.INotifiyer.Notify">
+            <summary>
+            notifies changes to som property
+            </summary>
+        </member>
+        <member name="T:System.WeekDayNames">
+            <summary>
+                An utility class to obtain localized versions of the week day names.
+            </summary>
+        </member>
+        <member name="P:System.WeekDayNames.Monday">
+            <summary>
+                Gets the localized name of Monday.
+            </summary>
+        </member>
+        <member name="P:System.WeekDayNames.Tuesday">
+            <summary>
+                Gets the localized name of Tuesday.
+            </summary>
+        </member>
+        <member name="P:System.WeekDayNames.Wednesday">
+            <summary>
+                Gets the localized name of Wednesday.
+            </summary>
+        </member>
+        <member name="P:System.WeekDayNames.Thurday">
+            <summary>
+                Gets the localized name of Thurday.
+            </summary>
+        </member>
+        <member name="P:System.WeekDayNames.Friday">
+            <summary>
+                Gets the localized name of Friday.
+            </summary>
+        </member>
+        <member name="P:System.WeekDayNames.Saturday">
+            <summary>
+                Gets the localized name of Saturday.
+            </summary>
+        </member>
+        <member name="P:System.WeekDayNames.Sunday">
+            <summary>
+                Gets the localized name of Sunday.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Input.DisabledCommand">
+            <summary>
+            Defines a command that is always disabled.
+            </summary>
+        </member>
+        <member name="E:System.Windows.Input.DisabledCommand.CanExecuteChanged">
+            <summary>
+            Not used.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Input.DisabledCommand.CanExecute(System.Object)">
+            <summary>
+            Determines whether the command can be executed.
+            </summary>
+            <param name="parameter">Not used.</param>
+            <returns>Returns false.</returns>
+        </member>
+        <member name="M:System.Windows.Input.DisabledCommand.Execute(System.Object)">
+            <summary>
+            Does nothing.
+            </summary>
+            <param name="parameter">Not used.</param>
+        </member>
+        <member name="T:System.Windows.UIElementExtensions">
+            <summary>
+            Provides some extensions for the <see cref="T:System.Windows.UIElement"/> objects.
+            </summary>
+        </member>
+        <member name="M:System.Windows.UIElementExtensions.FindCommandBinding(System.Windows.UIElement,System.Windows.Input.ICommand)">
+            <summary>
+            Gets the command binding with the given command.
+            </summary>
+            <param name="element">
+            The <see cref="T:System.Windows.UIElement"/> to search for the command binding with the specified command at
+            <paramref name="command"/>.
+            </param>
+            <param name="command">The command which command binding will be searched.</param>
+            <returns>
+            A <see cref="T:System.Windows.Input.CommandBinding"/> containig the given command at <paramref name="command"/> parameter.
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            There are more then one or none at all command bindings with the given command.
+            </exception>
+        </member>
+        <member name="F:System.Windows.Controls.EditableTextBlock.TextProperty">
+            <summary>
+            Identifies the dependency property to contain the value of the text being edited in this label.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.EditableTextBlock.CommandTextProperty">
+            <summary>
+            Identifies the dependency property to contain the value of the text displayed by the rename command.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.EditableTextBlock.InEditionProperty">
+            <summary>
+            Identifies the dependency property used to keep a value saying whether the current Editable TextBlock is in edition or not.
+            </summary>
+        </member>
+        <member name="F:System.Windows.Controls.EditableTextBlock.IsEditableProperty">
+            <summary>
+            Identifies the dependency property used to keep a value saying whether the current Editable TextBlock may engage editions.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.EditableTextBlock.Text">
+            <summary>
+            Gets or sets the value of the text handled in this label.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.EditableTextBlock.CommandText">
+            <summary>
+            Gets or sets the value of the text displayed by the rename command.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.EditableTextBlock.InEdition">
+            <summary>
+            Gets whether this control is in edition mode.
+            </summary>
+        </member>
+        <member name="P:System.Windows.Controls.EditableTextBlock.IsEditable">
+            <summary>
+            Gets or sets whether the current Editable TextBlock allows edition or not.
+            </summary>
+        </member>
+        <member name="T:System.Windows.Data.ErrorMessageToBooleanConverter">
+            <summary>
+            Converts from an Error message to a boolean value.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Data.ErrorMessageToBooleanConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Converts a Error message to a boolean value.
+            </summary>
+            <returns>
+            True if the if the error message is null; otherwise false.
+            </returns>
+            <param name="value">An Error message (or null).</param>
+            <param name="targetType">Not used.</param>
+            <param name="parameter">Not used.</param>
+            <param name="culture">Not used.</param>
+        </member>
+        <member name="M:System.Windows.Data.ErrorMessageToBooleanConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Not supported.
+            </summary>
+            <param name="value">Not used.</param>
+            <param name="targetType">Not used.</param>
+            <param name="parameter">Not used.</param>
+            <param name="culture">Not used.</param>
+            <exception cref="T:System.NotSupportedException">Always throws this exception.</exception>
+        </member>
+        <member name="T:System.Windows.Data.EnumerationValuesConverter">
+            <summary>
+            Helper converter to be used in combo boxes where the items are extracted from the values of an enumeration.
+            </summary>
+        </member>
+        <member name="M:System.Windows.Data.EnumerationValuesConverter.Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Returns an enumeration's values names in a list.
+            </summary>
+            <returns>
+            The list of strings conforming the values of an enumeration.
+            </returns>
+            <param name="value">The value produced by the binding source.</param>
+            <param name="targetType">The type of the binding target property.</param>
+            <param name="parameter">The converter parameter to use.</param>
+            <param name="culture">The culture to use in the converter.</param>
+        </member>
+        <member name="M:System.Windows.Data.EnumerationValuesConverter.ConvertBack(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            Not supported.
+            </summary>
+        </member>
+        <member name="T:System.ICloneable`1">
+            <summary>
+            Supports cloning, which creates a new instance of a class with the same value as an existing instance.
+            </summary>
+            <typeparam name="T">The type of clone.</typeparam>
+        </member>
+        <member name="M:System.ICloneable`1.Clone">
+            <summary>
+            Creates a new object that is a copy of the current instance.
+            </summary>
+            <returns>A new object that is a copy of this instance.</returns>
+        </member>
+        <member name="T:System.ObjectExtensions">
+            <summary>
+                Provides helpers to work with objects.
+            </summary>
+        </member>
+        <member name="M:System.ObjectExtensions.EqualsByMembers``1(``0,``0,System.String[])">
+            <summary>
+                Compares two objects of the same type by their public properties values.
+            </summary>
+            <typeparam name="T">The type of the objects to compare.</typeparam>
+            <param name="obj1">The first object to compare.</param>
+            <param name="obj2">The second object to compare.</param>
+            <param name="ignoreProperties">A list of properties to ignore when comparing.</param>
+            <returns>
+                True if both objects are not null and all the public properties of the first are equal to the
+                corresponding public properties of the second; otherwise false.
+            </returns>
+        </member>
+        <member name="M:System.ObjectExtensions.UpdateProperties(System.Object,System.Object,System.String[])">
+            <summary>
+                Passes the changes from an object's properties to the other's. If no properties names are provided, then
+                all the non read only properties of <paramref name="source" /> type are used. NOTE: both object must
+                share the same properties, or at least all those properties provided in <paramref name="propertiesNames" />.
+            </summary>
+            <param name="source">The object to copy properties values from.</param>
+            <param name="destination">The object to put copied properties values to.</param>
+            <param name="propertiesNames">
+                A list of properties names which will be the ones to pass their values from the first object to the
+                second one.
+            </param>
+            <exception cref="T:System.ArgumentException">
+                <paramref name="propertiesNames" /> contains null strings or names of properties not present in the
+                entities type.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+                Either <paramref name="source" /> or <paramref name="destination" /> is null.
+            </exception>
+        </member>
+        <member name="M:System.ObjectExtensions.FindProperties(System.Type,System.String[])">
+            <summary>
+                Searches the properties in the given type which names are contained in the given properties names list. If no
+                properties names are provided, then all the non read only properties.
+            </summary>
+            <param name="type">The type which selected properties will be returned.</param>
+            <param name="propertiesNames">The names of the properties to select.</param>
+            <exception cref="T:System.ArgumentException">
+                <paramref name="propertiesNames" /> contains names of properties not present in
+                <paramref name="type" />.
+            </exception>
+        </member>
+        <member name="T:System.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.ArrayLengthMustEqualTo">
+            <summary>
+              Looks up a localized string similar to Array&apos;s length must be equal to: {0}..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.CannotBeEnumerable">
+            <summary>
+              Looks up a localized string similar to Equals by members in enumerable objects is not supported..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.CannotCapitalizeStringNotStartingWithLetter">
+            <summary>
+              Looks up a localized string similar to To capitalize string, its first character must be a letter..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.CannotContainNullObjects">
+            <summary>
+              Looks up a localized string similar to Cannot contain nulls in the enumerable..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.CannotGetEditingObjectIfNotEditing">
+            <summary>
+              Looks up a localized string similar to In order to obtain the actual editing object there must be started the edition..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.ContainsInvalidNameOfProperties">
+            <summary>
+              Looks up a localized string similar to The list of given properties names contains some that does not exist in the type or are null..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Daily">
+            <summary>
+              Looks up a localized string similar to Diario.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Friday">
+            <summary>
+              Looks up a localized string similar to Viernes.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.IndexOutOfrange">
+            <summary>
+              Looks up a localized string similar to The index is out of the collection range ({0}..{1})..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Monday">
+            <summary>
+              Looks up a localized string similar to Lunes.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Monthly">
+            <summary>
+              Looks up a localized string similar to Mensual.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.MustBeNonEmptyString">
+            <summary>
+              Looks up a localized string similar to Cannot be an empty or made only of white spaces string..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.ObjectMustBeSameType">
+            <summary>
+              Looks up a localized string similar to The objects must be of the same type..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.OnlyPropertyExpressions">
+            <summary>
+              Looks up a localized string similar to Must be a correct property expression like: x =&gt; x.Property..
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Rename">
+            <summary>
+              Looks up a localized string similar to Renombrar.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Saturday">
+            <summary>
+              Looks up a localized string similar to Sábado.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Sunday">
+            <summary>
+              Looks up a localized string similar to Domingo.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Thurday">
+            <summary>
+              Looks up a localized string similar to Jueves.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Tuesday">
+            <summary>
+              Looks up a localized string similar to Martes.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Wednesday">
+            <summary>
+              Looks up a localized string similar to Miércoles.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Weekly">
+            <summary>
+              Looks up a localized string similar to Semanal.
+            </summary>
+        </member>
+        <member name="P:System.Properties.Resources.Yearly">
+            <summary>
+              Looks up a localized string similar to Anual.
+            </summary>
+        </member>
+        <member name="T:System.StringExtensions">
+            <summary>
+                Extends the <see cref="T:System.String" /> type.
+            </summary>
+        </member>
+        <member name="M:System.StringExtensions.EasyFormat(System.String,System.Object[])">
+            <summary>
+                Formats the given template by placing the given arguments in order in the placeholders that template may
+                contain.
+            </summary>
+            <param name="template">The <see cref="T:System.String" /> being the template to format.</param>
+            <param name="arguments">
+                An <see cref="T:System.Array" /> of objects which string representation will be
+                included in the template's placeholders.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+                Either <paramref name="template" /> or
+                <paramref name="arguments" /> is null.
+            </exception>
+            <returns>A <see cref="T:System.String" /> being the formatted string.</returns>
+        </member>
+        <member name="M:System.StringExtensions.EasyFormat(System.String,System.Globalization.CultureInfo,System.Object[])">
+            <summary>
+                Formats the given template by placing the given arguments in order in the placeholders that template may
+                contain, all this using the format provider specified by the given culture information.
+            </summary>
+            <param name="template">The <see cref="T:System.String" /> being the template to format.</param>
+            <param name="culture">
+                A <see cref="T:System.Globalization.CultureInfo" /> instance to get a format provider from to be
+                used in the formatting.
+            </param>
+            <param name="arguments">
+                An <see cref="T:System.Array" /> of objects which string representation will be
+                included in the template's placeholders.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+                Either <paramref name="template" />, <paramref name="arguments" /> or <paramref name="culture" /> is null.
+            </exception>
+            <returns>A <see cref="T:System.String" /> being the formatted string.</returns>
+        </member>
+        <member name="M:System.StringExtensions.Capitalize(System.String)">
+            <summary>
+                Capitalizes the given text.
+            </summary>
+            <param name="text">The <see cref="T:System.String" /> to capitalize.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="text" /> is null.</exception>
+            <returns>A copy of the given <see cref="T:System.String" /> with the first letter in upper-case.</returns>
+        </member>
+        <member name="T:System.TypeExtensions">
+            <summary>
+                Provides extensions for the <see cref="T:System.Type" /> type.
+            </summary>
+        </member>
+        <member name="M:System.TypeExtensions.Implements``1(System.Type)">
+            <summary>
+                Determines whether the given type implements the given interface.
+            </summary>
+            <typeparam name="T">The <see cref="T:System.Type" /> of the interface to check whether the given type implements it.</typeparam>
+            <param name="type">The <see cref="T:System.Type" /> to check whether it implements the interface.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="type" /> is null.</exception>
+            <returns>True when the type implements the interface; false otherwise.</returns>
+        </member>
+        <member name="M:System.TypeExtensions.Implements(System.Type,System.Type)">
+            <summary>
+                Determines whether the given type implements the given interface.
+            </summary>
+            <param name="type">The <see cref="T:System.Type" /> to check whether it implements the interface.</param>
+            <param name="iface">The <see cref="T:System.Type" /> of the interface to check whether the given type implements it.</param>
+            <exception cref="T:System.ArgumentNullException">Either <paramref name="type" /> or <paramref name="iface" /> is null.</exception>
+            <returns>True when the type implements the interface; false otherwise.</returns>
+        </member>
+        <member name="M:System.TypeExtensions.IsCloneable(System.Type)">
+            <summary>
+                Determines whether the given type implements <see cref="T:System.ICloneable" />.
+            </summary>
+            <param name="type">The <see cref="T:System.Type" /> to determine if it implements <see cref="T:System.ICloneable" />.</param>
+            <exception cref="T:System.ArgumentNullException">Either <paramref name="type" /> or <paramref name="iface" /> is null.</exception>
+            <returns>True in case the type implements <see cref="T:System.ICloneable" />; false otherwise.</returns>
+        </member>
+    </members>
+</doc>

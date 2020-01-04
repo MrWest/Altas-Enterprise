@@ -1,0 +1,1044 @@
+﻿<UserControl x:Class="CompanyName.Atlas.Investments.Presentation.Views.ReportViewsUI.Generals"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+              xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+              xmlns:viewModels="clr-namespace:CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels"
+              xmlns:converters="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views.Converters"
+              mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="800" 
+              Background="{DynamicResource DataGrid.Static.Background}" Padding="1"
+             FontSize="{DynamicResource Default.FontSize}" FontFamily="{DynamicResource Default.FontFamily}" Foreground="{DynamicResource DataGrid.Static.Foreground}"
+             
+                                 >
+    <UserControl.Resources>
+        <Style x:Key="{x:Type DataGrid}" TargetType="{x:Type DataGrid}">
+            <Setter Property="Background" Value="{DynamicResource DataGrid.Static.Background}"/>
+            <Setter Property="Foreground" Value="{DynamicResource DataGrid.Static.Foreground}"/>
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="RowDetailsVisibilityMode" Value="VisibleWhenSelected" />
+            <Setter Property="HorizontalGridLinesBrush" Value="{DynamicResource DataGridRowBottomLine.Static.Background}" />
+            <Setter Property="VerticalGridLinesBrush" Value="{DynamicResource DataGridRowBottomLine.Static.Background}" />
+            <Setter Property="DragIndicatorStyle" Value="{StaticResource ColumnFloatingHeaderStyle}" />
+            <Setter Property="DropLocationIndicatorStyle" Value="{StaticResource ColumnHeaderDropSeparatorStyle}" />
+            <Setter Property="GridLinesVisibility" Value="None" />
+            <Setter Property="ScrollViewer.CanContentScroll" Value="true"/>
+            <Setter Property="ScrollViewer.PanningMode" Value="Both"/>
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False"/>
+            <!--<Setter Property="SelectedIndex" Value="-1"/>-->
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+            <Setter Property="FontFamily" Value="{DynamicResource Default.FontFamily}"/>
+            <Setter Property="FontSize" Value="{DynamicResource DataGrid.Static.FontSize}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGrid}">
+                        <Grid Margin="0,0,0,0">
+                            <DockPanel Margin="0,0,0,0">
+                                <Border DockPanel.Dock="Top"
+								Background="{DynamicResource DataGridColumnHeader.Static.Background}"
+								Height="35" Margin="0"/>
+                                <Border DockPanel.Dock="Top"
+								Background="{TemplateBinding Background}" Margin="0" Padding="0"/>
+                            </DockPanel>
+                            <ScrollViewer Focusable="false" x:Name="DG_ScrollViewer" Height="Auto" Margin="0">
+                                <ScrollViewer.Template>
+                                    <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                        <Grid Margin="0,0,0,0">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"/>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="Auto"/>
+                                            </Grid.RowDefinitions>
+
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"/>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="Auto"/>
+                                            </Grid.ColumnDefinitions>
+
+                                            <DataGridColumnHeadersPresenter Grid.Column="1" Grid.ColumnSpan="2"
+											x:Name="PART_ColumnHeadersPresenter" HorizontalAlignment="Left"
+											Visibility="{Binding HeadersVisibility, ConverterParameter={x:Static DataGridHeadersVisibility.Column}, Converter={x:Static DataGrid.HeadersVisibilityConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" Margin="0" Padding="0"/>
+
+                                            <ScrollContentPresenter x:Name="PART_ScrollContentPresenter" Grid.Row="1" Grid.ColumnSpan="2"
+                                                                Grid.Column="0" Margin="0" 
+                                                                CanContentScroll="{TemplateBinding CanContentScroll}"/>
+
+                                            <ScrollBar Grid.Row="1" Grid.Column="2" x:Name="PART_VerticalScrollBar"
+											Orientation="Vertical"
+											Maximum="{TemplateBinding ScrollableHeight}"
+											ViewportSize="{TemplateBinding ViewportHeight}"
+											Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+											Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"/>
+
+                                            <Grid Grid.Row="2" Grid.Column="1">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"/>
+                                                    <ColumnDefinition Width="*"/>
+                                                </Grid.ColumnDefinitions>
+                                                <ScrollBar Grid.Column="1"
+												x:Name="PART_HorizontalScrollBar"
+												Orientation="Horizontal"
+												Maximum="{TemplateBinding ScrollableWidth}"
+												ViewportSize="{TemplateBinding ViewportWidth}"
+												Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+												Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"/>
+                                            </Grid>
+                                        </Grid>
+                                    </ControlTemplate>
+                                </ScrollViewer.Template>
+                                <ItemsPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Margin="0" />
+                            </ScrollViewer>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="CanUserResizeRows" Value="False"/>
+            <Style.Triggers>
+                <Trigger Property="IsGrouping" Value="true">
+                    <Setter Property="ScrollViewer.CanContentScroll" Value="false"/>
+                </Trigger>
+
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="DataGridCellRighted" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Background" Value="{DynamicResource DataGridCellBackground}" />
+            <Setter Property="Foreground" Value="{DynamicResource DataGridCellForeground}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="HorizontalContentAlignment" Value="Right" />
+            <Setter Property="MinHeight" Value="35"/>
+            <Setter Property="MaxHeight" Value="35"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="FontWeight" Value="{Binding RelativeSource={RelativeSource AncestorType=DataGridColumnHeader},Path=FontWeight}"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border Background="{TemplateBinding Background}" 
+						    BorderBrush="{TemplateBinding BorderBrush}"  
+						    BorderThickness="{TemplateBinding BorderThickness}" 
+						    Padding="6,0,12,0"
+						    SnapsToDevicePixels="True" >
+                            <ContentPresenter   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Margin="6,0" 
+							                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <!--<Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource DataGridCell.MouseOver.Background}" />
+                    <Setter Property="Foreground" Value="{DynamicResource DataGridCell.MouseOver.Foreground}" />
+                </Trigger>-->
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow},Path=Item.Background}" Value="True" >
+                    <!--<Setter TargetName="DGR_Border" Property="Background" Value="{DynamicResource DataGridCell.MouseOver.Background}"/>-->
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </DataTrigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource DataGridCell.Selected.Background}" />
+                    <Setter Property="Foreground" Value="{DynamicResource DataGridCell.Selected.Foreground}" />
+                </Trigger>
+               
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DataGridColumnHeaderLeft" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.Static.Foreground}" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{DynamicResource DataGridColumnHeader.DarkDark.Foreground}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="FontFamily" Value="{DynamicResource Default.FontFamily}" />
+            <Setter Property="FontSize" Value="{DynamicResource DataGrid.Static.FontSize}" />
+            <!--<Setter Property="FontWeight" Value="Bold" />-->
+            <Setter Property="Margin" Value="0,0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}"
+							Padding ="{TemplateBinding Padding}"
+>
+                                <Grid x:Name="containerGrid" Margin="{TemplateBinding Margin}" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ContentPresenter Grid.Column="0" Margin="12,0"
+									HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+									SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+									VerticalAlignment="{TemplateBinding VerticalContentAlignment}" >
+                                        <ContentPresenter.Style>
+                                            <Style TargetType="{x:Type ContentPresenter}">
+                                                <Setter Property="ContentTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate >
+                                                            <TextBlock Text="{TemplateBinding Content}" FontWeight="Bold"></TextBlock>
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+
+                                            </Style>
+                                        </ContentPresenter.Style>
+                                    </ContentPresenter>
+                                    <Path x:Name="SortArrow"
+									Grid.Column="1"
+									HorizontalAlignment="Center" VerticalAlignment="Center"
+									Width="8" Height="6"  Margin="5,0,5,0"
+									Stretch="Fill" Opacity="0.5" Fill="{TemplateBinding Foreground}"
+									RenderTransformOrigin="0.5,0.4"
+									Visibility="Hidden"
+									Data="M0,0 L1,0 0.5,1 z" />
+                                </Grid>
+                            </Border>
+                            <Thumb x:Name="PART_LeftHeaderGripper"
+							HorizontalAlignment="Left"
+							Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper"
+							HorizontalAlignment="Right"
+							Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="SortDirection" Value="Ascending">
+                                <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                                <Setter TargetName="SortArrow" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="180" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="SortDirection" Value="Descending">
+                                <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <!--<Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource DataGridHeaderBackgroundHover}" />
+                <Setter Property="Foreground" Value="{DynamicResource DataGridHeaderForegroundHover}" />
+            </Trigger>-->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource DataGridHeaderBackgroundPressed}" />
+                    <Setter Property="Foreground" Value="{DynamicResource DataGridHeaderForegroundPressed}" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+
+        
+        <Style x:Key="DataGridColumnHeaderRighted" TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.Static.Foreground}" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{DynamicResource DataGridColumnHeader.DarkDark.Foreground}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Height" Value="35"/>
+            <Setter Property="FontFamily" Value="{DynamicResource Default.FontFamily}" />
+            <Setter Property="FontSize" Value="{DynamicResource DataGrid.Static.FontSize}" />
+            <!--<Setter Property="FontWeight" Value="Bold" />-->
+            <Setter Property="Margin" Value="0,0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Right" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridColumnHeader}">
+                        <Grid>
+                            <Border Background="{TemplateBinding Background}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}"
+							Padding ="{TemplateBinding Padding}"
+>
+                                <Grid x:Name="containerGrid" Margin="{TemplateBinding Margin}" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ContentPresenter Grid.Column="0" Margin="12,0"
+									HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+									SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" 
+									VerticalAlignment="{TemplateBinding VerticalContentAlignment}" >
+                                        <ContentPresenter.Style>
+                                            <Style TargetType="{x:Type ContentPresenter}">
+                                                <Setter Property="ContentTemplate">
+                                                    <Setter.Value>
+                                                        <DataTemplate >
+                                                            <TextBlock Text="{TemplateBinding Content}" FontWeight="Bold"></TextBlock>
+                                                        </DataTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                
+                                            </Style>
+                                        </ContentPresenter.Style>
+                                        </ContentPresenter>
+                                    <Path x:Name="SortArrow"
+									Grid.Column="1"
+									HorizontalAlignment="Center" VerticalAlignment="Center"
+									Width="8" Height="6"  Margin="5,0,5,0"
+									Stretch="Fill" Opacity="0.5" Fill="{TemplateBinding Foreground}"
+									RenderTransformOrigin="0.5,0.4"
+									Visibility="Hidden"
+									Data="M0,0 L1,0 0.5,1 z" />
+                                </Grid>
+                            </Border>
+                            <Thumb x:Name="PART_LeftHeaderGripper"
+							HorizontalAlignment="Left"
+							Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                            <Thumb x:Name="PART_RightHeaderGripper"
+							HorizontalAlignment="Right"
+							Style="{StaticResource ColumnHeaderGripperStyle}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="SortDirection" Value="Ascending">
+                                <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                                <Setter TargetName="SortArrow" Property="RenderTransform">
+                                    <Setter.Value>
+                                        <RotateTransform Angle="180" />
+                                    </Setter.Value>
+                                </Setter>
+                            </Trigger>
+                            <Trigger Property="SortDirection" Value="Descending">
+                                <Setter TargetName="SortArrow" Property="Visibility" Value="Visible" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <!--<Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Background" Value="{DynamicResource DataGridHeaderBackgroundHover}" />
+                <Setter Property="Foreground" Value="{DynamicResource DataGridHeaderForegroundHover}" />
+            </Trigger>-->
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource DataGridHeaderBackgroundPressed}" />
+                    <Setter Property="Foreground" Value="{DynamicResource DataGridHeaderForegroundPressed}" />
+                </Trigger>
+            </Style.Triggers>
+
+        </Style>
+        <Style x:Key="{x:Type DataGridRow}" TargetType="{x:Type DataGridRow}">
+            <Setter Property="Background" Value="Transparent" />
+            <!--<Setter Property="MaxHeight" Value="Auto"/>-->
+            <Setter Property="SnapsToDevicePixels" Value="true"/>
+            <Setter Property="Validation.ErrorTemplate" Value="{x:Null}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridRow}">
+                        <Border x:Name="DGR_Border"
+						Background="{TemplateBinding Background}"
+						BorderBrush="{TemplateBinding BorderBrush}"
+						BorderThickness="{TemplateBinding BorderThickness}"
+						SnapsToDevicePixels="True" HorizontalAlignment="Left">
+                            <SelectiveScrollingGrid>
+                                <SelectiveScrollingGrid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </SelectiveScrollingGrid.ColumnDefinitions>
+
+                                <SelectiveScrollingGrid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                </SelectiveScrollingGrid.RowDefinitions>
+
+                                <DataGridCellsPresenter Grid.Column="1" 
+								ItemsPanel="{TemplateBinding ItemsPanel}"
+								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" FontWeight="{TemplateBinding FontWeight}"/>
+
+                                <DataGridDetailsPresenter SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical}, Converter={x:Static DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}"
+                                                      Grid.Column="1" Grid.Row="1" Visibility="{TemplateBinding DetailsVisibility}">
+                                </DataGridDetailsPresenter>
+                                <Rectangle Grid.Row="2" Grid.ColumnSpan="2"  Fill="{DynamicResource DataGridRowBottomLine.Static.Background}" Height="1"  ></Rectangle>
+
+                            </SelectiveScrollingGrid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self},Path=Item.Background}" Value="True" >
+                                <Setter TargetName="DGR_Border" Property="Background" Value="{DynamicResource DataGridCell.MouseOver.Background}"/>
+                                <Setter Property="FontWeight" Value="DemiBold"/>
+                            </DataTrigger>
+                           
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RowLabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.Static.Foreground}" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{DynamicResource DataGridColumnHeader.DarkDark.Foreground}" />
+            <Setter Property="Padding" Value="12,0,9,0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource PlanningExecutionTabControlHeader.Background}" />
+            <Setter Property="Height" Value="35" />
+
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <Border
+                            Background="{DynamicResource InvestmentComponentPropertiesRow.Static.Background}">
+                            <Border Margin="{TemplateBinding Padding}"
+                                    BorderThickness="0,0,0,1"
+                                    BorderBrush="{DynamicResource InvestmentComponentPropertiesRowHeading.Static.Border}">
+                                <ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
+
+        <Style x:Key="RowLabelStyle2" TargetType="Label">
+            <Setter Property="Foreground" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{DynamicResource DataGrid.Static.Background}" />
+            <Setter Property="Padding" Value="12,0,9,0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />
+            <Setter Property="Height" Value="35" />
+
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <Border
+                            Background="{DynamicResource InvestmentComponentPropertiesRow.Static.Background}">
+                            <Border Margin="{TemplateBinding Padding}"
+                                    BorderThickness="0,0,0,1"
+                                    BorderBrush="{DynamicResource InvestmentComponentPropertiesRowHeading.Static.Border}">
+                                <ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
+        <Style x:Key="TextBlockStyle" TargetType="TextBlock">
+            <!--<Setter Property="Foreground" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />-->
+            <!--<Setter Property="Background" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Background}" />-->
+            <!--<Setter Property="Background" Value="{DynamicResource DataGrid.Static.Background}" />-->
+            <!--<Setter Property="BorderThickness" Value="0,0,0,1" />-->
+            <!--<Setter Property="BorderBrush" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />-->
+            <Setter Property="Padding" Value="5,0" />
+            <Setter Property="AllowDrop" Value="true" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <!--<Setter Property="Margin" Value="8,4,0,4" />-->
+            <!--<Setter Property="MinWidth" Value="500" />-->
+            <Setter Property="Height" Value="35" />
+
+
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                        <Border x:Name="Bd"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" RenderOptions.ClearTypeHint="Enabled"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          Padding="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush"
+                                        Value="{DynamicResource InvestmentComponentPropertiesRow.Focused.Border}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
+
+        <DataTemplate x:Key="InvestmentDataTemplate" DataType="{x:Type viewModels:InvestmentPresenter}">
+            <DataTemplate.Resources>
+                <converters:DateToToShortDateStringConverter x:Key="DateToToShortDateStringConverter"/>
+            </DataTemplate.Resources>
+            <Grid Background ="{DynamicResource DataGrid.Static.Background}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="200" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Rectangle  Grid.Row="0" Grid.Column="1" Grid.RowSpan="18" Width="5" Fill="{DynamicResource DataGrid.Static.Background}">
+
+                </Rectangle>
+                <Label Grid.ColumnSpan="3" Grid.Row="0"
+                       Content="{x:Static properties:Resources.InvestmentSheet}"
+                       Style="{StaticResource RowLabelStyle}"  FontSize="16"/>
+                <Label Grid.Column="0" Grid.Row="1"
+                       Content="{x:Static properties:Resources.InvestmentName_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="1" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                          Content="{Binding Name}" />
+
+                <Label Grid.Column="0" Grid.Row="2"
+                       Content="{x:Static properties:Resources.Code}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="2" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Code}" />
+
+                <Label Grid.Column="0" Grid.Row="3"
+                       Content="{x:Static properties:Resources.AuthorOrEmitter_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="3" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding AuthorOrEmitter}" />
+
+                <Label Grid.Column="0" Grid.Row="4"
+                       Content="{x:Static properties:Resources.Entity_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="4" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Entity}" />
+
+                <Label Grid.Column="0" Grid.Row="5"
+                       Content="{x:Static properties:Resources.Objective_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="5" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Objective}" />
+
+                <Label Grid.Column="0" Grid.Row="6"
+                       Content="{x:Static properties:Resources.Scope_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="6" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Scope}" />
+
+                <Label Grid.Column="0" Grid.Row="7"
+                       Content="{x:Static properties:Resources.Osde_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                
+
+                    <!--<TextBlock Text="(Detalles)" FontWeight="Bold" Opacity="0.4"></Label>-->
+                    <!--<TextBlock Padding="5,1" Text="Categoria" HorizontalAlignment="Center" FontWeight="Bold"></Label>-->
+                    <Label  Grid.Row="7" Grid.Column="2" Name="Osde" Content="{Binding Osde}"  Style="{StaticResource RowLabelStyle2}" >
+                    </Label>
+               
+                <!--<TextBlock Grid.Row="4" Grid.Column="2" Style="{StaticResource RowLabelStyle2}" />-->
+
+                <Label Grid.Column="0" Grid.Row="8"
+                       Content="{x:Static properties:Resources.Oace_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                 <Label Name="Oace" Grid.Row="8" Grid.Column="2" Content="{Binding Oace}"  Style="{StaticResource RowLabelStyle2}" ></Label>
+
+                <!--<TextBlock Grid.Row="5" Grid.Column="2" Style="{StaticResource RowLabelStyle2}" />-->
+                <Label Grid.Column="0" Grid.Row="9"
+                       Content="{x:Static properties:Resources.Constructor_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="9" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Constructor}" />
+
+                <Label Grid.Column="0" Grid.Row="10"
+                       Content="{x:Static properties:Resources.Location_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="10" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Location}" />
+
+                <Label Grid.Column="0" Grid.Row="11"
+                       Content="{x:Static properties:Resources.PlannedPeriod}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Border  Grid.Row="11" Grid.Column="2" Padding="5,0" BorderThickness="0,0,0,1" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}">
+                    <StackPanel Orientation="Horizontal"  DataContext="{Binding Period}">
+                        <Label Content="{Binding ShortStarts}" Style="{StaticResource RowLabelStyle2}" BorderThickness="0,0,0,0" ></Label>
+                        <TextBlock Text="  -  " Height="35" VerticalAlignment="Center" Foreground="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}"></TextBlock>
+                        <Label Content="{Binding ShortEnds}" Style="{StaticResource RowLabelStyle2}" BorderThickness="0,0,0,0" ></Label>
+                    </StackPanel>
+                </Border>
+
+
+
+                <Label Grid.Column="0" Grid.Row="12"
+                       Content="{x:Static properties:Resources.RelatedPrograms_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="12" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding RelatedPrograms}" />
+
+
+
+
+                <!---->
+                <Label Grid.Column="0" Grid.Row="13" Grid.RowSpan="2"
+                       Content="{x:Static properties:Resources.ClassifiedBy}"
+                       Style="{StaticResource RowLabelStyle}" Height="Auto" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                <Grid  Grid.Row="13" Grid.Column="2" Background="{DynamicResource DataGrid.Static.Background}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="170"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="170"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="170" ></ColumnDefinition>
+                         <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                     <Label Grid.Column="0"  
+                       Content="{x:Static properties:Resources.InvestmentType_Colon}"  BorderBrush="{DynamicResource DataGrid.Generic.Row.Background}" 
+                       Style="{StaticResource RowLabelStyle2}"  />
+                     <Label Grid.Column="2"  
+                       Content="{x:Static properties:Resources.ByNature}"  BorderBrush="{DynamicResource DataGrid.Generic.Row.Background}" 
+                       Style="{StaticResource RowLabelStyle2}"/>
+                     <Label Grid.Column="4"  
+                       Content="{x:Static properties:Resources.ByImpact}" 
+                       Style="{StaticResource RowLabelStyle2}" BorderBrush="{DynamicResource DataGrid.Generic.Row.Background}" />
+                    
+                </Grid>
+                
+                
+                 <Grid  Grid.Row="14" Grid.Column="2" Background="{DynamicResource DataGrid.Static.Background}">
+                    <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="170"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="170"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="170"></ColumnDefinition>
+                         <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                     
+                     <Label Grid.Column="0"    Content="{Binding InvestmentType}" Style="{StaticResource RowLabelStyle2}"/>
+                     <Border BorderThickness="0,0,0,1"  Grid.Column="1" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" ></Border>
+                   
+                     <Label Grid.Column="2"  Content="{Binding Nature}" Style="{StaticResource RowLabelStyle2}"/>
+                      <Border BorderThickness="0,0,0,1"  Grid.Column="3" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" ></Border>
+                    <Label Grid.Column="4"    Content="{Binding Impact}" Style="{StaticResource RowLabelStyle2}"/>
+                      <Border BorderThickness="0,0,0,1"  Grid.Column="5" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" ></Border>
+                    
+                </Grid>
+
+                <Label Grid.Column="0" Grid.Row="15"
+                       Content="{x:Static properties:Resources.Capacity_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="15" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Capacity}" />
+
+                <Label Grid.Column="0" Grid.Row="16"
+                       Content="{x:Static properties:Resources.InducedDoings_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="16" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding InducedDoings}"  />
+
+                <Label Grid.Column="0" Grid.Row="17"
+                       Content="{x:Static properties:Resources.Phase}"
+                       Style="{StaticResource RowLabelStyle}" />
+                 <Label  Grid.Row="17" Grid.Column="2" Name="Phase"  Content="{Binding Phase}" Style="{StaticResource RowLabelStyle2}"></Label>
+                
+              
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="InvestmentComponentDataTemplate"
+                      >
+            <Grid Background ="{DynamicResource DataGrid.Static.Background}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="200" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Rectangle  Grid.Row="0" Grid.Column="1" Grid.RowSpan="9" Width="5" Fill="{DynamicResource Window.Default.Background}">
+
+                </Rectangle>
+                
+                <Label Grid.ColumnSpan="3" Grid.Row="0"
+                       Content="{x:Static properties:Resources.InvestmentSheet}"
+                       Style="{StaticResource RowLabelStyle}"  FontSize="16"/>
+                
+                <Label Grid.Column="0" Grid.Row="1"
+                       Content="{x:Static properties:Resources.InvestmentName_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="1" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Name}" />
+
+                <Label Grid.Column="0" Grid.Row="2"
+                       Content="{x:Static properties:Resources.Code}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="2" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Code}" />
+
+                <Label Grid.Column="0" Grid.Row="3"
+                       Content="{x:Static properties:Resources.Objective_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="3" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Objective}" />
+
+                <Label Grid.Column="0" Grid.Row="4"
+                       Content="{x:Static properties:Resources.Scope_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="4" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Scope}" />
+
+                <Label Grid.Column="0" Grid.Row="5"
+                       Content="{x:Static properties:Resources.Osde_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <DockPanel Grid.Row="5" Grid.Column="2"  >
+
+                    <!--<TextBlock Text="(Detalles)" FontWeight="Bold" Opacity="0.4"></Label>-->
+                    <!--<TextBlock Padding="5,1" Text="Categoria" HorizontalAlignment="Center" FontWeight="Bold"></Label>-->
+                <Label Name="Osde" Content="{Binding Osde}" Style="{StaticResource RowLabelStyle2}"></Label>
+                </DockPanel>
+
+                <!--<TextBlock Grid.Row="2" Grid.Column="2" Style="{StaticResource RowLabelStyle2}" />-->
+
+                <Label Grid.Column="0" Grid.Row="6"
+                       Content="{x:Static properties:Resources.Oace_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <DockPanel Grid.Row="6" Grid.Column="2" >
+
+                    <!--<TextBlock Text="(Detalles)" FontWeight="Bold" Opacity="0.4"></Label>-->
+                    <!--<TextBlock Padding="5,1" Text="Categoria" HorizontalAlignment="Center" FontWeight="Bold"></Label>-->
+                    <Label Name="Oace" Content="{Binding Oace}" Style="{StaticResource RowLabelStyle2}" >
+                       
+                    </Label>
+                </DockPanel>
+                <!--<TextBlock Grid.Row="3" Grid.Column="2" Style="{StaticResource RowLabelStyle2}" />-->
+
+                <Label Grid.Column="0" Grid.Row="7"
+                       Content="{x:Static properties:Resources.Location_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="7" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Location}" />
+
+                <Label Grid.Column="0" Grid.Row="8"
+                       Content="{x:Static properties:Resources.Constructor_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Label Grid.Row="8" Grid.Column="2" Style="{StaticResource RowLabelStyle2}"
+                         Content="{Binding Constructor}" />
+
+
+                <Label Grid.Column="0" Grid.Row="9"
+                       Content="{x:Static properties:Resources.PlannedPeriod}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Border  Grid.Row="9" Grid.Column="2" Padding="5,0" BorderThickness="0,0,0,1" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}">
+                    <StackPanel Orientation="Horizontal"  DataContext="{Binding Period}">
+                        <Label Content="{Binding ShortStarts}"  Style="{StaticResource RowLabelStyle2}"></Label>
+                        <TextBlock Text="  -  " Height="35"></TextBlock>
+                        <Label Content="{Binding ShortEnds}"  Style="{StaticResource RowLabelStyle2}"></Label>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <converters:InvestmentElementTemplateSelector x:Key="InvestmentElementTemplateSelector"/>
+
+        <Style x:Key="DataGridCell" TargetType="{x:Type DataGridCell}">
+            <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.Static.Foreground}" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{DynamicResource DataGridColumnHeader.DarkDark.Foreground}" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="MinHeight" Value="35"/>
+            <Setter Property="MaxHeight" Value="35"/>
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <!--<Setter Property="FontWeight" Value="{Binding RelativeSource={RelativeSource AncestorType=DataGridColumnHeader}, Path=FontWeight}"/>-->
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                        <Border Background="{TemplateBinding Background}" 
+						    BorderBrush="{TemplateBinding BorderBrush}"  
+						    BorderThickness="{TemplateBinding BorderThickness}" 
+						    Padding="6,0,0,0"
+						    SnapsToDevicePixels="True" >
+                            <ContentPresenter   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Margin="6,0"
+							                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource DataGridCell.MouseOver.Background}" />
+                    <Setter Property="Foreground" Value="{DynamicResource DataGridCell.MouseOver.Foreground}" />
+                </Trigger>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource DataGridCell.Selected.Background}" />
+                    <Setter Property="Foreground" Value="{DynamicResource DataGridCell.Selected.Foreground}" />
+                </Trigger>
+
+                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow},Path=Item.Background}" Value="True" >
+                    <!--<Setter TargetName="DGR_Border" Property="Background" Value="{DynamicResource DataGridCell.MouseOver.Background}"/>-->
+                    <Setter Property="FontWeight" Value="Bold"/>
+                </DataTrigger>
+
+
+            </Style.Triggers>
+        </Style>
+
+    </UserControl.Resources>
+  
+        <!--<FlowDocument FocusVisualStyle="{x:Null}" ColumnWidth="{Binding RelativeSource={RelativeSource AncestorType=UserControl},Path=ActualWidth}"  LineHeight="5" FontSize="{DynamicResource Default.FontSize}" FontFamily="{DynamicResource Default.FontFamily}" Foreground="{DynamicResource DataGrid.Static.Foreground}">-->
+        <!--<Paragraph FontWeight="Bold" >
+                <Label Content="{Binding Name}"></Label>
+            </Paragraph>-->
+        <!--<BlockUIContainer >-->
+    <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+        <Grid x:Name="PrintGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <!--<Grid  Margin="10,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+            <TextBlock Text="{Binding Name}" FontWeight="SemiBold" TextWrapping="Wrap"></TextBlock>
+            <TextBlock Text="{Binding Description}" Grid.Row="1" TextWrapping="Wrap" Margin="0,5,0,0"></TextBlock>
+
+            <DockPanel Grid.Column="1" Margin="10,0"  Grid.Row="1"  MinWidth="120">
+                    <TextBlock Text="{Binding Code}" HorizontalAlignment="Left" TextWrapping="Wrap"></TextBlock>
+                    -->
+            <!--<Path Data="{Binding IconData}" Fill="{DynamicResource AtlasTimelineScrollButton.Disabled.Foreground}" Width="35" Height="35"></Path>-->
+            <!--
+               </DockPanel>
+                
+         </Grid>-->
+
+            <ContentControl x:Name="ContentPlace"  Grid.ColumnSpan="3"  />
+
+            <Grid Grid.Row="1"  Background="{DynamicResource DataGridColumnHeader.DarkDark.Foreground}" Margin="0,35,0,0">
+                <Grid  Margin="10,5">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="100"/>
+                        <ColumnDefinition Width="150"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="{x:Static properties:Resources.Planned}" Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"></TextBlock>
+
+                    <TextBlock Grid.Column="1" Text="{x:Static properties:Resources.Executed}" Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"></TextBlock>
+
+                    <TextBlock Grid.Column="2" Text="{x:Static properties:Resources.Execution}" Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"></TextBlock>
+
+                    <TextBlock Grid.Row="1" Text="{Binding PlannedCost}" Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"></TextBlock>
+
+                    <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding ExecutedCost}" Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"></TextBlock>
+
+                    <DockPanel Grid.Row="1" Grid.Column="2">
+                        <TextBlock Text="{Binding ExecutionPercent}" Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"></TextBlock>
+                        <TextBlock Text=" %"  Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"></TextBlock>
+                    </DockPanel>
+
+
+                </Grid>
+            </Grid>
+
+            <Grid Grid.Row="2"  DataContext="{Binding BudgetSummaryPresenter}" Margin="0,1" HorizontalAlignment="Left" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Border Padding="10,0,0,0" Background="LightGray">
+                    <TextBlock Text="{x:Static properties:Resources.Summary}" VerticalAlignment="Center"></TextBlock>
+                </Border>
+                <DataGrid x:Name="SummaryDataGrid" Grid.Row="1" ItemsSource="{Binding BudgetSummary}" Background="Transparent" AutoGenerateColumns="False" ColumnWidth="Auto" Width="Auto" DataContextChanged="FrameworkContentElement_OnDataContextChanged"
+                           IsReadOnly="True"      CanUserSortColumns="False" HorizontalAlignment="Left"  CanUserAddRows="False" CanUserResizeRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False">
+                    <DataGrid.Resources>
+                        <Style x:Key="{x:Type DataGridCell}" TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.Static.Foreground}" />
+                            <Setter Property="Focusable" Value="False" />
+                            <Setter Property="Background" Value="{DynamicResource DataGridColumnHeader.DarkDark.Foreground}" />
+                            <Setter Property="BorderThickness" Value="0" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="MinHeight" Value="35"/>
+                            <Setter Property="MaxHeight" Value="35"/>
+                            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                            <!--<Setter Property="FontWeight" Value="{Binding RelativeSource={RelativeSource AncestorType=DataGridColumnHeader}, Path=FontWeight}"/>-->
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                        <Border Background="{TemplateBinding Background}" 
+						    BorderBrush="{TemplateBinding BorderBrush}"  
+						    BorderThickness="{TemplateBinding BorderThickness}" 
+						    Padding="6,0,0,0"
+						    SnapsToDevicePixels="True" >
+                                            <ContentPresenter   SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Margin="6,0"
+							                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="{DynamicResource DataGridCell.MouseOver.Background}" />
+                                    <Setter Property="Foreground" Value="{DynamicResource DataGridCell.MouseOver.Foreground}" />
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="{DynamicResource DataGridCell.Selected.Background}" />
+                                    <Setter Property="Foreground" Value="{DynamicResource DataGridCell.Selected.Foreground}" />
+                                </Trigger>
+
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=DataGridRow},Path=Item.Background}" Value="True" >
+                                    <!--<Setter TargetName="DGR_Border" Property="Background" Value="{DynamicResource DataGridCell.MouseOver.Background}"/>-->
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                </DataTrigger>
+
+
+                            </Style.Triggers>
+                        </Style>
+
+                    </DataGrid.Resources>
+                    <!--<DataGrid.Columns>
+                            <DataGridTextColumn Header="{x:Static properties:Resources.Concept}" Binding="{Binding ConceptName}"></DataGridTextColumn>
+                            
+                        </DataGrid.Columns>-->
+                </DataGrid>
+                <Grid Grid.RowSpan="2" Grid.Column="1" Name="PeriodGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </Grid>
+
+
+        </Grid>
+    </ScrollViewer>
+    
+           
+            <!--</BlockUIContainer>-->
+            <!--<Paragraph >
+            
+            </Paragraph>-->
+
+            <!--<Section  >-->
+              
+            <!--</Section>
+            <Section>
+                <BlockUIContainer >-->
+                <!--<Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>-->
+
+                  
+                    <!--<Grid Grid.Column="1" DataConContent="{Binding MetroChartPresenter}" HorizontalAlignment="Center" >
+                        --><!--<Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                    
+                            <Label Text="{x:Static properties:Resources.ExecutionPercent}"></Label>-->
+
+                        <!--<metroChart:RadialGaugeChart  BorderThickness="0" ChartTitle="% Ejecicion/Componentes" ChartSubTitle="% Ejecicion/Componentes" SeriesSource="{Binding ExecutionPercentByBudgetComponent}"/>--><!--
+                    </Grid>
+                   
+                </Grid>-->
+                    
+                <!--</BlockUIContainer>-->
+                <!--<BlockUIContainer Margin="0,10"  DataConContent="{Binding BudgetSummaryPresenter}" >
+                    <ListBox ItemsSource="{Binding BudgetSummaryOverall}">
+                        <ListBox.Style>
+                            <Style TargetType="ListBox">
+                                <Setter Property="ItemTemplate">
+                                    <Setter.Value>
+                                        <ItemContainerTemplate>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <DockPanel DataConContent="{Binding Period}">
+                                                    <Label Content="{Binding Name}"></Label>
+                                                </DockPanel>
+                                                <DataGrid x:Name="OverallSummaryDataGrid" Margin="0,5" Grid.Row="1" ItemsSource="{Binding BudgetSummary}" 
+                                                            CanUserSortColumns="False"  CanUserAddRows="False" CanUserResizeRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" AutoGenerateColumns="False" ColumnWidth="Auto" Width="Auto" Loaded="FrameworkElement_OnLoaded">
+
+                                                </DataGrid>
+                                            </Grid>
+                                        </ItemContainerTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate>
+                                            <Border Background="{TemplateBinding Background}">
+                                                <Grid>
+                                                    <Grid.RowDefinitions>
+                                                        <RowDefinition Height="Auto"></RowDefinition>
+                                                        <RowDefinition Height="*"></RowDefinition>
+                                                    </Grid.RowDefinitions>
+                                                    <Label Text="{x:Static properties:Resources.SummaryOverYears}"></Label>
+                                                    <StackPanel Grid.Row="1" x:Name="itemsHost"  IsItemsHost="True" Orientation="Horizontal" HorizontalAlignment="Left"/>
+                                                </Grid>
+
+                                            </Border>
+
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.Style>
+                    </ListBox>
+                </BlockUIContainer>-->
+            <!--</Section>
+
+        </FlowDocument>-->
+   
+</UserControl>

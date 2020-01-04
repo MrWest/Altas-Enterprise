@@ -1,0 +1,197 @@
+﻿<UserControl x:Class="CompanyName.Atlas.Investments.Presentation.Views.ReportViews"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:arrangement="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views.Arrangement"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+             xmlns:reportViews="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views.ReportViewsUI"
+             xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+             xmlns:views="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <UserControl.Resources>
+        <ResourceDictionary >
+            <ResourceDictionary.MergedDictionaries>
+            <ResourceDictionary Source="Assets/TabControls.xaml"/>
+            <ResourceDictionary Source="/Atlas.UIControls;component/Assets/ScrollBar.xaml"/>
+        </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="CustomTabControlStyle" TargetType="{x:Type TabControl}">
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Background" Value="{DynamicResource PlanningExecutionTabControl.Static.Background}"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="ItemContainerStyle" Value="{StaticResource ResourcesActivitiesTabItemStyle}"/>
+                <!--<Setter Property="Visibility" Value="Collapsed"/>-->
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabControl}">
+                            <Grid x:Name="templateRoot" ClipToBounds="true" SnapsToDevicePixels="true" KeyboardNavigation.TabNavigation="Local">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition x:Name="ColumnDefinition0"/>
+                                    <ColumnDefinition x:Name="ColumnDefinition1" Width="0"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition x:Name="RowDefinition0" Height="Auto"/>
+                                    <RowDefinition x:Name="RowDefinition1" Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Grid Grid.Column="0" Grid.Row="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions> 
+                                    <TabPanel x:Name="headerPanel" Background="Transparent" IsItemsHost="true"  KeyboardNavigation.TabIndex="1" Panel.ZIndex="1"/>
+                                    <ToggleButton Grid.Column="1" Width="40" Height="35" Visibility="Collapsed" x:Name="ExpenderToggleButton" Margin="5,0"  IsChecked="{Binding RelativeSource={RelativeSource AncestorType=TabControl},Path=Tag}" Foreground="DimGray">
+                                        <ToggleButton.Style>
+                                            <Style TargetType="ToggleButton">
+                                                <Setter Property="Template">
+                                                    <Setter.Value>
+                                                        <ControlTemplate TargetType="ToggleButton">
+                                                            <Border>
+                                                                <Grid x:Name="grid">
+                                                                    <Ellipse Fill="Transparent" Opacity="0.1" Stroke="{x:Null}"/>
+                                                                    <Path x:Name="icon" Stretch="Uniform"
+                                                                      Margin="5"
+                                                                      Fill="{TemplateBinding Foreground}"
+                                                                      Data="F1 M 38,23.5C 38.8643,23.5 39.7109,23.5756 40.5337,23.7206L 42.6275,18.5381L 48.1901,20.787L 46.0964,25.9692C 47.6473,27.0149 48.9851,28.3527 50.0308,29.9036L 55.213,27.8099L 57.4619,33.3725L 52.2794,35.4664C 52.4244,36.2891 52.5,37.1357 52.5,38C 52.5,38.8643 52.4244,39.7109 52.2794,40.5337L 57.4619,42.6275L 55.213,48.1901L 50.0308,46.0964C 49.0795,47.5073 47.8865,48.7418 46.5112,49.7405L 48.7844,54.8462L 43.3041,57.2891L 41.0307,52.1828C 40.0533,52.3906 39.0394,52.5 38,52.5C 37.1357,52.5 36.2891,52.4244 35.4664,52.2794L 33.3725,57.462L 27.8099,55.213L 29.9036,50.0309C 28.3527,48.9851 27.0149,47.6473 25.9691,46.0964L 20.787,48.1901L 18.538,42.6275L 23.7206,40.5336C 23.5756,39.7109 23.5,38.8643 23.5,38C 23.5,37.1357 23.5756,36.2891 23.7206,35.4664L 18.538,33.3725L 20.787,27.8099L 25.9691,29.9036C 26.9205,28.4927 28.1135,27.2582 29.4889,26.2594L 27.2157,21.1537L 32.6959,18.7109L 34.9694,23.8172C 35.9468,23.6094 36.9606,23.5 38,23.5 Z M 38,28C 32.4771,28 28,32.4772 28,38C 28,43.5229 32.4771,48 38,48C 43.5228,48 48,43.5229 48,38C 48,32.4772 43.5228,28 38,28 Z "/>
+                                                                </Grid>
+
+                                                            </Border>
+                                                            <ControlTemplate.Triggers>
+                                                                <Trigger Property="IsChecked" Value="True">
+                                                                    <Setter TargetName="icon" Property="Fill" Value="LightGray"></Setter>
+                                                                </Trigger>
+                                                            </ControlTemplate.Triggers>
+                                                        </ControlTemplate>
+                                                    </Setter.Value>
+                                                </Setter>
+                                                
+
+                                            </Style>
+                                        </ToggleButton.Style>
+
+                                    </ToggleButton>
+
+
+                                    <!--<DockPanel Height="35" Width="100" VerticalAlignment="Center" HorizontalAlignment="Right"  >
+                                -->
+                                    <!--<Grid>
+                                 <Grid.RowDefinitions>
+                                     <RowDefinition Height="*"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                    </Grid.RowDefinitions>-->
+                                    <!--
+                                <TextBlock DockPanel.Dock="Bottom" VerticalAlignment="Center" FontSize="13" HorizontalAlignment="Center" Foreground="{DynamicResource BudgetComponentItemButton.Selected.Foreground}"
+                                                       Text="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=uiControls:AtlasTabControl}, Converter={StaticResource BudgetComponentItemViewToString}}"/>
+                                -->
+                                    <!--</Grid>-->
+                                    <!--
+
+                            </DockPanel>-->
+
+                                </Grid>
+
+                                <Border x:Name="contentPanel" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                                    <ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Border>
+                            </Grid>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="SelectedIndex" Value="1">
+                                    <Setter TargetName="ExpenderToggleButton" Property="Visibility" Value="Visible"></Setter>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+
+        </ResourceDictionary>
+       
+        
+    </UserControl.Resources>
+    <Grid >
+        <!--<reportViews:Generals/>-->
+        <uiControls:AtlasTabControl x:Name="AtlasTabControl"
+                    Style="{DynamicResource ButtonlessTabControlStyle}" FilterCommand="ApplicationCommands.Find" >
+
+            <TabItem Header="{x:Static properties:Resources.Budget}">
+
+                <TabControl x:Name="BudgetTabControl" Style="{StaticResource CustomTabControlStyle}" Loaded="BudgetTabControl_OnLoaded">
+
+                    <!--This is the tab controls group of the equipment component items-->
+                    <TabItem Header="{x:Static properties:Resources.Generals}" >
+
+
+                        <ScrollViewer x:Name="ScrollViewer" HorizontalScrollBarVisibility="Disabled">
+
+
+                            <reportViews:Generals x:Name="Generals"/>
+
+                        </ScrollViewer>
+
+
+                    </TabItem>
+
+
+                    <!--This is the tab controls group of the construction component items--><!--
+                    <TabItem Header="{x:Static properties:Resources.Detailed}" >
+
+                        --><!--<reportViews:InvestmentFullReport x:Name="InvestmentFullReport" Tag="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasTabControl},Path=FilterCommand}"></reportViews:InvestmentFullReport>--><!--
+
+                    </TabItem>-->
+                    <!--This is the tab controls group of the construction component items-->
+                    <TabItem Header="{x:Static properties:Resources.CustomReport}" >
+
+                        <reportViews:ReportsGenerator x:Name="ReportsGenerator" Tag="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasTabControl},Path=FilterCommand}"></reportViews:ReportsGenerator>
+
+                    </TabItem>
+                </TabControl>
+                
+            </TabItem>
+
+
+            <TabItem Header="{x:Static properties:Resources.Timeline}">
+
+                <TabControl x:Name="TimelineTabControl" Style="{DynamicResource SubSpecialitiesTabControlStyle}">
+
+
+                    <TabItem  Header="{x:Static properties:Resources.DetailedTimeLine}" >
+
+                        <reportViews:DetailedTimeline x:Name="DetailedTimeline" Margin="0" Tag="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasTabControl},Path=FilterCommand}"></reportViews:DetailedTimeline>
+                    </TabItem>
+                    <TabItem  Header="{x:Static properties:Resources.StateTimeline}" >
+
+                        <reportViews:ProjectionTimeline x:Name="ProjectionTimeline" Margin="0" Tag="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasTabControl},Path=FilterCommand}"></reportViews:ProjectionTimeline>
+                    </TabItem>
+                </TabControl>
+            </TabItem>
+            <!--This is the tab controls group of the equipment component items-->
+            <TabItem Header="{x:Static properties:Resources.Graphics}" >
+
+
+                <TabControl x:Name="GraphicsTabControl" Style="{DynamicResource SubSpecialitiesTabControlStyle}">
+
+
+                    <TabItem  Header="{x:Static properties:Resources.GraphicModelator}" >
+                        <ScrollViewer x:Name="ScrollViewer2" HorizontalScrollBarVisibility="Disabled">
+
+
+                            <reportViews:GraphicModelator/>
+
+                        </ScrollViewer>
+                    </TabItem>
+                   
+                </TabControl>
+
+              
+
+
+            </TabItem>
+        </uiControls:AtlasTabControl>
+    </Grid>
+</UserControl>

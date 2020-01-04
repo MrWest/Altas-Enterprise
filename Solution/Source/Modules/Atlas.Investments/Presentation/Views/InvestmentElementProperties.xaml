@@ -1,0 +1,717 @@
+﻿<prism:PrismUserControlBase x:Class="CompanyName.Atlas.Investments.Presentation.Views.InvestmentElementProperties"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                        xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+                        xmlns:prism="clr-namespace:CompanyName.Atlas.Contracts.Presentation.Prism;assembly=Atlas.Contracts"
+                        xmlns:viewModels="clr-namespace:CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels"
+                        xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+                        xmlns:converters="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views.Converters"
+                        mc:Ignorable="d"
+                        d:DataContext="{d:DesignInstance viewModels:InvestmentPresenter}"
+                        d:DesignHeight="1000" d:DesignWidth="300">
+
+ 
+
+    <UserControl.Resources>
+
+        <Style x:Key="RowLabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />
+            <Setter Property="Focusable" Value="False" />
+            <Setter Property="Background" Value="{DynamicResource DataGrid.Static.Background}" />
+            <Setter Property="Padding" Value="12,0,9,0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />
+            <Setter Property="Height" Value="35" />
+
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <Border
+                            Background="{DynamicResource InvestmentComponentPropertiesRow.Static.Background}">
+                            <Border Margin="{TemplateBinding Padding}"
+                                    BorderThickness="0,0,0,1"
+                                    BorderBrush="{DynamicResource InvestmentComponentPropertiesRowHeading.Static.Border}">
+                                <ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
+        <Style x:Key="ComboboxStyle" TargetType="ComboBox" BasedOn="{StaticResource {x:Type ComboBox}}">
+            <Setter Property="Foreground" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />
+            <Setter Property="Background" Value="{DynamicResource DataGrid.Static.Background}" />
+            <!--<Setter Property="Focusable" Value="False" />-->
+            <!--<Setter Property="Margin" Value="7,0,9,0" />-->
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="MinWidth" Value="180" />
+            <Setter Property="Height" Value="35" />
+             <Setter Property="BorderThickness" Value="0,0,0,1" />
+             <Setter Property="BorderBrush" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />
+             
+
+        </Style>
+        <Style x:Key="ComboboxItemStyle" TargetType="ComboBoxItem" BasedOn="{StaticResource {x:Type ComboBoxItem}}">
+            <!--<Setter Property="Foreground" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />-->
+            <!--<Setter Property="Focusable" Value="False" />-->
+            <Setter Property="Margin" Value="7,0,9,0" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <Setter Property="MinWidth" Value="180" />
+            <!--<Setter Property="Height" Value="17" />-->
+
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ComboBox">
+                        <Border
+                            Background="{DynamicResource InvestmentComponentPropertiesRow.Static.Background}">
+                            <Border Margin="{TemplateBinding Padding}"
+                                    BorderThickness="0,0,0,1"
+                                    BorderBrush="{DynamicResource InvestmentComponentPropertiesRowHeading.Static.Border}">
+                                <ContentPresenter VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                            </Border>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
+
+        <Style x:Key="TextBoxStyle" TargetType="TextBox">
+            <Setter Property="Foreground" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" />
+            <!--<Setter Property="Background" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Background}" />-->
+            <Setter Property="Background" Value="{DynamicResource DataGrid.Static.Background}" />
+            <Setter Property="BorderThickness" Value="0,0,0,1" />
+            <Setter Property="BorderBrush" Value="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" /> 
+            <Setter Property="Padding" Value="5,0" />
+            <Setter Property="AllowDrop" Value="true" />
+            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+            <Setter Property="ScrollViewer.PanningMode" Value="VerticalFirst" />
+            <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
+            <Setter Property="VerticalContentAlignment" Value="Center" />
+            <!--<Setter Property="Margin" Value="8,4,0,4" />-->
+            <!--<Setter Property="MinWidth" Value="500" />-->
+            <Setter Property="Height" Value="35" />
+            
+
+            <!--<Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBoxBase}">
+                        <Border x:Name="Bd"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+                            <ScrollViewer x:Name="PART_ContentHost" RenderOptions.ClearTypeHint="Enabled"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          Padding="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush"
+                                        Value="{DynamicResource InvestmentComponentPropertiesRow.Focused.Border}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>-->
+        </Style>
+        <Style  x:Key="AtlasCacheTextBoxStyle" TargetType="uiControls:AtlasCacheTextBox" BasedOn="{StaticResource TextBoxStyle}" >
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="uiControls:AtlasCacheTextBox">
+
+                        <Grid>
+                            <TextBox x:Name="MainTextBox" Text="{TemplateBinding Text}" Padding="{TemplateBinding Padding}" Foreground="{TemplateBinding Foreground}"
+                                     BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"
+                                     Background="{TemplateBinding Background}" Height="{TemplateBinding Height}" Width="{TemplateBinding Width}" 
+                                     VerticalAlignment="{TemplateBinding VerticalAlignment}" VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"></TextBox>
+
+                            <Popup x:Name="CachePopup" StaysOpen="False"  PlacementTarget="{x:Reference Name=MainTextBox}" Placement="Bottom">
+                                <ListBox x:Name="CacheListBox" ItemsSource="{TemplateBinding CacheSource}" Width="{Binding ElementName=MainTextBox,Path=ActualWidth}">
+                                    <ListBox.Resources>
+                                        <Style TargetType="{x:Type ListBoxItem}">
+                                            <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+                                            <Setter Property="Background" Value="Transparent" />
+                                            <Setter Property="BorderBrush"
+                                          Value="Transparent"/>
+                                            <Setter Property="BorderThickness"
+                                         Value="1"/>
+                                            <Setter Property="Margin"
+                                         Value="0"/>
+                                            <Setter Property="Height"
+                                         Value="25"/>
+                                            <Setter Property="Foreground" Value="{DynamicResource ItemText}"/>
+                                            <Setter Property="Padding"
+                                        Value="5,2,5,2"/>
+                                            <Setter Property="HorizontalContentAlignment"
+                                        Value="Stretch"/>
+                                            <Setter Property="VerticalContentAlignment"
+                                           Value="Center"/>
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                                                        <Grid Background="{TemplateBinding Background}">
+                                                            <Border Name="Selection" Visibility="Collapsed" />
+                                                            <!-- This is used when GridView is put inside the ListView -->
+                                                            <GridViewRowPresenter Grid.RowSpan="2"
+                                              Margin="{TemplateBinding Padding}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+
+                                                            <!-- This is used for ListView that does not use GridView -->
+                                                            <ContentPresenter x:Name="contentPresenter"
+                                          Margin="{TemplateBinding Padding}"
+                                      Content="{TemplateBinding ContentControl.Content}"
+                                      Visibility="Collapsed"
+                                      ContentTemplate="{TemplateBinding ContentControl.ContentTemplate}"
+                                      ContentStringFormat="{TemplateBinding ContentControl.ContentStringFormat}"
+                                      HorizontalAlignment="{TemplateBinding Control.HorizontalContentAlignment}"
+                                      VerticalAlignment="{TemplateBinding Control.VerticalContentAlignment}"
+                                      SnapsToDevicePixels="{TemplateBinding UIElement.SnapsToDevicePixels}"/>
+                                                        </Grid>
+                                                        <ControlTemplate.Triggers>
+                                                            <Trigger Property="GridView.ColumnCollection" Value="{x:Null}">
+                                                                <Setter TargetName="contentPresenter" Property="Visibility" Value="Visible"/>
+                                                            </Trigger>
+                                                            <Trigger Property="IsMouseOver" Value="true">
+                                                                <Setter TargetName="Selection" Property="Visibility" Value="Visible"/>
+                                                                <Setter TargetName="Selection" Property="Background" Value="{DynamicResource ItemBackgroundHover}"/>
+                                                                <Setter Property="Foreground" Value="{DynamicResource ItemTextHover}" />
+                                                            </Trigger>
+                                                            <Trigger Property="IsSelected" Value="true">
+                                                                <Setter TargetName="Selection" Property="Visibility" Value="Visible"/>
+                                                                <Setter TargetName="Selection" Property="Background" Value="{DynamicResource ItemBackgroundSelected}"/>
+                                                                <Setter Property="Background" Value="{DynamicResource ItemBackgroundSelected}"/>
+                                                                <Setter Property="Foreground" Value="{DynamicResource ItemTextSelected}" />
+                                                                <!--<Setter Property="Background" Value="Transparent"></Setter>-->
+                                                            </Trigger>
+                                                            <Trigger Property="IsEnabled" Value="false">
+                                                                <Setter Property="Foreground" Value="{DynamicResource ItemTextDisabled}"/>
+                                                            </Trigger>
+                                                        </ControlTemplate.Triggers>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+
+                                    </ListBox.Resources>
+                                </ListBox>
+                            </Popup>
+                        </Grid>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+        </Style>
+        <DataTemplate x:Key="InvestmentDataTemplate" DataType="{x:Type viewModels:InvestmentPresenter}">
+            <DataTemplate.Resources>
+                <converters:DateToToShortDateStringConverter x:Key="DateToToShortDateStringConverter"/>
+            </DataTemplate.Resources>
+            <Grid Background ="{DynamicResource DataGrid.Static.Background}" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="200" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <Rectangle  Grid.Row="0" Grid.Column="1" Grid.RowSpan="18" Width="5" Fill="{DynamicResource Window.Default.Background}">
+                  
+                </Rectangle>
+                <Label Grid.Column="0" Grid.Row="0"
+                       Content="{x:Static properties:Resources.InvestmentName_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="0" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                          Text="{Binding Name}" />
+
+                <Label Grid.Column="0" Grid.Row="1"
+                       Content="{x:Static properties:Resources.Code}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="1" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Code}" />
+
+                <Label Grid.Column="0" Grid.Row="2"
+                       Content="{x:Static properties:Resources.AuthorOrEmitter_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="2" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding AuthorOrEmitter}" />
+
+                <Label Grid.Column="0" Grid.Row="3"
+                       Content="{x:Static properties:Resources.Entity_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="3" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Entity}" />
+                
+                <Label Grid.Column="0" Grid.Row="4"
+                       Content="{x:Static properties:Resources.Objective_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="4" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Objective}" />
+
+                <Label Grid.Column="0" Grid.Row="5"
+                       Content="{x:Static properties:Resources.Scope_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="5" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Scope}" />
+
+                <Label Grid.Column="0" Grid.Row="6"
+                       Content="{x:Static properties:Resources.Osde_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <DockPanel Grid.Row="6" Grid.Column="2" >
+                  
+                    <!--<TextBlock Text="(Detalles)" FontWeight="Bold" Opacity="0.4"></TextBlock>-->
+                    <!--<TextBlock Padding="5,1" Text="Categoria" HorizontalAlignment="Center" FontWeight="Bold"></TextBlock>-->
+                    <ComboBox Name="Osde" Style="{StaticResource ComboboxStyle}"  DisplayMemberPath="Osde.Name"   
+                                         ItemsSource="{x:Static viewModels:OsdeViewModel.Osdes}" SelectedItem="{Binding Osde}"
+                                                SelectedValue="{Binding Osde}"
+                                          Tag="{Binding Osde}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock   Text="{Binding Name}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+                </DockPanel>
+                <!--<TextBox Grid.Row="4" Grid.Column="2" Style="{DynamicResource TextBoxStyle}" />-->
+
+                <Label Grid.Column="0" Grid.Row="7"
+                       Content="{x:Static properties:Resources.Oace_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <DockPanel Grid.Row="7" Grid.Column="2" >
+                  
+                    <!--<TextBlock Text="(Detalles)" FontWeight="Bold" Opacity="0.4"></TextBlock>-->
+                    <!--<TextBlock Padding="5,1" Text="Categoria" HorizontalAlignment="Center" FontWeight="Bold"></TextBlock>-->
+                    <ComboBox Name="Oace" Style="{StaticResource ComboboxStyle}" 
+                                         ItemsSource="{x:Static viewModels:OaceViewModel.Oaces}" SelectedItem="{Binding Oace}"
+                                                SelectedValue="{Binding Oace}"  Tag="{Binding Oace}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock   Text="{Binding Name}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+                </DockPanel>
+                <!--<TextBox Grid.Row="5" Grid.Column="2" Style="{DynamicResource TextBoxStyle}" />-->
+                <Label Grid.Column="0" Grid.Row="8"
+                       Content="{x:Static properties:Resources.Constructor_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="8" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Constructor}" />
+
+                <Label Grid.Column="0" Grid.Row="9"
+                       Content="{x:Static properties:Resources.Location_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="9" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Location}" />
+
+                <Label Grid.Column="0" Grid.Row="10"
+                       Content="{x:Static properties:Resources.PlannedPeriod}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Border  Grid.Row="10" Grid.Column="2" Padding="5,0" BorderThickness="0,0,0,1" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}">
+                    <StackPanel Orientation="Horizontal"  DataContext="{Binding Period}">
+                        <DatePicker SelectedDate="{Binding Starts}" Height="35" Foreground="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}"></DatePicker>
+                        <TextBlock Text="  -  " VerticalAlignment="Center" Foreground="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}"></TextBlock>
+                        <DatePicker SelectedDate="{Binding Ends}" Height="35" Foreground="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}"></DatePicker>
+                    </StackPanel>
+                </Border>
+               
+
+                
+                <Label Grid.Column="0" Grid.Row="11"
+                       Content="{x:Static properties:Resources.RelatedPrograms_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="11" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding RelatedPrograms}" />
+
+               
+
+           
+<!---->
+                <Label Grid.Column="0" Grid.Row="12" Grid.RowSpan="2"
+                       Content="{x:Static properties:Resources.ClassifiedBy}"
+                       Style="{StaticResource RowLabelStyle}" Height="Auto" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                <Grid  Grid.Row="12" Grid.Column="2" Background="{DynamicResource Window.Default.Background}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                     <Label Grid.Column="0"  
+                       Content="{x:Static properties:Resources.InvestmentType_Colon}" BorderThickness="0"
+                       Style="{StaticResource RowLabelStyle}" Height="Auto" Padding="5,0" Margin="0" VerticalAlignment="Center" VerticalContentAlignment="Center" />
+                     <Label Grid.Column="2"  
+                       Content="{x:Static properties:Resources.ByNature}" BorderThickness="0"
+                       Style="{StaticResource RowLabelStyle}" Height="Auto" Padding="5,0" Margin="0" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                     <Label Grid.Column="4"  
+                       Content="{x:Static properties:Resources.ByImpact}" BorderThickness="0"
+                       Style="{StaticResource RowLabelStyle}" Height="Auto" Padding="5,0" Margin="0" VerticalAlignment="Center" VerticalContentAlignment="Center"/>
+                    
+                </Grid>
+                
+                
+                 <Grid  Grid.Row="13" Grid.Column="2" Background="{DynamicResource Window.Default.Background}">
+                    <Grid.ColumnDefinitions>
+                         <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                        <ColumnDefinition Width="5"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                     
+                     <uiControls:AtlasCacheTextBox Grid.Column="0"  Style="{StaticResource AtlasCacheTextBoxStyle}"  Text="{Binding InvestmentType}" TextChanged="InvestmentType_OnTextChanged"/>
+                     <Border BorderThickness="0,0,0,1"  Grid.Column="1" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" ></Border>
+                   
+                     <uiControls:AtlasCacheTextBox Grid.Column="2" Style="{StaticResource AtlasCacheTextBoxStyle}"  Text="{Binding Nature}" TextChanged="Nature_OnTextChanged"/>
+                      <Border BorderThickness="0,0,0,1"  Grid.Column="3" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}" ></Border>
+                    <uiControls:AtlasCacheTextBox Grid.Column="4" Style="{StaticResource AtlasCacheTextBoxStyle}"   Text="{Binding Impact}" TextChanged="Impact_OnTextChanged"/>
+                    
+                </Grid>
+
+                <Label Grid.Column="0" Grid.Row="14"
+                       Content="{x:Static properties:Resources.Capacity_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="14" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Capacity}" />
+
+                <Label Grid.Column="0" Grid.Row="15"
+                       Content="{x:Static properties:Resources.InducedDoings_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="15" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding InducedDoings}"  />
+
+                <Label Grid.Column="0" Grid.Row="16"
+                       Content="{x:Static properties:Resources.Phase}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <DockPanel Grid.Row="16" Grid.Column="2" >
+                  
+                    <!--<TextBlock Text="(Detalles)" FontWeight="Bold" Opacity="0.4"></TextBlock>-->
+                    <!--<TextBlock Padding="5,1" Text="Categoria" HorizontalAlignment="Center" FontWeight="Bold"></TextBlock>-->
+                    <ComboBox Name="Phase"  Style="{StaticResource ComboboxStyle}" 
+                                         ItemsSource="{x:Static viewModels:PhaseViewModel.Phases}" SelectedItem="{Binding Phase}"
+                                                SelectedValue="{Binding Phase}" Tag="{Binding Phase}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock   Text="{Binding Name}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+                </DockPanel>
+                <!--<DockPanel Grid.Row="16" Grid.Column="0" Grid.ColumnSpan="2" DataContext="{Binding Documents}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="420" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Label Content="{x:Static properties:Resources.Documents}" Grid.ColumnSpan="2"
+                               Style="{StaticResource RowLabelStyle}" />
+                        <uiControls:AtlasDataGrid x:Name="DocumentsDataGrid" ShowTotal="Collapsed" Grid.Row="1" Margin="0,5,0,0" ItemsSource="{Binding Items}" AddButtonCommand="{Binding AddCommand}" DeleteButtonCommand="{Binding DeleteCommand}"
+                                            AllowDrop="True"    Drop="DocumentsDataGrid_OnDrop">
+                            <uiControls:AtlasDataGrid.Columns>
+                                <DataGridTextColumn Header="{x:Static properties:Resources.Name}" Binding="{Binding Name}" Width="*"></DataGridTextColumn>
+                                <DataGridTemplateColumn Header="{x:Static properties:Resources.Date}" Width="Auto">
+                                    <DataGridTemplateColumn.CellEditingTemplate>
+                                        <DataTemplate>
+                                            <DatePicker SelectedDate="{Binding RecieveDate}" Margin="3,0,0,0"></DatePicker>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellEditingTemplate>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="3,0,0,0" Text="{Binding RecieveDate,Converter={StaticResource DateToToShortDateStringConverter}}"></TextBlock>
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+
+                                </DataGridTemplateColumn>
+                                <DataGridTextColumn Header="{x:Static properties:Resources.Type}" Binding="{Binding DocumentType}"  Width="Auto"></DataGridTextColumn>
+                            </uiControls:AtlasDataGrid.Columns>
+                        </uiControls:AtlasDataGrid>
+                        <DockPanel Grid.Column="2" Grid.Row="1" Grid.RowSpan="2" Margin="5,0,0,0" DataContext="{Binding ElementName=DocumentsDataGrid,Path=SelectedItem}">
+                           --><!--<DockPanel.Style>
+                               <Style TargetType="DockPanel">
+                                   <Style.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=DocumentsDataGrid,Path=SelectedItem}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                   </Style.Triggers>
+                               </Style>
+                           </DockPanel.Style>--><!--
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="200" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <Label Grid.Column="0" Grid.Row="0"
+                       Content="{x:Static properties:Resources.Document_Type}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <TextBox Grid.Row="0" Grid.Column="2" MinWidth="0" Style="{DynamicResource TextBoxStyle}"
+                         Margin="8,8,0,4" Text="{Binding DocumentType}" />
+
+                                <Label Grid.Column="0" Grid.Row="1"
+                       Content="{x:Static properties:Resources.Name}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <TextBox Grid.Row="1" Grid.Column="2" MinWidth="0" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Name}" />
+
+                                <Label Grid.Column="0" Grid.Row="2"
+                       Content="{x:Static properties:Resources.Author_Emiter}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <TextBox Grid.Row="2" Grid.Column="2" MinWidth="0" Style="{DynamicResource TextBoxStyle}" />
+
+                                <Label Grid.Column="0" Grid.Row="3"
+                       Content="{x:Static properties:Resources.Osde_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <TextBox Grid.Row="3" Grid.Column="2" MinWidth="0" Style="{DynamicResource TextBoxStyle}" />
+
+                                <Label Grid.Column="0" Grid.Row="4"
+                       Content="{x:Static properties:Resources.Oace_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <TextBox Grid.Row="4" Grid.Column="2" MinWidth="0" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Location}" />
+
+                                <Label Grid.Column="0" Grid.Row="5"
+                       Content="{x:Static properties:Resources.Code}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <TextBox Grid.Row="5" Grid.Column="2" MinWidth="0" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Constructor}" />
+
+                                <Label Grid.Column="0" Grid.Row="6"
+                       Content="{x:Static properties:Resources.RecieveDate}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <TextBox Grid.Row="6" Grid.Column="2" MinWidth="0" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding RecieveDate}" />
+
+                                <Label Grid.Column="0" Grid.Row="7"
+                       Content="{x:Static properties:Resources.DeliverDate}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <TextBox Grid.Row="7" Grid.Column="2" MinWidth="0" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding DeliverDate}" />
+                                <Label Grid.Column="0" Grid.Row="8"
+                       Content="{x:Static properties:Resources.FilePath}"
+                       Style="{StaticResource RowLabelStyle}" />
+                                <Grid Grid.Row="8" Grid.Column="2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition x:Name="ColumnDefinition" Width="*"></ColumnDefinition>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <DockPanel >
+                                    <TextBox ToolTip="{Binding FilePath}" TextWrapping="Wrap"   Style="{DynamicResource TextBoxStyle}"
+                                       Text="{Binding FilePath}" />
+                                    </DockPanel>
+                                    <Button Content="Open" Grid.Column="2" Command="{Binding OpenCommand}" HorizontalAlignment="Right" DockPanel.Dock="Right" Margin="0,4,0,4" BorderThickness="1" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow}"></Button>
+                                </Grid>
+                            </Grid>
+                        </DockPanel>
+                        
+                    </Grid>
+                </DockPanel>-->
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="InvestmentComponentDataTemplate"
+                      >
+            <Grid Background ="{DynamicResource DataGrid.Static.Background}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" MinWidth="200" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Rectangle  Grid.Row="0" Grid.Column="1" Grid.RowSpan="9" Width="5" Fill="{DynamicResource Window.Default.Background}">
+                   
+                </Rectangle>
+                <Label Grid.Column="0" Grid.Row="0"
+                       Content="{x:Static properties:Resources.InvestmentName_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="0" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Name}" />
+
+                <Label Grid.Column="0" Grid.Row="1"
+                       Content="{x:Static properties:Resources.Code}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="1" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Code}" />
+
+                <Label Grid.Column="0" Grid.Row="2"
+                       Content="{x:Static properties:Resources.Objective_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="2" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Objective}" />
+
+                <Label Grid.Column="0" Grid.Row="3"
+                       Content="{x:Static properties:Resources.Scope_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="3" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Scope}" />
+                
+                <Label Grid.Column="0" Grid.Row="4"
+                       Content="{x:Static properties:Resources.Osde_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <DockPanel Grid.Row="4" Grid.Column="2"  >
+
+                    <!--<TextBlock Text="(Detalles)" FontWeight="Bold" Opacity="0.4"></TextBlock>-->
+                    <!--<TextBlock Padding="5,1" Text="Categoria" HorizontalAlignment="Center" FontWeight="Bold"></TextBlock>-->
+                    <ComboBox Name="Osde" Style="{StaticResource ComboboxStyle}"  DisplayMemberPath="Osde.Name"   
+                                         ItemsSource="{x:Static viewModels:OsdeViewModel.Osdes}" SelectedItem="{Binding Osde}"
+                                                SelectedValue="{Binding Osde}"
+                                          Tag="{Binding Osde}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock   Text="{Binding Name}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+                </DockPanel>
+                
+                <!--<TextBox Grid.Row="2" Grid.Column="2" Style="{DynamicResource TextBoxStyle}" />-->
+
+                <Label Grid.Column="0" Grid.Row="5"
+                       Content="{x:Static properties:Resources.Oace_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <DockPanel Grid.Row="5" Grid.Column="2" >
+
+                    <!--<TextBlock Text="(Detalles)" FontWeight="Bold" Opacity="0.4"></TextBlock>-->
+                    <!--<TextBlock Padding="5,1" Text="Categoria" HorizontalAlignment="Center" FontWeight="Bold"></TextBlock>-->
+                    <ComboBox Name="Oace" Style="{StaticResource ComboboxStyle}" 
+                                         ItemsSource="{x:Static viewModels:OaceViewModel.Oaces}" SelectedItem="{Binding Oace}"
+                                                SelectedValue="{Binding Oace}"  Tag="{Binding Oace}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock   Text="{Binding Name}"></TextBlock>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+
+                    </ComboBox>
+                </DockPanel>
+                <!--<TextBox Grid.Row="3" Grid.Column="2" Style="{DynamicResource TextBoxStyle}" />-->
+
+                <Label Grid.Column="0" Grid.Row="6"
+                       Content="{x:Static properties:Resources.Location_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="6" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Location}" />
+
+                <Label Grid.Column="0" Grid.Row="7"
+                       Content="{x:Static properties:Resources.Constructor_Colon}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <TextBox Grid.Row="7" Grid.Column="2" Style="{DynamicResource TextBoxStyle}"
+                         Text="{Binding Constructor}" />
+
+              
+                <Label Grid.Column="0" Grid.Row="8"
+                       Content="{x:Static properties:Resources.PlannedPeriod}"
+                       Style="{StaticResource RowLabelStyle}" />
+                <Border  Grid.Row="8" Grid.Column="2" Padding="5,0" BorderThickness="0,0,0,1" BorderBrush="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}">
+                    <StackPanel Orientation="Horizontal"  DataContext="{Binding Period}">
+                        <DatePicker SelectedDate="{Binding Starts}" Foreground="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}"></DatePicker>
+                        <TextBlock Text="  -  "></TextBlock>
+                        <DatePicker SelectedDate="{Binding Ends}"  Foreground="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}"></DatePicker>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <converters:InvestmentElementTemplateSelector x:Key="InvestmentElementTemplateSelector"/>
+    </UserControl.Resources>
+<Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" MinWidth="200" />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+            <Label Content="{x:Static properties:Resources.Attributes}" 
+               VerticalContentAlignment="Center" Padding="12,2,17,2"
+                    Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}" />
+
+            <Label Content="{x:Static properties:Resources.Description}" DockPanel.Dock="Top" Grid.Column="1"
+               VerticalContentAlignment="Center" Padding="12,2,17,2"
+                    Foreground="{DynamicResource PlanningExecutionTabItem.Static.Foreground}" />
+            <!--<Label Content="{x:Static properties:Resources.InvestmentSheet}" DockPanel.Dock="Top"
+               FontWeight="Bold" VerticalContentAlignment="Center" Padding="20,0"
+               
+               Foreground="{DynamicResource InvestmentComponentPropertiesFormHeading.Static.Foreground}" />
+            <DockPanel  VerticalAlignment="Center" Grid.Column="2" ToolTip="{x:Static properties:Resources.Period_ToolTip}" DataContext="{Binding Period}" Margin="10,0">
+                    <DatePicker SelectedDate="{Binding Starts,Mode=TwoWay}" VerticalAlignment="Center" Foreground="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}"></DatePicker>
+                <TextBlock Text=" - "   VerticalAlignment="Center" ></TextBlock>
+                    <DatePicker SelectedDate="{Binding Ends,Mode=TwoWay}"  VerticalAlignment="Center" Foreground="{DynamicResource InvestmentComponentPropertiesRow.Static.Foreground}"></DatePicker>
+            </DockPanel>-->
+        </Grid>
+       
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+
+            <Border Background="{DynamicResource InvestmentComponentPropertiesFormHeading.Static.Background}">
+            <!-- This control will containg the properties edition form for the current selected investment element. -->
+            <ContentControl x:Name="ContentPlace"  IsVisibleChanged="ContentPlace_OnIsVisibleChanged"/>
+            </Border>
+        </ScrollViewer>
+
+    </Grid>
+
+   
+
+</prism:PrismUserControlBase>

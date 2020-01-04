@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CompanyName.Atlas.Contracts.Implementation.Presentation.Data.CrudViewModelBase&lt;T, TPresenter, TServices&gt;">
+    <Position X="4.75" Y="9" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAIAgAAANAAASFGCUFgAAKAECTWIAgCEABABAEIIAAA=</HashCode>
+      <FileName>Implementation\Presentation\Data\CrudViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Contracts.Implementation.Presentation.Data.EnableableCrudViewModelBase&lt;T, TPresenter, TServices&gt;">
+    <Position X="4.5" Y="19.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAIAAAAAAAAEAAIAAAAEAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\Data\EnableableCrudViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Contracts.Implementation.Presentation.Data.EntityPresenterBase2&lt;T, TServices&gt;">
+    <Position X="11" Y="9" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAEDUCIAlABEAAAAAAAAAAACIgAAAAECBAAA=</HashCode>
+      <FileName>Implementation\Presentation\Data\EntityPresenterBase2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Contracts.Implementation.Presentation.Data.NomenclatorPresenterBase&lt;T&gt;">
+    <Position X="8.75" Y="15.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\Data\NomenclatorPresenterBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Contracts.Implementation.Presentation.Data.NomenclatorPresenterBase2&lt;T, TServices&gt;">
+    <Position X="13" Y="15.25" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\Data\NomenclatorPresenterBase2.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Contracts.Implementation.Presentation.Data.ServiceBackedViewModel&lt;TServices&gt;">
+    <Position X="8.75" Y="5.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAQAAAAAAAAAAAAAAAAAAAYAAAAAJA=</HashCode>
+      <FileName>Implementation\Presentation\Data\ServiceBackedViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompanyName.Atlas.Contracts.Implementation.Presentation.Data.ViewModelBase">
+    <Position X="8.75" Y="1.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAUCIAAAAAAACAAIACAAACAAAAAAACAAAA=</HashCode>
+      <FileName>Implementation\Presentation\Data\ViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

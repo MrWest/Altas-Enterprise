@@ -1,0 +1,159 @@
+﻿<prism:PrismUserControlBase x:Class="CompanyName.Atlas.Investments.Presentation.Views.ExpenseConceptEditor"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                        xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+                        xmlns:prism="clr-namespace:CompanyName.Atlas.Contracts.Presentation.Prism;assembly=Atlas.Contracts"
+                        xmlns:mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
+                        xmlns:viewModels="clr-namespace:CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels"
+                        xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+                        xmlns:converters="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views.Converters"
+                        mc:Ignorable="d"
+                        d:DesignHeight="400" d:DesignWidth="600"
+                        d:DataContext="{d:DesignInstance viewModels:ExpenseConceptViewModel}"
+                        mvvm:ViewModelLocator.AutoWireViewModel="True">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Atlas.UIControls;component/Assets/DataGrid.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Storyboard x:Key="ExpandStoryboard">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="400">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="CollapseStoryboard">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" >
+                    <EasingDoubleKeyFrame KeyTime="0" Value="400"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="0">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <converters:ExpenseConceptTypeToStringConverter x:Key="ExpenseConceptTypeToStringConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <DockPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+        <uiControls:AtlasDataGrid Name="AtlasDataGrid" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}"
+                                  AddButtonCommand="{Binding AddCommand}"
+                                  DeleteButtonCommand="{Binding DeleteCommand}" ShowTotal="Collapsed">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="{x:Static properties:Resources.Code}" Width="*"
+                                    Binding="{Binding Code}"
+                                    EditingElementStyle="{DynamicResource DataGridTextColumnEditingElementStyle}" />
+                <DataGridTextColumn Header="{x:Static properties:Resources.Name}" Width="2*"
+                                    Binding="{Binding Name}"
+                                    EditingElementStyle="{DynamicResource DataGridTextColumnEditingElementStyle}" />
+                <DataGridTextColumn Header="{x:Static properties:Resources.Type}" Width="*"
+                                    Binding="{Binding Type, Converter={StaticResource ExpenseConceptTypeToStringConverter}}">
+                    <DataGridTextColumn.EditingElementStyle>
+                        <Style TargetType="TextBox" BasedOn="{StaticResource DataGridTextColumnEditingElementStyle}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="TextBox">
+                                        <ComboBox ItemsSource="{Binding Types, Converter={StaticResource ExpenseConceptTypeToStringConverter}, Mode=OneWay}"
+                                                  SelectedItem="{Binding Type, Converter={StaticResource ExpenseConceptTypeToStringConverter}}"/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </DataGridTextColumn.EditingElementStyle>
+                </DataGridTextColumn>
+            </DataGrid.Columns>
+            <!--<DataGrid.RowDetailsTemplate>
+                <DataTemplate>
+                    <Border>
+                        <ComboBox ItemsSource="{Binding Types, Converter={StaticResource ExpenseConceptTypeToStringConverter}, Mode=OneWay}"
+                                                  SelectedItem="{Binding Type, Converter={StaticResource ExpenseConceptTypeToStringConverter}}"/>
+                    </Border>
+                </DataTemplate>
+            </DataGrid.RowDetailsTemplate>-->
+        </uiControls:AtlasDataGrid>
+            <!--<GridSplitter Grid.Column="1">
+                <GridSplitter.Style>
+                    <Style TargetType="GridSplitter">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=AtlasDataGrid,Path=SelectedItem}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </GridSplitter.Style>
+            </GridSplitter>-->
+            <Rectangle  Grid.Column="1"  Width="2" Fill="{DynamicResource Window.Default.Background}">
+                <Rectangle.Style>
+                    <Style TargetType="Rectangle">
+
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=AtlasDataGrid,Path=SelectedItem}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
+                </Rectangle.Style>
+            </Rectangle>
+            <DockPanel Grid.Column="2" DataContext="{Binding ElementName=AtlasDataGrid,Path=SelectedItem}" Width="0">
+                <DockPanel.Style>
+                    <Style TargetType="DockPanel">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=AtlasDataGrid, Path=SelectedItem}" Value="{x:Null}">
+                                <DataTrigger.EnterActions>
+                                    <BeginStoryboard Storyboard="{StaticResource CollapseStoryboard}"></BeginStoryboard>
+
+                                </DataTrigger.EnterActions>
+                                <DataTrigger.ExitActions>
+                                    <BeginStoryboard Storyboard="{StaticResource ExpandStoryboard}"></BeginStoryboard>
+                                </DataTrigger.ExitActions>
+                            </DataTrigger>
+
+                        </Style.Triggers>
+                    </Style>
+                </DockPanel.Style>
+                <Grid DataContext="{Binding SubExpenseConcepts}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{x:Static properties:Resources.SubExpenseConcepts}" HorizontalAlignment="Right" Margin="0,-25,5,0" FontWeight="SemiBold" Foreground="{DynamicResource Buttom.Static.Foreground}"></TextBlock>
+
+                    
+                    <uiControls:AtlasDataGrid Grid.Row="1" ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem}" DataContextChanged="FrameworkElement_OnDataContextChanged"
+                                  AddButtonCommand="{Binding AddCommand}"
+                                  DeleteButtonCommand="{Binding DeleteCommand}" ShowTotal="Collapsed" AddButtonText="">
+                        <DataGrid.Columns>
+
+
+                            <DataGridTextColumn Header="{x:Static properties:Resources.Code}" Width="Auto" MaxWidth="140"
+                                    Binding="{Binding Code}"
+                                    EditingElementStyle="{DynamicResource DataGridTextColumnEditingElementStyle}" />
+                            <DataGridTextColumn Header="{x:Static properties:Resources.Name}" 
+                                    Binding="{Binding Name}" Width="*"
+                                    EditingElementStyle="{DynamicResource DataGridTextColumnEditingElementStyle}" />
+
+
+                        </DataGrid.Columns>
+                    </uiControls:AtlasDataGrid>
+                </Grid>
+        </DockPanel>
+        </Grid>
+    </DockPanel>
+
+</prism:PrismUserControlBase>

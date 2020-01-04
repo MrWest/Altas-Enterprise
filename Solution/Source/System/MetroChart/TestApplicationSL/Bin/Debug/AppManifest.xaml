@@ -1,0 +1,6 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="TestApplicationSL" EntryPointType="TestApplicationSL.App" RuntimeVersion="5.0.61118.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="TestApplicationSL" Source="TestApplicationSL.dll" />
+    <AssemblyPart x:Name="De.TorstenMandelkow.MetroChart" Source="De.TorstenMandelkow.MetroChart.dll" />
+  </Deployment.Parts>
+</Deployment>

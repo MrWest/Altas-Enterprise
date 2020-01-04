@@ -1,0 +1,529 @@
+﻿<UserControl x:Class="CompanyName.Atlas.Investments.Presentation.Views.Tools.AccessImport"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views.Tools"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+             xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" >
+    <Grid  Margin="20"  Name="MainGrid">
+        <Grid.Resources>
+            <ResourceDictionary >
+            <Storyboard x:Key="ShowSelectionMarker">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" >
+                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="540"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="HideSelectionMarker">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" >
+                    <EasingDoubleKeyFrame KeyTime="0" Value="540"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="0"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="SlideIn">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)">
+                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="1">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+                <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" >
+                    <EasingThicknessKeyFrame KeyTime="0" Value="0,0,300,0"/>
+                    <EasingThicknessKeyFrame KeyTime="0:0:0.45" Value="0">
+                        <EasingThicknessKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </EasingThicknessKeyFrame.EasingFunction>
+                    </EasingThicknessKeyFrame>
+                </ThicknessAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="SlideOut" >
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                    <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="0">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseIn"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+                <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                    <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+                    <EasingThicknessKeyFrame KeyTime="0:0:0.35" Value="300,0,0,0">
+                        <EasingThicknessKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseIn"/>
+                        </EasingThicknessKeyFrame.EasingFunction>
+                    </EasingThicknessKeyFrame>
+                </ThicknessAnimationUsingKeyFrames>
+
+            </Storyboard>
+
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Atlas.UIControls;component/Assets/Button.xaml"/>
+                    <ResourceDictionary Source="/Atlas.UIControls;component/Assets/TabControls.xaml"/>
+                    <ResourceDictionary Source="/Atlas.UIControls;component/Assets/ProgressBar.xaml"/>
+
+                </ResourceDictionary.MergedDictionaries>
+           </ResourceDictionary>
+        </Grid.Resources>
+        
+        <Grid Name="IntroGrid" >
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Select}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Path}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <Trigger Property="Visibility" Value="Visible">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                            </Trigger.ExitActions>
+                            </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+            </Grid.Style>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*" ></ColumnDefinition>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock Text="Access Import"></TextBlock>
+            <Grid Grid.Column="1" Grid.ColumnSpan="2">
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" ></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                <TextBox Name="DataUriTextBox" Margin="20,0,5,0" MinWidth="380" HorizontalAlignment="Stretch" ></TextBox>
+                <Button Content="{x:Static properties:Resources.FilePath}" Click="ButtonBase_OnClick" Padding="10,3" Grid.Column="1"></Button>
+            </Grid>
+            <DockPanel Grid.Row="2" Grid.Column="2"  Dock="Right">
+                <Button Content="{x:Static properties:Resources.Open}" Click="ButtonBase_OnClick2" Padding="10,3" DockPanel.Dock="Right" Height="45" Width="210"></Button>
+            </DockPanel>
+        </Grid>
+        
+            <Grid Name="SQLGrid"   >
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Style.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Select}">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Welcome}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Path}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <Trigger Property="Visibility" Value="Visible">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </Style.Triggers>
+                    </Style>
+
+                </Grid.Style>
+
+               
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" ></ColumnDefinition>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="Auto" ></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                   <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="Access Import"></TextBlock>
+                    <DockPanel Grid.Row="1" Margin="0,10,0,15">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBox Name="SQLCommandTextBox" AcceptsReturn="True" AcceptsTab="True" MinWidth="380" HorizontalAlignment="Stretch"  MinLines="4"  Text="Select * From Table"></TextBox>
+                            <Button Content="Execute" Grid.Column="1" Click="ButtonBase_OnClick4" Padding="10,3" MaxWidth="200" ></Button>
+
+                        </Grid>
+                        
+                    </DockPanel>
+
+                    <Grid Grid.Row="2">
+                        <ScrollViewer  HorizontalScrollBarVisibility="Auto">
+
+                            <DataGrid  Name="AtlasDataGrid" AutoGenerateColumns="False" Visibility="Collapsed">
+
+                        </DataGrid>
+
+                        </ScrollViewer>
+
+                    </Grid>
+
+                   
+                    </Grid>
+              
+                <DockPanel Grid.Row="1" Dock="Right" HorizontalAlignment="Right" >
+
+                    <Button  Click="ButtonBase_OnClick5" Content="Exit" Margin="0,15,0,0" MaxWidth="280" Padding="15,3" DockPanel.Dock="Right"></Button>
+
+                </DockPanel>
+            </Grid>
+            <Rectangle Grid.Column="1" Width="5" ></Rectangle>
+                
+                <Grid Grid.Column="2">
+                    <!--<Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>-->
+
+                    <StackPanel Name="PSStackPanel" Margin="5,0,0,0">
+                        <TextBlock Text="Choose Price System:" Margin="0,0,0,10"></TextBlock>
+                        <DockPanel VerticalAlignment="Top"> 
+                            <ComboBox Name="PSComboBox" ItemsSource="{Binding Items}" DockPanel.Dock="Left" MinWidth="280" SelectionChanged="PSComboBox_OnSelectionChanged"></ComboBox>
+                            <Button Command="{Binding AddCommand}"  DockPanel.Dock="Right" Margin="2" Style="{DynamicResource AddCommandButtonStyle}" Content="F1 M 51.5487,37.9814L 56.814,41.0534L 50.3383,48.7636L 50.3383,48.8841L 60.0205,46.9565L 60.0205,53.0403L 50.2777,51.414L 50.2777,51.5344L 56.814,59.0037L 51.4882,62.0757L 47.978,52.7994L 47.8569,52.7994L 44.4072,62.0757L 39.2025,59.0037L 45.6782,51.4742L 45.6177,51.3537L 36.1159,53.0403L 36.1159,46.9565L 45.5571,48.8841L 45.5571,48.7636L 39.2025,41.1137L 44.5888,37.9814L 47.9174,47.3179L 48.0385,47.3179L 51.5487,37.9814 Z M 20,17L 43.25,17L 56,29.75L 56,39L 52,36.75L 52,34L 39,34L 39,21L 24,21L 24,55L 41,55L 37.5,59L 20,59L 20,17 Z M 43,22.25L 43,30L 50.75,30L 43,22.25 Z "></Button>
+                        </DockPanel>
+
+
+
+                    <TabControl Margin="0,5,0,0" MinHeight="320">
+                                <TabItem Header="OverGroup">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                          <RowDefinition Height="Auto"></RowDefinition>
+                                          <RowDefinition Height="Auto"></RowDefinition>
+                                       </Grid.RowDefinitions>     
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="5"></ColumnDefinition>
+                                            <ColumnDefinition Width="20"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                         </Grid.ColumnDefinitions>
+                                      
+                                            <TextBlock Text="Code Match Column:"></TextBlock>
+                                <TextBox Name="OGcode" Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=OverGroupCodeMatchColumn}"  Grid.Column="2"></TextBox>
+                                       
+                                            <TextBlock Text="Name Match Column:" Grid.Row="1"></TextBlock>
+                                            <TextBox  Name="OGname" Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=OverGroupNameMatchColumn}" Grid.Row="1" Grid.Column="2"></TextBox>
+                                        
+                                    </Grid>
+                                </TabItem>
+                                <TabItem Header="Group">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                <ColumnDefinition Width="5"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Text="Code Match Column:"></TextBlock>
+                                <TextBox  Name="Grcode" Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=RegularGroupCodeMatchColumn}"  Grid.Column="2"></TextBox>
+
+                                            <TextBlock Text="Name Match Column:" Grid.Row="1"></TextBlock>
+                                             <TextBox  Name="Grname" Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=RegularGroupNameMatchColumn}"  Grid.Row="1" Grid.Column="2"></TextBox>
+
+                                        </Grid>
+                                  </TabItem>
+                                <TabItem Header="UnderGroup">
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                                <ColumnDefinition Width="5"></ColumnDefinition>
+                                                <ColumnDefinition Width="20"></ColumnDefinition>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBlock Text="Code Match Column:"></TextBlock>
+                                <TextBox  Name="UGcode" Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=UnderGroupCodeMatchColumn}"  Grid.Column="2"></TextBox>
+
+                                            <TextBlock Text="Name Match Column:" Grid.Row="1"></TextBlock>
+                                <TextBox  Name="UGname" Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=UnderGroupNameMatchColumn}"  Grid.Row="1" Grid.Column="2"></TextBox>
+
+                                         </Grid>     
+                                </TabItem>
+                                <TabItem Header="VariantLine">
+                                    <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            <ColumnDefinition Width="5"></ColumnDefinition>
+                                            <ColumnDefinition Width="22"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+                                        <TextBlock Text="Code Match Column:"></TextBlock>
+                                <TextBox  Name="VLcode" Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ActivityCodeMatchColumn}" Grid.Column="2"></TextBox>
+
+                                        <TextBlock Text="Name Match Column:" Grid.Row="1"></TextBlock>
+                                <TextBox  Name="VLname"  Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ActivityNameMatchColumn}" Grid.Row="1" Grid.Column="2"></TextBox>
+
+                                <TextBlock Text="Description Match Column:"  Grid.Row="2"></TextBlock>
+                                <TextBox   Name="VLdesc"  Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ActivityDescriptionMatchColumn}" Grid.Row="2" Grid.Column="2"></TextBox>
+                                        
+                                <TextBlock Text="M/U Match Column:"  Grid.Row="3"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ActivityMUMatchColumn}"   Name="VLmu"   Grid.Row="3" Grid.Column="2"></TextBox>
+                                        
+                                <TextBlock Text="Currency Match Column:"  Grid.Row="4"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ActivityCurrencyMatchColumn}"   Name="VLcurrency"  Grid.Row="4" Grid.Column="2"></TextBox>
+                                        
+                                <TextBlock Text="U Price Match Column:"  Grid.Row="5"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ActivityPriceMatchColumn}"   Name="VLuprice"   Grid.Row="5" Grid.Column="2"></TextBox>
+
+                            </Grid>
+                            
+                                </TabItem>
+                                <TabItem Header="Resource">
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                    <RowDefinition Height="Auto"></RowDefinition>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    <ColumnDefinition Width="5"></ColumnDefinition>
+                                    <ColumnDefinition Width="22"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <TextBlock Text="Code Match Column:"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceCodeMatchColumn}"   Name="Rcode"   Grid.Column="2"></TextBox>
+
+                                <TextBlock Text="Name Match Column:" Grid.Row="1"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceNameMatchColumn}"   Name="Rname"  Grid.Row="1" Grid.Column="2"></TextBox>
+
+                                <TextBlock Text="Description Match Column:"  Grid.Row="2"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceDescriptionMatchColumn}"   Name="Rdesc"   Grid.Row="2" Grid.Column="2"></TextBox>
+
+                                <TextBlock Text="Norm Match Column:"  Grid.Row="3"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceNormMatchColumn}"   Name="Rnorm"   Grid.Row="3" Grid.Column="2"></TextBox>
+
+
+                                <TextBlock Text="M/U Match Column:"  Grid.Row="4"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceMUMatchColumn}"   Name="Rmu"  Grid.Row="4" Grid.Column="2"></TextBox>
+
+                                <TextBlock Text="Currency Match Column:"  Grid.Row="5"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceCurrencyMatchColumn}"   Name="Rcurrency"  Grid.Row="5" Grid.Column="2"></TextBox>
+                                <TextBlock Text="R Kind Match Column:"  Grid.Row="6"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceKindMatchColumn}"   Name="RKind"   Grid.Row="6" Grid.Column="2"></TextBox>
+                                <TextBlock Text="Weight Match Columns:"  Grid.Row="7">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=getWeight, Path= IsChecked}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                <DockPanel   Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" HorizontalAlignment="Left" >
+                                    <DockPanel.Style>
+                                        <Style TargetType="DockPanel">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=getWeight, Path= IsChecked}" Value="False">
+                                                    <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </DockPanel.Style>
+                                    <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceWVMatchColumn}"   Name="RWV"  Width="26" ></TextBox>
+                                    <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourceWMUMatchColumn}"   Name="RWMU" Width="26"   Margin="5,0,0,0"></TextBox>
+                                </DockPanel>
+
+                                <TextBlock Text="U Price Match Column:"  Grid.Row="8"></TextBlock>
+                                <TextBox Text="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport}, Path=ResourcePriceMatchColumn}"   Name="Ruprice"   Grid.Row="8" Grid.Column="2"></TextBox>
+                                <TextBlock Text="Get Weight?..:"  Grid.Row="9"></TextBlock>
+                                <CheckBox IsChecked="True" Name="getWeight"   Grid.Row="9" Grid.Column="2" Checked="GetWeight_OnChecked" Unchecked="GetWeight_OnUnchecked"></CheckBox>
+                                <TextBlock Text="Check for Code:"  Grid.Row="10"></TextBlock>
+                                <CheckBox IsChecked="True" Name="check4Code"   Grid.Row="10" Grid.Column="2" Checked="Check4Code_OnChecked" Unchecked="Check4Code_OnUnchecked"></CheckBox>
+                                <TextBlock Text="Overwrite?..:"  Grid.Row="11"></TextBlock>
+                                <CheckBox IsChecked="False" Name="overwrite"   Grid.Row="11" Grid.Column="2" Checked="Overwrite_OnChecked" Unchecked="Overwrite_OnUnchecked"></CheckBox>
+
+                            </Grid>
+                        </TabItem>
+                            </TabControl>
+
+
+                    <Button Content="Import" Margin="5,20,0,0" Padding="20,8" HorizontalAlignment="Right" Click="Import_OnClick"></Button>
+                    </StackPanel>
+
+
+                </Grid>
+                
+            </Grid>
+       
+       
+        <Grid Name="Progress" >
+            <Grid.Style>
+            <Style TargetType="Grid">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Select}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                    </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Welcome}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Path}">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                    </DataTrigger>
+                    <Trigger Property="Visibility" Value="Visible">
+                        <Trigger.EnterActions>
+                            <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                            <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            </Grid.Style>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="1.5*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <ListBox Name="ErrorsList" Margin="20"></ListBox>
+
+                <StackPanel  HorizontalAlignment="Stretch"   Grid.Row="1">
+                <TextBlock Name="ProgressTextBlock" Margin="0,0,0,5"></TextBlock>
+                <ProgressBar Name="ProgressBar" HorizontalAlignment="Stretch" Minimum="0" Maximum="100" MinWidth="350" BorderThickness="1" BorderBrush="Black" Height="12">
+                    <ProgressBar.Resources>
+                        
+                        <ResourceDictionary>
+                            <ResourceDictionary.MergedDictionaries>
+                              
+                                <ResourceDictionary Source="/Atlas.UIControls;component/Assets/ProgressBar.xaml"/>
+
+                            </ResourceDictionary.MergedDictionaries>
+                        </ResourceDictionary>
+                    </ProgressBar.Resources>
+                </ProgressBar>
+            </StackPanel>
+           
+            <DockPanel HorizontalAlignment="Right" Grid.Row="3">
+                <Button Content="Cancel" Click="ButtonBase_OnClick33" DockPanel.Dock="Right"  MaxWidth="280" Padding="15,3" ></Button>
+            </DockPanel>
+        
+        </Grid>
+
+        <Grid Name="Completed" >
+            <Grid.Style>
+                <Style TargetType="Grid">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Select}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Welcome}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                            <Setter Property="Visibility" Value="Visible"></Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:AccessImport},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Path}">
+                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                        </DataTrigger>
+                        <Trigger Property="Visibility" Value="Visible">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+
+            </Grid.Style>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <TextBlock Name="FinishText" Text="Import transfer Completed Successfully." ></TextBlock>
+
+            <DockPanel Grid.Row="2" Dock="Right" HorizontalAlignment="Right" >
+
+                <Button  Click="ButtonBase_OnClick5" Content="Exit" Margin="0,15,0,0" MaxWidth="280" Padding="15,3" DockPanel.Dock="Right"></Button>
+
+            </DockPanel>
+
+        </Grid>
+    </Grid>
+    
+</UserControl>

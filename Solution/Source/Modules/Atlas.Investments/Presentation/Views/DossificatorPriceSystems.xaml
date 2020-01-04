@@ -1,0 +1,624 @@
+﻿<prism:PrismUserControlBase x:Class="CompanyName.Atlas.Investments.Presentation.Views.DossificatorPriceSystems"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+             xmlns:converters="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views.Converters"
+             xmlns:views="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views"
+             xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+             xmlns:prism="clr-namespace:CompanyName.Atlas.Contracts.Presentation.Prism;assembly=Atlas.Contracts"
+             xmlns:viewTypes="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views.ViewTypes"
+             mc:Ignorable="d" 
+                           
+             d:DesignHeight="300" d:DesignWidth="300" >
+
+    <UserControl.Resources>
+        
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Atlas.UIControls;component/Assets/DataGrid.xaml"/>
+                <ResourceDictionary Source="Assets/TabControls.xaml"></ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+
+            <Storyboard x:Key="Collapse">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)"  >
+                    <EasingDoubleKeyFrame KeyTime="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="0">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+            <Storyboard x:Key="Expand">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)"  >
+                    <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.15"  Value="400">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseIn"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                    <!--<EasingDoubleKeyFrame KeyTime="0:0:0.16"  />-->
+                </DoubleAnimationUsingKeyFrames>
+                
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)"  >
+                    <EasingDoubleKeyFrame KeyTime="0" Value="100"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="100"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="0">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseIn"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+                
+            </Storyboard>
+            <Storyboard x:Key="Appear">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)"  >
+                    <EasingDoubleKeyFrame KeyTime="0" Value="100"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="100"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="0">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+
+            </Storyboard>
+            <Storyboard x:Key="Disappear">
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)"  >
+                    <EasingDoubleKeyFrame KeyTime="0" Value="100"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="100"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.25" Value="0">
+                        <EasingDoubleKeyFrame.EasingFunction>
+                            <CubicEase EasingMode="EaseOut"/>
+                        </EasingDoubleKeyFrame.EasingFunction>
+                    </EasingDoubleKeyFrame>
+                </DoubleAnimationUsingKeyFrames>
+
+            </Storyboard>
+            <converters:BooleanToPSDossificatorConverter x:Key="BooleanToPSDossificatorConverter">
+
+            </converters:BooleanToPSDossificatorConverter>
+
+            <converters:BudgetComponentItemViewToStringConverter x:Key="BudgetComponentItemViewToString"/>
+
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+            
+
+            <!--<Style x:Key="BudgetComponentItemViewSwitcherButtonStyle" TargetType="CheckBox">
+                <Setter Property="Height" Value="20"/>
+                <Setter Property="Width" Value="20"/>
+                <Setter Property="VerticalAlignment" Value="Center"/>
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="Background" Value="{DynamicResource BudgetComponentItemButton.Static.Background}"/>
+                <Setter Property="Foreground" Value="{DynamicResource BudgetComponentItemButton.Static.Foreground}"/>
+                <Setter Property="Margin" Value="4"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="CheckBox">
+                            <Border Background="{TemplateBinding Background}" Height="{TemplateBinding Height}" Padding="{TemplateBinding Padding}">
+                                <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+
+                <Style.Triggers>
+                    <Trigger Property="IsMouseOver" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource BudgetComponentItemButton.MouseOver.Foreground}"/>
+                    </Trigger>
+                    <Trigger Property="IsChecked" Value="True">
+                        <Setter Property="Foreground" Value="{DynamicResource BudgetComponentItemButton.Selected.Foreground}"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="PlanningExecutionTabItemStyle" TargetType="{x:Type TabItem}">
+                <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"/>
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="Padding" Value="12,2,15,2"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+                <Setter Property="Background" Value="{DynamicResource PlanningExecutionTabControl.Static.Background}"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabItem}">
+                            <ControlTemplate.Resources>
+                                <Storyboard x:Key="ShowSelectionMarker">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path">
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Key="HideSelectionMarker">
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path">
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.05" Value="0"/>
+                                    </DoubleAnimationUsingKeyFrames>
+                                </Storyboard>
+                            </ControlTemplate.Resources>
+
+                            <Grid>
+                                <Border x:Name="mainBorder" Height="35" BorderThickness="{TemplateBinding BorderThickness}" Background="{DynamicResource PlanningExecutionTabItem.Static.Background}" Margin="0" OpacityMask="Red">
+                                    <ContentPresenter x:Name="contentPresenter" ContentSource="Header" FocusVisualStyle="{x:Null}" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                                </Border>
+                                <Path x:Name="path" Fill="{TemplateBinding Background}" VerticalAlignment="Bottom" Height="5" Width="10" Data="M0,5L5,0 10,5z" Visibility="Visible" Opacity="0" OpacityMask="{x:Null}"/>
+                            </Grid>
+
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="Selector.IsSelected" Value="True">
+                                    <Trigger.ExitActions>
+                                        <BeginStoryboard x:Name="HideSelectionMarker_BeginStoryboard" Storyboard="{StaticResource HideSelectionMarker}"/>
+                                    </Trigger.ExitActions>
+                                    <Trigger.EnterActions>
+                                        <BeginStoryboard Storyboard="{StaticResource ShowSelectionMarker}"/>
+                                    </Trigger.EnterActions>
+                                </Trigger>
+                                <Trigger Property="Selector.IsSelected" Value="True">
+                                    <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.Selected.Foreground}"/>
+                                </Trigger>
+                                <Trigger SourceName="mainBorder" Property="IsMouseOver" Value="True">
+                                    <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.MouseOver.Foreground}"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="PlanningExecutionTabControlStyle" TargetType="{x:Type TabControl}">
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Foreground" Value="{DynamicResource PlanningExecutionTabItem.Static.Foreground}"/>
+                <Setter Property="Background" Value="{DynamicResource PlanningExecutionTabControl.Static.Background}"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="ItemContainerStyle" Value="{DynamicResource PlanningExecutionTabItemStyle}"/>
+                <Setter Property="FontFamily" Value="{DynamicResource Default.FontFamily}"/>
+                <Setter Property="FontSize" Value="{DynamicResource Default.FontSize}"/>
+
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabControl}">
+                            <Grid x:Name="templateRoot" ClipToBounds="true" SnapsToDevicePixels="true" KeyboardNavigation.TabNavigation="Local">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition x:Name="ColumnDefinition0"/>
+                                    <ColumnDefinition x:Name="ColumnDefinition1" Width="0"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition x:Name="RowDefinition0" Height="Auto"/>
+                                    <RowDefinition x:Name="RowDefinition1" Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Border Margin="0" Grid.Row="0" Panel.ZIndex="1" Height="35"
+                                        Background="{DynamicResource PlanningExecutionTabControlHeader.Background}">
+                                    <DockPanel VerticalAlignment="Bottom">
+                                        <DockPanel DockPanel.Dock="Right" Margin="0,0,10,0" Width="130" >
+                                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" 
+                                                        HorizontalAlignment="Center">
+                                                --><!--<CheckBox Style="{StaticResource BudgetComponentItemViewSwitcherButtonStyle}"
+                                                             ToolTip="{x:Static properties:Resources.Planned}"
+                                                             IsChecked="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}, Converter={StaticResource BooleanToPSDossificatorConverter}, ConverterParameter={x:Static views:PSDossificatiorViewType.StandAlong}}">
+                                                    <Grid>
+                                                        <Path Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType=RadioButton}}"
+                                                              Stretch="Uniform"
+                                                              Data="F1 M 54.6818,20.1053L 55.8947,21.3182C 57.4019,22.8254 57.4019,25.2691 55.8947,26.7763L 53.7721,28.8989L 47.1011,22.2279L 49.2237,20.1053C 50.7309,18.5981 53.1746,18.5981 54.6818,20.1053 Z M 36.1848,46.4862L 29.5138,39.8152L 45.8881,23.4408L 52.5592,30.1119L 36.1848,46.4862 Z M 28.9073,42.241L 33.759,47.0927L 27.0251,48.9749L 28.9073,42.241 Z M 19,57L 19,25L 40.8063,25L 36.8063,29L 23,29L 23,53L 53,53L 53,32.6912L 57,28.6911L 57,57L 19,57 Z "/>
+                                                        <Path HorizontalAlignment="Center" Data="M 0,5 5,0 10,5 Z"
+                                                              Fill="{DynamicResource PlanningExecutionTabControl.Static.Background}"
+                                                              Margin="0,44,0,0"
+                                                              Visibility="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType=RadioButton}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                                    </Grid>
+                                                </CheckBox>--><!--
+                                                <CheckBox  Style="{DynamicResource BudgetComponentItemViewSwitcherButtonStyle}"
+                                                             ToolTip="{x:Static properties:Resources.ConstructionComponent}"
+                                                             IsChecked="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}, Converter={StaticResource BooleanToPSDossificatorConverter}, ConverterParameter={x:Static viewTypes:PSDossificatiorViewType.ConstructionComponenetPlanning}}">
+                                                    <CheckBox.Template>
+                                                        <ControlTemplate>
+                                                            <Grid Height="16">
+                                                                <Path Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType=CheckBox}}"
+                                                              Stretch="Uniform" Margin="0,1,0,1"
+                                                                Data="F1 M 19,38L 19,22L 24,22L 24,20L 29,20L 29,19L 46.75,19L 57,29.25L 57,38L 59,38L 59,57L 58.5833,57L 17.4167,57L 17,57L 17,38L 19,38 Z M 24,38L 24,25L 22,25L 22,38L 24,38 Z M 27,23L 27,38L 29,38L 29,23L 27,23 Z M 43,46L 43,49L 33,49L 33,46L 43,46 Z M 54,38L 54,33L 43,33L 43,22L 32,22L 32,38L 54,38 Z M 46,22.75L 46,30L 53.25,30L 46,22.75 Z M 21,42L 21,53L 55,53L 55,42L 21,42 Z "/>
+                                                                <Path HorizontalAlignment="Center" Data="M 0,5 5,0 10,5 Z"
+                                                              Fill="{DynamicResource PlanningExecutionTabControl.Static.Background}"
+                                                              
+                                                              Visibility="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType=CheckBox}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                                            </Grid>
+                                                        </ControlTemplate>
+                                                    </CheckBox.Template>
+                                                   
+                                                </CheckBox>
+                                                <CheckBox    Style="{DynamicResource BudgetComponentItemViewSwitcherButtonStyle}"
+                                                             ToolTip="{x:Static properties:Resources.VariantLines}"
+                                                             IsChecked="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}, Converter={StaticResource BooleanToPSDossificatorConverter}, ConverterParameter={x:Static viewTypes:PSDossificatiorViewType.VariantLines}}">
+                                                    <Grid>
+                                                        <Path Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType=CheckBox}}"
+                                                              Stretch="Uniform" Margin="0,1,0,1"
+                                                              Data="F1 M 22,19L 54,19L 54,22L 61,22L 61,52L 54,52L 54,57L 22,57L 22,54L 17,54L 17,24L 22,24L 22,19 Z M 25,22.0001L 25,48L 51,48L 51,22L 25,22.0001 Z M 20,27.0001L 20,45L 22,45L 22,27.0001L 20,27.0001 Z M 54,43L 57.9999,43L 57.9999,25L 54,25L 54,43 Z M 30,33L 30,37L 28,37L 28,33L 30,33 Z M 40.25,32C 41.0784,32 42,32.9216 42,33.75L 42,39.25C 42,40.0784 41.0784,41 40.25,41L 31,41L 31,32.0001L 40.25,32 Z M 43,34L 48,30L 48,42L 43,38L 43,34 Z "/>
+                                                        <Path HorizontalAlignment="Center" Data="M 0,5 5,0 10,5 Z"
+                                                              Fill="{DynamicResource PlanningExecutionTabControl.Static.Background}"
+                                                              
+                                                              Visibility="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType=CheckBox}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                                    </Grid>
+                                                </CheckBox>
+                                                <CheckBox   Style="{DynamicResource BudgetComponentItemViewSwitcherButtonStyle}"
+                                                             ToolTip="{x:Static properties:Resources.Dossificator}" 
+                                                             IsChecked="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}, Converter={StaticResource BooleanToPSDossificatorConverter}, ConverterParameter={x:Static viewTypes:PSDossificatiorViewType.Dossificator}}">
+                                                    <Grid>
+                                                        <Path Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType=CheckBox}}"
+                                                              Stretch="Uniform"
+                                                               Data="F1 M 19,19L 24,19L 24,20L 44,20L 44,32L 56,32L 56,52L 57,52L 57,57L 52,57L 52,56L 32,56L 32,44L 20,44L 20,24L 19,24L 19,19 Z M 41,23L 24,23L 24,24L 23,24L 23,41L 32,41L 32,32.0001L 41,32.0001L 41,23 Z M 51.9999,19.0001L 56.9999,19.0001L 56.9999,24.0001L 51.9999,24.0001L 51.9999,19.0001 Z M 19,52L 24,52L 24,57L 19,57L 19,52 Z M 51.9999,52L 52.9999,52L 52.9999,35L 44,35L 44,44L 35,44L 35,53L 51.9999,53L 51.9999,52 Z M 35,35L 35,41L 41,41L 41,35L 35,35 Z M 20,20L 20,23L 23,23L 23,20L 20,20 Z M 53,20L 53,23L 56,23L 56,20L 53,20 Z M 20,53L 20,56L 23,56L 23,53L 20,53 Z M 53,53L 53,56L 56,56L 56,53L 53,53 Z "/>
+                                                        <Path HorizontalAlignment="Center" Data="M 0,5 5,0 10,5 Z"
+                                                              Fill="{DynamicResource PlanningExecutionTabControl.Static.Background}"
+                                                              
+                                                              Visibility="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType=CheckBox}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                                    </Grid>
+                                                </CheckBox>
+                                                <CheckBox  Style="{DynamicResource BudgetComponentItemViewSwitcherButtonStyle}"
+                                                             ToolTip="{x:Static properties:Resources.PriceSystem}" 
+                                                             IsChecked="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}, Converter={StaticResource BooleanToPSDossificatorConverter}, ConverterParameter={x:Static viewTypes:PSDossificatiorViewType.PriceSystem}}">
+                                                    <Grid>
+                                                        <Path Fill="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType=CheckBox}}"
+                                                              Stretch="Uniform"
+                                                               Data="F1 M 16.3997,47.9811L 18.0607,46.7936L 25.5038,59.2898L 56.356,40.6856L 58.017,42.6648L 25.5039,62.0606L 16.3997,47.9811 Z M 17.0264,41.2053L 18.2915,40.4136L 25.7347,53.3056L 56.5869,35.0973L 57.852,37.4723L 25.7347,56.4723L 17.0264,41.2053 Z M 16.625,34.0417L 49.5339,15.0417L 59.0339,31.4962L 26.125,50.4962L 16.625,34.0417 Z M 38,25.3333C 34.065,25.3333 30.875,28.5233 30.875,32.4583C 30.875,36.3934 34.065,39.5833 38,39.5833C 41.935,39.5833 45.125,36.3934 45.125,32.4583C 45.125,28.5233 41.935,25.3333 38,25.3333 Z M 41.2778,36.9577L 40.1946,37.5831L 39.5993,36.5521L 38.4606,36.9961L 37.5089,37.1367L 37.091,35.6699L 38.0824,35.5512L 39.157,35.129C 39.4812,34.9396 39.7158,34.7233 39.8607,34.4801C 40.0056,34.2369 40.0189,34.0038 39.9008,33.781C 39.7801,33.5738 39.5707,33.4558 39.2727,33.427L 38.0917,33.5366C 37.3964,33.6816 36.784,33.6962 36.2545,33.5807C 35.7251,33.4651 35.3027,33.1441 34.9876,32.6177C 34.7014,32.1166 34.6178,31.601 34.7366,31.0709C 34.8555,30.5408 35.1846,30.0428 35.7239,29.5769L 35.1229,28.536L 36.198,27.9153L 36.7547,28.8795L 37.7516,28.4683L 38.5445,28.3282L 38.9425,29.7566L 38.2097,29.8536L 37.0885,30.3081C 36.742,30.5175 36.5343,30.7263 36.4653,30.9348C 36.3963,31.1432 36.4113,31.3272 36.5103,31.4868C 36.6061,31.6626 36.8028,31.7607 37.1005,31.7811L 38.4193,31.6438C 39.2025,31.4956 39.8317,31.5058 40.3067,31.6744C 40.7818,31.8431 41.1605,32.1794 41.4427,32.6834C 41.7325,33.1857 41.8179,33.7144 41.6988,34.2694C 41.5797,34.8245 41.2242,35.3479 40.6324,35.8398L 41.2778,36.9577 Z "/>
+                                                        <Path HorizontalAlignment="Center" Data="M 0,5 5,0 10,5 Z"
+                                                              Fill="{DynamicResource PlanningExecutionTabControl.Static.Background}"
+                                                              
+                                                              Visibility="{Binding IsChecked, RelativeSource={RelativeSource FindAncestor, AncestorType=CheckBox}, Converter={StaticResource BooleanToVisibilityConverter}}"/>
+                                                    </Grid>
+                                                </CheckBox>
+                                            </StackPanel>
+                                            <TextBlock Margin="-80,0,0,-45" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource BudgetComponentItemButton.Selected.Foreground}"
+                                                       Text="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}, Converter={StaticResource BudgetComponentItemViewToString}}">
+                                            <TextBlock.Style>
+                                                <Style TargetType="TextBlock">
+                                                    <Style.Triggers>
+                                                        <Trigger Property="Text" Value="">
+                                                                <Trigger.EnterActions>
+                                                                    <BeginStoryboard Storyboard="{StaticResource Disappear}"/>
+                                                                </Trigger.EnterActions>
+                                                                <Trigger.ExitActions>
+                                                                    <BeginStoryboard Storyboard="{StaticResource Appear}"/>
+                                                                </Trigger.ExitActions>
+                                                            </Trigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </TextBlock.Style>    
+                                            </TextBlock>
+                                        </DockPanel>
+
+                                        <Line Y1="0" Y2="20" VerticalAlignment="Center" Margin="10,0"
+                                              Stroke="{DynamicResource FilterBoxSeparator.Stroke}"
+                                              StrokeThickness="1" DockPanel.Dock="Right"/>
+
+                                        <uiControls:FilterBox DockPanel.Dock="Right" MinWidth="150" MaxWidth="200"
+                                                              Text="{Binding FilterCriteria, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                                              FilterCommand="Find" ToolTip="{x:Static properties:Resources.FilterBudgetComponentItems}" />
+
+                                        <TabPanel x:Name="headerPanel" IsItemsHost="true" Margin="0"
+                                                  KeyboardNavigation.TabIndex="1" Panel.ZIndex="1"/>
+                                    </DockPanel>
+                                </Border>
+                                <Border x:Name="contentPanel" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                                    <ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="ResourcesActivitiesTabItemStyle" TargetType="{x:Type TabItem}">
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="Background" Value="{DynamicResource ResourcesActivitiesTabControlHeader.Background}"/>
+                <Setter Property="Foreground" Value="{DynamicResource ResourcesActivitiesTabItem.Static.Foreground}"/>
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+                <Setter Property="Padding" Value="12,2,17,2"/>
+                <Setter Property="Margin" Value="0"/>
+                <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+                <Setter Property="VerticalContentAlignment" Value="Stretch"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabItem}">
+                            <Border x:Name="mainBorder" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="1,1,1,0" Background="{TemplateBinding Background}" Margin="0" Height="35">
+                                <ContentPresenter x:Name="contentPresenter" ContentSource="Header" FocusVisualStyle="{x:Null}" HorizontalAlignment="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}"/>
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True" SourceName="mainBorder">
+                                    <Setter Property="Foreground" Value="{DynamicResource ResourcesActivitiesTabItem.MouseOver.Foreground}"/>
+                                </Trigger>
+                                <Trigger Property="Selector.IsSelected" Value="True">
+                                    <Setter Property="Foreground" Value="{DynamicResource ResourcesActivitiesTabItem.Selected.Foreground}"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="ResourcesActivitiesTabControlStyle" TargetType="{x:Type TabControl}">
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                <Setter Property="VerticalContentAlignment" Value="Center"/>
+                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="Background" Value="{DynamicResource PlanningExecutionTabControl.Static.Background}"/>
+                <Setter Property="Padding" Value="0"/>
+                <Setter Property="ItemContainerStyle" Value="{StaticResource ResourcesActivitiesTabItemStyle}"/>
+                <Setter Property="Visibility" Value="Collapsed"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabControl}">
+                            <Grid x:Name="templateRoot" ClipToBounds="true" SnapsToDevicePixels="true" KeyboardNavigation.TabNavigation="Local">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition x:Name="ColumnDefinition0"/>
+                                    <ColumnDefinition x:Name="ColumnDefinition1" Width="0"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition x:Name="RowDefinition0" Height="Auto"/>
+                                    <RowDefinition x:Name="RowDefinition1" Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TabPanel x:Name="headerPanel" Background="Transparent" Grid.Column="0" IsItemsHost="true" Grid.Row="0" KeyboardNavigation.TabIndex="1" Panel.ZIndex="1"/>
+                                <Border x:Name="contentPanel" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Grid.Column="0" KeyboardNavigation.DirectionalNavigation="Contained" Grid.Row="1" KeyboardNavigation.TabIndex="2" KeyboardNavigation.TabNavigation="Local">
+                                    <ContentPresenter x:Name="PART_SelectedContentHost" ContentSource="SelectedContent" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Border>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            
+
+            <Style x:Key="SplitStandAloneStyle" TargetType="Grid" >
+                <Setter Property="Visibility" Value="Visible"></Setter>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                 Value="{x:Static viewTypes:PSDossificatiorViewType.StandAlong}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
+
+            <Style x:Key="ColumnDefinitionStyle" TargetType="ColumnDefinition" >
+               
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                 Value="{x:Static viewTypes:PSDossificatiorViewType.StandAlong}">
+                        
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource Collapse}"/>
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource Expand}"/>
+                            </DataTrigger.ExitActions>
+                            --><!--<Setter Property="Width" Value="Auto"></Setter>--><!--
+                       
+
+                    </DataTrigger>
+                   
+                </Style.Triggers>
+            </Style>
+            <Style x:Key="SplitPriceSystemStyle" TargetType="views:PriceSystems" >
+                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                 Value="{x:Static viewTypes:PSDossificatiorViewType.PriceSystem}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                    
+                </Style.Triggers>
+            </Style>
+            
+            <Style x:Key="SplitDossificatorStyle" TargetType="views:DossificatorView" >
+                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                 Value="{x:Static viewTypes:PSDossificatiorViewType.Dossificator}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                    <Trigger  Property="Visibility" Value="{x:Static Visibility.Visible}">
+                        <Trigger.EnterActions>
+                             <BeginStoryboard Storyboard="{StaticResource Expand}"/>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                           <BeginStoryboard Storyboard="{StaticResource Collapse}"/>
+                        </Trigger.ExitActions>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+
+            <Style x:Key="SplitvariantLinesStyle" TargetType="views:VariantLinesViewer">
+                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                 Value="{x:Static viewTypes:PSDossificatiorViewType.VariantLines}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                    <Trigger  Property="Visibility" Value="{x:Static Visibility.Visible}">
+                        <Trigger.EnterActions>
+                            <BeginStoryboard Storyboard="{StaticResource Expand}"/>
+                        </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                            <BeginStoryboard Storyboard="{StaticResource Collapse}"/>
+                        </Trigger.ExitActions>
+                        <Setter Property="Width" Value="Auto"></Setter>
+                    </Trigger>
+                    
+                        
+                   
+                </Style.Triggers>
+            </Style>
+            
+
+            <Style x:Key="SplitConstructionStyle" TargetType="views:BudgetConstructionView">
+                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                 Value="{x:Static viewTypes:PSDossificatiorViewType.ConstructionComponenetPlanning}">
+                        <Setter Property="Visibility" Value="Visible"/>
+                    </DataTrigger>
+                    
+                        <Trigger  Property="Visibility" Value="{x:Static Visibility.Visible}">
+                        <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource Expand}"/>
+                            </Trigger.EnterActions>
+                        <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource Collapse}"/>
+                            </Trigger.ExitActions>
+                        <Setter Property="Width" Value="Auto"></Setter>
+                    </Trigger>
+                    </Style.Triggers>
+            </Style>-->
+           
+        </ResourceDictionary>
+
+       
+    </UserControl.Resources>
+    <!--<DockPanel>
+        --><!--<Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>--><!--
+        <DockPanel DockPanel.Dock="Top" Height="35">
+
+            <uiControls:RouteTextBox  VerticalAlignment="Center"  d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" />
+
+        </DockPanel>
+
+        <uiControls:AtlasTabControl  d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" 
+                    Style="{DynamicResource PlanningExecutionTabControlStyle}" FilterCommand="{Binding RelativeSource={RelativeSource }}">
+
+            --><!-- This is the tab controls group of the price system view --><!--
+            <uiControls:AtlasTabItem Header="{x:Static properties:Resources.PriceSystems}" >-->
+
+
+                <views:PriceSystems x:Name="PriceSystems" ></views:PriceSystems>
+
+
+                <!--<DockPanel>
+                   <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Name="ColumnDefinition" Width="Auto" MaxWidth="400" />
+                        </Grid.ColumnDefinitions>
+                    <Grid Style="{DynamicResource SplitStandAloneStyle}">
+                        <views:PriceSystems></views:PriceSystems>
+                    </Grid>
+                   
+                        <GridSplitter HorizontalAlignment="Center" VerticalAlignment="Stretch" 
+                                              Grid.Column="1" Width="5">
+                            <GridSplitter.Style>
+                                <Style TargetType="GridSplitter">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                            Value="{x:Static viewTypes:PSDossificatiorViewType.StandAlong}">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </GridSplitter.Style>
+                            </GridSplitter>
+
+                        
+                            <views:BudgetConstructionView x:Name="BudgetConstructionView"  Grid.Column="2" Style="{DynamicResource SplitConstructionStyle}"
+                                                        ></views:BudgetConstructionView>
+
+                            <views:VariantLinesViewer x:Name="VariantLinesViewer"  Grid.Column="2"  Style="{DynamicResource SplitvariantLinesStyle}"
+                                                     ></views:VariantLinesViewer>
+
+                            <views:DossificatorView x:Name="DossificatorView"  Grid.Column="2"    Style="{DynamicResource SplitDossificatorStyle}"
+                                                   ></views:DossificatorView>
+
+                            <views:PriceSystems x:Name="PriceSystems" Grid.Column="2" Style="{DynamicResource SplitPriceSystemStyle}"
+                                                ></views:PriceSystems>
+                        
+                        
+                    </Grid>
+                </DockPanel>-->
+            <!--</uiControls:AtlasTabItem>
+
+
+            --><!-- This is the tab controls group of the construction component items --><!--
+            <uiControls:AtlasTabItem Header="{x:Static properties:Resources.Dossificator}">
+               --><!--<DockPanel>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Name="ColumnDefinition2" Width="Auto" MaxWidth="400"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Style="{DynamicResource SplitStandAloneStyle}">
+                            <views:DossificatorView></views:DossificatorView>
+                        </Grid>
+                    
+                        <GridSplitter HorizontalAlignment="Center" VerticalAlignment="Stretch"
+                                              Grid.Column="1" Width="5">
+                            <GridSplitter.Style>
+                                <Style TargetType="GridSplitter">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                 Value="{x:Static viewTypes:PSDossificatiorViewType.StandAlong}">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </GridSplitter.Style>
+                        </GridSplitter>
+                        <views:BudgetConstructionView x:Name="BudgetConstructionView1" Grid.Column="2" Style="{DynamicResource SplitConstructionStyle}"></views:BudgetConstructionView>
+                
+                        <views:PriceSystems Grid.Column="2" x:Name="PriceSystems1"  Style="{DynamicResource SplitPriceSystemStyle}"></views:PriceSystems>
+                        <views:VariantLinesViewer Grid.Column="2" x:Name="VariantLinesViewer1" Style="{DynamicResource SplitvariantLinesStyle}"></views:VariantLinesViewer>
+                    
+                        <views:DossificatorView Grid.Column="2" x:Name="DossificatorView1" Style="{DynamicResource SplitDossificatorStyle}"></views:DossificatorView>
+                   
+                    </Grid>
+                </DockPanel>--><!--
+            </uiControls:AtlasTabItem>
+
+            <uiControls:AtlasTabItem Header="{x:Static properties:Resources.VariantLines}">
+            --><!--<DockPanel>
+                    <Grid >
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Name="ColumnDefinition3" Width="Auto"  MaxWidth="400"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid Style="{DynamicResource SplitStandAloneStyle}">
+                        <views:VariantLinesViewer></views:VariantLinesViewer>
+                       </Grid>
+                        <GridSplitter HorizontalAlignment="Center" VerticalAlignment="Stretch"
+                                              Grid.Column="1" Width="5">
+                            <GridSplitter.Style>
+                                <Style TargetType="GridSplitter">
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding View, RelativeSource={RelativeSource FindAncestor, AncestorType=views:DossificatorPriceSystems}}"
+                                 Value="{x:Static viewTypes:PSDossificatiorViewType.StandAlong}">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </GridSplitter.Style>
+                            </GridSplitter>
+                            <views:BudgetConstructionView x:Name="BudgetConstructionView2" Grid.Column="2" Style="{DynamicResource SplitConstructionStyle}"></views:BudgetConstructionView>
+                    
+                            <views:PriceSystems x:Name="PriceSystems2" Grid.Column="2"  Style="{DynamicResource SplitPriceSystemStyle}"></views:PriceSystems>
+                            <views:DossificatorView x:Name="DossificatorView2" Grid.Column="2"  Style="{DynamicResource SplitDossificatorStyle}"></views:DossificatorView>
+                   
+                            <views:VariantLinesViewer x:Name="VariantLinesViewer2" Grid.Column="2"  Style="{DynamicResource SplitvariantLinesStyle}"></views:VariantLinesViewer>
+                    </Grid>
+                </DockPanel>--><!--
+            </uiControls:AtlasTabItem>
+
+    </uiControls:AtlasTabControl>
+    </DockPanel>-->
+</prism:PrismUserControlBase>

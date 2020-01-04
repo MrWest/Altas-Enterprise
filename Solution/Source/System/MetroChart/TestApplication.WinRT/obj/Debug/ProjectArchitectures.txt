@@ -1,0 +1,2 @@
+D:\TFS2010\MetroChart\De.TorstenMandelkow.MetroChart.WinRT\De.TorstenMandelkow.MetroChart.WinRT.csproj;neutral
+D:\TFS2010\MetroChart\TestApplication.WinRT\TestApplication.WinRT.csproj;neutral

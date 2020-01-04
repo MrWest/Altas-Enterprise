@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.BindableTestsBase&lt;T, TValidatable&gt;" Collapsed="true">
+    <Position X="3.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAQBAACAAEEAQAgAAAAAAAAAAAAAAAIAAAhAAAABAg=</HashCode>
+      <FileName>BindableTestsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.CrudViewModelTestsBase&lt;TViewModel, TItem, TPresenter, TServices&gt;">
+    <Position X="2.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEQAACQAAAIAAABAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>CrudViewModelTestsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.DomainServicesTestsBase&lt;T, TDomainServices&gt;" Collapsed="true">
+    <Position X="7.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DomainServicesTestsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.ItemManagerApplicationServicesTestsBase&lt;TServices, T, TRepository, TDomainServices, TUnitOfWork&gt;" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABYAAACAAASAQgQAAAIAEAQAABEAIAAAgEAABAAA=</HashCode>
+      <FileName>ItemManagerApplicationServicesTestsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.MockedTestBase&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAACAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MockedTestBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.PresenterTestsBase&lt;TItem, TPresenter, TServices&gt;" Collapsed="true">
+    <Position X="5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBBAQAAAESAACQAAAoAEAAAAAQAAAQAAICAAAAAAAAA=</HashCode>
+      <FileName>PresenterTestsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.TestBase" Collapsed="true">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAYAAAYAAAQAAAAAAiAAEAAAAAAAgAQAAgAAAAAA=</HashCode>
+      <FileName>TestBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.TestBase&lt;T&gt;" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABAAAgAAAAQAACQAAAAAAIAEAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>TestBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Microsoft.VisualStudio.TestTools.UnitTesting.ValidatedTestsBase&lt;T, TValidatable&gt;" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAGAAQACAAABAAAAQAEAAEAAgACAAAAAAAA=</HashCode>
+      <FileName>ValidatedTestsBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

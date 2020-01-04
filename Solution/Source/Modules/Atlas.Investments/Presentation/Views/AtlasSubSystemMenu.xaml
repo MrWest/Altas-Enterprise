@@ -1,0 +1,82 @@
+﻿<UserControl x:Class="CompanyName.Atlas.Investments.Presentation.Views.AtlasSubSystemMenu"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+             xmlns:views="clr-namespace:CompanyName.Atlas.UIControls.Views;assembly=Atlas.UIControls"
+             xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+             xmlns:properties1="clr-namespace:CompanyName.Atlas.UIControls.Properties;assembly=Atlas.UIControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="100" d:DesignWidth="300" x:Name="HelpMenu"  >
+    <UserControl.Resources>
+        
+            <ResourceDictionary Source="Assets/Icons.xaml" />
+      
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2"></ColumnDefinition>
+            <ColumnDefinition Width="Auto"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+           <Menu x:Name="SubSystemMenu"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="4,0">
+            <MenuItem Header="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=File}" HorizontalAlignment="Left" VerticalAlignment="Center" ></MenuItem>
+            <MenuItem Header="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Edit}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <MenuItem Command="{Binding CopyCommand, RelativeSource={RelativeSource AncestorType=uiControls:AtlasModuleView}}" IsEnabled="{Binding CanCopy, RelativeSource={RelativeSource AncestorType=uiControls:AtlasModuleView}}" Header="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Copy}" InputGestureText="Ctrl+C"></MenuItem>
+                <MenuItem Command="{Binding PasteCommand, RelativeSource={RelativeSource AncestorType=uiControls:AtlasModuleView}}" IsEnabled="{Binding CanPaste, RelativeSource={RelativeSource AncestorType=uiControls:AtlasModuleView}}" Header="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Paste}" InputGestureText="Ctrl+V"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="{x:Static properties:Resources.Tools}" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <MenuItem  Header="Access Import" InputGestureText="Ctrl+I" Click="MenuItem_OnClick"></MenuItem>
+            </MenuItem>
+            <MenuItem  Header="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Help}"  HorizontalAlignment="Left" VerticalAlignment="Center" IsCheckable="True"
+                       IsChecked="{Binding ShowHelp, RelativeSource={RelativeSource AncestorType=uiControls:AtlasModuleView}}">
+                <!--<MenuItem.Header>
+                    <CheckBox Background="Transparent"  OverridesDefaultStyle="True" Foreground="{DynamicResource Menu.Static.Foreground}" Content="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Help}" IsChecked="{Binding ShowHelp, RelativeSource={RelativeSource AncestorType=uiControls:AtlasModuleView}}">
+                        <CheckBox.Template>
+
+                            <ControlTemplate TargetType="{x:Type CheckBox}">
+                                <Border x:Name="LayoutRoot" Margin="{TemplateBinding Padding}">
+                                    -->
+                <!--<Border x:Name="CheckBorder" Width="16" Height="16" Margin="0,1,4,0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
+                                        <Path x:Name="CheckMark" Width="10" Height="10" Margin="2" Visibility="Collapsed" Stretch="Fill" Fill="{TemplateBinding Foreground}" Data="F1 M 15,21L 22,28L 32.9999,14.0001L 35.9999,17.0001L 22,34L 12.0001,24L 15,21 Z "/>
+                                    </Border>-->
+                <!--
+                                    <TextBlock Text="{TemplateBinding Content}" x:Name="TextBlock" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter Property="Foreground" Value="{DynamicResource ButtonTextDisabled}" />
+                                    </Trigger>
+
+                                    <Trigger Property="IsChecked" Value="true">
+                                        -->
+                <!--<Setter Property="Background" TargetName="LayoutRoot" Value="{DynamicResource TopMenuItem.IsOpen.Background}"/>-->
+                <!--<Setter Property="Foreground"  TargetName="TextBlock"  Value="{DynamicResource TopMenuItem.IsOpen.Foreground}"/>-->
+                <!--
+                                    </Trigger>
+
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+
+                        </CheckBox.Template>
+                    </CheckBox>
+                </MenuItem.Header>-->
+            </MenuItem>
+
+
+
+
+        </Menu>
+        <Rectangle Grid.Column="1" Fill="{DynamicResource DataGridRowBottomLine.Static.Background}" Margin="0,8,0,8"></Rectangle>
+        <Path Grid.Column="2"  Style="{StaticResource IconStyle}" Fill="{DynamicResource Default.Foreground}" Height="20" Width="20" Margin="5,0"
+          Data="F1 M 38,15.8334L 58.5833,23.75L 58.5833,30.0833L 38,38L 17.4167,30.0833L 17.4166,23.75L 38,15.8334 Z M 58.5833,44.3333L 58.5833,52.25L 38,60.1667L 17.4167,52.25L 17.4167,44.3333L 21.5333,45.9167L 38,52.25L 54.4667,45.9167L 58.5833,44.3333 Z M 58.5833,33.25L 58.5833,41.1667L 38,49.0833L 17.4167,41.1667L 17.4167,33.25L 21.5333,34.8333L 38,41.1667L 54.4666,34.8333L 58.5833,33.25 Z "/>
+        <!--<Popup x:Name="HelpPopup" PopupAnimation="Slide" Placement="Bottom" PlacementTarget="{x:Reference Name=HelpMenu}" StaysOpen="True">
+            <views:AtlasModuleHelpContent x:Name="AtlasModuleHelpContent" Height="690" Width="{Binding ElementName=HelpMenu}" >
+
+            </views:AtlasModuleHelpContent>
+        </Popup>-->
+       
+    </Grid>
+</UserControl>

@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CompanyName.Atlas.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="ModulePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Modules</Value>
+    </Setting>
+    <Setting Name="ReferencePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">References</Value>
+    </Setting>
+    <Setting Name="MaxTimePerCharToReadyStatus" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">50</Value>
+    </Setting>
+    <Setting Name="VideoMediaRelativePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Media\Video</Value>
+    </Setting>
+    <Setting Name="VideoMediaFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Loging page ATLAS.f4v</Value>
+    </Setting>
+    <Setting Name="ImgMediaFile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Loging page ATLAS.jpg</Value>
+    </Setting>
+    <Setting Name="ImgMediaRelativePath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Media\Img</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,66 @@
+D:\TFS2010\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.exe.config
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.csprojResolveAssemblyReference.cache
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\MainWindow.baml
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\Skins\MainSkin.baml
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\App.baml
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\MainWindow.g.cs
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\App.g.cs
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF_MarkupCompile.cache
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF_MarkupCompile.lref
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.exe
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.pdb
+D:\TFS2010\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.exe
+D:\TFS2010\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.pdb
+D:\TFS2010\MetroChart\TestApplicationWPF\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\TFS2010\MetroChart\TestApplicationWPF\bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\Themes\Generic.baml
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.g.resources
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.Properties.Resources.resources
+D:\TFS2010\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.csproj.GenerateResource.Cache
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.exe.config
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.exe
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.exe
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.csprojResolveAssemblyReference.cache
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\MainWindow.baml
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\App.baml
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\MainWindow.g.cs
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\App.g.cs
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF_MarkupCompile.cache
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF_MarkupCompile.lref
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\Themes\Generic.baml
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.g.resources
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.Properties.Resources.resources
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.csproj.GenerateResource.Cache
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.exe.config
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.exe
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.pdb
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.exe
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.pdb
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.csprojResolveAssemblyReference.cache
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\MainWindow.baml
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\Skins\MainSkin.baml
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\App.baml
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\MainWindow.g.cs
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\App.g.cs
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF_MarkupCompile.cache
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF_MarkupCompile.lref
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\Themes\Generic.baml
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.g.resources
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.Properties.Resources.resources
+C:\Users\KidWest\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.csproj.GenerateResource.Cache
+C:\Users\Enrike\Desktop\New line\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.exe.config
+C:\Users\Enrike\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.exe
+C:\Users\Enrike\Desktop\New line\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.pdb
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationWPF\bin\Debug\TestApplicationWPF.exe.config
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.exe
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\TestApplicationWPF\obj\Debug\TestApplicationWPF.pdb

@@ -1,0 +1,1152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Activities" xml:space="preserve">
+    <value>Actividades</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="AddInvElemButtonTooltip" xml:space="preserve">
+    <value>Añadir Nuevo Elemento de Inversión hijo del actual</value>
+  </data>
+  <data name="AddRootInvElemButtonTooltip" xml:space="preserve">
+    <value>Crear Nuevo Elemento de Inversión raíz</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Importe</value>
+  </data>
+  <data name="Both" xml:space="preserve">
+    <value>Ambos</value>
+  </data>
+  <data name="Budget" xml:space="preserve">
+    <value>Presupuesto</value>
+  </data>
+  <data name="Budget_Tooltip" xml:space="preserve">
+    <value>Sección de Administración del presupuesto</value>
+  </data>
+  <data name="Code" xml:space="preserve">
+    <value>Código</value>
+  </data>
+  <data name="ConstructionComponent" xml:space="preserve">
+    <value>Construcción y Montaje</value>
+  </data>
+  <data name="Cost" xml:space="preserve">
+    <value>Importe</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Moneda</value>
+  </data>
+  <data name="DeleteInvElemButtonTooltip" xml:space="preserve">
+    <value>Eliminar el Elemento de Inversión actual</value>
+  </data>
+  <data name="EquipmentComponent" xml:space="preserve">
+    <value>Equipos</value>
+  </data>
+  <data name="Executed" xml:space="preserve">
+    <value>Ejecutados</value>
+  </data>
+  <data name="ExecutedThisManyItems" xml:space="preserve">
+    <value>Se han ejecutado: "{0}" elementos de los que fueron seleccionados, los que ya estaban ejecutados se han ignorado.</value>
+  </data>
+  <data name="ExecutionSummary" xml:space="preserve">
+    <value>Resumen de Ejecución</value>
+  </data>
+  <data name="FilterBudgetComponentItems" xml:space="preserve">
+    <value>Filtrar por nombre los elementos de los componentes del presupuesto.</value>
+  </data>
+  <data name="Funding" xml:space="preserve">
+    <value>Financiamiento</value>
+  </data>
+  <data name="Funding_Tooltip" xml:space="preserve">
+    <value>Sección de Financiamiento</value>
+  </data>
+  <data name="GraphicModelator" xml:space="preserve">
+    <value>Modelador Gráfico</value>
+  </data>
+  <data name="GraphicModelator_Tooltip" xml:space="preserve">
+    <value>Modelado de gráficas y simulación</value>
+  </data>
+  <data name="InitializeBudgetBeforeUsingIt" xml:space="preserve">
+    <value>Cannot use the budget reference before it's set. It's currently null, so please, set it first, before using it.</value>
+  </data>
+  <data name="InitializeComponentReferenceBeforeUsingIt" xml:space="preserve">
+    <value>Cannot use this class's Component property before its initialized.</value>
+  </data>
+  <data name="InitializeConstructionComponentBeforeUsingIt" xml:space="preserve">
+    <value>Cannot use the construction component reference before it's set. It's currently null, so please, set it first, before using it.</value>
+  </data>
+  <data name="InitializeEquipmentComponentBeforeUsingIt" xml:space="preserve">
+    <value>Cannot use the equipment component reference before it's set. It's currently null, so please, set it first, before using it.</value>
+  </data>
+  <data name="InitializeInvestmentElementBeforeUsingIt" xml:space="preserve">
+    <value>Cannot use the investment element reference before it's set. It's currently null, so please, set it first, before using it.</value>
+  </data>
+  <data name="InvestmentElementMustHaveAName" xml:space="preserve">
+    <value>El Elemento de Inversión debe tener un nombre.</value>
+  </data>
+  <data name="InvestmentElementWithoutBudget" xml:space="preserve">
+    <value>No se permiten elementos de inversión (IInvestmentElement) sin Presupuestos (IBudget).</value>
+  </data>
+  <data name="Market" xml:space="preserve">
+    <value>Mercado</value>
+  </data>
+  <data name="Market_Tooltip" xml:space="preserve">
+    <value>Sección de Mercado</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="NewExecutedActivityDescription" xml:space="preserve">
+    <value>Descripción de Nueva Actividad Ejecutada</value>
+  </data>
+  <data name="NewExecutedActivityName" xml:space="preserve">
+    <value>Nueva Actividad Ejecutada</value>
+  </data>
+  <data name="NewExecutedResourceDescription" xml:space="preserve">
+    <value>Descripción de Nuevo Recurso Ejecutado</value>
+  </data>
+  <data name="NewExecutedResourceName" xml:space="preserve">
+    <value>Nuevo Recurso Ejecutado</value>
+  </data>
+  <data name="NewInvestmentElementDescription" xml:space="preserve">
+    <value>Descripción del Nuevo Elemento de Inversión.</value>
+  </data>
+  <data name="NewInvestmentElementName" xml:space="preserve">
+    <value>Nuevo Elemento de Inversión</value>
+  </data>
+  <data name="NewPlannedActivityDescription" xml:space="preserve">
+    <value>Descripción de Nueva Actividad Planificada</value>
+  </data>
+  <data name="NewPlannedActivityName" xml:space="preserve">
+    <value>Nueva Actividad Planificada</value>
+  </data>
+  <data name="NewPlannedResourceDescription" xml:space="preserve">
+    <value>Descripción de Nuevo Recurso Planificado</value>
+  </data>
+  <data name="NewPlannedResourceName" xml:space="preserve">
+    <value>Nuevo Recurso Planificado</value>
+  </data>
+  <data name="OtherExpensesComponent" xml:space="preserve">
+    <value>Otros</value>
+  </data>
+  <data name="Planned" xml:space="preserve">
+    <value>Planificados</value>
+  </data>
+  <data name="PlanningExecuting" xml:space="preserve">
+    <value>Plan/Ejecución</value>
+  </data>
+  <data name="PlanningExecution_Tooltip" xml:space="preserve">
+    <value>Gestión de recursos y actividades planificadas y ejecutada</value>
+  </data>
+  <data name="PriceSystem" xml:space="preserve">
+    <value>Sistema de Precios</value>
+  </data>
+  <data name="PriceSystem_Tooltip" xml:space="preserve">
+    <value>Gestión de Sistemas de Precios y dosis</value>
+  </data>
+  <data name="ProvidedInvestmentElementWithBudget" xml:space="preserve">
+    <value>Not allowed an investment element with a null budget.</value>
+  </data>
+  <data name="Quantity" xml:space="preserve">
+    <value>Cantidad</value>
+  </data>
+  <data name="Resources_" xml:space="preserve">
+    <value>Recursos</value>
+  </data>
+  <data name="SuccessfullyAddedExecutedActivity" xml:space="preserve">
+    <value>Añadida exitosamente la Actividad ejecutada: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedExecutedResource" xml:space="preserve">
+    <value>Añadido exitosamente el Recurso ejecutado: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedInvestmentElement" xml:space="preserve">
+    <value>Añadido exitosamente el Elemento de Inversión: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedPlannedActivity" xml:space="preserve">
+    <value>Añadida exitosamente el Actividad planificada: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedPlannedResource" xml:space="preserve">
+    <value>Añadido exitosamente el Recurso planificado: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedExecutedActivity" xml:space="preserve">
+    <value>Eliminada exitosamente la Actividad ejecutada: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedExecutedResource" xml:space="preserve">
+    <value>Eliminado exitosamente el Recurso ejecutado: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedInvestmentElement" xml:space="preserve">
+    <value>Eliminado exitosamente el Elemento de Inversión: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedPlannedActivity" xml:space="preserve">
+    <value>Eliminada exitosamente el Actividad planificada: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedPlannedResource" xml:space="preserve">
+    <value>Eliminado exitosamente el Recurso planificado: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedExecutedActivity" xml:space="preserve">
+    <value>Actualizada exitosamente la Actividad ejecutada: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedExecutedResource" xml:space="preserve">
+    <value>Actualizado exitosamente el Recurso ejecutado: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedInvestmentElement" xml:space="preserve">
+    <value>Actualizado exitosamente el Elemento de Inversión: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedPlannedActivity" xml:space="preserve">
+    <value>Actualizada exitosamente la Actividad planificada: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedPlannedResource" xml:space="preserve">
+    <value>Actualizado exitosamente el Recurso planificado: "{0}".</value>
+  </data>
+  <data name="SureToDeleteExecutedActivity" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Actividad ejecutada: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteExecutedResource" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Recurso ejecutado: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteInvestmentElement" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Elemento de Inversión: "{0}"?</value>
+  </data>
+  <data name="SureToDeletePlannedActivity" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Actividad planificada: "{0}"?</value>
+  </data>
+  <data name="SureToDeletePlannedResource" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Recurso planificado: "{0}"?</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>Cronograma</value>
+  </data>
+  <data name="Timeline_Tooltip" xml:space="preserve">
+    <value>Distribución temporal de los elementos de inversión</value>
+  </data>
+  <data name="TotalCost" xml:space="preserve">
+    <value>Costo Total</value>
+  </data>
+  <data name="UnitaryCost" xml:space="preserve">
+    <value>Costo</value>
+  </data>
+  <data name="U_Slash_M" xml:space="preserve">
+    <value>U/M</value>
+  </data>
+  <data name="WorkCapitalComponent" xml:space="preserve">
+    <value>Capital de Trabajo</value>
+  </data>
+  <data name="AddOace_ToolTip" xml:space="preserve">
+    <value>Adicionar un nuevo OACE.</value>
+  </data>
+  <data name="AuthorOrEmitter_Colon" xml:space="preserve">
+    <value>Autor o Emisor:</value>
+  </data>
+  <data name="Categories" xml:space="preserve">
+    <value>Categorías</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Categoría</value>
+  </data>
+  <data name="DeleteOace_ToolTip" xml:space="preserve">
+    <value>Eliminar el OACE seleccionado.</value>
+  </data>
+  <data name="Indirect" xml:space="preserve">
+    <value>Indirecto</value>
+  </data>
+  <data name="InducedDoings_Colon" xml:space="preserve">
+    <value>Obras Inducidas:</value>
+  </data>
+  <data name="InitializeInvestmentComponentPresenterParentBeforeUsingIt" xml:space="preserve">
+    <value>The parent of the investment component presenter is being read without a value, it's currently null. Please assign one to it before using it.</value>
+  </data>
+  <data name="InitializeInvestmentComponentViewModelParentBeforeUsingIt" xml:space="preserve">
+    <value>The parent of the investment component view model is being read without a value, it's currently null. Please assign one to it before using it.</value>
+  </data>
+  <data name="InvestmentName_Colon" xml:space="preserve">
+    <value>Nombre de Inversión:</value>
+  </data>
+  <data name="InvestmentSheet" xml:space="preserve">
+    <value>Ficha de Inversión</value>
+  </data>
+  <data name="InvestmentTypes" xml:space="preserve">
+    <value>Tipos de Inversión</value>
+  </data>
+  <data name="InvestmentType_Colon" xml:space="preserve">
+    <value>Tipo inversión:</value>
+  </data>
+  <data name="InvestmentVariables" xml:space="preserve">
+    <value>Variables de Inversion</value>
+  </data>
+  <data name="InvestmentVariables_ToolTip" xml:space="preserve">
+    <value>Edición de las variables del Módulo de Inversiones.</value>
+  </data>
+  <data name="Location_Colon" xml:space="preserve">
+    <value>Localization:</value>
+  </data>
+  <data name="NewCategory_Description" xml:space="preserve">
+    <value>Descripción de Nueva Category.</value>
+  </data>
+  <data name="NewCategory_Name" xml:space="preserve">
+    <value>Nueva Categoría</value>
+  </data>
+  <data name="NewExpenseConcept_Name" xml:space="preserve">
+    <value>Nuevo Concepto de Gasto</value>
+  </data>
+  <data name="NewInvestmentType_Description" xml:space="preserve">
+    <value>Descripción de Nuevo Tipo de Inversión.</value>
+  </data>
+  <data name="NewInvestmentType_Name" xml:space="preserve">
+    <value>Nuevo Tipo de Inversión</value>
+  </data>
+  <data name="NewOace_Description" xml:space="preserve">
+    <value>Descripción de Nuevo OACE.</value>
+  </data>
+  <data name="NewOace_Name" xml:space="preserve">
+    <value>Nuevo OACE.</value>
+  </data>
+  <data name="NewOsde_Description" xml:space="preserve">
+    <value>Descripción de Nuevo OSDE.</value>
+  </data>
+  <data name="NewOsde_Name" xml:space="preserve">
+    <value>Nuevo OSDE.</value>
+  </data>
+  <data name="NewPhase_Description" xml:space="preserve">
+    <value>Descripción de Nueva Fase.</value>
+  </data>
+  <data name="NewPhase_Name" xml:space="preserve">
+    <value>Nueva Fase.</value>
+  </data>
+  <data name="NewWageScale_Name" xml:space="preserve">
+    <value>Nueva Escala Salarial</value>
+  </data>
+  <data name="NewWorkForce_Name" xml:space="preserve">
+    <value>Nueva Fuerza de Trabajo</value>
+  </data>
+  <data name="Oace" xml:space="preserve">
+    <value>OACE</value>
+  </data>
+  <data name="Oace_Colon" xml:space="preserve">
+    <value>OACE:</value>
+  </data>
+  <data name="Objective_Colon" xml:space="preserve">
+    <value>Objectivo:</value>
+  </data>
+  <data name="Osde" xml:space="preserve">
+    <value>OSDE</value>
+  </data>
+  <data name="Osde_Colon" xml:space="preserve">
+    <value>OSDE:</value>
+  </data>
+  <data name="Phase" xml:space="preserve">
+    <value>Fase</value>
+  </data>
+  <data name="Phases" xml:space="preserve">
+    <value>Fases</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Propiedades</value>
+  </data>
+  <data name="Retribution" xml:space="preserve">
+    <value>Retribución</value>
+  </data>
+  <data name="Scope_Colon" xml:space="preserve">
+    <value>Alcance:</value>
+  </data>
+  <data name="SuccessfullyAddedCategory" xml:space="preserve">
+    <value>Añadida exitosamente la Categoría: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedExpenseConcept" xml:space="preserve">
+    <value>Añadido exitosamente el Concepto de Gasto: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedInvestmentType" xml:space="preserve">
+    <value>Añadido exitosamente el Tipo de Inversión: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedOace" xml:space="preserve">
+    <value>Añadido exitosamente el OACE: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedOsde" xml:space="preserve">
+    <value>Añadido exitosamente el OSDE: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedPhase" xml:space="preserve">
+    <value>Añadida exitosamente la Fase: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedWageScale" xml:space="preserve">
+    <value>Añadida exitosamente la Escala salarial: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedWorkForce" xml:space="preserve">
+    <value>Añadida exitosamente la Fuerza de Trabajo: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedCategory" xml:space="preserve">
+    <value>Eliminada exitosamente la Categoría: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedExpenseConcept" xml:space="preserve">
+    <value>Eliminado exitosamente el Concepto de Gasto: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedInvestmentType" xml:space="preserve">
+    <value>Eliminado exitosamente el Tipo de Inversión: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedOace" xml:space="preserve">
+    <value>Eliminado exitosamente el OACE: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedOsde" xml:space="preserve">
+    <value>Eliminado exitosamente el OSDE: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedPhase" xml:space="preserve">
+    <value>Eliminada exitosamente la Fase: "{0}". </value>
+  </data>
+  <data name="SuccessfullyDeletedWageScale" xml:space="preserve">
+    <value>Eliminada exitosamente la Escala salarial: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedWorkForce" xml:space="preserve">
+    <value>Eliminada exitosamente la Fuerza de Trabajo: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedCategory" xml:space="preserve">
+    <value>Actualizada exitosamente la Categoría: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedExpenseConcept" xml:space="preserve">
+    <value>Actualizado exitosamente el Concepto de Gasto: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedInvestment" xml:space="preserve">
+    <value>Actualizada exitosamente la Inversión: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedInvestmentComponent" xml:space="preserve">
+    <value>Actualizado exitosamente el Componente de Inversión: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedInvestmentType" xml:space="preserve">
+    <value>Actualizado exitosamente el Tipo de Inversión: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedOace" xml:space="preserve">
+    <value>Actualizado exitosamente el OACE: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedOsde" xml:space="preserve">
+    <value>Actualizado exitosamente el OSDE: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedPhase" xml:space="preserve">
+    <value>Actualizada exitosamente la Fase: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedWageScale" xml:space="preserve">
+    <value>Actualizada exitosamente la Escala salarial: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedWorkForce" xml:space="preserve">
+    <value>Actualizada exitosamente la Fuerza de Trabajo: "{0}".</value>
+  </data>
+  <data name="SureToDeleteCategory" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Categoría: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteExpenseConcept" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Concepto de Gasto: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteInvestmentType" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Tipo de Inversión: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteOace" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el OACE: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteOsde" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el OSDE: "{0}"?</value>
+  </data>
+  <data name="SureToDeletePhase" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Fase: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteWageScale" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Escala salarial: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteWorkForce" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Fuerza de Trabajo: "{0}"?</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Tipo</value>
+  </data>
+  <data name="WageScale" xml:space="preserve">
+    <value>Escala Salarial</value>
+  </data>
+  <data name="WageScales" xml:space="preserve">
+    <value>Escalas Salariales</value>
+  </data>
+  <data name="Capacity_Colon" xml:space="preserve">
+    <value>Capacidad:</value>
+  </data>
+  <data name="Category_Colon" xml:space="preserve">
+    <value>Categoría:</value>
+  </data>
+  <data name="Constructor_Colon" xml:space="preserve">
+    <value>Constructor:</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descripción</value>
+  </data>
+  <data name="Direct" xml:space="preserve">
+    <value>Directo</value>
+  </data>
+  <data name="Entity_Colon" xml:space="preserve">
+    <value>Entidad:</value>
+  </data>
+  <data name="ExpenseConcepts" xml:space="preserve">
+    <value>Concepto Gasto</value>
+  </data>
+  <data name="RelatedPrograms_Colon" xml:space="preserve">
+    <value>Programas relacionados:</value>
+  </data>
+  <data name="WorkForces" xml:space="preserve">
+    <value>Fuerzas de Trabajo</value>
+  </data>
+  <data name="Common" xml:space="preserve">
+    <value>Común</value>
+  </data>
+  <data name="Common_ToolTip" xml:space="preserve">
+    <value>Configuración de aspectos esenciales de las inversiones y sus componentes.</value>
+  </data>
+  <data name="Properties_ToolTip" xml:space="preserve">
+    <value>Edición de las propiedades de las inversiones y sus componentes.</value>
+  </data>
+  <data name="AddNewPlannedResource" xml:space="preserve">
+    <value>Añadir Nuevo Recurso</value>
+  </data>
+  <data name="Norm" xml:space="preserve">
+    <value>Norma</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="DefaultLettersCurrency" xml:space="preserve">
+    <value>CUP</value>
+  </data>
+  <data name="DefaultLettersMeasurementUnit" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="NewCurrency" xml:space="preserve">
+    <value>Nueva Moneda</value>
+  </data>
+  <data name="NewCurrencyDescription" xml:space="preserve">
+    <value>Descripcion de la Nueva Moneda</value>
+  </data>
+  <data name="NewMeasurementUnit" xml:space="preserve">
+    <value>Nueva Unidad de Medida</value>
+  </data>
+  <data name="NewMeasurementUnitDescription" xml:space="preserve">
+    <value>Descripcion de la Nueva Unidad de Medida</value>
+  </data>
+  <data name="Letters" xml:space="preserve">
+    <value>Siglas</value>
+  </data>
+  <data name="MeasurementUnit" xml:space="preserve">
+    <value>Unidades de Medida</value>
+  </data>
+  <data name="SuccessfullyAddedConvertible" xml:space="preserve">
+    <value>Añadida exitosamente la Convertible"{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedCurrency" xml:space="preserve">
+    <value>Añadida exitosamente la Moneda "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedMeasurementUnit" xml:space="preserve">
+    <value>Añadida exitosamente la Unidad de Medida"{0}".</value>
+  </data>
+  <data name="SureToDeleteConvertible" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Convertible: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteCurrency" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Moneda: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteMeasurementUnit" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Unidad de Medida: "{0}"?</value>
+  </data>
+  <data name="SuccessfullyDeletedConvertible" xml:space="preserve">
+    <value>Eliminado exitosamente el Convertible: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedCurrency" xml:space="preserve">
+    <value>Eliminada exitosamente la Moneda: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedMeasurementUnit" xml:space="preserve">
+    <value>Eliminada exitosamente la Unidad de Medida: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedConvertible" xml:space="preserve">
+    <value>Actualizado exitosamente el Convertible: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedCurrency" xml:space="preserve">
+    <value>Actualizada exitosamente la Moneda: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedMeasurementUnit" xml:space="preserve">
+    <value>Actualizada exitosamente la Unidad de Medida: "{0}".</value>
+  </data>
+  <data name="Dossificator" xml:space="preserve">
+    <value>Dosificador</value>
+  </data>
+  <data name="PriceSystems" xml:space="preserve">
+    <value>Sistemas de Precios</value>
+  </data>
+  <data name="NewPriceSystem" xml:space="preserve">
+    <value>Nuevo Sistema de Precios</value>
+  </data>
+  <data name="NewSection" xml:space="preserve">
+    <value>Nueva Seccion</value>
+  </data>
+  <data name="SuccessfullyAddedPriceSystem" xml:space="preserve">
+    <value>Añadida exitosamente el Sistema de Precios: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedSection" xml:space="preserve">
+    <value>Añadida exitosamente la Seccion: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedPriceSystem" xml:space="preserve">
+    <value>Actualizado exitosamente el Sistema de Precios: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedSection" xml:space="preserve">
+    <value>Actualizado exitosamente la Seccion: "{0}".</value>
+  </data>
+  <data name="SureToDeletePriceSystem" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Systema de Precios: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteSection" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Seccion: "{0}"?</value>
+  </data>
+  <data name="SuccessfullyDeletedPriceSystem" xml:space="preserve">
+    <value>Eliminado exitosamente el Sistema de Precios: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedSection" xml:space="preserve">
+    <value>Eliminada exitosamente la Seccion: "{0}".</value>
+  </data>
+  <data name="VariantLines" xml:space="preserve">
+    <value>Renglones Variantes</value>
+  </data>
+  <data name="CashFlow" xml:space="preserve">
+    <value>Flujo de Caja</value>
+  </data>
+  <data name="NewCashEntry" xml:space="preserve">
+    <value>Nueva Entrada</value>
+  </data>
+  <data name="NewCashMovement" xml:space="preserve">
+    <value>Nuevo Movimiento</value>
+  </data>
+  <data name="NewCashOutGoing" xml:space="preserve">
+    <value>Nueva Salida</value>
+  </data>
+  <data name="SureToDeleteCashMovement" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Movimiento: "{0}"?</value>
+  </data>
+  <data name="Summary" xml:space="preserve">
+    <value>Resumen</value>
+  </data>
+  <data name="AddEntry" xml:space="preserve">
+    <value>Adicionar Entrada</value>
+  </data>
+  <data name="AddOutgoing" xml:space="preserve">
+    <value>Adicionar Salida</value>
+  </data>
+  <data name="ExecutionLog" xml:space="preserve">
+    <value>Historial de Ejecucion</value>
+  </data>
+  <data name="NewExecution" xml:space="preserve">
+    <value>Nueva Ejecucion</value>
+  </data>
+  <data name="SureToDeleteExecution" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Ejecucion: "{0}"?</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Fecha</value>
+  </data>
+  <data name="Convertions" xml:space="preserve">
+    <value>Conversiones</value>
+  </data>
+  <data name="ConvertionFactor" xml:space="preserve">
+    <value>Factor de Conversion</value>
+  </data>
+  <data name="ResourcesVariables" xml:space="preserve">
+    <value>Variables de Recursos</value>
+  </data>
+  <data name="ResourcesVariables_ToolTip" xml:space="preserve">
+    <value>Edicion de Variables de Recursos</value>
+  </data>
+  <data name="SystemVairables_ToolTip" xml:space="preserve">
+    <value>Edicion de las Variables del Sistema</value>
+  </data>
+  <data name="SystemVariable" xml:space="preserve">
+    <value>Variables del Sist...</value>
+  </data>
+  <data name="Period_ToolTip" xml:space="preserve">
+    <value>Periodo</value>
+  </data>
+  <data name="Generals" xml:space="preserve">
+    <value>Generales</value>
+  </data>
+  <data name="Generals_Tooltip" xml:space="preserve">
+    <value>Reportes Generales</value>
+  </data>
+  <data name="Graphics" xml:space="preserve">
+    <value>Graficos</value>
+  </data>
+  <data name="Graphics_Tooltip" xml:space="preserve">
+    <value>Reportes Graficos</value>
+  </data>
+  <data name="ReportSection" xml:space="preserve">
+    <value>Reportes</value>
+  </data>
+  <data name="ReportSection_Tooltip" xml:space="preserve">
+    <value>Seccion de Reportes</value>
+  </data>
+  <data name="ByBudgetComponent" xml:space="preserve">
+    <value>por Componentes del Presupuesto</value>
+  </data>
+  <data name="Execution" xml:space="preserve">
+    <value>Ejecución</value>
+  </data>
+  <data name="GeneralSummary" xml:space="preserve">
+    <value>Resumen General</value>
+  </data>
+  <data name="Planification" xml:space="preserve">
+    <value>Planificación</value>
+  </data>
+  <data name="ExecutionPercent" xml:space="preserve">
+    <value>Porciento de Ejecucion</value>
+  </data>
+  <data name="Qualitative" xml:space="preserve">
+    <value>Cualitativo</value>
+  </data>
+  <data name="Quantitative" xml:space="preserve">
+    <value>Cuantitativo</value>
+  </data>
+  <data name="Concept" xml:space="preserve">
+    <value>Concepto</value>
+  </data>
+  <data name="JustTotal" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="FixedCapital" xml:space="preserve">
+    <value>Capital Fijo</value>
+  </data>
+  <data name="SummaryOverYears" xml:space="preserve">
+    <value>Resumen por años</value>
+  </data>
+  <data name="PlannedPeriod" xml:space="preserve">
+    <value>Periodo Planificado</value>
+  </data>
+  <data name="UnitaryWeight" xml:space="preserve">
+    <value>Peso</value>
+  </data>
+  <data name="CashMovements" xml:space="preserve">
+    <value>Movimientos de Efectivo</value>
+  </data>
+  <data name="BuiltCash" xml:space="preserve">
+    <value>Saldo Acumulado</value>
+  </data>
+  <data name="CashAmount" xml:space="preserve">
+    <value>Saldo</value>
+  </data>
+  <data name="Equipment" xml:space="preserve">
+    <value>Equipamiento</value>
+  </data>
+  <data name="MenLabor" xml:space="preserve">
+    <value>Mano de Obra</value>
+  </data>
+  <data name="MenNumber" xml:space="preserve">
+    <value>Hombres</value>
+  </data>
+  <data name="Supply" xml:space="preserve">
+    <value>Suministro</value>
+  </data>
+  <data name="UnitaryVolume" xml:space="preserve">
+    <value>Volumen</value>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Volumen</value>
+  </data>
+  <data name="WasteCoefficient" xml:space="preserve">
+    <value>Coeficiente de Merma</value>
+  </data>
+  <data name="Configuration" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="File" xml:space="preserve">
+    <value>Archivo</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Herramientas</value>
+  </data>
+  <data name="Speciality" xml:space="preserve">
+    <value>Especialidad</value>
+  </data>
+  <data name="NewOverGroup" xml:space="preserve">
+    <value>Nuevo Sobregrupo</value>
+  </data>
+  <data name="NewOverGroupDescription" xml:space="preserve">
+    <value>Descripción del Nuevo Sobregrupo</value>
+  </data>
+  <data name="NewRegularGroup" xml:space="preserve">
+    <value>Nuevo Grupo</value>
+  </data>
+  <data name="NewRegularGroupDescription" xml:space="preserve">
+    <value>Descripción del Nuevo Grupo</value>
+  </data>
+  <data name="NewUnderGroup" xml:space="preserve">
+    <value>Nuevo Subgrupo</value>
+  </data>
+  <data name="NewUnderGroupDescription" xml:space="preserve">
+    <value>Descripción del Nuevo Subgrupo</value>
+  </data>
+  <data name="NewVariantLineDescription" xml:space="preserve">
+    <value>Descripción del Nuevo Renglón Variante</value>
+  </data>
+  <data name="NewVariantLineName" xml:space="preserve">
+    <value>Nuevo Renglón Variante</value>
+  </data>
+  <data name="NewSubExpenseConcept_Name" xml:space="preserve">
+    <value>Nuevo SubConcepto de Gasto</value>
+  </data>
+  <data name="SubExpenseConcepts" xml:space="preserve">
+    <value>SubConceptos de Gasto</value>
+  </data>
+  <data name="NewSpeciality_Description" xml:space="preserve">
+    <value>Descripcion de la Nueva Especialidad</value>
+  </data>
+  <data name="NewSpeciality_Name" xml:space="preserve">
+    <value>Nueva Especialidad</value>
+  </data>
+  <data name="NewSubSpeciality_Description" xml:space="preserve">
+    <value>Descripcion de la Nueva SubEspecialidad</value>
+  </data>
+  <data name="NewSubSpeciality_Name" xml:space="preserve">
+    <value>Nueva SubEspecialidad</value>
+  </data>
+  <data name="FileNotFound" xml:space="preserve">
+    <value>No se encuentra o no se tiene acceso al archivo...</value>
+  </data>
+  <data name="NewDocument_Description" xml:space="preserve">
+    <value>Descripcion del Nuevo Documento</value>
+  </data>
+  <data name="NewDocument_Name" xml:space="preserve">
+    <value>Nuevo Documento</value>
+  </data>
+  <data name="Author_Emiter" xml:space="preserve">
+    <value>Autor o Emisor:</value>
+  </data>
+  <data name="DeliverDate" xml:space="preserve">
+    <value>Fecha de Emision:</value>
+  </data>
+  <data name="Documents" xml:space="preserve">
+    <value>Documentos</value>
+  </data>
+  <data name="Document_Type" xml:space="preserve">
+    <value>Tipo de Documento:</value>
+  </data>
+  <data name="FilePath" xml:space="preserve">
+    <value>Fichero:</value>
+  </data>
+  <data name="RecieveDate" xml:space="preserve">
+    <value>Fecha de Recepcion:</value>
+  </data>
+  <data name="NewInvestment" xml:space="preserve">
+    <value>Nueva Inversion</value>
+  </data>
+  <data name="InvestmentDefinition" xml:space="preserve">
+    <value>Caracterizacion de Inversion</value>
+  </data>
+  <data name="RelatedDocuments" xml:space="preserve">
+    <value>Documentos Asociados</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Atributos</value>
+  </data>
+  <data name="NewAttribute" xml:space="preserve">
+    <value>Nuevo Atributo</value>
+  </data>
+  <data name="ModuleInternalConfigurationToolTip" xml:space="preserve">
+    <value>Configuracion Interna del Modulo</value>
+  </data>
+  <data name="ModuleUserConfiguration" xml:space="preserve">
+    <value>Configuracion de Usuarios del Modulo</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Usuarios</value>
+  </data>
+  <data name="ModuleHelpContent" xml:space="preserve">
+    <value>GNesis</value>
+  </data>
+  <data name="ModuleHelpContent_ToolTip" xml:space="preserve">
+    <value>Contenido Referente al Modulo</value>
+  </data>
+  <data name="Permission" xml:space="preserve">
+    <value>Permiso</value>
+  </data>
+  <data name="RelatedInvestment" xml:space="preserve">
+    <value>Inversion Asociada</value>
+  </data>
+  <data name="Rols" xml:space="preserve">
+    <value>Roles</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Seguridad</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="Institution" xml:space="preserve">
+    <value>Institucion</value>
+  </data>
+  <data name="DeleteResourse" xml:space="preserve">
+    <value>Eliminar Recurso</value>
+  </data>
+  <data name="Projects" xml:space="preserve">
+    <value>Proyectos</value>
+  </data>
+  <data name="SubSpecialities" xml:space="preserve">
+    <value>SubEpecialidades</value>
+  </data>
+  <data name="Variables" xml:space="preserve">
+    <value>Variables</value>
+  </data>
+  <data name="SpreadChanges" xml:space="preserve">
+    <value>Extender Cambios</value>
+  </data>
+  <data name="SpreadChangesFor" xml:space="preserve">
+    <value>Extender cambios para: </value>
+  </data>
+  <data name="NewActivityExecutor" xml:space="preserve">
+    <value>Nuevo Ejecutor</value>
+  </data>
+  <data name="NewActivityExecutorDescription" xml:space="preserve">
+    <value>Descrpcion de Nuevo Ejecutor</value>
+  </data>
+  <data name="NewResourceProvider" xml:space="preserve">
+    <value>Nuevo Proveedor</value>
+  </data>
+  <data name="NewResourceProviderDescription" xml:space="preserve">
+    <value>Descripcion del Nuevo Proveedor</value>
+  </data>
+  <data name="NewResourceSupplier" xml:space="preserve">
+    <value>Nuevo Suministrador</value>
+  </data>
+  <data name="NewResourceSupplierDescription" xml:space="preserve">
+    <value>Descripcion del Nuevo Suministrador</value>
+  </data>
+  <data name="Executors" xml:space="preserve">
+    <value>Ejecutores</value>
+  </data>
+  <data name="Providers" xml:space="preserve">
+    <value>Proveedores</value>
+  </data>
+  <data name="Suppliers" xml:space="preserve">
+    <value>Suministradores</value>
+  </data>
+  <data name="Executor" xml:space="preserve">
+    <value>Ejecutor</value>
+  </data>
+  <data name="Provider" xml:space="preserve">
+    <value>Proveedor</value>
+  </data>
+  <data name="Supplier" xml:space="preserve">
+    <value>Suministrador</value>
+  </data>
+  <data name="ModuleRemark" xml:space="preserve">
+    <value>Este module contiene todos los recursos y la logica referente a la Gestion de Inversiones.</value>
+  </data>
+  <data name="Detailed" xml:space="preserve">
+    <value>Detallado</value>
+  </data>
+  <data name="ByImpact" xml:space="preserve">
+    <value>Impacto:</value>
+  </data>
+  <data name="ByNature" xml:space="preserve">
+    <value>Naturaleza:</value>
+  </data>
+  <data name="ClassifiedBy" xml:space="preserve">
+    <value>Clasificacion de Inversion</value>
+  </data>
+  <data name="DetailedTimeLine" xml:space="preserve">
+    <value>Cronograma Detallado</value>
+  </data>
+  <data name="PrintingWait" xml:space="preserve">
+    <value>Imprimiendo. Espere...</value>
+  </data>
+  <data name="EstimatedFinishDate" xml:space="preserve">
+    <value>Terminacion Estimada</value>
+  </data>
+  <data name="StateTimeline" xml:space="preserve">
+    <value>Cronograma de Estado</value>
+  </data>
+  <data name="Estimation" xml:space="preserve">
+    <value>Estimacion</value>
+  </data>
+  <data name="CustomReport" xml:space="preserve">
+    <value>Reporte Personalizado</value>
+  </data>
+  <data name="Activity" xml:space="preserve">
+    <value>Actividad</value>
+  </data>
+  <data name="BudgetComponent" xml:space="preserve">
+    <value>Componente del Presupuesto</value>
+  </data>
+  <data name="GroupBy" xml:space="preserve">
+    <value>Agrupar</value>
+  </data>
+  <data name="InvestmentElement" xml:space="preserve">
+    <value>Elemento de Inversion</value>
+  </data>
+  <data name="Resource" xml:space="preserve">
+    <value>Recurso</value>
+  </data>
+  <data name="SubSpeciality" xml:space="preserve">
+    <value>Sub Especialidad</value>
+  </data>
+  <data name="Atlas" xml:space="preserve">
+    <value>Atlas</value>
+  </data>
+  <data name="PreView" xml:space="preserve">
+    <value>Vista Previa</value>
+  </data>
+  <data name="Options" xml:space="preserve">
+    <value>Opciones</value>
+  </data>
+  <data name="OrderBy" xml:space="preserve">
+    <value>Ordenar por:</value>
+  </data>
+  <data name="ShowColumns" xml:space="preserve">
+    <value>Mostrar Columnas:</value>
+  </data>
+  <data name="Print" xml:space="preserve">
+    <value>Imprimir</value>
+  </data>
+  <data name="ConstAbv" xml:space="preserve">
+    <value>Const</value>
+  </data>
+  <data name="EquipAbv" xml:space="preserve">
+    <value>Equip</value>
+  </data>
+  <data name="OthersAbv" xml:space="preserve">
+    <value>Otros</value>
+  </data>
+  <data name="WorkCapAbv" xml:space="preserve">
+    <value>CapTbj</value>
+  </data>
+  <data name="WorkCapitalSimple" xml:space="preserve">
+    <value>Capital de Trabajo</value>
+  </data>
+  <data name="CurrencyAbv" xml:space="preserve">
+    <value>Mond</value>
+  </data>
+  <data name="ExcelExport" xml:space="preserve">
+    <value>Exportar a Excel</value>
+  </data>
+  <data name="Concepts" xml:space="preserve">
+    <value>Conceptos</value>
+  </data>
+  <data name="MaxAccDef" xml:space="preserve">
+    <value>Máximo Déficit Acumulado</value>
+  </data>
+</root>

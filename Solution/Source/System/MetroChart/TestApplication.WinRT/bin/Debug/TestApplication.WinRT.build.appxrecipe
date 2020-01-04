@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MININT-J2UEFLD</Machine>
+    <WindowsUser>tmandel</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\TestApplication.WinRT.exe">
+      <PackagePath>TestApplication.WinRT.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\TestApplication.WinRT.pdb">
+      <PackagePath>TestApplication.WinRT.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\De.TorstenMandelkow.MetroChart.WinRT\bin\Debug\De.TorstenMandelkow.MetroChart.pdb">
+      <PackagePath>De.TorstenMandelkow.MetroChart.pdb</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\De.TorstenMandelkow.MetroChart.WinRT\bin\Debug\De.TorstenMandelkow.MetroChart.dll">
+      <PackagePath>De.TorstenMandelkow.MetroChart.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.Shared\Shared\Fonts\seguisym.ttf">
+      <PackagePath>Shared\Fonts\seguisym.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.Shared\Shared\Images\torsten.png">
+      <PackagePath>Shared\Images\torsten.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\GroupDetailPage.xaml">
+      <PackagePath>GroupDetailPage.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\Skins\MainSkin.xaml">
+      <PackagePath>Skins\MainSkin.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\Themes\Generic.xaml">
+      <PackagePath>Themes\Generic.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\De.TorstenMandelkow.MetroChart.WinRT\bin\Debug\Themes\Generic.xaml">
+      <PackagePath>De.TorstenMandelkow.MetroChart\Themes\Generic.xaml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

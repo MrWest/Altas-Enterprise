@@ -1,0 +1,659 @@
+﻿<Window x:Class="AtlasInstall.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Shell="http://schemas.microsoft.com/winfx/2006/xaml/presentation/shell"
+        xmlns:local="clr-namespace:AtlasInstall"
+        xmlns:logic="clr-namespace:AtlasInstall.Logic"
+        mc:Ignorable="d"
+        Title="Atlas Enterprise" Height="350" Width="525">
+    <Window.Resources>
+        <Storyboard x:Key="SlideIn">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)"  >
+                <EasingThicknessKeyFrame KeyTime="0" Value="-30,0,30,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.3" Value="0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SlideOut" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)"  >
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" >
+                <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.1" Value="30,0,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+
+        </Storyboard>
+
+        <Storyboard x:Key="FadeOut" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="FadeIn" >
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <SolidColorBrush x:Key="Window.Default.BorderBrush" Color="#252526"/>
+        <SolidColorBrush x:Key="Window.Default.Foreground" Color="#252526"/>
+        <SolidColorBrush x:Key="Window.Default.Background" Color="White"/>
+        <SolidColorBrush x:Key="SystemButton.Static.Foreground" Color="#FF5A708C"/>
+        <SolidColorBrush x:Key="SystemButton.MouseOver.Background" Color="WhiteSmoke"/>
+        <SolidColorBrush x:Key="SystemButton.Pressed.Background" Color="#FF5A708C"/>
+        <SolidColorBrush x:Key="SystemButton.Pressed.Foreground" Color="#FFEAEAEA"/>
+        <SolidColorBrush x:Key="CloseSystemButton.MouseOver.Foreground" Color="#FFF55757"/>
+        <!-- This is the style of a system command button, those going at the top of the windows, allowing to minimize, maximize, restore it or close it. -->
+        <Style x:Key="SystemButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Foreground" Value="#252526"/>
+            <!--<Setter Property="Foreground" Value="{DynamicResource SystemButton.Static.Foreground}"/>-->
+            <Setter Property="Width" Value="22"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}">
+                            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <!--<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=uiControls:AtlasWindow},Path=ViewState}" Value="{x:Static uiControls:AtlasViewState.Module}">
+                    <Setter Property="Foreground" Value="{DynamicResource SystemButton.Static.Foreground}"></Setter>
+                </DataTrigger>-->
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="{DynamicResource AtlasContextButton.Static.Foreground}"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource SystemButton.Pressed.Background}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource SystemButton.Pressed.Foreground}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!-- This the style of the close button. It's a little variation of the system button's style. -->
+        <Style x:Key="CloseSystemButtonStyle" TargetType="Button" BasedOn="{StaticResource SystemButtonStyle}">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="{DynamicResource CloseSystemButton.MouseOver.Foreground}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="{DynamicResource SystemButton.Pressed.Foreground}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SystemButtonBase" TargetType="ButtonBase">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ButtonBase}">
+                        <Border Name="Chrome"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                SnapsToDevicePixels="true">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              RecognizesAccessKey="True"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Style>
+        <Style TargetType="Window">
+            <Setter Property="Width" Value="700" />
+            <Setter Property="Height" Value="440" />
+            <Setter Property="MinWidth" Value="700" />
+            <Setter Property="MinHeight" Value="440" />
+            <!--<Setter Property="Topmost" Value="True" />-->
+            <Setter Property="ResizeMode" Value="CanResizeWithGrip" />
+            <Setter Property="UseLayoutRounding" Value="True" />
+            <Setter Property="SnapsToDevicePixels" Value="True" />
+            <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+            <!--<Setter Property="Background" Value="{DynamicResource Window.Default.Background}"/>-->
+            <Setter Property="WindowStyle" Value="None"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource Window.Default.BorderBrush}"/>
+            <Setter Property="Shell:WindowChrome.WindowChrome">
+                <Setter.Value>
+                    <Shell:WindowChrome CornerRadius="0" GlassFrameThickness="1" UseAeroCaptionButtons="False" />
+                </Setter.Value>
+            </Setter>
+
+
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Window">
+                        <Grid Background="{StaticResource Window.Default.Background}"  >
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"></RowDefinition>
+                                <RowDefinition Height="*"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <!-- System commands: Minimize, Maximize, Restore, Close -->
+                            <StackPanel x:Name="systemButtons" Focusable="False"  Grid.ColumnSpan="3" HorizontalAlignment="Right" Orientation="Horizontal" Shell:WindowChrome.IsHitTestVisibleInChrome="True" VerticalAlignment="Center"  Margin="0,0,5,0">
+
+                                <!-- Minimize -->
+                                <Button TabIndex="-1" Command="{x:Static SystemCommands.MinimizeWindowCommand}"  Focusable="False" 
+                                                ToolTip="minimize" Style="{StaticResource SystemButtonStyle}" FocusVisualStyle="{x:Null}">
+                                    <Button.Content>
+                                        <Grid Width="13" Height="12" RenderTransform="1,0,0,1,0,1">
+                                            <Path Data="M0,6 L8,6 Z" Width="8" Height="7" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                         Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="2"  />
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+
+                                <Grid Margin="1,0">
+                                    <!-- Restore -->
+                                    <Button TabIndex="-1" x:Name="Restore"  Command="{x:Static SystemCommands.RestoreWindowCommand}"
+                                                    ToolTip="Restore" 
+                                                    FocusVisualStyle="{x:Null}" Focusable="False" >
+                                        <Button.Content>
+                                            <Grid Width="8" Height="12" UseLayoutRounding="True">
+                                                <Path Data="M2,0 L8,0 L8,6 M0,3 L6,3 M0,2 L6,2 L6,8 L0,8 Z" Width="8" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                              Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="1"  />
+                                            </Grid>
+                                        </Button.Content>
+                                        <Button.Style>
+                                            <Style TargetType="Button" BasedOn="{StaticResource SystemButtonStyle}">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}, Path=WindowState}" Value="{x:Static WindowState.Normal}">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                                    
+                                            </Style>
+                                            
+                                        </Button.Style>
+                                    </Button>
+                                    <!-- Maximize -->
+                                    <Button x:Name="Maximize" TabIndex="-1" Focusable="False" 
+                                                     Command="{x:Static SystemCommands.MaximizeWindowCommand}"
+                                                    ToolTip="Maximize" FocusVisualStyle="{x:Null}" >
+                                        <Button.Content>
+                                            <Grid Width="13" Height="12">
+                                                <Path Data="M0,1 L9,1 L9,8 L0,8 Z" Width="9" Height="8" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                              Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="2"  />
+                                            </Grid>
+                                        </Button.Content>
+                                        <Button.Style>
+                                            <Style TargetType="Button" BasedOn="{StaticResource SystemButtonStyle}">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType=Window}, Path=WindowState}" Value="{x:Static WindowState.Maximized}">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+
+                                            </Style>
+
+                                        </Button.Style>
+                                    </Button>
+                                </Grid>
+
+                                <!-- Close -->
+                                <Button  Command="{x:Static SystemCommands.CloseWindowCommand}" Focusable="False" 
+                                                ToolTip="Close"
+                                                Style="{StaticResource CloseSystemButtonStyle}" FocusVisualStyle="{x:Null}">
+                                    <Button.Content>
+                                        <Grid Width="13" Height="12" RenderTransform="1,0,0,1,0,1">
+                                            <Path Data="M0,0 L8,7 M8,0 L0,7 Z" Width="8" Height="7" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                          Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="1.5"  />
+                                        </Grid>
+                                    </Button.Content>
+                                </Button>
+                            </StackPanel>
+
+                            <Border  Grid.Row="0" Grid.RowSpan="2" Background="#0059b3" Padding="5,35">
+                            <StackPanel   HorizontalAlignment="Stretch"  >
+                                <Path x:Name="path"    Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center"
+                                                  Data="M23.79661,7.3220339 L8.7457627,32.745763 C8.7457627,32.745763 20.967638,41.353691 39.457627,32.949153 40.016949,32.694916 23.79661,7.3220339 23.79661,7.3220339 z M24.147993,17.112616 L18.539078,26.748444 16.296807,25.750439 24.147993,12.654248 31.889651,25.764187 29.325452,26.748444 z M21.684987,27.079261 L24.028953,22.958628 26.296647,26.943419 C24.264925,27.391584 21.684987,27.079261 21.684987,27.079261 z M14.400201,28.659537 L16.947083,29.838223 15.307045,32.3936 12.693201,31.380069 z M20.509176,30.588291 C20.509176,30.588291 24.455545,30.870772 28.060024,30.512021 L29.33121,32.851005 C29.33121,32.851005 25.203222,34.132012 18.932905,33.003547 z M31.119327,29.811227 L32.390514,32.093841 35.034582,31.229434 33.788819,28.768854 z" 
+                                                  Fill="{StaticResource Window.Default.Background}" StrokeThickness="0"
+                                                  Stretch="Uniform">
+
+                                </Path>
+                                    <TextBlock Text="Atlas Enterprise" Foreground="{StaticResource Window.Default.Background}" TextAlignment="Center" FontSize="16"/>
+                                    <TextBlock Text="Looking into the Future" Foreground="{StaticResource Window.Default.Background}" TextAlignment="Center" />
+                            </StackPanel>
+                            </Border>
+                            
+                            <Border  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Padding="10" >
+                                <Grid >
+                                   
+                                    <Border >
+                                        <Border.Style>
+                                            
+                                            <Style TargetType="Border">
+                                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=InstallState}" Value="{x:Static logic:InstallState.Welcome}">
+                                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeIn}"></BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeOut}"></BeginStoryboard>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+
+                                        <Grid>
+                                            <TextBlock Text="Welcome to Atlas Enterprise Installation Wizard."  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                                <TextBlock.Style>
+
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="False">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                            <TextBlock Text="You are about to uninstall Atlas Enterprise from your system."  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                                <TextBlock.Style>
+
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="True">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                        </Grid>
+
+                                       
+                                    </Border>
+                                    <Border  >
+                                        <Border.Style>
+
+                                            <Style TargetType="Border">
+                                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=InstallState}" Value="{x:Static logic:InstallState.Agreement}">
+                                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeIn}"></BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeOut}"></BeginStoryboard>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+
+                                        <Grid >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Text="Atlas Enterprise License Agreement:" Margin="2" FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" />
+
+
+                                            <RichTextBox Grid.Row="1" x:Name="licenseRTb" Background="#f3f2e9"  Focusable="False" VerticalScrollBarVisibility="Auto" ></RichTextBox>
+                                            <DockPanel Grid.Row="2" HorizontalAlignment="Right" Margin="5">
+                                                <CheckBox  FontWeight="SemiBold" Content="I Agree"  Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Agreement}"></CheckBox>
+                                                
+                                                
+                                            </DockPanel>
+                                            <!--<Rectangle Fill="White" Opacity="0.1" Grid.Row="1"  Height="310"></Rectangle>-->
+                                        </Grid>
+
+                                       
+                                    </Border>
+
+                                    <Border  >
+                                        <Border.Style>
+
+                                            <Style TargetType="Border">
+                                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=InstallState}" Value="{x:Static logic:InstallState.Miscellaneuos}">
+                                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeIn}"></BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeOut}"></BeginStoryboard>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+
+                                        <Grid >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Text="Aditional Settings: " Margin="2" FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" />
+                                            <StackPanel Grid.Row="1" Margin="2,35">
+                                                <StackPanel.Style>
+                                                    <Style TargetType="StackPanel">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="False">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </StackPanel.Style>
+                                                <TextBlock Text="Install Atlas for:"></TextBlock>
+                                                <RadioButton Content="Current User" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=CurrentUser}"></RadioButton>
+                                                <RadioButton Content="All Users"    IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=AllUsers}"></RadioButton>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="2" Margin="2,35">
+                                                <StackPanel.Style>
+                                                    <Style TargetType="StackPanel">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="False">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </StackPanel.Style>
+                                                <TextBlock Text="Aditional shortcuts:"></TextBlock>
+                                                <CheckBox Content="Desktop" Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Desktop}"></CheckBox>
+                                                <CheckBox Content="Start Menu"  Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=StartMenu}"></CheckBox>
+                                            </StackPanel>
+                                            <StackPanel Grid.Row="2" Margin="2,35">
+                                                <StackPanel.Style>
+                                                    <Style TargetType="StackPanel">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="True">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </StackPanel.Style>
+                                                <TextBlock Text="Remove Data Options:"></TextBlock>
+                                                <CheckBox Content="Remove all application data." Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Desktop}"></CheckBox>
+                                                <CheckBox Content="Keep Activation data."  Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=StartMenu}"></CheckBox>
+                                            </StackPanel>
+
+                                          
+                                        </Grid>
+
+
+                                    </Border>
+
+                                    <Border  >
+                                        <Border.Style>
+
+                                            <Style TargetType="Border">
+                                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=InstallState}" Value="{x:Static logic:InstallState.Install}">
+                                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeIn}"></BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeOut}"></BeginStoryboard>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+
+                                        <Grid >
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                                <RowDefinition Height="*"></RowDefinition>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+
+                                            </Grid.RowDefinitions>
+                                            <TextBlock Text="Installation Progress: " Margin="2" FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                                <TextBlock.Style>
+
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="False">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                            <TextBlock Text="Uninstallation Progress: "  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                                <TextBlock.Style>
+
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="True">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+
+                                            <Grid Grid.Row="1" Margin="2,35">
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                    <RowDefinition Height="Auto"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <ProgressBar Height="17" Value="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Progress}"></ProgressBar>
+                                                <TextBlock Text="Progress Details: " Grid.Row="1" Foreground="{StaticResource Window.Default.Foreground}" Margin="2,35,2,0"/>
+                                                <TextBox Background="Transparent" Grid.Row="2" VerticalAlignment="Stretch" x:Name="progressDetails" BorderThickness="0" Margin="2,2,2,10" Focusable="False" VerticalScrollBarVisibility="Auto" Text="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Details}"></TextBox>
+                                            </Grid>
+                                            
+
+
+                                            <!--<Rectangle Fill="White" Opacity="0.1" Grid.Row="1"  Height="310"></Rectangle>-->
+                                        </Grid>
+
+
+                                    </Border>
+
+                                    <Border >
+                                        <Border.Style>
+
+                                            <Style TargetType="Border">
+                                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=InstallState}" Value="{x:Static logic:InstallState.Finish}">
+                                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                                        <DataTrigger.EnterActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeIn}"></BeginStoryboard>
+                                                        </DataTrigger.EnterActions>
+                                                        <DataTrigger.ExitActions>
+                                                            <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                                                            <BeginStoryboard Storyboard="{StaticResource FadeOut}"></BeginStoryboard>
+                                                        </DataTrigger.ExitActions>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Border.Style>
+
+                                        <Grid>
+                                            <TextBlock Text="Atlas Enterprise has been succcessfully installed on your system."  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                                <TextBlock.Style>
+
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="False">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>                                                        
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                            </TextBlock>
+                                            <TextBlock Text="Atlas Enterprise has been succcessfully uninstalled from your system."  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                                <TextBlock.Style>
+
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                        <Style.Triggers>
+                                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="True">
+                                                                <Setter Property="Visibility" Value="Visible"></Setter>
+                                                            </DataTrigger>
+                                                        </Style.Triggers>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                        </Grid>
+
+                                       
+                                    </Border>
+                                </Grid>
+                                
+                                
+                            </Border>
+                            
+                            <Grid Grid.Row="2" Grid.ColumnSpan="3" >
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Border  Background="#252526" >
+                                </Border>
+                                <Border  Background="#252526" Grid.Column="1" Grid.ColumnSpan="2">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Button  Grid.Column="0"  Content="Back" Height="35" Margin="5" Command="{x:Static NavigationCommands.PreviousPage}">
+                                            <Button.Style>
+                                                <Style TargetType="Button" BasedOn="{StaticResource SystemButtonBase}">
+                                                    <Setter Property="Background" Value="#0059b3"></Setter>
+                                                    <Setter Property="BorderBrush" Value="WhiteSmoke"></Setter>
+                                                    <Setter Property="Foreground" Value="White"></Setter>
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <Setter Property="BorderThickness" Value="2"></Setter>
+                                                        </Trigger>
+                                                        <Trigger Property="IsEnabled" Value="False">
+                                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                                            <Trigger.EnterActions>
+                                                                <BeginStoryboard Storyboard="{StaticResource FadeOut}"></BeginStoryboard>
+                                                            </Trigger.EnterActions>
+                                                            <Trigger.ExitActions>
+                                                                <BeginStoryboard Storyboard="{StaticResource FadeIn}"></BeginStoryboard>
+                                                            </Trigger.ExitActions>
+                                                        </Trigger>
+                                                       
+                                                    </Style.Triggers>
+                                                </Style>
+                                                
+                                            </Button.Style>
+                                        </Button>
+                                        <Button  Grid.Column="1"  Content="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=ButtonText}" Height="35" Margin="5" Command="{x:Static NavigationCommands.NextPage}">
+                                            <Button.Style>
+                                                <Style TargetType="Button" BasedOn="{StaticResource SystemButtonBase}">
+                                                    <Setter Property="Background" Value="#0059b3"></Setter>
+                                                    <Setter Property="BorderBrush" Value="WhiteSmoke"></Setter>
+                                                    <Setter Property="Foreground" Value="White"></Setter>
+                                                    <Style.Triggers>
+                                                        <Trigger Property="IsMouseOver" Value="True">
+                                                            <!--<Setter Property="Background" Value="#252526"/>
+                                                            <Setter Property="Foreground" Value="White"></Setter>-->
+                                                            <Setter Property="BorderThickness" Value="2"></Setter>
+                                                        </Trigger>
+                                                        <Trigger Property="IsEnabled" Value="False">
+                                                            <!--<Setter Property="Background" Value="#252526"/>
+                                                            <Setter Property="Foreground" Value="White"></Setter>-->
+                                                            <Setter Property="BorderThickness" Value="0"></Setter>
+                                                        </Trigger>
+                                                       
+
+                                                    </Style.Triggers>
+                                                </Style>
+
+                                            </Button.Style>
+                                        </Button>
+                                    </Grid>
+                                   
+                                </Border>
+                               
+                            </Grid>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Style>
+   
+</Window>

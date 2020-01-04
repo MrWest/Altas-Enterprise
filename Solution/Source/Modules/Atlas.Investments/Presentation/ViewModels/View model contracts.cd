@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionComponentPresenter">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionComponentPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionExecutedActivityPresenter">
+    <Position X="19.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionExecutedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionExecutedActivityViewModel">
+    <Position X="8.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionExecutedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionExecutedResourcePresenter">
+    <Position X="1.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionExecutedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionExecutedResourceViewModel">
+    <Position X="17.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionExecutedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionPlannedActivityPresenter">
+    <Position X="13" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionPlannedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionPlannedActivityViewModel">
+    <Position X="42.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionPlannedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionPlannedResourcePresenter">
+    <Position X="35.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Construction.IConstructionPlannedResourceViewModel">
+    <Position X="31.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Construction\IConstructionPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentComponentPresenter">
+    <Position X="2.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentComponentPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentExecutedActivityPresenter">
+    <Position X="22" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentExecutedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentExecutedActivityViewModel">
+    <Position X="10.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentExecutedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentExecutedResourcePresenter">
+    <Position X="4" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentExecutedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentExecutedResourceViewModel">
+    <Position X="19.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentExecutedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentPlannedActivityViewModel">
+    <Position X="44.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentPlannedActivitiesViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentPlannedActivityPresenter">
+    <Position X="17.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentPlannedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentPlannedResourcePresenter">
+    <Position X="28.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.Equipment.IEquipmentPlannedResourceViewModel">
+    <Position X="33.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\Equipment\IEquipmentPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IBudgetComponentItemPresenter&lt;TItem, TComponent&gt;">
+    <Position X="18.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAgAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IBudgetComponentItemPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IBudgetComponentItemViewModel">
+    <Position X="20" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IBudgetComponentItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IBudgetComponentItemViewModel&lt;TItem, TPresenter, TComponent&gt;">
+    <Position X="21" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IBudgetComponentItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IBudgetComponentPresenter&lt;TComponent, TPlannedResources, TPlannedResourcePresenter, TExecutedResources, TExecutedResourcePresenter, TPlannedActivities, TPlannedActivityPresenter, TExecutedActivities, TExecutedActivityPresenter&gt;">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAABAAAAAgAAAgAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IBudgetComponentPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IBudgetPresenter" Collapsed="true">
+    <Position X="49.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAAAAAEIAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IBudgetPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IExecutedActivityPresenter&lt;TComponent&gt;">
+    <Position X="23.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IExecutedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IExecutedActivityViewModel&lt;TComponent, TPresenter&gt;">
+    <Position X="11.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IExecutedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IExecutedBudgetComponentItemViewModel">
+    <Position X="11" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IExecutedBudgetComponentItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IExecutedBudgetComponentItemViewModel&lt;T, TPresenter, TComponent&gt;">
+    <Position X="16" Y="5.75" Width="5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IExecutedBudgetComponentItemViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IExecutedResourcePresenter&lt;TComponent&gt;">
+    <Position X="5.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IExecutedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IExecutedResourceViewModel&lt;TComponent, TPresenter&gt;">
+    <Position X="20.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IExecutedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IPlannedActivityPresenter&lt;TComponent&gt;">
+    <Position X="14.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IPlannedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IPlannedActivityViewModel&lt;TComponent, TPresenter&gt;">
+    <Position X="43.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IPlannedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IPlannedResourcePresenter&lt;TComponent&gt;">
+    <Position X="32.25" Y="14.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.IPlannedResourceViewModel&lt;TComponent, TPresenter&gt;">
+    <Position X="34.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\IPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesComponentPresenter">
+    <Position X="5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesComponentPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesExecutedActivityPresenter">
+    <Position X="24.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesExecutedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesExecutedActivityViewModel">
+    <Position X="12.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesExecutedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesExecutedResourcePresenter">
+    <Position X="6.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesExecutedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesExecutedResourceViewModel">
+    <Position X="21.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesExecutedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesPlannedActivityPresenter">
+    <Position X="15.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesPlannedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesPlannedActivityViewModel">
+    <Position X="47" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesPlannedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesPlannedResourcePresenter">
+    <Position X="31" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.OtherExpenses.IOtherExpensesPlannedResourceViewModel">
+    <Position X="35.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalPlannedActivityPresenter">
+    <Position X="10.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitakPlannedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalComponentPresenter">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalComponentPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalExecutedActivityPresenter">
+    <Position X="26.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalExecutedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalExecutedActivityViewModel">
+    <Position X="15" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalExecutedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalExecutedResourcePresenter">
+    <Position X="8.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalExecutedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalExecutedResourceViewModel">
+    <Position X="24" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalExecutedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalPlannedActivityViewModel">
+    <Position X="40.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalPlannedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalPlannedResourcePresenter">
+    <Position X="33.25" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.Budget.WorkCapital.IWorkCapitalPlannedResourceViewModel">
+    <Position X="38" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.IInvestmentElementPresenter" Collapsed="true">
+    <Position X="51.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAQQAAAAAAAAIAoAAAAAAAAgAA=</HashCode>
+      <FileName>Presentation\ViewModels\IInvestmentElementPresenter.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Presentation.ViewModels.IInvestmentElementViewModel" Collapsed="true">
+    <Position X="49.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Presentation\ViewModels\IInvestmentElementViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

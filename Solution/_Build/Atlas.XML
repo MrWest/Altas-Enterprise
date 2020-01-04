@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Atlas</name>
+    </assembly>
+    <members>
+        <member name="T:CompanyName.Atlas.App">
+            <summary>
+            Application's interaction. This is the object managing the whole lifetime of the Atlas application.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.App.Merge(System.String)">
+            <summary>
+            Merges the resource dictionary at a given uri with the current <see cref="T:CompanyName.Atlas.App"/> one.
+            </summary>
+            <param name="dictionaryUri">The <see cref="T:System.String"/> representing the URI leading to the resource dictionary to merge.</param>
+        </member>
+        <member name="M:CompanyName.Atlas.App.OnStartup(System.Windows.StartupEventArgs)">
+            <summary>
+            Invoked when the application has been started up. Initializes and launches the main window.
+            </summary>
+            <param name="e">Not used.</param>
+        </member>
+        <member name="M:CompanyName.Atlas.App.OnExit(System.Windows.ExitEventArgs)">
+            <summary>
+            Invoked when the application has been shut down.
+            </summary>
+            <param name="e">Not used.</param>
+        </member>
+        <member name="M:CompanyName.Atlas.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CompanyName.Atlas.Bootstrapper">
+            <summary>
+            Represents the Atlas initialization bootstrapper.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Bootstrapper.DatabaseContext">
+            <summary>
+            Gets the database context to use to manage the raw data operations of the system.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.Bootstrapper.CreateLogger">
+            <summary>
+            Creates the logger the system will use.
+            </summary>
+            <returns>A new instance of <see cref="T:Microsoft.Practices.Prism.Logging.ILoggerFacade"/>.</returns>
+        </member>
+        <member name="M:CompanyName.Atlas.Bootstrapper.ConfigureContainer">
+            <summary>
+            Configures the Microsoft.Practices.Unity.IUnityContainer.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.Bootstrapper.CreateAndInitialize``1">
+            <summary>
+            Gets a new instance of a crud view model and loads it.
+            </summary>
+            <returns>A new and initialized instance of <typeparamref name="TViewModel"/>.</returns>
+        </member>
+        <member name="M:CompanyName.Atlas.Bootstrapper.CreateShell">
+            <summary>
+            Returns the created shell window.
+            </summary>
+            <returns>A new instance of a Shell window.</returns>
+        </member>
+        <member name="M:CompanyName.Atlas.Bootstrapper.InitializeShell">
+            <summary>
+            Initializes the created shell.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.Bootstrapper.CreateModuleCatalog">
+            <summary>
+            Creates the module catalog used by Prism to locate the modules.
+            </summary>
+            <returns>A new module catalog.</returns>
+        </member>
+        <member name="T:CompanyName.Atlas.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.Conf_MenuItem">
+            <summary>
+              Looks up a localized string similar to Configuración.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.Edit_MenuItem">
+            <summary>
+              Looks up a localized string similar to Edición.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.Exit_MenuItem">
+            <summary>
+              Looks up a localized string similar to _Salir.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.File_MenuItem">
+            <summary>
+              Looks up a localized string similar to _Archivo.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.Help_MenuItem">
+            <summary>
+              Looks up a localized string similar to Ayuda.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.Loading">
+            <summary>
+              Looks up a localized string similar to Cargando....
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.Ready">
+            <summary>
+              Looks up a localized string similar to Listo.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.View_MenuItem">
+            <summary>
+              Looks up a localized string similar to _VER.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.WaitOperation">
+            <summary>
+              Looks up a localized string similar to Operación en curso. Espere....
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.Properties.Resources.Welcome">
+            <summary>
+              Looks up a localized string similar to Bienvenido.
+            </summary>
+        </member>
+        <member name="T:CompanyName.Atlas.ViewModels.ShellViewModel">
+            <summary>
+            This is the view model that must be placed behind the status bar of the shell.
+            </summary>
+        </member>
+        <member name="P:CompanyName.Atlas.ViewModels.ShellViewModel.StatusText">
+            <summary>
+            Gets the current status text.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.ViewModels.ShellViewModel.SignalReady">
+            <summary>
+            Places the ready status in the status bar.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.ViewModels.ShellViewModel.SignalWaitOperation">
+            <summary>
+            Places the ready status in the status bar.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.ViewModels.ShellViewModel.SignalLoading">
+            <summary>
+            Places the loading status in the status bar.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.ViewModels.ShellViewModel.SignalText(System.String)">
+            <summary>
+            Displays the specified text in the status bar.
+            </summary>
+            <param name="text">The text to display.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="text"/> is null or empty.</exception>
+        </member>
+        <member name="M:CompanyName.Atlas.ViewModels.ShellViewModel.SignalText2(System.String)">
+            <summary>
+            Displays the specified text in the status bar.
+            </summary>
+            <param name="text">The text to display.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="text"/> is null or empty.</exception>
+        </member>
+        <member name="T:CompanyName.Atlas.Views.Shell">
+            <summary>
+            Interaction logic for Atlas main UI.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.Views.Shell.#ctor">
+            <summary>
+            Initializes a new instance of the Atlas main UI.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.Views.Shell.CloseCommand_CanExecute(System.Object,System.Windows.Input.CanExecuteRoutedEventArgs)">
+            <summary>
+                Hides the optional navigation content.
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.Views.Shell.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:CompanyName.Atlas.Views.TestWindow">
+            <summary>
+            Interaction logic for TestWindow.xaml
+            </summary>
+            <summary>
+            TestWindow
+            </summary>
+        </member>
+        <member name="M:CompanyName.Atlas.Views.TestWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,100 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+                    xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+                    xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+                    xmlns:constants="clr-namespace:CompanyName.Atlas.Contracts;assembly=Atlas.Contracts"
+                    xmlns:local="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Assets/Icons.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- On the below collection there will be defined the navigation of the current subsystem -->
+    <collections:ArrayList x:Key="{x:Static constants:GlobalParameters.NavigationResourceKey}" >
+
+        <!-- This section is for the common module -->
+        <uiControls:FirstLevelNavItem Icon="{StaticResource Icon.Common}"
+                                      ToolTip="{x:Static properties:Resources.Common_ToolTip}"
+                                      Text="{x:Static properties:Resources.Common}">
+            <uiControls:FirstLevelNavItem.SubNavigation>
+
+                <!-- This category is for the properties of the selected investment element  -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.Properties}"
+                                               Text="{x:Static properties:Resources.Properties}"
+                                               ToolTip="{x:Static properties:Resources.Properties_ToolTip}">
+                    <local:InvestmentElementProperties Margin="0,37,0,0" />
+                </uiControls:SecondLevelNavItem>
+
+                <!-- This categry is to manage the variables of the investment module -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.InvestmentVariables}"
+                                               Text="{x:Static properties:Resources.InvestmentVariables}"
+                                               ToolTip="{x:Static properties:Resources.InvestmentVariables_ToolTip}">
+                    <local:InvestmentVariablesEditor/>
+                </uiControls:SecondLevelNavItem>
+
+            </uiControls:FirstLevelNavItem.SubNavigation>
+        </uiControls:FirstLevelNavItem>
+        <!-- This first navigation item is the budget section -->
+        <uiControls:FirstLevelNavItem Icon="{StaticResource Icon.Budget}"
+                                      ToolTip="{x:Static properties:Resources.Budget_Tooltip}"
+                                      Text="{x:Static properties:Resources.Budget}">
+            <!-- The budget section is composed by... -->
+            <uiControls:FirstLevelNavItem.SubNavigation>
+                
+                <!-- The planning and execution view -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.PlanningExecuting}"
+                                               ToolTip="{x:Static properties:Resources.PlanningExecution_Tooltip}"
+                                               Text="{x:Static properties:Resources.PlanningExecuting}">
+                    <local:PlanningExecutionView/>
+                </uiControls:SecondLevelNavItem>
+
+                <!-- The timeline view -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.Timeline}"
+                                               ToolTip="{x:Static properties:Resources.Timeline_Tooltip}"
+                                               Text="{x:Static properties:Resources.Timeline}">
+                    <local:InvestmentElementTimeline/>
+                </uiControls:SecondLevelNavItem>
+
+                <!-- The graphic modelator view -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.GraphicModelator}"
+                                               ToolTip="{x:Static properties:Resources.GraphicModelator_Tooltip}"
+                                               Text="{x:Static properties:Resources.GraphicModelator}">
+                    <Button>
+                        <StackPanel>
+                            <TextBlock>Grapchi</TextBlock>
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </Button>
+                </uiControls:SecondLevelNavItem>
+
+                <!-- The price systems view -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.PriceSystem}"
+                                               ToolTip="{x:Static properties:Resources.PriceSystem_Tooltip}"
+                                               Text="{x:Static properties:Resources.PriceSystem}">
+                    <Button>
+                        <StackPanel>
+                            <TextBlock>Price</TextBlock>
+                            <TextBlock Text="{Binding Name}"/>
+                        </StackPanel>
+                    </Button>
+                </uiControls:SecondLevelNavItem>
+
+            </uiControls:FirstLevelNavItem.SubNavigation>
+        </uiControls:FirstLevelNavItem>
+        
+
+        <!-- This second section is the one corresponding to the marketing management -->
+        <uiControls:FirstLevelNavItem Text="{x:Static properties:Resources.Market}"
+                                      ToolTip="{x:Static properties:Resources.Market_Tooltip}"
+                                      Icon="{StaticResource Icon.Market}"/>
+        
+
+        <!-- And the thrid section is for funding matters -->
+        <uiControls:FirstLevelNavItem Text="{x:Static properties:Resources.Funding}"
+                                      ToolTip="{x:Static properties:Resources.Funding_Tooltip}"
+                                      Icon="{StaticResource Icon.Funding}"/>
+
+    </collections:ArrayList>
+
+</ResourceDictionary>

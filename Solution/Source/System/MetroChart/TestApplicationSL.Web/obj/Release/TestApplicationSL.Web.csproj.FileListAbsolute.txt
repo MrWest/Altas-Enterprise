@@ -1,0 +1,7 @@
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.dll.config
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.dll
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\bin\TestApplicationSL.Web.pdb
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\obj\Release\TestApplicationSL.Web.csprojResolveAssemblyReference.cache
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\obj\Release\TestApplicationSL.Web.csproj.CoreCompileInputs.cache
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\obj\Release\TestApplicationSL.Web.dll
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\TestApplicationSL.Web\obj\Release\TestApplicationSL.Web.pdb

@@ -1,0 +1,1449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2FEC9C68-093A-431E-A43D-D2591C6E4286}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CompanyName.Atlas.Investments</RootNamespace>
+    <AssemblyName>Atlas.Investments</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\_Build\Modules\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\_Build\Modules\Atlas.Investments.XML</DocumentationFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\_Build\Modules\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\_Build\Modules\Atlas.Investments.XML</DocumentationFile>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Db4objects.Db4o">
+      <HintPath>..\..\..\References\Db4objects.Db4o.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\..\..\References\Microsoft.Office.Interop.Excel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.ExceptionHandling, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Microsoft.Practices.EnterpriseLibrary.ExceptionHandling.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation, Version=5.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Composition, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.PubSubEvents.1.1.2\lib\portable-sl5+windowsphone8+windows8+net40+wpa81\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions, Version=5.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Prism.UnityExtensions.5.0.1\lib\NET45\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\Budget\IBudgetComponentItemChangesSpreadder.cs" />
+    <Compile Include="Application\Budget\WorkCapital\ICashFlowCashMovementCategoryManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\WorkCapital\IWorkCapitalCashFlowItemManagerApplicationServices.cs" />
+    <Compile Include="Application\IActivityExecutorManagerApplicationServices.cs" />
+    <Compile Include="Application\IActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\IExecutionManagerApplicationServices.cs" />
+    <Compile Include="Application\IPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\IBudgetComponentItemManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\Construction\IConstructionExecutedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\Construction\IConstructionPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\WorkCapital\IWorkCapitaltExecutedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\OtherExpenses\IOtherExpensesExecutedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\Equipment\IEquipmentExecutedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\IBudgetComponentResourceManagerApplicationServices.cs" />
+    <Compile Include="Application\ICashMovementCategoryManagerApplicationServices.cs" />
+    <Compile Include="Application\ICashMovementManagerApplicationServices.cs" />
+    <Compile Include="Application\ICategoryManagerApplicationServices.cs" />
+    <Compile Include="Application\IDossificatorApplicationService.cs" />
+    <Compile Include="Application\IExecutedActivityItemManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\WorkCapital\IWorkCaptitalPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\OtherExpenses\IOtherExpensesPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\Budget\Equipment\IEquipmentPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\IInvestmentDocumentManagerApplicationServices.cs" />
+    <Compile Include="Application\IExecutedSubSpecialityHolderManagerApplicationServices.cs" />
+    <Compile Include="Application\IResourceProviderManagerApplicationServices.cs" />
+    <Compile Include="Application\IResourceSupplierManagerApplicationServices.cs" />
+    <Compile Include="Application\ISpecialityManagerApplicationServices.cs" />
+    <Compile Include="Application\IExpenseConceptManagerApplicationServices.cs" />
+    <Compile Include="Application\IInvestmentComponentManagerApplicationServices.cs" />
+    <Compile Include="Application\IInvestmentElementManagerApplicationServices.cs" />
+    <Compile Include="Application\IInvestmentElementPeriodManagerApplicationServices.cs" />
+    <Compile Include="Application\IInvestmentManagerApplicationServices.cs" />
+    <Compile Include="Application\IInvestmentTypeManagerApplicationServices.cs" />
+    <Compile Include="Application\IOaceManagerApplicationServices.cs" />
+    <Compile Include="Application\IOsdeManagerApplicationServices.cs" />
+    <Compile Include="Application\IOverGroupManagerApplicationServices.cs" />
+    <Compile Include="Application\IPhaseManagerApplicationServices.cs" />
+    <Compile Include="Application\IPriceSystemGroupManagerApplicationServices.cs" />
+    <Compile Include="Application\IPriceSystemManagerApplicationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Application\IRegularGroupManagerApplicationServices.cs" />
+    <Compile Include="Application\ISectionManagerApplicationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Application\IPlannedSubSpecialityHolderManagerApplicationServices.cs" />
+    <Compile Include="Application\ISubSpecialityHolderManagerApplicationServices.cs" />
+    <Compile Include="Application\ISubSpecialityManagerApplicationServices.cs" />
+    <Compile Include="Application\ISubExpenseConceptManagerApplicationServices.cs" />
+    <Compile Include="Application\IUnderGroupActivityManagerApplicationServices.cs" />
+    <Compile Include="Application\IUnderGroupItemManagerApplicationServices.cs" />
+    <Compile Include="Application\IUnderGroupManagerApplicationServices.cs" />
+    <Compile Include="Application\IUnderGroupResourcesManagerApplicationServices.cs" />
+    <Compile Include="Application\IVariantLinesHolderManagerApplicationServices.cs" />
+    <Compile Include="Application\IWageScaleManagerApplicationServices.cs" />
+    <Compile Include="Application\IWorkForceManagerApplicationServices.cs" />
+    <Compile Include="Application\Reporting\IInvestmentChildCustomReportSettingsApplicationServices.cs" />
+    <Compile Include="Domain\Entities\DocumentType.cs" />
+    <Compile Include="Domain\Entities\ExpenseConceptType.cs" />
+    <Compile Include="Domain\Entities\IActivity.cs" />
+    <Compile Include="Domain\Entities\IActivityExecutor.cs" />
+    <Compile Include="Domain\Entities\IBudget.cs" />
+    <Compile Include="Domain\Entities\IBudgetComponent.cs" />
+    <Compile Include="Domain\Entities\IBudgetComponentItem.cs" />
+    <Compile Include="Domain\Entities\ICashEntry.cs" />
+    <Compile Include="Domain\Entities\ICashMovementCategory.cs" />
+    <Compile Include="Domain\Entities\ICashOutgoing.cs" />
+    <Compile Include="Domain\Entities\ICategory.cs" />
+    <Compile Include="Domain\Entities\IConstructionComponent.cs" />
+    <Compile Include="Domain\Entities\IInvestmentCustomReportSettings.cs" />
+    <Compile Include="Domain\Entities\IInvestmentDocument.cs" />
+    <Compile Include="Domain\Entities\IDossificator.cs" />
+    <Compile Include="Domain\Entities\IEquipmentComponent.cs" />
+    <Compile Include="Domain\Entities\IExecutedBudgetComponentItem.cs" />
+    <Compile Include="Domain\Entities\IExecutedActivity.cs" />
+    <Compile Include="Domain\Entities\IExecutedResource.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\Entities\IExecution.cs" />
+    <Compile Include="Domain\Entities\IExpenseConcept.cs" />
+    <Compile Include="Domain\Entities\IExecutedSubSpecialityHolder.cs" />
+    <Compile Include="Domain\Entities\IResourceProvider.cs" />
+    <Compile Include="Domain\Entities\IResourseSupplier.cs" />
+    <Compile Include="Domain\Entities\ISubExpenseConcept.cs" />
+    <Compile Include="Domain\Entities\ISpeciality.cs" />
+    <Compile Include="Domain\Entities\IInvestment.cs" />
+    <Compile Include="Domain\Entities\IInvestmentComponent.cs" />
+    <Compile Include="Domain\Entities\IInvestmentElement.cs" />
+    <Compile Include="Domain\Entities\IInvestmentElementPeriod.cs" />
+    <Compile Include="Domain\Entities\IInvestmentType.cs" />
+    <Compile Include="Domain\Entities\ICashMovement.cs" />
+    <Compile Include="Domain\Entities\IOace.cs" />
+    <Compile Include="Domain\Entities\IOsde.cs" />
+    <Compile Include="Domain\Entities\IOtherExpensesComponent.cs" />
+    <Compile Include="Domain\Entities\IOverGroup.cs" />
+    <Compile Include="Domain\Entities\IPhase.cs" />
+    <Compile Include="Domain\Entities\IPlannedActivity.cs" />
+    <Compile Include="Domain\Entities\IPlannedBudgetComponentItem.cs" />
+    <Compile Include="Domain\Entities\IPlannedResource.cs" />
+    <Compile Include="Domain\Entities\IPriceSystem.cs" />
+    <Compile Include="Domain\Entities\IPriceSystemGroup.cs" />
+    <Compile Include="Domain\Entities\IRegularGroup.cs" />
+    <Compile Include="Domain\Entities\ISection.cs" />
+    <Compile Include="Domain\Entities\ISubSpeciality.cs" />
+    <Compile Include="Domain\Entities\IPlannedSubSpecialityHolder.cs" />
+    <Compile Include="Domain\Entities\ISubSpecialityHolder.cs" />
+    <Compile Include="Domain\Entities\IUnderGroup.cs" />
+    <Compile Include="Domain\Entities\IUnderGroupActivity.cs" />
+    <Compile Include="Domain\Entities\IUnderGroupItem.cs" />
+    <Compile Include="Domain\Entities\IUnderGroupResource.cs" />
+    <Compile Include="Domain\Entities\IVariantLinesHolder.cs" />
+    <Compile Include="Domain\Entities\IWageScale.cs" />
+    <Compile Include="Domain\Entities\IWorkCapitalCashFlow.cs" />
+    <Compile Include="Domain\Entities\IWorkCapitalComponent.cs" />
+    <Compile Include="Domain\Entities\IWorkForce.cs" />
+    <Compile Include="Domain\Entities\ResourceKind.cs" />
+    <Compile Include="Domain\Services\Budget\WorkCapital\ IWorkCapitalCashFlowDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\WorkCapital\ICashFlowCashMovementCategoryDomainService.cs" />
+    <Compile Include="Domain\Services\IActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\IActivityExecutorDomainServicesBase.cs" />
+    <Compile Include="Domain\Services\ICashMovementCategoryDomainService.cs" />
+    <Compile Include="Domain\Services\ICashMovementDomainService.cs" />
+    <Compile Include="Domain\Services\IInvestmentDocumentDomainService.cs" />
+    <Compile Include="Domain\Services\IDossificatorDomainService.cs" />
+    <Compile Include="Domain\Services\IExecutionDomainService.cs" />
+    <Compile Include="Domain\Services\Budget\WorkCapital\IWorkCapitalExecutedActivityDomainServices .cs" />
+    <Compile Include="Domain\Services\Budget\OtherExpenses\IOtherExpensesExecutedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\IPlannedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\IBudgetComponentResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\ICategoryDomainServices.cs" />
+    <Compile Include="Domain\Services\IExecutedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\IBudgetComponentItemDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\Construction\IConstructionExecutedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\Construction\IConstructionPlannedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\Construction\IConstructionExecutedResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\Construction\IConstructionPlannedResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\WorkCapital\IWorkCapitalPlannedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\Equipment\IEquipmentExecutedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\WorkCapital\IWorkCapitalExecutedResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\OtherExpenses\IOtherExpensestExecutedResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\OtherExpenses\IOtherExpensesPlannedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\Equipment\IEquipmentPlannedActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\Equipment\IEquipmentExecutedResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\Equipment\IEquipmentPlannedResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\IExecutedSubSpecialityHolderDomainServices.cs" />
+    <Compile Include="Domain\Services\IResourceProviderDomainServices.cs" />
+    <Compile Include="Domain\Services\IResourceSupplierDomainServices.cs" />
+    <Compile Include="Domain\Services\ISpecialityDomainServices.cs" />
+    <Compile Include="Domain\Services\IExpenseConceptDomainServices.cs" />
+    <Compile Include="Domain\Services\IInvestmentComponentDomainServices.cs" />
+    <Compile Include="Domain\Services\IInvestmentDomainServices.cs" />
+    <Compile Include="Domain\Services\IInvestmentElementDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\OtherExpenses\IOtherExpensesPlannedResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\Budget\WorkCapital\IWorkCapitalPlannedResourceDomainServices.cs" />
+    <Compile Include="Domain\Services\IInvestmentTypeDomainServices.cs" />
+    <Compile Include="Domain\Services\IOaceDomainServices.cs" />
+    <Compile Include="Domain\Services\IOsdeDomainServices.cs" />
+    <Compile Include="Domain\Services\IOverGroupDomainService.cs" />
+    <Compile Include="Domain\Services\IPhaseDomainServices.cs" />
+    <Compile Include="Domain\Services\IPriceSystemDomainService.cs" />
+    <Compile Include="Domain\Services\IRegularGroupDomainService.cs" />
+    <Compile Include="Domain\Services\ISectionDomainService.cs" />
+    <Compile Include="Domain\Services\ISubSpecialityDomainService.cs" />
+    <Compile Include="Domain\Services\ISubExpenseConceptDomainService.cs" />
+    <Compile Include="Domain\Services\IPlannedSubSpecialityHolderDomainServices.cs" />
+    <Compile Include="Domain\Services\ISubSpecialityHolderDomainServices.cs" />
+    <Compile Include="Domain\Services\IUnderGroupActivityDomainServices.cs" />
+    <Compile Include="Domain\Services\IUnderGroupDomainService.cs" />
+    <Compile Include="Domain\Services\IUnderGroupResourceDomainService.cs" />
+    <Compile Include="Domain\Services\IVariantLinesHolderDomainService.cs" />
+    <Compile Include="Domain\Services\IWageScaleDomainServices.cs" />
+    <Compile Include="Domain\Services\IWorkForceDomainServices.cs" />
+    <Compile Include="Domain\Services\IPriceSystemGroupDomainService.cs" />
+    <Compile Include="Implementation\Application\ActivityExecutorManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\ActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\PlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\BudgetComponentItemManagerApplicationServicesBase.cs" />
+    <Compile Include="Implementation\Application\BudgetComponentResourceManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\Construction\ConstructionExecutedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\Construction\ConstructionPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\Equipment\EquipmentExecutedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\Equipment\EquipmentPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\OtherExpenses\OtherExpensesExecutedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\OtherExpenses\OtherExpensesPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\WorkCapital\CashFlowCashMovementCategoryManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\WorkCapital\WorkCapitalCashFlowItemManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\WorkCapital\WorkCapitalExecutedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Budget\WorkCapital\WorkCapitalPlannedActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\CashMovementCategoryManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\CategoryManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\InvestmentDocumentManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\DossificatorApplicationServices.cs" />
+    <Compile Include="Implementation\Application\ExecutedActivityItemManagerApplicationServicesBase.cs" />
+    <Compile Include="Implementation\Application\ExecutionManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\ExecutedSubSpecialityHolderManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\PlannedSubSpecialityHolderManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\Reporting\InvestmentChildCustomReportSettingsApplicationServices.cs" />
+    <Compile Include="Implementation\Application\ResourceProviderManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\ResourceSupplierManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\SpecialityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\ExpenseConceptManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\CashMovementManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\InvestmentComponentManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\InvestmentElementManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\InvestmentElementPeriodManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\InvestmentManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\InvestmentTypeManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\OaceManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\OsdeManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\OverGroupManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\PhaseManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\PriceSystemGroupManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\PriceSystemManagerApplicationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Application\RegularGroupManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\SectionManagerApplicationService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Application\SubSpecialityHolderManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\SubSpecialityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\SubExpenseConceptManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\UnderGroupActivityManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\UnderGroupItemManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\UnderGroupManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\UnderGroupResourcesManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\VariantLinesHolderManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\WageScaleManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Application\WorkForceManagerApplicationServices.cs" />
+    <Compile Include="Implementation\Domain\Entities\Activity.cs" />
+    <Compile Include="Implementation\Domain\Entities\ActivityExecutor.cs" />
+    <Compile Include="Implementation\Domain\Entities\Budget.cs" />
+    <Compile Include="Implementation\Domain\Entities\BudgetComponentBase.cs" />
+    <Compile Include="Implementation\Domain\Entities\BudgetComponentItemBase.cs" />
+    <Compile Include="Implementation\Domain\Entities\CashEntry.cs" />
+    <Compile Include="Implementation\Domain\Entities\CashMovementCategory.cs" />
+    <Compile Include="Implementation\Domain\Entities\CashMovement.cs" />
+    <Compile Include="Implementation\Domain\Entities\CashOutgoing.cs" />
+    <Compile Include="Implementation\Domain\Entities\Category.cs" />
+    <Compile Include="Implementation\Domain\Entities\ConstructionComponent.cs" />
+    <Compile Include="Implementation\Domain\Entities\InvestmentDocument.cs" />
+    <Compile Include="Implementation\Domain\Entities\Dossificator.cs" />
+    <Compile Include="Implementation\Domain\Entities\EquipmentComponent.cs" />
+    <Compile Include="Implementation\Domain\Entities\ExecutedBudgetComponentItemBase.cs" />
+    <Compile Include="Implementation\Domain\Entities\Execution.cs" />
+    <Compile Include="Implementation\Domain\Entities\PlannedSubSpecialityHolder.cs" />
+    <Compile Include="Implementation\Domain\Entities\Reporting\InvestmentCustomReportSettings.cs" />
+    <Compile Include="Implementation\Domain\Entities\ResourceProvider.cs" />
+    <Compile Include="Implementation\Domain\Entities\ResourceSupplier.cs" />
+    <Compile Include="Implementation\Domain\Entities\Speciality.cs" />
+    <Compile Include="Implementation\Domain\Entities\ExpenseConcept.cs" />
+    <Compile Include="Implementation\Domain\Entities\Investment.cs" />
+    <Compile Include="Implementation\Domain\Entities\InvestmentComponent.cs" />
+    <Compile Include="Implementation\Domain\Entities\InvestmentElement.cs" />
+    <Compile Include="Implementation\Domain\Entities\InvestmentElementPeriod.cs" />
+    <Compile Include="Implementation\Domain\Entities\InvestmentType.cs" />
+    <Compile Include="Implementation\Domain\Entities\Oace.cs" />
+    <Compile Include="Implementation\Domain\Entities\Osde.cs" />
+    <Compile Include="Implementation\Domain\Entities\OtherExpensesComponent.cs" />
+    <Compile Include="Implementation\Domain\Entities\ExecutedActivity.cs" />
+    <Compile Include="Implementation\Domain\Entities\OverGroup.cs" />
+    <Compile Include="Implementation\Domain\Entities\Phase.cs" />
+    <Compile Include="Implementation\Domain\Entities\PlannedActivity.cs" />
+    <Compile Include="Implementation\Domain\Entities\PlannedBudgetComponentItemBase.cs" />
+    <Compile Include="Implementation\Domain\Entities\PlannedResource.cs" />
+    <Compile Include="Implementation\Domain\Entities\PriceSystem.cs" />
+    <Compile Include="Implementation\Domain\Entities\PriceSystemGroup.cs" />
+    <Compile Include="Implementation\Domain\Entities\RegularGroup.cs" />
+    <Compile Include="Implementation\Domain\Entities\Section.cs" />
+    <Compile Include="Implementation\Domain\Entities\SubSpeciality.cs" />
+    <Compile Include="Implementation\Domain\Entities\SubExpenseConcept.cs" />
+    <Compile Include="Implementation\Domain\Entities\ExecutedSubSpecialityHolder.cs" />
+    <Compile Include="Implementation\Domain\Entities\SubSpecialityHolder.cs" />
+    <Compile Include="Implementation\Domain\Entities\UnderGroup.cs" />
+    <Compile Include="Implementation\Domain\Entities\UnderGroupActivity.cs" />
+    <Compile Include="Implementation\Domain\Entities\UnderGroupResource.cs" />
+    <Compile Include="Implementation\Domain\Entities\VariantLinesHolder.cs" />
+    <Compile Include="Implementation\Domain\Entities\WageScale.cs" />
+    <Compile Include="Implementation\Domain\Entities\WorkCapitalCashFlow.cs" />
+    <Compile Include="Implementation\Domain\Entities\WorkCapitalComponent.cs" />
+    <Compile Include="Implementation\Domain\Entities\WorkForce.cs" />
+    <Compile Include="Implementation\Domain\Services\ActivityExecutorDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\PlannedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\BudgetComponentResourceDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\OtherExpenses\OtherExpensesExecutedResourceDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\OtherExpenses\OtherExpensesPlannedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\OtherExpenses\OtherExpensesExecutedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\WorkCapital\CashFlowCashMovementCategoryDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\WorkCapital\WorkCapitalExecutedResourceDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\WorkCapital\WorkCapitalPlannedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\WorkCapital\WorkCapitalExecutedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\CashMovementCategoryDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\CashMovementDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\CategoryDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\InvestmentDocumentDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\DossificatorDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\ActivityDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\BudgetComponentItemDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\Construction\ConstructionExecutedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\Construction\ConstructionPlannedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\Equipment\EquipmentExecutedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\Equipment\EquipmentPlannedActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\Budget\Equipment\EquipmentExecutedResourceDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\ExecutedActivityDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\ExecutionDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\ExecutedSubSpecialityHolderDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\ResourceProviderDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\ResourceSupplierDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\SpecialityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\ExpenseConceptDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\InvestmentComponentDomainServices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Domain\Services\InvestmentDomainServices.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Domain\Services\InvestmentElementDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\InvestmentTypeDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\OaceDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\OsdeDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\OverGroupDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\PhaseDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\PlannedActivityDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\ExecutedResourceDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\PlannedResourceDomainServicesBase.cs" />
+    <Compile Include="Implementation\Domain\Services\PriceSystemDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\PriceSystemGroupDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\RegularGroupDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\SectionDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\SubSpecialityDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\SubExpenseConceptDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\PlannedSubSpecialityHolderDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\SubSpecialityHolderDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\UnderGroupActivityDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\UnderGroupDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\UnderGroupResourceDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\VariantLinesHolderDomainService.cs" />
+    <Compile Include="Implementation\Domain\Services\WageScaleDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\WorkCapitalCashFlowDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Services\WorkForceDomainServices.cs" />
+    <Compile Include="Implementation\Domain\Specifications\BudgetComponentActivityOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\BudgetComponentItemForNomenclatorSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\BudgetComponentItemsOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\BudgetComponentResourceOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\CashMovementCategoryOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\CashMovementOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\ExecutionOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\InvestmentElementsOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\OverGroupOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\RegularGroupOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\RootInvestmentElementsSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\SectionOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\SubSpecialityHolderOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\SubSpecialityOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\SubExpenseConceptOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\UnderGroupItemOfSpecification.cs" />
+    <Compile Include="Implementation\Domain\Specifications\UnderGroupOfSpecification.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\ActivityExecutorRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\ActivityRepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\BudgetComponentItemForNomenclatorRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\BudgetComponentItemRepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\BudgetComponentResourceRepositoryBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\Construction\ConstructionExecutedActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\Construction\ConstructionPlannedActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\ExecutedBudgetComponentItemRepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\OtherExpenses\OtherExpensesExecutedActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\OtherExpenses\OtherExpensesPlannedActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\PlannedResourceRepositoryBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\ExecutedSubSpecialityHolderRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\PlannedSubSpecialityHolderRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\SubSpecialityHolderRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\UnderGroupActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\UnderGroupItemRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\UnderGroupResourceRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\WorkCapital\WorkCapitalCashFlowRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\InvestmentDocumentRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Reporting\InvestmentChildCustomReportSettingsRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\ResourceProviderRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\ResourceSupplierRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\SpecialityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\SubSpecialityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\SubExpenseConceptRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\WorkCapital\CashFlowCashMovementCategoryRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\WorkCapital\WorkCapitalExecutedActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\WorkCapital\WorkCapitalPlannedActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\Equipment\EquipmentExecutedActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\Equipment\EquipmentPlannedActivityRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\ExecutedActivityRepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\CashMovementRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\CategoryRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\DossificatorRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\ExecutionRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\ExpenseConceptRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\CashMovementCategoryRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\InvestmentComponentRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\Budget\PlannedActivityRepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\InvestmentElementRepository.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\InvestmentElementRepositoryBase.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\InvestmentRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\InvestmentTypeRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\OaceRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\OsdeRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\OverGroupRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\PhaseRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\PriceSystemGroupRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\PriceSystemRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\RegularGroupRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\SectionRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\UnderGroupRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\VariantLinesHolderRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\WageScaleRepository.cs" />
+    <Compile Include="Implementation\Infrastructure\Data\Db4O\WorkForceRepository.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ActivityExecutorPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ActivityExecutorViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Construction\ConstructionExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Construction\ConstructionExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Construction\ConstructionPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Construction\ConstructionPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\ExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\OtherExpenses\OtherExpensesExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\OtherExpenses\OtherExpensesPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\OtherExpenses\OtherExpensesExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\OtherExpenses\OtherExpensesPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\PlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\ExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\PlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\SubSpecialityForNomenclatorViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\PlannedActivitiesForNomenclatorViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\PlannedResourceForNomenclatorViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\SubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\SubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\UnderGroupActivityPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\UnderGroupActivityViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\UnderGroupItemPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\UnderGroupItemViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\UnderGroupResourcePresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\UnderGroupResourceViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalCashFlowCashMovementCategoryPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalCashFlowCashMovementViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\CashMovementPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalCashFlowPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\CashMovementCategoryPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\CashMovementCategoryViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\CashMovementViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\CategoryViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentDocumentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentDocumentViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\DossificatorPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\DossificatorViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ExecutionPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Rerporting\CustomReportSettings.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Rerporting\GenericComparer.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Rerporting\InvestmentChildCustomReportSettingsPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ResourceProviderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ResourceProviderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ResourceSupplierPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ResourceSupplierViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\SpecialityPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\SpecialityViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ExpenseConceptViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\GenericSectionPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ExecutionViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\RegularGroupViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\SubSpecialityPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\SubExpenseConceptPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\SubSpecialityViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\SubExpenseConceptViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\UnderGroupPlannedActivityViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\UnderGroupPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\UnderGroupViewModel.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IBudgetComponentItemForNomenclatorRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IExecutedSubSpecialityHolderRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IPlannedSubSpecialityHolderRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\ISubSpecialityHolderRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IUnderGroupActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IUnderGroupItemRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IUnderGroupResourceRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\WorkCapital\IWorkCapitalCashFlowRepository.cs" />
+    <Compile Include="Infrastructure\Data\IActivityExecutorRepository.cs" />
+    <Compile Include="Infrastructure\Data\IResourceProviderRepository.cs" />
+    <Compile Include="Infrastructure\Data\IResourceSupplierRepository.cs" />
+    <Compile Include="Infrastructure\Data\ISpecialityRepository.cs" />
+    <Compile Include="Infrastructure\Data\ISubSpecialityRepository.cs" />
+    <Compile Include="Infrastructure\Data\ISubExpenseConceptRepository.cs" />
+    <Compile Include="Infrastructure\Data\IInvestmentDocumentRepository.cs" />
+    <Compile Include="Infrastructure\Data\Reporting\IInvestmentChildCustomReportSettingsRepository.cs" />
+    <Compile Include="Infrastructure\DBControl.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Construction\IConstructionExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Construction\IConstructionExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Construction\IConstructionPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Construction\IConstructionPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Equipment\IEquipmentExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Equipment\IEquipmentExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Equipment\IEquipmentPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Equipment\IEquipmentPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IPlannedActivitiesForNomenclatorViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IPlannedResourceForNomenclatorViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\ISubSpecialityForNomenclatorViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\ISubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\ISubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IUnderGroupActivityPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IUnderGroupItemPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IUnderGroupItemViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IUnderGroupResourcePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IUnderGroupResourceViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalExecutedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalPlannedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalExecutedSubSpecialityHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IActivityExecutorPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IActivityExecutorProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IActivityExecutorViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentDocumentPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentDocumentViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentTypeProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IResourceProviderProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IResourceSupplierProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IOaceProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IOsdeProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IPhaseProvider.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IPlannedSubSpecialityHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IResourceProviderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IResourceProviderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IResourceSupplierPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IResourceSupplierViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\ISpecialityPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ISpecialityProvider.cs" />
+    <Compile Include="Presentation\ViewModels\ISpecialityViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IOverGroupViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\OverGroupPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\OverGroupViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\PriceSystemGroupPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\PriceSystemGroupViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\RegularGroupPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Rerporting\BudgetSummaryConcept.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Rerporting\BudgetSummaryPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Rerporting\FixedCapitalPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Rerporting\MetroChartPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\SectionViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\PlannedActivityPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\BudgetComponentItemPresenterBase.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\BudgetComponentItemViewModelBase.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\BudgetComponentPresenterBase.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Construction\ConstructionComponentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentComponentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\ExecutedBudgetComponentItemViewModelBase.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\OtherExpenses\OtherExpensesComponentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\PlannedResourceViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalComponentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\CategoryPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\ExpenseConceptPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentComponentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentComponentViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentElementPresenterBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\ExecutedActivityPresenterBase.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\ExecutedActivityViewModelBase.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\PlannedResourcePresenterBase.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\PlannedActivityViewModelBase.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentElementPeriodPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentElementViewModelBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentTypePresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentTypeViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\InvestmentViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\OacePresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\OaceViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\OsdePresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\OsdeViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\PeriodViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\PhasePresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\PhaseViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\PriceSystemPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\PriceSystemViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\SectionPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\VariantLinesHolderPresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\VariantLinesHolderViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\WageScalePresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\WageScaleViewModel.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\WorkForcePresenter.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\WorkForceViewModel.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IActivityRelatedRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IBudgetComponentActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IExecutedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IBudgetComponentItemRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\Construction\IConstructionExecutedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\Construction\IConstructionPlannedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\IBudgetComponentResourceRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\OtherExpenses\IOtherExpensesExecutedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\WorkCapital\ICashFlowCashMovementCategoryRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\WorkCapital\IWorkCapitalExecutedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\WorkCapital\IWorkCapitalPlannedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\OtherExpenses\IOtherExpensesPlannedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\Equipment\IEquipmentExecutedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\Budget\Equipment\IEquipmentPlannedActivityRepository.cs" />
+    <Compile Include="Infrastructure\Data\ICashMovementCategoryRepository.cs" />
+    <Compile Include="Infrastructure\Data\ICashMovementRepository.cs" />
+    <Compile Include="Infrastructure\Data\ICategoryRepository.cs" />
+    <Compile Include="Infrastructure\Data\IDossificatorRepository.cs" />
+    <Compile Include="Infrastructure\Data\IExecutionRepository.cs" />
+    <Compile Include="Infrastructure\Data\IExpenseConceptRepository.cs" />
+    <Compile Include="Infrastructure\Data\IInvestmentComponentRepository.cs" />
+    <Compile Include="Infrastructure\Data\IInvestmentElementRepository.cs" />
+    <Compile Include="Infrastructure\Data\IInvestmentElementRepository2.cs" />
+    <Compile Include="Infrastructure\Data\IInvestmentRepository.cs" />
+    <Compile Include="Infrastructure\Data\IInvestmentTypeRepository.cs" />
+    <Compile Include="Infrastructure\Data\IOaceRepository.cs" />
+    <Compile Include="Infrastructure\Data\IOsdeRepository.cs" />
+    <Compile Include="Infrastructure\Data\IOverGroupRepository.cs" />
+    <Compile Include="Infrastructure\Data\IPhaseRepository.cs" />
+    <Compile Include="Infrastructure\Data\IPriceSystemGroupRepository.cs" />
+    <Compile Include="Infrastructure\Data\IPriceSystemRepository.cs" />
+    <Compile Include="Infrastructure\Data\IRegularGroupRepository.cs" />
+    <Compile Include="Infrastructure\Data\ISectionRepository.cs" />
+    <Compile Include="Infrastructure\Data\IUnderGroupRepository.cs" />
+    <Compile Include="Infrastructure\Data\IVariantLinesHolderRepository.cs" />
+    <Compile Include="Infrastructure\Data\IWageScaleRepository.cs" />
+    <Compile Include="Infrastructure\Data\IWorkForceRepository.cs" />
+    <Compile Include="InvestmentsSubsystem.cs" />
+    <Compile Include="Implementation\Presentation\ViewModels\Budget\BudgetPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IBudgetSummary.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalCashFlowCashEntryViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalCashFlowCashMovementCategoryPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalCashFlowPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ICashMovementCategoryViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Construction\IConstructionComponentPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\Equipment\IEquipmentComponentPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IBudgetComponentActivityPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IBudgetComponentPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IBudgetComponentResourcePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IBudgetPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IBudgetComponentItemPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IExecutedBudgetComponentItemViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\OtherExpenses\IOtherExpensesComponentPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IBudgetComponentItemViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IExecutedActivityViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IExecutedActivityPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\WorkCapital\IWorkCapitalComponentPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ICashMovementCategoryPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ICashMovementPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ICashMovementViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\ICategoryPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ICategoryProvider.cs" />
+    <Compile Include="Presentation\ViewModels\ICategoryViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IDossificatorPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IDossificatorViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IExecutionPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IExecutionViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IExpenseConceptPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IExpenseConceptProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IExpenseConceptViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IGenericSectionPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentComponentPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentComponentViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IPlannedActivityPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IPlannedResourcePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IPlannedActivityViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IPlannedResourceViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentElementPresenter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\ViewModels\IInvestmentElementViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IOverGroupPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IPriceSystemGroupPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IPriceSystemGroupViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IRegularGroupPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IRegularGroupViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IItemeable.cs" />
+    <Compile Include="Presentation\ViewModels\ISubSpecialityPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ISubExpenseConceptPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ISubSpecialityViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\ISubExpenseConceptViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Budget\IUnderGroupActivityViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IUnderGroupPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IUnderGroupViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IVariantLinesHolderPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IVariantLinesHolderViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentTypePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentTypeViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IInvestmentViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IOacePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IOaceViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IOsdePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IOsdeViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IPeriodPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IPeriodViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IPhasePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IPhaseViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IPriceSystemPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IPriceSystemViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\ISectionPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\ISectionViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IWageScalePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IWageScaleProvider.cs" />
+    <Compile Include="Presentation\ViewModels\IWageScaleViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\IWorkForcePresenter.cs" />
+    <Compile Include="Presentation\ViewModels\IWorkForceViewModel.cs" />
+    <Compile Include="Presentation\ViewModels\Reporting\CurrencyPeriodContainer.cs" />
+    <Compile Include="Presentation\ViewModels\Reporting\IBudgetSummaryConcept.cs" />
+    <Compile Include="Presentation\ViewModels\Reporting\IBudgetSummaryPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Reporting\IInvestmentChildCustomReportSettingsPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\Reporting\IMetroChartPresenter.cs" />
+    <Compile Include="Presentation\ViewModels\TreeViewCommander.cs" />
+    <Compile Include="Presentation\Views\Arrangement\BudgetItemView.xaml.cs">
+      <DependentUpon>BudgetItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Arrangement\BudgetView.xaml.cs">
+      <DependentUpon>BudgetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Arrangement\ExecutionView.xaml.cs">
+      <DependentUpon>ExecutionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Arrangement\InvestmentElementOverView.xaml.cs">
+      <DependentUpon>InvestmentElementOverView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Arrangement\UserAccesView.xaml.cs">
+      <DependentUpon>UserAccesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Arrangement\UserRolesDataGrid.xaml.cs">
+      <DependentUpon>UserRolesDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Arrangement\UserRolesView.xaml.cs">
+      <DependentUpon>UserRolesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Arrangement\WorkCapitalItemView.xaml.cs">
+      <DependentUpon>WorkCapitalItemView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Controls\EasyExecutionTimeline.cs" />
+    <Compile Include="Presentation\Views\Converters\TimeLineActivityMarginConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\AnnoyingWidthAjustConverter.cs" />
+    <Compile Include="Presentation\Views\CustomReportTreeViewContainer.xaml.cs">
+      <DependentUpon>CustomReportTreeViewContainer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\DefaultContent.xaml.cs">
+      <DependentUpon>DefaultContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\CustomReportTreeView.xaml.cs">
+      <DependentUpon>CustomReportTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViewsUI\ReportsGenerator.xaml.cs">
+      <DependentUpon>ReportsGenerator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViewsUI\ProjectionTimeline.xaml.cs">
+      <DependentUpon>ProjectionTimeline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViewsUI\DetailedTimeline.xaml.cs">
+      <DependentUpon>DetailedTimeline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViewsUI\InvestmentFullReport.xaml.cs">
+      <DependentUpon>InvestmentFullReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViewsUI\FullReportDataGrid.xaml.cs">
+      <DependentUpon>FullReportDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ResourceSupplierEditor.xaml.cs">
+      <DependentUpon>ResourceSupplierEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ResourceProviderEditor.xaml.cs">
+      <DependentUpon>ResourceProviderEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ActivityExecutorEditor.xaml.cs">
+      <DependentUpon>ActivityExecutorEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Converters\InvestmentElementTemplateSelector.cs" />
+    <Compile Include="Presentation\Views\Converters\NavigableStateToBooleanConverter.cs" />
+    <Compile Include="Presentation\Views\SpreadChangesPlattform.xaml.cs">
+      <DependentUpon>SpreadChangesPlattform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\SubSpecialityHolderBothDataGrid.xaml.cs">
+      <DependentUpon>SubSpecialityHolderBothDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\SubSpecialityHolderDataGrid.xaml.cs">
+      <DependentUpon>SubSpecialityHolderDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Controls\BudgetComponentCombobox.cs" />
+    <Compile Include="Presentation\Views\InvestmentExportPlattform.xaml.cs">
+      <DependentUpon>InvestmentExportPlattform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\InvestmentView.xaml.cs">
+      <DependentUpon>InvestmentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ModuleSubjectPresentationView.xaml.cs">
+      <DependentUpon>ModuleSubjectPresentationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ModuleSubjectView.xaml.cs">
+      <DependentUpon>ModuleSubjectView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Tools\AccessImport.xaml.cs">
+      <DependentUpon>AccessImport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Tools\ToolsWindow.xaml.cs">
+      <DependentUpon>ToolsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\UserConfigurationView.xaml.cs">
+      <DependentUpon>UserConfigurationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\BudgetComponentItemDataGrid.xaml.cs">
+      <DependentUpon>BudgetComponentItemDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\BudgetComponentResourceDataGrid.xaml.cs">
+      <DependentUpon>BudgetComponentResourceDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ViewTypes\BudgetComponentItemViewType.cs" />
+    <Compile Include="Presentation\Views\BudgetConstructionView.xaml.cs">
+      <DependentUpon>BudgetConstructionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\BudgetItemManagementView.xaml.cs">
+      <DependentUpon>BudgetItemManagementView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\CashMovementTreeView.xaml.cs">
+      <DependentUpon>CashMovementTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\CategoryEditor.xaml.cs">
+      <DependentUpon>CategoryEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\Converters\BackgroundOnDeepConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\BeforeSpaceConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\BooleanToBudgetComponentItemConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\BooleanToPSDossificatorConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\BudgetComponentItemTemplateSelector.cs" />
+    <Compile Include="Presentation\Views\Converters\BudgetComponentItemViewToStringConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\BudgetSummaryConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\DateToToShortDateStringConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\ExpenseConceptTypeToStringConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\PeriodtoValueConverter.cs" />
+    <Compile Include="Presentation\Views\Converters\UnsainTestConverter.cs" />
+    <Compile Include="Presentation\Views\DossificatorPriceSystems.xaml.cs">
+      <DependentUpon>DossificatorPriceSystems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ModuleAccessView.xaml.cs">
+      <DependentUpon>ModuleAccessView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ModuleAccessTreeView.xaml.cs">
+      <DependentUpon>ModuleAccessTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\InvestmentRelatedDocument.xaml.cs">
+      <DependentUpon>InvestmentRelatedDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\SpecialityEditor.xaml.cs">
+      <DependentUpon>SpecialityEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ExpenseConceptEditor.xaml.cs">
+      <DependentUpon>ExpenseConceptEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\InvestmentElementProperties.xaml.cs">
+      <DependentUpon>InvestmentElementProperties.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\InvestmentElementsView.xaml.cs">
+      <DependentUpon>InvestmentElementsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\InvestmentElementTimeline.xaml.cs">
+      <DependentUpon>InvestmentElementTimeline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\InvestmentElementTreeView.xaml.cs">
+      <DependentUpon>InvestmentElementTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\AtlasSubSystemMenu.xaml.cs">
+      <DependentUpon>AtlasSubSystemMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\InvestmentTypeEditor.xaml.cs">
+      <DependentUpon>InvestmentTypeEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\InvestmentVariablesEditor.xaml.cs">
+      <DependentUpon>InvestmentVariablesEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\OaceEditor.xaml.cs">
+      <DependentUpon>OaceEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\OsdeEditor.xaml.cs">
+      <DependentUpon>OsdeEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\PhaseEditor.xaml.cs">
+      <DependentUpon>PhaseEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\PlanningExecutionView.xaml.cs">
+      <DependentUpon>PlanningExecutionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\PriceSystems.xaml.cs">
+      <DependentUpon>PriceSystems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\PriceSystemDataGrid.xaml.cs">
+      <DependentUpon>PriceSystemDataGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportSetcion.xaml.cs">
+      <DependentUpon>ReportSetcion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViews.xaml.cs">
+      <DependentUpon>ReportViews.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViewsUI\Generals.xaml.cs">
+      <DependentUpon>Generals.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViewsUI\GraphicModelator.xaml.cs">
+      <DependentUpon>GraphicModelator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ReportViewsUI\Graphics.xaml.cs">
+      <DependentUpon>Graphics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\SectionTreeView.xaml.cs">
+      <DependentUpon>SectionTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\TreeViewDatagrid.xaml.cs">
+      <DependentUpon>TreeViewDatagrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\ViewTypes\BudgetViewType.cs" />
+    <Compile Include="Presentation\Views\ZUserControl1.xaml.cs">
+      <DependentUpon>ZUserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\VariantLinesViewer.xaml.cs">
+      <DependentUpon>VariantLinesViewer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\WageScaleEditor.xaml.cs">
+      <DependentUpon>WageScaleEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\WorkCapitalCashFlowView.xaml.cs">
+      <DependentUpon>WorkCapitalCashFlowView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation\Views\WorkForceEditor.xaml.cs">
+      <DependentUpon>WorkForceEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.en.Designer.cs">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Implementation\Presentation\ViewModels\View model implementations.cd" />
+    <None Include="Implementation\Domain\Entities\Entities.cd" />
+    <None Include="Presentation\ViewModels\View model contracts.cd" />
+    <None Include="Domain\Entities\Class Diagram.cd" />
+    <None Include="packages.config" />
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Common\Common.csproj">
+      <Project>{6b91944d-b123-41df-8ba8-0ce7dcdbebed}</Project>
+      <Name>Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\System\Atlas.Contracts\Atlas.Contracts.csproj">
+      <Project>{a29b4a7a-9ddd-42f2-b157-d0f086ce4df9}</Project>
+      <Name>Atlas.Contracts</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\System\Atlas.UIControls\Atlas.UIControls.csproj">
+      <Project>{3a787139-3eab-4ad2-b1fd-5a02e41b9663}</Project>
+      <Name>Atlas.UIControls</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\System\Infralution.Localization.Wpf\Infralution.Localization.Wpf.csproj">
+      <Project>{E3D700D5-BDFB-4777-8E9C-53E8F943AC58}</Project>
+      <Name>Infralution.Localization.Wpf</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\System\MetroChart\De.TorstenMandelkow.MetroChart\De.TorstenMandelkow.MetroChart.csproj">
+      <Project>{fa286411-e476-4bd0-abe9-7ae69226069c}</Project>
+      <Name>De.TorstenMandelkow.MetroChart</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Presentation\Views\Arrangement\BudgetItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Arrangement\BudgetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Arrangement\ExecutionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Arrangement\InvestmentElementOverView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Arrangement\UserAccesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\Arrangement\UserRolesDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\Arrangement\UserRolesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\Arrangement\WorkCapitalItemView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Assets\EasyExecutionTimeline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Assets\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Assets\TabControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\CustomReportTreeViewContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\DefaultContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\CustomReportTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ReportViewsUI\ReportsGenerator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ReportViewsUI\ProjectionTimeline.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ReportViewsUI\DetailedTimeline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ReportViewsUI\InvestmentFullReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ReportViewsUI\FullReportDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ResourceSupplierEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ResourceProviderEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ActivityExecutorEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\SpreadChangesPlattform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\SubSpecialityHolderBothDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\SubSpecialityHolderDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentExportPlattform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ModuleSubjectPresentationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ModuleSubjectView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\Tools\AccessImport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Tools\ToolsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\UserConfigurationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\BudgetComponentItemDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\BudgetComponentResourceDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\BudgetConstructionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\BudgetItemManagementView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\CashMovementTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\CategoryEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\DossificatorPriceSystems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ModuleAccessView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ModuleAccessTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentRelatedDocument.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\SpecialityEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\ExpenseConceptEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentElementProperties.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentElementsView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentElementTimeline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentElementTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\AtlasSubSystemMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentTypeEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\InvestmentVariablesEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\Navigation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\Navigation2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\OaceEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\OsdeEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\PhaseEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\PlanningExecutionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\PriceSystems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\PriceSystemDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ReportSetcion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ReportViews.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ReportViewsUI\Generals.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ReportViewsUI\GraphicModelator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ReportViewsUI\Graphics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\SectionTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\Themes\Light.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\TreeViewDatagrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\ZUserControl1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\VariantLinesViewer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\WageScaleEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Presentation\Views\WorkCapitalCashFlowView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Presentation\Views\WorkForceEditor.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

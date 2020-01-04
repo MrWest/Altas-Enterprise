@@ -1,0 +1,6 @@
+D:\TFSPreview\Source\SPCAFMetro\De.TorstenMandelkow.MetroChart\obj\Debug\De.TorstenMandelkow.MetroChart.csprojResolveAssemblyReference.cache
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Debug\De.TorstenMandelkow.MetroChart.csprojResolveAssemblyReference.cache
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Debug\De.TorstenMandelkow.MetroChart.pdb

@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converters="clr-namespace:CompanyName.Atlas.UIControls.Converters">
+
+    <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+    <converters:AtlasWindowUriConverter x:Key="ContentConverter"/>
+    <converters:AtlasWindowUriConverter x:Key="UriConverter"/>
+    <converters:PercentWidthConverter x:Key="PercentWidthConverter"/>
+    <converters:PercentMarginConverter x:Key="PercentMarginConverter"/>
+    <converters:AtlasOptionalContentContentConverter x:Key="AtlasOptionalContentContentConverter"/>
+    <converters:ComboBoxItemIdConverter x:Key="ComboBoxItemIdConverter"/>
+    <converters:TextItemIdConverter x:Key="TextItemIdConverter"/>
+    <converters:ToUpperConverter x:Key="ToUpperConverter" />
+    <converters:ToLowerConverter x:Key="ToLowerConverter" />
+    <converters:AllowedModuleToBooleanConverter x:Key="AllowedModuleToBooleanConverter"/>
+    <converters:LoginViewStateToVisibility x:Key="LoginViewStateToVisibility" />
+    <converters:DecreaseDateTimeScaleConverter x:Key="DecreaseDateTimeScaleConverter" />
+    <converters:ModuleIconConverter x:Key="ModuleIconConverter"/>
+    <converters:ModuleNameConverter x:Key="ModuleNameConverter"/>
+    <converters:ModuleDescriptionConverter x:Key="ModuleDescriptionConverter"/>
+    <converters:TimeLineScaleConverter x:Key="TimeLineScaleConverter"/>
+    <converters:WidthValueToVisibilityConverter x:Key="WidthValueToVisibilityConverter"/>
+    <converters:NullOrEmptyStringToVisibilityConverter x:Key="NullOrEmptyStringToVisibilityConverter"/>
+    
+</ResourceDictionary>

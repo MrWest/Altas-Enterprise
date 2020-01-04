@@ -1,0 +1,24 @@
+D:\TFSPreview\Source\SPCAFMetro\TestApplication.Shared\bin\Debug\TestApplication.Shared.dll
+D:\TFSPreview\Source\SPCAFMetro\TestApplication.Shared\bin\Debug\TestApplication.Shared.pdb
+D:\TFSPreview\Source\SPCAFMetro\TestApplication.Shared\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\TFSPreview\Source\SPCAFMetro\TestApplication.Shared\bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+D:\TFSPreview\Source\SPCAFMetro\TestApplication.Shared\obj\Debug\TestApplication.Shared.csprojResolveAssemblyReference.cache
+D:\TFSPreview\Source\SPCAFMetro\TestApplication.Shared\obj\Debug\TestApplication.Shared.dll
+D:\TFSPreview\Source\SPCAFMetro\TestApplication.Shared\obj\Debug\TestApplication.Shared.pdb
+D:\TFSPreview\Source\SPCAFMetro\TestApplication.Shared\obj\Debug\TestApplication.Shared.g.resources
+D:\TFS2010\MetroChart\TestApplication.Shared\bin\Debug\TestApplication.Shared.dll
+D:\TFS2010\MetroChart\TestApplication.Shared\bin\Debug\TestApplication.Shared.pdb
+D:\TFS2010\MetroChart\TestApplication.Shared\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\TFS2010\MetroChart\TestApplication.Shared\bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+D:\TFS2010\MetroChart\TestApplication.Shared\obj\Debug\TestApplication.Shared.csprojResolveAssemblyReference.cache
+D:\TFS2010\MetroChart\TestApplication.Shared\obj\Debug\TestApplication.Shared.g.resources
+D:\TFS2010\MetroChart\TestApplication.Shared\obj\Debug\TestApplication.Shared.dll
+D:\TFS2010\MetroChart\TestApplication.Shared\obj\Debug\TestApplication.Shared.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplication.Shared\bin\Debug\TestApplication.Shared.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplication.Shared\bin\Debug\TestApplication.Shared.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplication.Shared\bin\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplication.Shared\bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplication.Shared\obj\Debug\TestApplication.Shared.csprojResolveAssemblyReference.cache
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplication.Shared\obj\Debug\TestApplication.Shared.g.resources
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplication.Shared\obj\Debug\TestApplication.Shared.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplication.Shared\obj\Debug\TestApplication.Shared.pdb

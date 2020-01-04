@@ -1,0 +1,29 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls">
+
+    <Style TargetType="uiControls:EditableTextBlock">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="uiControls:EditableTextBlock">
+                    <Border>
+                        <Grid>
+                            <TextBox x:Name="PART_TextBox" Visibility="Collapsed" Margin="-1,0,0,0" Foreground="{TemplateBinding Foreground}" Background="Transparent" BorderBrush="Transparent" BorderThickness="0"/>
+                            <Label x:Name="PART_Label" Content="{TemplateBinding Text}" Padding="2,1" Background="Transparent" Foreground="{TemplateBinding Foreground}"
+                                          />
+                        </Grid>
+                    </Border>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="InEdition" Value="True">
+                            <Setter TargetName="PART_TextBox" Property="Visibility" Value="Visible"/>
+                            
+                            <Setter TargetName="PART_Label" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

@@ -1,0 +1,84 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
+                    xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+                   
+                    xmlns:constants="clr-namespace:CompanyName.Atlas.Contracts;assembly=Atlas.Contracts"
+                    xmlns:properties1="clr-namespace:CompanyName.Atlas.Configuration.Properties"
+                    xmlns:views="clr-namespace:CompanyName.Atlas.Configuration.Presentation.Views"
+                    xmlns:properties="clr-namespace:CompanyName.Atlas.UIControls.Properties;assembly=Atlas.UIControls">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Assets/Icons.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <!-- On the below collection there will be defined the navigation of the current subsystem -->
+    <collections:ArrayList x:Key="{x:Static constants:GlobalParameters.NavigationResourceKey}" >
+
+        <!-- This section is for the common module -->
+        <uiControls:FirstLevelNavItem Icon="{StaticResource Icon.Common}"
+                                      Text="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Preferences}" 
+                                      ToolTip="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Preferences_Tooltip}"
+                                      >
+            <uiControls:FirstLevelNavItem.SubNavigation>
+
+                <!-- This category is for the properties of the selected investment element  -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.Properties}"
+                                              Text="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Preferences}" 
+                                      ToolTip="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Preferences_Tooltip}"
+                                      >
+                    <views:AtlasPreferenceSettings/>
+                    
+                </uiControls:SecondLevelNavItem>
+
+                <!-- This categry is to manage the variables of the investment module -->
+               
+            </uiControls:FirstLevelNavItem.SubNavigation>
+        </uiControls:FirstLevelNavItem>
+        <!-- This first navigation item is the budget section -->
+        <uiControls:FirstLevelNavItem Icon="{StaticResource Icon.Budget}"
+                                      ToolTip="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Security}"
+                                      Text="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Security}">
+            <!-- The budget section is composed by... -->
+            <uiControls:FirstLevelNavItem.SubNavigation>
+
+                <!-- The planning and execution view -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.PlanningExecuting}"
+                                               ToolTip="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Security}"
+                                               Text="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Security}">
+                    <views:AtlasUsersManagementView />
+                </uiControls:SecondLevelNavItem>
+
+               
+            </uiControls:FirstLevelNavItem.SubNavigation>
+        </uiControls:FirstLevelNavItem>
+        
+        <!-- And the thrid section is for funding matters -->
+        <uiControls:FirstLevelNavItem Text="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Advanced}"
+                                      ToolTip="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=SystemManagement_Tooltip}"
+                                      Icon="{StaticResource Icon.Properties}">
+            <uiControls:FirstLevelNavItem.SubNavigation>
+                <!-- This category is for the properties of the selected investment element  -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.Properties}"
+                                               Text="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=Advanced}"
+                                               ToolTip="{Resx ResxName=CompanyName.Atlas.UIControls.Properties.Resources, Key=SystemManagement_Tooltip}">
+                   
+                    <views:AtlasModuleManagementView />
+
+                </uiControls:SecondLevelNavItem>
+
+                <!-- This categry is to manage the variables of the investment module -->
+                <uiControls:SecondLevelNavItem Icon="{StaticResource Icon.ModuleHelpContent}"
+                                               Text="{x:Static properties:Resources.ModuleHelpContent}"
+                                               ToolTip="{x:Static properties:Resources.ModuleHelpContent_ToolTip}"
+                                               OptionalUri="/Atlas.Configuration;component/Presentation/Views/ModuleSubjectView.xaml"   
+                                               DefaultOptionalUri="/Atlas.Configuration;component/Presentation/Views/ModuleSubjectView.xaml">
+                    <views:ModuleSubjectPresentationView/>
+                </uiControls:SecondLevelNavItem>
+
+            </uiControls:FirstLevelNavItem.SubNavigation>
+            </uiControls:FirstLevelNavItem>
+
+    </collections:ArrayList>
+
+</ResourceDictionary>

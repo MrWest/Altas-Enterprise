@@ -1,0 +1,19 @@
+﻿<Application x:Class="CompanyName.Atlas.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:ClassModifier="internal" ShutdownMode="OnLastWindowClose">
+
+    <Application.Resources>
+        <ResourceDictionary>
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Common;component/Windows/Controls/EditableTextBlock.xaml"/>
+
+                <ResourceDictionary Source="/Atlas.UIControls;component/Themes/Light.xaml"/>
+                <ResourceDictionary Source="/Atlas.UIControls;component/Assets/ResourcesCompilation.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+</Application>

@@ -1,0 +1,570 @@
+﻿<Window x:Class="CompanyName.Atlas.Investments.Presentation.Views.InvestmentExportPlattform"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CompanyName.Atlas.Investments.Presentation.Views"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.UIControls.Properties;assembly=Atlas.UIControls"
+             xmlns:views="clr-namespace:CompanyName.Atlas.UIControls.Views;assembly=Atlas.UIControls"
+             xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+             xmlns:common="clr-namespace:CompanyName.Atlas.Contracts.Implementation.Presentation.Data.Common;assembly=Atlas.Contracts"
+             xmlns:viewModels="clr-namespace:CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+       WindowStartupLocation="CenterOwner" Name="ExportWindow" AllowsTransparency="True" WindowStyle="None" Background="Transparent">
+    <Window.Resources>
+        <SolidColorBrush x:Key="SystemButton.Static.Foreground" Color="#FF5A708C"/>
+        <SolidColorBrush x:Key="SystemButton.MouseOver.Background" Color="WhiteSmoke"/>
+        <SolidColorBrush x:Key="SystemButton.Pressed.Background" Color="#FF5A708C"/>
+        <SolidColorBrush x:Key="SystemButton.Pressed.Foreground" Color="#FFEAEAEA"/>
+        <SolidColorBrush x:Key="CloseSystemButton.MouseOver.Foreground" Color="#FFF55757"/>
+        <Style x:Key="SystemButtonBase" TargetType="ButtonBase" >
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ButtonBase}">
+                        <Border Name="Chrome"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                BorderBrush="{TemplateBinding Foreground}"
+                                SnapsToDevicePixels="true">
+                            <ContentPresenter Margin="{TemplateBinding Padding}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              RecognizesAccessKey="True"
+                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="{DynamicResource AtlasContextButton.Static.Foreground}"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource SystemButton.Pressed.Background}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource SystemButton.Pressed.Foreground}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- This is the style of a system command button, those going at the top of the windows, allowing to minimize, maximize, restore it or close it. -->
+        <Style x:Key="SystemButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <!--<Setter Property="Foreground" Value="White"/>-->
+            <!--<Setter Property="Foreground" Value="{DynamicResource SystemButton.Static.Foreground}"/>-->
+            <Setter Property="Width" Value="32"/>
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}">
+                            <ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="{DynamicResource AtlasContextButton.Static.Foreground}"/>
+                    <Setter Property="Background" Value="Transparent"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource SystemButton.Pressed.Background}"/>
+                    <Setter Property="Foreground" Value="{DynamicResource SystemButton.Pressed.Foreground}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <!-- This the style of the close button. It's a little variation of the system button's style. -->
+        <Style x:Key="CloseSystemButtonStyle" TargetType="Button" BasedOn="{StaticResource SystemButtonStyle}">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="{DynamicResource CloseSystemButton.MouseOver.Foreground}"/>
+                </Trigger>
+                <Trigger Property="IsPressed" Value="True">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="{DynamicResource SystemButton.Pressed.Foreground}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <SolidColorBrush x:Key="Default.Foreground" Color="#FF6F6F6F"/>
+        <SolidColorBrush x:Key="Window.Default.Background" Color="White"/>
+        <Storyboard x:Key="SlideIn" TargetName="ExportBorder">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="1">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" >
+                <EasingThicknessKeyFrame KeyTime="0" Value="0,0,300,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.45" Value="0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseOut"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="SlideOut" TargetName="ExportBorder">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="0">
+                    <EasingDoubleKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingDoubleKeyFrame.EasingFunction>
+                </EasingDoubleKeyFrame>
+            </DoubleAnimationUsingKeyFrames>
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.35" Value="300,0,0,0">
+                    <EasingThicknessKeyFrame.EasingFunction>
+                        <CubicEase EasingMode="EaseIn"/>
+                    </EasingThicknessKeyFrame.EasingFunction>
+                </EasingThicknessKeyFrame>
+            </ThicknessAnimationUsingKeyFrames>
+
+        </Storyboard>
+
+    </Window.Resources>
+    <Window.Template>
+        <ControlTemplate TargetType="Window">
+            <Grid>
+                <Border Name="ExportBorder" Height="400" Width="600" Background="{DynamicResource Window.Default.Background}" BorderBrush="{DynamicResource Default.Foreground}" BorderThickness="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <TextBlock Margin="10,2" Text="Exportar" FontWeight="SemiBold" HorizontalAlignment="Left"></TextBlock>
+                        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Style="{StaticResource CloseSystemButtonStyle}" Command="{Binding YesNoCommand}"  Click="ButtonBase_OnClick3" FocusVisualStyle="{x:Null}">
+                            <Button.Content>
+                                <Grid Width="13" Height="12" RenderTransform="1,0,0,1,0,1">
+                                    <Path Data="M0,0 L8,7 M8,0 L0,7 Z" Width="8" Height="7" VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                          Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="1.5"  />
+                                </Grid>
+                            </Button.Content>
+                        </Button>
+                        <!--<Button HorizontalAlignment="Right" Padding="5,0" Margin="2" Style="{DynamicResource CloseSystemButtonStyle}"
+                        Command="Close" CommandTarget="{Binding ElementName=InteractWindow}">
+                            <TextBlockText="X"></TextBlock>
+                        </Button>-->
+                        <DockPanel Grid.Row="1" >
+                            <DockPanel.Resources>
+                                <Storyboard x:Key="ContentSlideIn" >
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)">
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="1">
+                                            <EasingDoubleKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </EasingDoubleKeyFrame.EasingFunction>
+                                        </EasingDoubleKeyFrame>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" >
+                                        <EasingThicknessKeyFrame KeyTime="0" Value="100,0,0,0"/>
+                                        <EasingThicknessKeyFrame KeyTime="0:0:0.45" Value="0">
+                                            <EasingThicknessKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </EasingThicknessKeyFrame.EasingFunction>
+                                        </EasingThicknessKeyFrame>
+                                    </ThicknessAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Key="ContentSlideOut" >
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="0">
+                                            <EasingDoubleKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseIn"/>
+                                            </EasingDoubleKeyFrame.EasingFunction>
+                                        </EasingDoubleKeyFrame>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                        <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingThicknessKeyFrame KeyTime="0:0:0.35" Value="-100,0,0,0">
+                                            <EasingThicknessKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseIn"/>
+                                            </EasingThicknessKeyFrame.EasingFunction>
+                                        </EasingThicknessKeyFrame>
+                                    </ThicknessAnimationUsingKeyFrames>
+
+                                </Storyboard>
+                            </DockPanel.Resources>
+                            <DockPanel.Style>
+                                <Style TargetType="DockPanel" >
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Select}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Path}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <Trigger Property="Visibility" Value="Visible">
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ContentSlideIn}"></BeginStoryboard>
+                                            </Trigger.EnterActions>
+                                            <Trigger.ExitActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ContentSlideOut}"></BeginStoryboard>
+                                            </Trigger.ExitActions>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DockPanel.Style>
+                            <Border Padding="20">
+                                <TextBlock Text="Welcome and Desciption text"></TextBlock>
+                            </Border>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1" >
+                            <DockPanel.Resources>
+                                <Storyboard x:Key="ContentSlideIn" >
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)">
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="1">
+                                            <EasingDoubleKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </EasingDoubleKeyFrame.EasingFunction>
+                                        </EasingDoubleKeyFrame>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" >
+                                        <EasingThicknessKeyFrame KeyTime="0" Value="100,0,0,0"/>
+                                        <EasingThicknessKeyFrame KeyTime="0:0:0.45" Value="0">
+                                            <EasingThicknessKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </EasingThicknessKeyFrame.EasingFunction>
+                                        </EasingThicknessKeyFrame>
+                                    </ThicknessAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Key="ContentSlideOut" >
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="0">
+                                            <EasingDoubleKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseIn"/>
+                                            </EasingDoubleKeyFrame.EasingFunction>
+                                        </EasingDoubleKeyFrame>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                        <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingThicknessKeyFrame KeyTime="0:0:0.35" Value="-100,0,0,0">
+                                            <EasingThicknessKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseIn"/>
+                                            </EasingThicknessKeyFrame.EasingFunction>
+                                        </EasingThicknessKeyFrame>
+                                    </ThicknessAnimationUsingKeyFrames>
+
+                                </Storyboard>
+                            </DockPanel.Resources>
+                            <DockPanel.Style>
+                                <Style TargetType="DockPanel" >
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Welcome}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Path}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <Trigger Property="Visibility" Value="Visible">
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ContentSlideIn}"></BeginStoryboard>
+                                            </Trigger.EnterActions>
+                                            <Trigger.ExitActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ContentSlideOut}"></BeginStoryboard>
+                                            </Trigger.ExitActions>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DockPanel.Style>
+
+                            <TabControl Style="{DynamicResource VisiblePlannedResourcesActivitiesTabControlStyle}">
+                                <TabItem Header="{x:Static properties:Resources.ExportableElements}">
+                                    <ListBox Name="ElementsListBox" SelectionMode="Multiple" ItemsSource="{Binding Items}" BorderBrush="Transparent" >
+                                        <ListBox.ItemTemplate >
+                                            <ItemContainerTemplate >
+                                                <DockPanel Margin="5">
+                                                    <CheckBox Margin="0,0,10,0" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem},Path=IsSelected}"></CheckBox>
+                                                    <TextBlock Text="{Binding Name}"></TextBlock>
+                                                </DockPanel>
+                                            </ItemContainerTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </TabItem>
+                                <TabItem Header="{x:Static properties:Resources.PriceSystems}">
+                                    <ListBox Name="PriceSystemListBox" SelectionMode="Multiple" ItemsSource="{x:Static viewModels:PriceSystemViewModel.PriceSystems}" BorderBrush="Transparent" >
+                                        <ListBox.ItemTemplate >
+                                            <ItemContainerTemplate >
+                                                <DockPanel Margin="5">
+                                                    <CheckBox Margin="0,0,10,0" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem},Path=IsSelected}"></CheckBox>
+                                                    <TextBlock Text="{Binding Name}"></TextBlock>
+                                                </DockPanel>
+                                            </ItemContainerTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </TabItem>
+                                <TabItem Header="{x:Static properties:Resources.Currency}">
+                                    <ListBox Name="CurrencyListBox" SelectionMode="Multiple" ItemsSource="{x:Static common:CurrencyViewModel.Currencies}" BorderBrush="Transparent" >
+                                        <ListBox.ItemTemplate >
+                                            <ItemContainerTemplate >
+                                                <DockPanel Margin="5">
+                                                    <CheckBox Margin="0,0,10,0" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem},Path=IsSelected}"></CheckBox>
+                                                    <TextBlock Text="{Binding Name}"></TextBlock>
+                                                    <TextBlock Text="{Binding Description}" Margin="10,0" MaxWidth="220"></TextBlock>
+                                                    <TextBlock Text="{Binding Letters}" ></TextBlock>
+                                                </DockPanel>
+                                            </ItemContainerTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </TabItem>
+
+                                <TabItem Header="{x:Static properties:Resources.MeasurementUnit}">
+                                    <ListBox Name="MeasurementUnitListBox" ItemsSource="{x:Static common:MeasurementUnitViewModel.MeasurementUnits}" BorderBrush="Transparent" >
+                                        <ListBox.ItemTemplate >
+                                            <ItemContainerTemplate >
+                                                <DockPanel Margin="5">
+                                                    <CheckBox Margin="0,0,10,0" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem},Path=IsSelected}"></CheckBox>
+                                                    <TextBlock Text="{Binding Name}"></TextBlock>
+                                                    <TextBlock Text="{Binding Description}" Margin="10,0" MaxWidth="220"></TextBlock>
+                                                    <TextBlock Text="{Binding Letters}" ></TextBlock>
+                                                </DockPanel>
+                                            </ItemContainerTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </TabItem>
+
+
+                            </TabControl>
+
+                        </DockPanel>
+                        <DockPanel Grid.Row="1">
+                            <DockPanel.Resources>
+                                <Storyboard x:Key="ContentSlideIn" >
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)">
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="1">
+                                            <EasingDoubleKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </EasingDoubleKeyFrame.EasingFunction>
+                                        </EasingDoubleKeyFrame>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" >
+                                        <EasingThicknessKeyFrame KeyTime="0" Value="100,0,0,0"/>
+                                        <EasingThicknessKeyFrame KeyTime="0:0:0.45" Value="0">
+                                            <EasingThicknessKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </EasingThicknessKeyFrame.EasingFunction>
+                                        </EasingThicknessKeyFrame>
+                                    </ThicknessAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Key="ContentSlideOut" >
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="0">
+                                            <EasingDoubleKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseIn"/>
+                                            </EasingDoubleKeyFrame.EasingFunction>
+                                        </EasingDoubleKeyFrame>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                        <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingThicknessKeyFrame KeyTime="0:0:0.35" Value="-100,0,0,0">
+                                            <EasingThicknessKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseIn"/>
+                                            </EasingThicknessKeyFrame.EasingFunction>
+                                        </EasingThicknessKeyFrame>
+                                    </ThicknessAnimationUsingKeyFrames>
+
+                                </Storyboard>
+                            </DockPanel.Resources>
+                            <DockPanel.Style>
+                                <Style TargetType="DockPanel" >
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Select}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Welcome}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <Trigger Property="Visibility" Value="Visible">
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ContentSlideIn}"></BeginStoryboard>
+                                            </Trigger.EnterActions>
+                                            <Trigger.ExitActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ContentSlideOut}"></BeginStoryboard>
+                                            </Trigger.ExitActions>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DockPanel.Style>
+                            <Border Padding="20">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="Auto"></RowDefinition>
+                                        <RowDefinition Height="*"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <TextBlock Text="Welcome and Desciption text"></TextBlock>
+                                    <DockPanel Grid.Row="1">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                            </Grid.ColumnDefinitions>
+
+                                            <TextBox Name="PathTextBox" TextChanged="PathTextBox_OnTextChanged" HorizontalAlignment="Stretch" BorderBrush="{StaticResource SystemButton.Static.Foreground}" BorderThickness="1"></TextBox>
+                                            <Button Grid.Column="1" Content="Buscar" Margin="15,0" Width="80" Click="ButtonBase_OnClick4"></Button>
+                                        </Grid>
+                                    </DockPanel>
+                                </Grid>
+                            </Border>
+                        </DockPanel>
+                        <DockPanel Grid.Row="1" >
+                            <DockPanel.Resources>
+                                <Storyboard x:Key="ContentSlideIn" >
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)">
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="1">
+                                            <EasingDoubleKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </EasingDoubleKeyFrame.EasingFunction>
+                                        </EasingDoubleKeyFrame>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" >
+                                        <EasingThicknessKeyFrame KeyTime="0" Value="100,0,0,0"/>
+                                        <EasingThicknessKeyFrame KeyTime="0:0:0.45" Value="0">
+                                            <EasingThicknessKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseOut"/>
+                                            </EasingThicknessKeyFrame.EasingFunction>
+                                        </EasingThicknessKeyFrame>
+                                    </ThicknessAnimationUsingKeyFrames>
+                                </Storyboard>
+                                <Storyboard x:Key="ContentSlideOut" >
+                                    <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
+                                        <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                                        <EasingDoubleKeyFrame KeyTime="0:0:0.35" Value="0">
+                                            <EasingDoubleKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseIn"/>
+                                            </EasingDoubleKeyFrame.EasingFunction>
+                                        </EasingDoubleKeyFrame>
+                                    </DoubleAnimationUsingKeyFrames>
+                                    <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)">
+                                        <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
+                                        <EasingThicknessKeyFrame KeyTime="0:0:0.35" Value="-100,0,0,0">
+                                            <EasingThicknessKeyFrame.EasingFunction>
+                                                <CubicEase EasingMode="EaseIn"/>
+                                            </EasingThicknessKeyFrame.EasingFunction>
+                                        </EasingThicknessKeyFrame>
+                                    </ThicknessAnimationUsingKeyFrames>
+
+                                </Storyboard>
+                            </DockPanel.Resources>
+                            <DockPanel.Style>
+                                <Style TargetType="DockPanel" >
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Select}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Welcome}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Path}">
+                                            <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                        </DataTrigger>
+                                        <Trigger Property="Visibility" Value="Visible">
+                                            <Trigger.EnterActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ContentSlideIn}"></BeginStoryboard>
+                                            </Trigger.EnterActions>
+                                            <Trigger.ExitActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ContentSlideOut}"></BeginStoryboard>
+                                            </Trigger.ExitActions>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </DockPanel.Style>
+                            <Border Padding="20">
+                                <TextBlock Text="Finish and Advicing text"></TextBlock>
+                            </Border>
+                        </DockPanel>
+                        <StackPanel Grid.Row="2" HorizontalAlignment="Right"  Orientation="Horizontal">
+                            <Button Margin="10,4" IsDefault="True"  Width="80" Height="35" Command="{Binding YesNoCommand}"  Click="ButtonBase_OnClick">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource SystemButtonBase}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Welcome}">
+                                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <TextBlock Text="Back"  ></TextBlock>
+                            </Button>
+                            <Button x:Name="NextButton"  Margin="10,4" IsDefault="True" Width="80" Height="35" Command="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=NextCommand}">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource SystemButtonBase}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                                                <Setter Property="Visibility" Value="Collapsed"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+                                <TextBlock Text="Next"  ></TextBlock>
+                            </Button>
+                            <Button Margin="10,4" Content="Cancel" IsCancel="True" Width="80" Height="35" Command="{Binding YesNoCommand}" Click="ButtonBase_OnClick">
+                                <Button.Style>
+                                    <Style TargetType="Button" BasedOn="{StaticResource SystemButtonBase}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=views:AtlasExportPlatform},Path=TransferState}" Value="{x:Static uiControls:AtlasTransferWizardState.Finish}">
+                                                <Setter  Property="Content" Value="Finish"></Setter>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Button.Style>
+
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+
+            <ControlTemplate.Triggers>
+                <EventTrigger RoutedEvent="Loaded" >
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource SlideIn}"></BeginStoryboard>
+                    </EventTrigger.Actions>
+                    <!--<Trigger.ExitActions>
+                        <BeginStoryboard Storyboard="{StaticResource SlideOut}" Name="SlideOutStoryboard">
+                            
+                        </BeginStoryboard>
+                    </Trigger.ExitActions>-->
+                </EventTrigger>
+                <!--<EventTrigger RoutedEvent="Unloaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard Storyboard="{StaticResource SlideOut}"></BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>-->
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Window.Template>
+</Window>

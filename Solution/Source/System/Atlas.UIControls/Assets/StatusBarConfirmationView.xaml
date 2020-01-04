@@ -1,0 +1,288 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls"
+                    xmlns:properties="clr-namespace:CompanyName.Atlas.UIControls.Properties">
+
+    <!--<Style x:Key="TreeViewCollapserButtonBaseStyle" TargetType="{x:Type ButtonBase}">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Foreground" Value="{DynamicResource AddRootInvestmentElementButton.Static.Foreground}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" FocusVisualStyle="{x:Null}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsDefaulted" Value="true">
+                            <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource DataGridColumnHeader.Static.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource DataGridColumnHeader.Static.Background}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource AddRootInvestmentElementButton.Disabled.Background}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource AddRootInvestmentElementButton.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+
+    <Style x:Key="ToggleButtonStyle"
+                                       BasedOn="{StaticResource TreeViewCollapserButtonBaseStyle}"
+                                       TargetType="{x:Type ToggleButton}">
+        <Setter Property="Background" Value="Transparent"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                        <ContentPresenter x:Name="contentPresenter" FocusVisualStyle="{x:Null}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource DataGrid.Dark.Background}"/>
+                            --><!--<Setter Property="Background" TargetName="border" Value="{DynamicResource DataGridColumnHeader.Static.Background}"/>--><!--
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="true">
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource DataGrid.Dark.Background}"/>
+                            --><!--<Setter Property="Background" TargetName="border" Value="{DynamicResource DataGridColumnHeader.Static.Background}"/>--><!--
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Background" TargetName="border" Value="{DynamicResource AddRootInvestmentElementButton.Disabled.Background}"/>
+                            <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{DynamicResource AddRootInvestmentElementButton.Disabled.Foreground}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DeleteCommandToggleButtonStyle" TargetType="ToggleButton" BasedOn="{StaticResource ToggleButtonStyle}">
+        <Style.Triggers>
+
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource InvestmentElementDeleteCommandAddRootInvestmentElementButton.MouseOver.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource InvestmentElementCommandAddRootInvestmentElementButton.Pressed.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="LightGray"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="CommandButtonBaseStyle" TargetType="Button">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{x:Null}"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="Foreground" Value="{DynamicResource Buttom.Static.Foreground}"/>
+
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" BorderThickness="0" Background="{TemplateBinding Background}"
+                                                    Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Path x:Name="path"
+                                                      Width="12" Height="12"
+                                                      Fill="{TemplateBinding Foreground}"
+                                                      Data="{Binding Content, RelativeSource={RelativeSource FindAncestor, AncestorType=Button}}"
+                                                      Stretch="Uniform"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
+    <!--<Style x:Key="AddCommandButtonStyle" TargetType="Button" BasedOn="{StaticResource CommandButtonBaseStyle}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource Buttom.MouseOver.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource Buttom.Pressed.Foreground}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="DeleteCommandButtonStyle" TargetType="Button" BasedOn="{StaticResource CommandButtonBaseStyle}">
+        <Style.Triggers>
+          
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource DataGridDeleteButton.MouseOver.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="True">
+                <Setter Property="Foreground" Value="{DynamicResource DataGridDeleteButton.MouseOver.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="False">
+                <Setter Property="Foreground" Value="LightGray"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>-->
+
+    <Style x:Key="BaseButtonStyle"
+           TargetType="{x:Type ButtonBase}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background"
+                Value="{DynamicResource ButtonBackground}"/>
+        <Setter Property="BorderBrush"
+                Value="{DynamicResource ButtonBorder}"/>
+        <Setter Property="BorderThickness"
+                Value="1"/>
+        <Setter Property="Foreground"
+                Value="{DynamicResource ButtonText}"/>
+        <Setter Property="HorizontalContentAlignment"
+                Value="Center"/>
+        <Setter Property="VerticalContentAlignment"
+                Value="Center"/>
+        <Setter Property="Padding"
+                Value="16,3,16,5"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ButtonBase}">
+                    <Border Name="Chrome"
+                                        Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        SnapsToDevicePixels="true">
+                        <ContentPresenter Name="Presenter" Margin="{TemplateBinding Padding}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          RecognizesAccessKey="True"
+                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="false">
+                            <Setter Property="Foreground" Value="{DynamicResource ButtonTextDisabled}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource ButtonBackgroundHover}" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource Accent}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource ButtonTextHover}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{DynamicResource ButtonBackgroundPressed}" />
+                            <Setter Property="BorderBrush" Value="{DynamicResource ButtonBorderPressed}"/>
+                            <Setter Property="Foreground" Value="{DynamicResource ButtonTextPressed}"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="true">
+                            <Setter TargetName="Chrome" Property="BorderBrush" Value="{DynamicResource Accent}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Storyboard x:Key="ExpandStoryboard">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)">
+            <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="360">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Storyboard x:Key="CollapseStoryboard">
+        <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" >
+            <EasingDoubleKeyFrame KeyTime="0" Value="360"/>
+            <EasingDoubleKeyFrame KeyTime="0:0:0.15" Value="0">
+                <EasingDoubleKeyFrame.EasingFunction>
+                    <CubicEase EasingMode="EaseOut"/>
+                </EasingDoubleKeyFrame.EasingFunction>
+            </EasingDoubleKeyFrame>
+        </DoubleAnimationUsingKeyFrames>
+    </Storyboard>
+    <Style TargetType="uiControls:StatusBarConfirmationView">
+        <Setter Property="HorizontalAlignment" Value="Right"></Setter>
+        <!--<Setter Property="Width" Value="0"></Setter>-->
+        <!--<Setter Property="IsEnabled" Value="False"></Setter>-->
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="uiControls:StatusBarConfirmationView">
+                    <Grid>
+
+                        <Border x:Name="ConfirmElement" Width="0" Height="35"  Background="{DynamicResource StatusBar.Background}"  
+                               Padding="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=Padding}"  >
+                            <Border.Style>
+                                <Style TargetType="Border">
+                                    <Style.Triggers>
+                                        <DataTrigger  Binding="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=IsCollapsed}" Value="False">
+                                            <DataTrigger.EnterActions>
+                                                <BeginStoryboard Storyboard="{StaticResource ExpandStoryboard}"></BeginStoryboard>
+                                            </DataTrigger.EnterActions>
+                                            <DataTrigger.ExitActions>
+                                                <BeginStoryboard Storyboard="{StaticResource CollapseStoryboard}"></BeginStoryboard>
+                                            </DataTrigger.ExitActions>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid>
+                                <!--<Rectangle Fill="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=Background}" Opacity="1"></Rectangle>-->
+                                <DockPanel HorizontalAlignment="Right">
+                                    <DockPanel  Dock="Left">
+                                        <TextBlock Text="{x:Static properties:Resources.WantToSpreadChanges}" Foreground="{DynamicResource StatusBar.Foreground}" FontSize="{DynamicResource Default.FontSize}" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10,0,18,0"></TextBlock>
+                                    </DockPanel>
+                                    
+                                  <DockPanel  Dock="Right" >
+                                        <DockPanel.Style>
+                                            <Style TargetType="DockPanel">
+                                                <Style.Triggers>
+                                                    <DataTrigger  Binding="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=IsCollapsed}" Value="False">
+                                                        <Setter Property="Margin" Value="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=RelativeMargin}"></Setter>
+                                                        </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </DockPanel.Style>
+                                        <Button HorizontalAlignment="Right"
+                                                    Command="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=Command}"
+                                                    CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=DataContext}"
+                                                    ToolTip="{x:Static properties:Resources.Yes}"
+                                                Style="{StaticResource BaseButtonStyle}" FontWeight="SemiBold"
+                                                 IsDefault="True"
+                                                    Content="{x:Static properties:Resources.Yes}" Width="54"  Background="{DynamicResource StatusBar.Foreground}"   Foreground="{DynamicResource StatusBar.Background}"  
+                                                Margin="10,4">
+                                            <!--<Button.Style>
+                                                <Style TargetType="Button" >
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=IsCollapsed}" Value="True">
+                                                            <Setter Property="IsEnabled" Value="False"></Setter>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Button.Style>-->
+                                    </Button>
+                                    <Button DockPanel.Dock="Right"
+                                              Style="{StaticResource BaseButtonStyle}"
+                                                    Command="{Binding RelativeSource={RelativeSource AncestorType=uiControls:StatusBarConfirmationView},Path=DisableCommand}"
+                                                    ToolTip="{x:Static properties:Resources.No}" FontWeight="SemiBold"
+                                                    Content="{x:Static properties:Resources.No}" Width="54" Margin="10,4 " IsCancel="True" Background="{DynamicResource StatusBar.Foreground}"   Foreground="{DynamicResource StatusBar.Background}"  >
+                                     
+
+                                    </Button>
+                                    </DockPanel>
+                                </DockPanel>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                   
+                    
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+
+</ResourceDictionary>

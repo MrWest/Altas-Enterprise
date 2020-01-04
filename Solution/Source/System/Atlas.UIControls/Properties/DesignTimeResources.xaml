@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:CompanyName.Atlas.UIControls.Properties">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/TextBox.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/Light.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/AtlasEasyTextBox.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/Icons.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/AtlasDatetimePicker.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/AtlasContextMenu.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/CheckBox.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+</ResourceDictionary>

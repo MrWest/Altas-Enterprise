@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>MININT-J2UEFLD</Machine>
+    <WindowsUser>tmandel</WindowsUser>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <RegisteredManifestChecksum>CA38904BEF55CF62DC38D7D148CC2D39BC6EB50A3431EB73E4A2BC0584E89830</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>38bb1745-e40f-47a3-972b-24389b2d82a8_1.0.0.0_neutral__jxfnkr8paccsw</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>38bb1745-e40f-47a3-972b-24389b2d82a8_jxfnkr8paccsw!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>38bb1745-e40f-47a3-972b-24389b2d82a8</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=tmandel</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2013-05-05T10:33:20.477</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\TestApplication.WinRT.exe">
+      <PackagePath>TestApplication.WinRT.exe</PackagePath>
+      <Modified>2013-05-05T10:33:20.322</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\TestApplication.WinRT.pdb">
+      <PackagePath>TestApplication.WinRT.pdb</PackagePath>
+      <Modified>2013-05-05T10:33:20.304</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\De.TorstenMandelkow.MetroChart.WinRT\bin\Debug\De.TorstenMandelkow.MetroChart.pdb">
+      <PackagePath>De.TorstenMandelkow.MetroChart.pdb</PackagePath>
+      <Modified>2013-05-05T10:33:18.875</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\De.TorstenMandelkow.MetroChart.WinRT\bin\Debug\De.TorstenMandelkow.MetroChart.dll">
+      <PackagePath>De.TorstenMandelkow.MetroChart.dll</PackagePath>
+      <Modified>2013-05-05T10:33:18.893</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.Shared\Shared\Fonts\seguisym.ttf">
+      <PackagePath>Shared\Fonts\seguisym.ttf</PackagePath>
+      <Modified>2012-07-06T02:01:01.719</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.Shared\Shared\Images\torsten.png">
+      <PackagePath>Shared\Images\torsten.png</PackagePath>
+      <Modified>2013-05-05T09:12:46.250</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\Logo.png">
+      <PackagePath>Assets\Logo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-30T02:15:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\SmallLogo.png">
+      <PackagePath>Assets\SmallLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-30T02:15:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\SplashScreen.png">
+      <PackagePath>Assets\SplashScreen.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-30T02:15:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2012-03-30T02:15:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\LightGray.png">
+      <PackagePath>Assets\LightGray.png</PackagePath>
+      <Modified>2012-03-30T02:15:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\MediumGray.png">
+      <PackagePath>Assets\MediumGray.png</PackagePath>
+      <Modified>2012-03-30T02:15:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\Assets\DarkGray.png">
+      <PackagePath>Assets\DarkGray.png</PackagePath>
+      <Modified>2012-03-30T02:15:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\App.xaml">
+      <PackagePath>App.xaml</PackagePath>
+      <Modified>2013-05-05T10:33:19.078</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\Common\StandardStyles.xaml">
+      <PackagePath>Common\StandardStyles.xaml</PackagePath>
+      <Modified>2013-05-05T10:33:19.099</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\GroupDetailPage.xaml">
+      <PackagePath>GroupDetailPage.xaml</PackagePath>
+      <Modified>2013-05-05T10:33:19.079</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\Skins\MainSkin.xaml">
+      <PackagePath>Skins\MainSkin.xaml</PackagePath>
+      <Modified>2013-05-05T10:33:19.101</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\Themes\Generic.xaml">
+      <PackagePath>Themes\Generic.xaml</PackagePath>
+      <Modified>2013-05-05T10:33:19.104</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\De.TorstenMandelkow.MetroChart.WinRT\bin\Debug\Themes\Generic.xaml">
+      <PackagePath>De.TorstenMandelkow.MetroChart\Themes\Generic.xaml</PackagePath>
+      <Modified>2013-05-05T10:33:17.544</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\TFS2010\MetroChart\TestApplication.WinRT\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2013-05-05T10:33:20.403</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,45 @@
+﻿<!-- This resource dictionary is the compilation of the resources in the current library for the common controls. -->
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="Button.xaml"/>
+        <ResourceDictionary Source="ComboBox.xaml"/>
+        <ResourceDictionary Source="LeveredComboBox.xaml"/>
+        <ResourceDictionary Source="Converters.xaml"/>
+        <ResourceDictionary Source="DataGrid.xaml"/>
+        <!--<ResourceDictionary Source="Menu.xaml"/>-->
+        <ResourceDictionary Source="MenuItem.xaml"/>
+        <ResourceDictionary Source="ToolTip.xaml"/>
+        <ResourceDictionary Source="EditableTextBlock.xaml"/>
+        <ResourceDictionary Source="ScrollBar.xaml"/>
+        <ResourceDictionary Source="Icons.xaml"/>
+        <ResourceDictionary Source="CheckBox.xaml"/>
+        <ResourceDictionary Source="ListView.xaml"/>
+        <ResourceDictionary Source="AtlasComboBox.xaml"/>
+        <ResourceDictionary Source="GaussChart.xaml"/>
+        <ResourceDictionary Source="MetroChart.xaml"/>
+        <ResourceDictionary Source="AtlasMediaElement.xaml"/>
+        <ResourceDictionary Source="AtlasLoginControl.xaml"/>
+        <ResourceDictionary Source="LoginInfoHolder.xaml"/>
+        <ResourceDictionary Source="AtlasDatetimePicker.xaml"/>
+        <ResourceDictionary Source="ConfirmLayout.xaml"/>
+        <ResourceDictionary Source="AtlasContextMenu.xaml"/>
+        <ResourceDictionary Source="UserSelectionForm.xaml"/>
+        <ResourceDictionary Source="TextBox.xaml"/>
+        <ResourceDictionary Source="AtlasEasyTextBox.xaml"/>
+        <ResourceDictionary Source="UserControl.xaml"/>
+        <ResourceDictionary Source="ProgressBar.xaml"/>
+        <ResourceDictionary Source="AtlasActivationControl.xaml"/>
+        <ResourceDictionary Source="ConfirmationView.xaml"/>
+        <ResourceDictionary Source="StatusBarConfirmationView.xaml"/>
+        <ResourceDictionary Source="Calendar.xaml"/>
+        <ResourceDictionary Source="DatePicker.xaml"/>
+        <ResourceDictionary Source="ModernButton.xaml"/>
+        <ResourceDictionary Source="AtlasCacheTextBox.xaml"/>
+        <ResourceDictionary Source="InnerLifeLineControl.xaml"/>
+        <ResourceDictionary Source="EasyTimeLine.xaml"/>
+        
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>

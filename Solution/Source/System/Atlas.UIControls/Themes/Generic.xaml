@@ -1,0 +1,21 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/AtlasWindow.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/AtlasFrontPage.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/AtlasMainPage.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/AtlasModuleView.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/AtlasModuleContainer.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/AtlasTimelineGrid.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Assets/Converters.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/FilterBox.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/FirstLevelNavItem.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/SecondLevelNavItem.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/Paginator.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/ModernUI.Dark.xaml"/>
+        <ResourceDictionary Source="/Atlas.UIControls;component/Themes/AtlasOptionalContent.xaml"/>
+        
+    </ResourceDictionary.MergedDictionaries>
+    
+</ResourceDictionary>

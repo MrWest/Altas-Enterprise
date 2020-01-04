@@ -1,0 +1,12 @@
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\bin\Release\De.TorstenMandelkow.MetroChart.dll
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\bin\Release\De.TorstenMandelkow.MetroChart.pdb
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Release\De.TorstenMandelkow.MetroChart.dll
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Release\De.TorstenMandelkow.MetroChart.pdb
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Release\De.TorstenMandelkow.MetroChart.csprojResolveAssemblyReference.cache
+C:\Users\Enrike\Desktop\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Release\De.TorstenMandelkow.MetroChart.csproj.CoreCompileInputs.cache
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\bin\Release\De.TorstenMandelkow.MetroChart.dll
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\bin\Release\De.TorstenMandelkow.MetroChart.pdb
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Release\De.TorstenMandelkow.MetroChart.csprojResolveAssemblyReference.cache
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Release\De.TorstenMandelkow.MetroChart.csproj.CoreCompileInputs.cache
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Release\De.TorstenMandelkow.MetroChart.dll
+D:\Enrike\Programming\Atlas\Solution\Source\System\MetroChart\De.TorstenMandelkow.MetroChart\obj\Release\De.TorstenMandelkow.MetroChart.pdb

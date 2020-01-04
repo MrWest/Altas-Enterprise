@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A787139-3EAB-4AD2-B1FD-5A02E41B9663}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CompanyName.Atlas.UIControls</RootNamespace>
+    <AssemblyName>Atlas.UIControls</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <ExpressionBlendVersion>12.0.41002.1</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Db4objects.Db4o, Version=8.0.249.16098, Culture=neutral, PublicKeyToken=6199cd4f203aa8eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\References\Db4objects.Db4o.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Composition">
+      <HintPath>..\..\..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop">
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents">
+      <HintPath>..\..\..\packages\Prism.PubSubEvents.1.1.2\lib\portable-sl5+windowsphone8+windows8+net40+wpa81\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces, Version=1.1.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Prism.Mvvm.1.1.1\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions">
+      <HintPath>..\..\..\packages\Prism.UnityExtensions.5.0.1\lib\NET45\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\..\..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windows.Shell">
+      <HintPath>..\..\..\References\Microsoft.Windows.Shell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="TimelineExLib">
+      <HintPath>..\..\..\..\..\New line\timeline-79962\Version-2\Library\WPF\TimelineExLib\Bin\Debug\TimelineExLib.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AtlasActivationControl.cs" />
+    <Compile Include="AtlasBackButton.cs" />
+    <Compile Include="AtlasCacheTextBox.cs" />
+    <Compile Include="AtlasCashFlowDatagrid.cs" />
+    <Compile Include="AtlasClusteredColumnChart.cs" />
+    <Compile Include="AtlasComboBox.cs" />
+    <Compile Include="AtlasPieChart.cs" />
+    <Compile Include="AtlasModuleListBox.cs" />
+    <Compile Include="AtlasPasswordBox.cs" />
+    <Compile Include="AtlasSignalTextBox.cs" />
+    <Compile Include="AtlasTabControl.cs" />
+    <Compile Include="AtlasTabItem.cs" />
+    <Compile Include="ConfirmationView.cs" />
+    <Compile Include="Converters\AnnoyingWidthAjustConverter.cs" />
+    <Compile Include="Converters\BackgroundOnDeepConverterReverse.cs" />
+    <Compile Include="Converters\BackgroundOnDeepConverter.cs" />
+    <Compile Include="Converters\ConceptViewToStringConverter.cs" />
+    <Compile Include="Converters\NullOrEmptyStringToVisibilityConverter.cs" />
+    <Compile Include="Converters\SoftBooleanToVisibilityConverter.cs" />
+    <Compile Include="Converters\StringSignalToBooleanConverter.cs" />
+    <Compile Include="Converters\WidthValueToVisibilityConverter.cs" />
+    <Compile Include="Converters\TimeLineScaleConverter.cs" />
+    <Compile Include="Converters\DateToToShortDateStringConverter.cs" />
+    <Compile Include="Converters\EasyTextBoxItemTemplateSelector.cs" />
+    <Compile Include="Converters\ModuleDescriptionConverter.cs" />
+    <Compile Include="Converters\ModuleNameConverter.cs" />
+    <Compile Include="Converters\ModuleIconConverter.cs" />
+    <Compile Include="Converters\DecreaseDateTimeScaleConverter.cs" />
+    <Compile Include="Converters\TextContainsToVisibilityConverter.cs" />
+    <Compile Include="DefaultContentLoader.cs" />
+    <Compile Include="Displayable.cs" />
+    <Compile Include="EasyTimeLine.cs" />
+    <Compile Include="EasyTimelineContainer.cs" />
+    <Compile Include="FragmentNavigationEventArgs.cs" />
+    <Compile Include="ICanAdd.cs" />
+    <Compile Include="IContent.cs" />
+    <Compile Include="IContentLoader.cs" />
+    <Compile Include="InnerLifeLineControl.cs" />
+    <Compile Include="Link.cs" />
+    <Compile Include="LinkCollection.cs" />
+    <Compile Include="LinkGroup.cs" />
+    <Compile Include="LinkGroupCollection.cs" />
+    <Compile Include="ModernButton.cs" />
+    <Compile Include="ModernFrame.cs" />
+    <Compile Include="ModernTab.cs" />
+    <Compile Include="ModernUIHelper.cs" />
+    <Compile Include="NamedCrudViewModel.cs" />
+    <Compile Include="NavigatingCancelEventArgs.cs" />
+    <Compile Include="NavigationBaseEventArgs.cs" />
+    <Compile Include="NavigationEventArgs.cs" />
+    <Compile Include="NavigationFailedEventArgs.cs" />
+    <Compile Include="NavigationHelper.cs" />
+    <Compile Include="NavigationType.cs" />
+    <Compile Include="NotifyPropertyChanged.cs" />
+    <Compile Include="RelativeAnimatingContentControl.cs" />
+    <Compile Include="StatusBarConfirmationView.cs" />
+    <Compile Include="TabLayout.cs" />
+    <Compile Include="Views\AtlasConfiguration.xaml.cs">
+      <DependentUpon>AtlasConfiguration.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AtlasContextMenu.cs" />
+    <Compile Include="AtlasDatetimePicker.cs" />
+    <Compile Include="AtlasEasyTextBox.cs" />
+    <Compile Include="Views\AtlasExportPlatform.xaml.cs">
+      <DependentUpon>AtlasExportPlatform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AtlasFrontPage.cs" />
+    <Compile Include="AtlasGaussChart.cs" />
+    <Compile Include="Views\AtlasImportPlatform.xaml.cs">
+      <DependentUpon>AtlasImportPlatform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AtlasLoginControl.cs" />
+    <Compile Include="AtlasLoginViewState.cs" />
+    <Compile Include="AtlasMainPage.cs" />
+    <Compile Include="AtlasMediaElement.cs" />
+    <Compile Include="AtlasModuleButton.cs" />
+    <Compile Include="Views\AtlasModuleHelpContent.xaml.cs">
+      <DependentUpon>AtlasModuleHelpContent.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AtlasModuleManagement.xaml.cs">
+      <DependentUpon>AtlasModuleManagement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AtlasModuleView.cs" />
+    <Compile Include="AtlasOptionalContent.cs" />
+    <Compile Include="AtlasTimeline.xaml.cs">
+      <DependentUpon>AtlasTimeline.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AtlasTimelineGrid.cs" />
+    <Compile Include="AtlasTimelineHeaderGrid.cs" />
+    <Compile Include="AtlasTimelineLifelinesGrid.cs" />
+    <Compile Include="AtlasTransferWizardState.cs" />
+    <Compile Include="Views\AtlasUserManagePage.xaml.cs">
+      <DependentUpon>AtlasUserManagePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AtlasViewState.cs" />
+    <Compile Include="ChildLifeLine.cs" />
+    <Compile Include="Views\ConceptsView.xaml.cs">
+      <DependentUpon>ConceptsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ConceptView.cs" />
+    <Compile Include="Converters\AllowedModuleToBooleanConverter.cs" />
+    <Compile Include="Converters\AtlasOptionalContentContentConverter.cs" />
+    <Compile Include="Converters\BooleanToConceptViewConverter.cs" />
+    <Compile Include="Converters\ComboBoxItemIdConverter.cs" />
+    <Compile Include="Converters\LoginViewStateToVisibility.cs" />
+    <Compile Include="Converters\TextItemIdConverter.cs" />
+    <Compile Include="Converters\ToLowerConverter.cs" />
+    <Compile Include="Converters\ToUpperConverter.cs" />
+    <Compile Include="DateTimePicker.xaml.cs">
+      <DependentUpon>DateTimePicker.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EditableTextBlock.xaml.cs" />
+    <Compile Include="IChildLifeLine.cs" />
+    <Compile Include="Converters\IsCheckedToDateTimeScaleConverter.cs" />
+    <Compile Include="FilterBox.cs" />
+    <Compile Include="FirstLevelNavItem.cs" />
+    <Compile Include="ILifeline.cs" />
+    <Compile Include="ILifelineTreeNode.cs" />
+    <Compile Include="Converters\LifelineMarginConverter.cs" />
+    <Compile Include="ILoginInfoHolder.cs" />
+    <Compile Include="LeveredComboBox.cs" />
+    <Compile Include="Lifeline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LifelineControl.xaml.cs">
+      <DependentUpon>LifelineControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LifelineTreeNode.cs" />
+    <Compile Include="AtlasModuleContainer.cs" />
+    <Compile Include="LoginInfoHolder.cs" />
+    <Compile Include="ModuleLogo.cs" />
+    <Compile Include="Views\ConvertibleEntityEditor.xaml.cs">
+      <DependentUpon>ConvertibleEntityEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CurrencyEditor.xaml.cs">
+      <DependentUpon>CurrencyEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HelpContentTreat.cs" />
+    <Compile Include="Views\SubjectRelatedDocument.xaml.cs">
+      <DependentUpon>SubjectRelatedDocument.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MeasurementUnitEditor.xaml.cs">
+      <DependentUpon>MeasurementUnitEditor.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Paginator.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\Annotations1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.en.Designer.cs">
+      <DependentUpon>Resources.en.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="AtlasDataGrid.cs" />
+    <Compile Include="AtlasWindow.cs" />
+    <Compile Include="RouteTextBox.xaml.cs">
+      <DependentUpon>RouteTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SecondLevelNavItem.cs" />
+    <Compile Include="Converters\TimelineColumnWidthConverter.cs" />
+    <Compile Include="Converters\AtlasWindowContentConverter.cs" />
+    <Compile Include="Converters\AtlasWindowUriConverter.cs" />
+    <Compile Include="Converters\PercentMarginConverter.cs" />
+    <Compile Include="Converters\PercentWidthConverter.cs" />
+    <Compile Include="Views\AtlasHelpContentTreeView.xaml.cs">
+      <DependentUpon>AtlasHelpContentTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ModuleSubjectTreeView.xaml.cs">
+      <DependentUpon>ModuleSubjectTreeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SubjectMainView.xaml.cs">
+      <DependentUpon>SubjectMainView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserSelectionForm.cs" />
+    <Compile Include="VisualTreeHelperEx.cs" />
+    <EmbeddedResource Include="Properties\Resources.en.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.en.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Assets\AtlasActivationControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\AtlasCacheTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\AtlasContextMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\AtlasDatetimePicker.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\AtlasComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\AtlasEasyTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\AtlasMediaElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Button.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Calendar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\DatePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\EasyTimeLine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\HeaderDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\InnerLifeLineControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\MenuItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\ModernButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\StatusBarConfirmationView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\ConfirmationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\LeveredComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\ConfirmLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\Converters.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\EasyDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\GaussChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\HierarchicalDataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\DataGrid.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\ProgressBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\TabControls.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\TextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\UserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\UserSelectionForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\ListView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\Menu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\MetroChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Assets\ResourcesCompilation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\ScrollBar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\ToolTip.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\TotallesDataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="Views\AtlasConfiguration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AtlasExportPlatform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AtlasImportPlatform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AtlasModuleHelpContent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AtlasModuleManagement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AtlasTimeline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AtlasUserManagePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConceptsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DateTimePicker.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\EditableTextBlock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="LifelineControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\ConvertibleEntityEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\CurrencyEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SubjectRelatedDocument.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\MeasurementUnitEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RouteTextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\AtlasHelpContentTreeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\ModuleSubjectTreeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SubjectMainView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\AtlasOptionalContent.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\AtlasFrontPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\AtlasLoginControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\AtlasMainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\AtlasModuleContainer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\AtlasModuleView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\AtlasTimelineGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\FilterBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\FirstLevelNavItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Light.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\AtlasWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Assets\LoginInfoHolder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\ModernUI.Dark.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Paginator.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\SecondLevelNavItem.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Common\Common.csproj">
+      <Project>{6b91944d-b123-41df-8ba8-0ce7dcdbebed}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Atlas.Contracts\Atlas.Contracts.csproj">
+      <Project>{A29B4A7A-9DDD-42F2-B157-D0F086CE4DF9}</Project>
+      <Name>Atlas.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Infralution.Localization.Wpf\Infralution.Localization.Wpf.csproj">
+      <Project>{e3d700d5-bdfb-4777-8e9c-53e8f943ac58}</Project>
+      <Name>Infralution.Localization.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MetroChart\De.TorstenMandelkow.MetroChart\De.TorstenMandelkow.MetroChart.csproj">
+      <Project>{fa286411-e476-4bd0-abe9-7ae69226069c}</Project>
+      <Name>De.TorstenMandelkow.MetroChart</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

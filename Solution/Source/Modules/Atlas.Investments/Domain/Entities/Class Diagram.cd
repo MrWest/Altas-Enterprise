@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IBudget">
+    <Position X="13" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAAAAAEIAAA=</HashCode>
+      <FileName>Domain\Entities\IBudget.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IBudgetComponent">
+    <Position X="4.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAgAAAgAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Domain\Entities\IBudgetComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IBudgetComponentItem">
+    <Position X="4.5" Y="4.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAgAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IBudgetComponentItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IConstructionComponent">
+    <Position X="9" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IConstructionComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IEquipmentComponent">
+    <Position X="0.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IEquipmentComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IExecutedBudgetComponentItem">
+    <Position X="1.25" Y="6.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IExecutedBudgetComponentItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IExecutedResource">
+    <Position X="0.5" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IExecutedResource.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IInvestmentElement">
+    <Position X="17.25" Y="0.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Domain\Entities\IInvestmentElement.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IOtherExpensesComponent">
+    <Position X="3.25" Y="3" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IOtherExpensesComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IPlannedActivity">
+    <Position X="6" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IPlannedActivity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IPlannedBudgetComponentItem">
+    <Position X="6.75" Y="6.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IPlannedBudgetComponentItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IPlannedResource">
+    <Position X="8.75" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IPlannedResource.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IWorkCapitalComponent">
+    <Position X="6.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IWorkCapitalComponent.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="CompanyName.Atlas.Investments.Domain.Entities.IExecutedActivity">
+    <Position X="3.25" Y="8.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Domain\Entities\IExecutedActivity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

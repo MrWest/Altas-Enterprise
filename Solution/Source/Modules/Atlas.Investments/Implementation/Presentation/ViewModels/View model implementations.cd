@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Construction.ConstructionPlannedActivityPresenter">
+    <Position X="8" Y="13.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Construction\ConstructionPlannedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Construction.ConstructionPlannedActivityViewModel">
+    <Position X="2.25" Y="6" Width="8.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Construction\ConstructionPlannedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Construction.ConstructionPlannedResourcePresenter">
+    <Position X="36" Y="13.5" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Construction\ConstructionPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Construction.ConstructionPlannedResourceViewModel">
+    <Position X="47.25" Y="6" Width="8.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Construction\ConstructionPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Equipment.EquipmentExecutedResourcePresenter">
+    <Position X="21.75" Y="13.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentExecutedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Equipment.EquipmentExecutedResourceViewModel">
+    <Position X="28.75" Y="6" Width="8.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentExecutedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Equipment.EquipmentPlannedActivityPresenter">
+    <Position X="15" Y="13.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentPlannedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Equipment.EquipmentPlannedActivityViewModel">
+    <Position X="11.25" Y="6" Width="8" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentPlannedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Equipment.EquipmentPlannedResourcePresenter">
+    <Position X="50.25" Y="13.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Equipment.EquipmentPlannedResourceViewModel">
+    <Position X="65.75" Y="6" Width="8.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.OtherExpenses.OtherExpensesPlannedResourcePresenter">
+    <Position X="28.75" Y="13.5" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\OtherExpenses\OtherExpensesPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.OtherExpenses.OtherExpensesPlannedResourceViewModel">
+    <Position X="37.75" Y="6" Width="8.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\OtherExpenses\OtherExpensesPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.WorkCapital.WorkCapitalPlannedResourcePresenter">
+    <Position X="43.25" Y="13.5" Width="6.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalPlannedResourcePresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.WorkCapital.WorkCapitalPlannedResourceViewModel">
+    <Position X="56.5" Y="6" Width="8.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\WorkCapital\WorkCapitalPlannedResourceViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.BudgetComponentItemPresenterBase&lt;TItem, TComponent, TServices&gt;">
+    <Position X="26.75" Y="7.5" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAABAAAABIgAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\BudgetComponentItemPresenterBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.BudgetComponentItemViewModelBase&lt;TItem, TPresenter, TComponent, TServices&gt;">
+    <Position X="35.25" Y="0.5" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAAABIAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\BudgetComponentItemViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.ExecutedResourcePresenterBase&lt;TComponent, TServices&gt;">
+    <Position X="22.75" Y="11" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\ExecutedResourcePresenterBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.ExecutedResourceViewModelBase&lt;TComponent, TPresenter, TServices&gt;">
+    <Position X="30.25" Y="3.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAEAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\ExecutedResourceViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.InvestmentElementPresenter" Collapsed="true">
+    <Position X="75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAABQCAQAoAEAIKAFAQRCQAIAEoAIAoAIAIAAAABCA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\InvestmentElementPresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.InvestmentElementViewModel" Collapsed="true">
+    <Position X="76.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAEAAEAAAQAAEAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\InvestmentElementViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.PlannedActivityPresenterBase&lt;TComponent, TServices&gt;">
+    <Position X="12.25" Y="11" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\PlannedActivityPresenterBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.PlannedActivityViewModelBase&lt;TComponent, TPresenter, TServices&gt;">
+    <Position X="8" Y="3.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAEAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\PlannedActivityViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.PlannedResourcePresenterBase&lt;TComponent, TServices&gt;">
+    <Position X="40.5" Y="11" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\PlannedResourcePresenterBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.PlannedResourceViewModelBase&lt;TComponent, TPresenter, TServices&gt;">
+    <Position X="53.25" Y="3.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAEAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\PlannedResourceViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.ExecutedActivityPresenterBase&lt;TComponent, TServices&gt;">
+    <Position X="2" Y="11" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\ExecutedActivityPresenterBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.ExecutedActivityViewModelBase&lt;TComponent, TPresenter, TServices&gt;">
+    <Position X="21.25" Y="3.5" Width="5.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAEAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\ExecutedActivityViewModelBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Equipment.EquipmentExecutedActivityPresenter">
+    <Position X="1.25" Y="13.5" Width="6" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentExecutedActivityPresenter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.Budget.Equipment.EquipmentExecutedActivityViewModel">
+    <Position X="20" Y="6" Width="8" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Presentation\ViewModels\Budget\Equipment\EquipmentExecutedActivityViewModel.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

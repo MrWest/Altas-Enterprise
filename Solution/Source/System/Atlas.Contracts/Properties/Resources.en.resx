@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="APresenterMustHaveAnUnderlyingObject" xml:space="preserve">
+    <value>A presenter view model cannot get accessed its Object property before it's set. Nulls in Object property are not allowed. So please set it with some value before accessing it.</value>
+  </data>
+  <data name="April" xml:space="preserve">
+    <value>April</value>
+  </data>
+  <data name="Atlas" xml:space="preserve">
+    <value>Atlas</value>
+  </data>
+  <data name="AtlasUserDescription" xml:space="preserve">
+    <value>Descripcion del Usuario Atlas</value>
+  </data>
+  <data name="August" xml:space="preserve">
+    <value>August</value>
+  </data>
+  <data name="CacheablesMustImplementContract" xml:space="preserve">
+    <value>Objects implementing ICacheable must implement the interface: "{0}".</value>
+  </data>
+  <data name="CannotRelateUnrelateNulls" xml:space="preserve">
+    <value>No se puede trabajar en las relaciones de entidades que no existan, asegúrese the proveer entidades existentes para relacionar o romper sus relaciones.</value>
+  </data>
+  <data name="December" xml:space="preserve">
+    <value>December</value>
+  </data>
+  <data name="DefaultLettersCurrency" xml:space="preserve">
+    <value>CUP</value>
+  </data>
+  <data name="DefaultLettersMeasurementUnit" xml:space="preserve">
+    <value>U</value>
+  </data>
+  <data name="ErrorWhileAddingItem" xml:space="preserve">
+    <value>Hubo un error cuando se adicionaba el elemento: "{0}". La causa fue:\n"{1}".</value>
+  </data>
+  <data name="ErrorWhileAddingItemTitle" xml:space="preserve">
+    <value>Adición fallida</value>
+  </data>
+  <data name="ErrorWhileDeletingItem" xml:space="preserve">
+    <value>Hubo un error cuando se eliminaba el elemento: "{0}". La causa fue:\n"{1}".</value>
+  </data>
+  <data name="ErrorWhileDeletingItemTitle" xml:space="preserve">
+    <value>Eliminación fallida</value>
+  </data>
+  <data name="February" xml:space="preserve">
+    <value>February</value>
+  </data>
+  <data name="InvalidTypeOfItem" xml:space="preserve">
+    <value>Given item(s) of the wrong type, the expected type is: "{0}".</value>
+  </data>
+  <data name="ItemModified" xml:space="preserve">
+    <value>Actualizado exitosamente: "{0}".</value>
+  </data>
+  <data name="ItemNotAddedDueToValidationErrors" xml:space="preserve">
+    <value>Adición fallida de: "{0}", Se encontraron errores de validación. Estos fueron:</value>
+  </data>
+  <data name="ItemNotDeletedDueToValidationErrors" xml:space="preserve">
+    <value>Eliminación fallida de: "{0}", Se encontraron errores de validación. Estos fueron:</value>
+  </data>
+  <data name="ItemNotModified" xml:space="preserve">
+    <value>Fallos al actualizar: "{0}".</value>
+  </data>
+  <data name="ItemNotModifiedDueToValidationErrors" xml:space="preserve">
+    <value>Actualización fallida de: "{0}", Se encontraron errores de validación. Corríjalos y vuelva a intentar.</value>
+  </data>
+  <data name="January" xml:space="preserve">
+    <value>January</value>
+  </data>
+  <data name="July" xml:space="preserve">
+    <value>July</value>
+  </data>
+  <data name="June" xml:space="preserve">
+    <value>June</value>
+  </data>
+  <data name="March" xml:space="preserve">
+    <value>March</value>
+  </data>
+  <data name="May" xml:space="preserve">
+    <value>May</value>
+  </data>
+  <data name="NewCurrency" xml:space="preserve">
+    <value>Nueva Moneda</value>
+  </data>
+  <data name="NewCurrencyDescription" xml:space="preserve">
+    <value>Descripcion de la Nueva Moneda</value>
+  </data>
+  <data name="NewCustomReportSettings" xml:space="preserve">
+    <value>New Custom Report Settings</value>
+  </data>
+  <data name="NewCustomReportSettingsDescription" xml:space="preserve">
+    <value>New Custom Report Settings Description</value>
+  </data>
+  <data name="NewDocument_Description" xml:space="preserve">
+    <value>Descripcion del Nuevo Documento</value>
+  </data>
+  <data name="NewDocument_Name" xml:space="preserve">
+    <value>Nuevo Documento</value>
+  </data>
+  <data name="NewEmptyAccess" xml:space="preserve">
+    <value>Nuevo Acceso (Vacio)</value>
+  </data>
+  <data name="NewExecutedActivityDescription" xml:space="preserve">
+    <value>Descripción de Nueva Actividad Ejecutada</value>
+  </data>
+  <data name="NewMeasurementUnit" xml:space="preserve">
+    <value>Nueva Unidad de Medida</value>
+  </data>
+  <data name="NewMeasurementUnitDescription" xml:space="preserve">
+    <value>Descripcion de la Nueva Unidad de Medida</value>
+  </data>
+  <data name="NewPeriod" xml:space="preserve">
+    <value>Nuevo Periodo</value>
+  </data>
+  <data name="NewSubject" xml:space="preserve">
+    <value>Nuevo Topico</value>
+  </data>
+  <data name="NewSubjectDescription" xml:space="preserve">
+    <value>Descripcion del Nuevo Topico</value>
+  </data>
+  <data name="New_AtlasUser" xml:space="preserve">
+    <value>Nuevo Usuario Atlas</value>
+  </data>
+  <data name="New_SubjectConcept" xml:space="preserve">
+    <value>Nuevo Concepto</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="NotNullName" xml:space="preserve">
+    <value>El nombre es requerido.</value>
+  </data>
+  <data name="November" xml:space="preserve">
+    <value>November</value>
+  </data>
+  <data name="October" xml:space="preserve">
+    <value>October</value>
+  </data>
+  <data name="Proccessing" xml:space="preserve">
+    <value>Procesando...</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="September" xml:space="preserve">
+    <value>September</value>
+  </data>
+  <data name="SuccessfullyAddedConvertible" xml:space="preserve">
+    <value>Añadida exitosamente la Convertible"{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedCurrency" xml:space="preserve">
+    <value>Añadida exitosamente la Moneda "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedItemStatusMessage" xml:space="preserve">
+    <value>Añadido existosamente: "{0}".</value>
+  </data>
+  <data name="SuccessfullyAddedMeasurementUnit" xml:space="preserve">
+    <value>Añadida exitosamente la Unidad de Medida"{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedConvertible" xml:space="preserve">
+    <value>Eliminado exitosamente el Convertible: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedCurrency" xml:space="preserve">
+    <value>Eliminada exitosamente la Moneda: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedItemStatusMessage" xml:space="preserve">
+    <value>Eliminado exitosamente: "{0}".</value>
+  </data>
+  <data name="SuccessfullyDeletedMeasurementUnit" xml:space="preserve">
+    <value>Eliminada exitosamente la Unidad de Medida: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedConvertible" xml:space="preserve">
+    <value>Actualizado exitosamente el Convertible: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedCurrency" xml:space="preserve">
+    <value>Actualizada exitosamente la Moneda: "{0}".</value>
+  </data>
+  <data name="SuccessfullyUpdatedMeasurementUnit" xml:space="preserve">
+    <value>Actualizada exitosamente la Unidad de Medida: "{0}".</value>
+  </data>
+  <data name="SureToDelete" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el elemento?</value>
+  </data>
+  <data name="SureToDeleteConvertible" xml:space="preserve">
+    <value>¿Seguro que desea eliminar el Convertible: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteCurrency" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Moneda: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteMeasurementUnit" xml:space="preserve">
+    <value>¿Seguro que desea eliminar la Unidad de Medida: "{0}"?</value>
+  </data>
+  <data name="SureToDeleteTitle" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="UnexpectedException" xml:space="preserve">
+    <value>Un error inesperado ocurrió realizando la operación actual. Los detalles del mismo se han registrado en el log del sistema. Por favor, póngase en contacto con el equipo de soporte y mantenimiento.</value>
+  </data>
+  <data name="UnexpectedExceptionLogMessage" xml:space="preserve">
+    <value>An expected error occured doing the current operation. The exception details go below:</value>
+  </data>
+  <data name="UnexpectedExceptionTitle" xml:space="preserve">
+    <value>Error inesperado</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Si</value>
+  </data>
+</root>

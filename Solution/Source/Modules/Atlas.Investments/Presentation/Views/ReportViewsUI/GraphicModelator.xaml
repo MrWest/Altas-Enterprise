@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="CompanyName.Atlas.Investments.Presentation.Views.ReportViewsUI.GraphicModelator"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:uiControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+             xmlns:chartControls="clr-namespace:De.TorstenMandelkow.MetroChart.ChartControls;assembly=De.TorstenMandelkow.MetroChart"
+             xmlns:metroChart="clr-namespace:De.TorstenMandelkow.MetroChart;assembly=De.TorstenMandelkow.MetroChart"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.Investments.Properties"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+              Background="{DynamicResource DataGrid.Static.Background}" 
+             FontSize="{DynamicResource Default.FontSize}" FontFamily="{DynamicResource Default.FontFamily}" Foreground="{DynamicResource DataGrid.Static.Foreground}"
+             IsVisibleChanged="GraphicModelator_OnIsVisibleChanged" DataContextChanged="GraphicModelator_OnDataContextChanged" Loaded="GraphicModelator_OnLoaded">
+    
+        <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid DataContext="{Binding MetroChartPresenter}"  Margin="10,5">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition  Height="Auto" ></RowDefinition>
+                <!--<RowDefinition></RowDefinition>-->
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="550"></ColumnDefinition>
+                <ColumnDefinition ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <uiControls:AtlasPieChart BorderThickness="1"  SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" BorderBrush="White" SeriesTitle="Sample Series" ChartName="Sample Chart" SeriesSource="{Binding PlanByBudgetComponent}"  Foreground="{DynamicResource DataGrid.Static.Foreground}"/>
+            <Grid Grid.Column="1" Margin="15,0,0,0">
+                <uiControls:AtlasClusteredColumnChart   SelectedItem="{Binding Path=SelectedItem, Mode=TwoWay}" BorderThickness="1" BorderBrush="White" SeriesTitle="Sample Series" ChartName="Sample Chart" SeriesSource="{Binding PlanByBudgetComponent}"  Foreground="{DynamicResource DataGrid.Static.Foreground}"/>
+            </Grid>
+
+            <Grid  Grid.Row="1" Grid.ColumnSpan="2"  >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                     <ColumnDefinition ></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                <StackPanel Grid.Column="1" Orientation="Horizontal">
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="8" Width="8" Name="Equip" Margin="15,0,5,0"></Rectangle>
+                        <TextBlock Text="{x:Static properties:Resources.EquipmentComponent}"></TextBlock>
+                     </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="8" Width="8" Name="Const" Margin="15,0,5,0"></Rectangle>
+                        <TextBlock Text="{x:Static properties:Resources.ConstructionComponent}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="8" Width="8" Name="Other" Margin="15,0,5,0"></Rectangle>
+                        <TextBlock Text="{x:Static properties:Resources.OtherExpensesComponent}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="8" Width="8" Name="Work" Margin="15,0,5,0"></Rectangle>
+                        <TextBlock Text="{x:Static properties:Resources.WorkCapitalComponent}"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <DockPanel Grid.Row="2"  Grid.ColumnSpan="2" Margin="15,5">
+                <Grid>
+                    <!--<Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <TextBlock Text="{x:Static properties:Resources.ExecutionPercent}"></TextBlock>-->
+                    <uiControls:AtlasGaussChart  MaxHeight="240"  MaxWidth="{Binding RelativeSource={RelativeSource AncestorType=DockPanel}, Path=ActualWidth}"   BorderThickness="1" BorderBrush="White" SeriesTitle="Sample Series" ChartName="Sample Chart" SeriesSource="{Binding ExecutionPercentByBudgetComponent}"  Foreground="{DynamicResource DataGrid.Static.Foreground}"/>
+                </Grid>
+                
+            </DockPanel>
+
+        </Grid>
+    </ScrollViewer>
+        <!--<TextBlock Text="Here is"></TextBlock>-->
+        
+ 
+</UserControl>

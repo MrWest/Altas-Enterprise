@@ -1,0 +1,25 @@
+﻿<UIControls:AtlasWindow x:Class="CompanyName.Atlas.Views.Shell"
+                        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                        xmlns:Properties="clr-namespace:CompanyName.Atlas.Properties"
+                        xmlns:UIControls="clr-namespace:CompanyName.Atlas.UIControls;assembly=Atlas.UIControls"
+                        xmlns:Mvvm="clr-namespace:Microsoft.Practices.Prism.Mvvm;assembly=Microsoft.Practices.Prism.Mvvm.Desktop"
+                        Mvvm:ViewModelLocator.AutoWireViewModel="True"
+                        x:ClassModifier="internal" WindowState="Maximized"
+                        Title="Atlas" Height="600" Width="1000">
+    
+    <Window.CommandBindings>
+        <CommandBinding Command="Close" CanExecute="CloseCommand_CanExecute" Executed="CloseCommand_Executed"/>
+    </Window.CommandBindings>
+    <UIControls:AtlasWindow.AtlasModuleView>
+        <UIControls:AtlasModuleView  Module="{Binding SelectedModule,RelativeSource={RelativeSource AncestorType=UIControls:AtlasWindow}}" >
+            <!--<UIControls:AtlasMainPage.Resources>
+                                                    <ResourceDictionary Source="../Themes/AtlasMainPage.xaml"/>
+                                                </UIControls:AtlasMainPage.Resources>-->
+
+        </UIControls:AtlasModuleView>
+    </UIControls:AtlasWindow.AtlasModuleView>
+    
+   
+
+</UIControls:AtlasWindow>

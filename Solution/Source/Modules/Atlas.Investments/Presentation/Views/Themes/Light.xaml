@@ -1,0 +1,109 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:System="clr-namespace:System;assembly=mscorlib">
+
+    
+
+    <SolidColorBrush x:Key="NavigationIcon.Fill" Color="White"/>
+
+
+    <SolidColorBrush x:Key="InvestmentElement.Default.Foreground" Color="#ededed"/>
+    <FontFamily x:Key="InvestmentElement.Default.FontFamily">Source Sans Pro Light</FontFamily>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Static.Background" Color="#0059b3"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.MouseOver.Background" Color="#2d70b3"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Pressed.Background" Color="#5986b3"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Disabled.Background" Color="#394f65"/>
+    <SolidColorBrush x:Key="AddRootInvestmentElementButton.Disabled.Foreground" Color="#252526"/>
+
+    <SolidColorBrush x:Key="InvestmentElementTreeView.Static.Background" Color="#0059b3"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeView.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.Static.Background" Color="#2d70b3"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.MouseOver.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.MouseOver.Foreground" Color="#252526"/>
+    <!--<SolidColorBrush x:Key="InvestmentElementTreeViewItem.MouseOver.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.MouseOver.Foreground" Color="WhiteSmoke"/>-->
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.Selected.Background" Color="White"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItem.Selected.Foreground" Color="#343434"/>
+    <SolidColorBrush x:Key="InvestmentElementTreeViewItemBottomLine.Stroke" Color="#f3f2e9"/>
+
+    <System:Double x:Key="InvestmentElementCommandAddRootInvestmentElementButton.Static.StrokeThickness">1</System:Double>
+    <SolidColorBrush x:Key="InvestmentElementAddCommandAddRootInvestmentElementButton.MouseOver.Foreground" Color="#FF09A596"/>
+    <SolidColorBrush x:Key="InvestmentElementEditCommandAddRootInvestmentElementButton.MouseOver.Foreground" Color="#FF707070"/>
+    <SolidColorBrush x:Key="InvestmentElementDeleteCommandAddRootInvestmentElementButton.MouseOver.Foreground" Color="#FFEB7466"/>
+    <SolidColorBrush x:Key="InvestmentElementCommandAddRootInvestmentElementButton.Pressed.Background" Color="#FF09A596"/>
+    <SolidColorBrush x:Key="InvestmentElementCommandAddRootInvestmentElementButton.Pressed.Foreground" Color="#FF474747"/>
+    <SolidColorBrush x:Key="CashFlowTreeView.Headers.Static.Foreground" Color="#474748"/>
+
+    
+    <SolidColorBrush x:Key="PlanningExecutionTabItem.Static.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="PlanningExecutionTabItem.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="PlanningExecutionTabItem.MouseOver.Foreground" Color="#9fcefc"/>
+    <SolidColorBrush x:Key="PlanningExecutionTabItem.Selected.Foreground" Color="#52a9ff"/>
+    <SolidColorBrush x:Key="PlanningExecutionTabControlHeader.Background" Color="#252526"/>
+    <SolidColorBrush x:Key="PlanningExecutionTabControl.Static.Background" Color="#343434"/>
+
+    <SolidColorBrush x:Key="ResourcesActivitiesTabItem.Static.Background" Color="#343434"/>
+    <SolidColorBrush x:Key="ResourcesActivitiesTabItem.Static.Foreground" Color="#ededed"/>
+    <SolidColorBrush x:Key="ResourcesActivitiesTabItem.MouseOver.Foreground" Color="#9fcefc"/>
+    <SolidColorBrush x:Key="ResourcesActivitiesTabItem.Selected.Foreground" Color="#52a9ff"/>
+    <SolidColorBrush x:Key="ResourcesActivitiesTabControlHeader.Background" Color="#343434"/>
+
+    <SolidColorBrush x:Key="BudgetComponentItemButton.Static.Background" Color="Transparent"/>
+    <SolidColorBrush x:Key="BudgetComponentItemButton.Static.Foreground" Color="#727576"/>
+    <SolidColorBrush x:Key="BudgetComponentItemButton.MouseOver.Foreground" Color="#beb19a"/>
+    <SolidColorBrush x:Key="BudgetComponentItemButton.Selected.Foreground" Color="#e99501"/>
+
+    <!-- DATA GRIDS -->
+    <SolidColorBrush x:Key="DataGrid.Static.Background" Color="#f3f2e9"/>
+    <SolidColorBrush x:Key="DataGrid.Static.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.Static.Background" Color="#9e9e9e"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.Dark.Background" Color="#5a5a5a"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.Dark.Foreground" Color="#f3f2e9"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.Static.Foreground" Color="#252526"/>
+    <SolidColorBrush x:Key="DataGridRowBottomLine.Static.Background" Color="#b3b3b3"/>
+    <SolidColorBrush x:Key="DataGridColumnHeader.DarkDark.Foreground" Color="#474748"/>
+    <SolidColorBrush x:Key="DataGridRowBottomLine.Real.Background" Color="#7c7c7e"/>
+    <SolidColorBrush x:Key="DataGridRowDetailLine.Real.Foreground" Color="#FFCBCBCB"/>
+
+    <SolidColorBrush x:Key="DataGridCell.MouseOver.Background" Color="#e4e4e4"/>
+    <SolidColorBrush x:Key="DataGridCell.MouseOver.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="DataGridCell.Selected.Background" Color="#FFFFFFFF"/>
+    <SolidColorBrush x:Key="DataGridCell.Selected.Foreground" Color="#FF6F6F6F"/>
+
+    
+    <SolidColorBrush x:Key="DataGridTextColumn.SelectionBrush" Color="Gray"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.Static.Background" Color="#FFE2E2E2"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.Static.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.MouseOver.Foreground" Color="#FFEB7466"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.Pressed.Foreground" Color="#FF3E3E3E"/>
+    <SolidColorBrush x:Key="DataGridDeleteButton.Disabled.Foreground" Color="#FF9B9B9B"/>
+
+    <SolidColorBrush x:Key="DataGridAddButton.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="DataGridAddButton.Pressed.Background" Color="#FFD1D1D1"/>
+    <SolidColorBrush x:Key="PriceSystemDosificatorMain.Backgournd" Color="Transparent"/>
+    <!-- activity row-->
+    <SolidColorBrush x:Key="DataGrid.Activity.Row.Background" Color="#ebefe9"/>
+    <!-- subSpcility row-->
+    <SolidColorBrush x:Key="DataGrid.SubSpeciality.Row.Background" Color="#dfe3df"/>
+    <System:Double x:Key="DataGrid.SubSpeciality.Row.FontSize">16</System:Double>
+    <SolidColorBrush x:Key="DataGrid.SubSpeciality.Row.Foreground" Color="#cF2F2F2F"/>
+
+    <SolidColorBrush x:Key="DataGrid.OverGroup.Row.Background" Color="#cacaca"/>
+    <SolidColorBrush x:Key="DataGrid.Group.Row.Background" Color="#d2d2d2"/>
+    <SolidColorBrush x:Key="DataGrid.UnderGroup.Row.Background" Color="#dfdfdf"/>
+
+    <SolidColorBrush x:Key="DataGrid.Generic.Row.Background" Color="#cccccc"/>
+    <!-- Investment Property sheet -->
+    <SolidColorBrush x:Key="InvestmentComponentPropertiesRow.Static.Background" Color="#ededed"/>
+    <SolidColorBrush x:Key="InvestmentComponentPropertiesRowHeading.Static.Border" Color="#9e9e9e"/>
+    <SolidColorBrush x:Key="InvestmentComponentPropertiesRow.Static.Foreground" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="InvestmentComponentPropertiesRow.Focused.Border" Color="#FF6F6F6F"/>
+    <SolidColorBrush x:Key="InvestmentComponentPropertiesFormHeading.Static.Background" Color="#fdfdfd"/>
+    <SolidColorBrush x:Key="InvestmentComponentPropertiesFormHeading.Static.Foreground" Color="#FF6F6F6F"/>
+
+    
+
+
+</ResourceDictionary>

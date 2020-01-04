@@ -1,0 +1,45 @@
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\Bin\Debug\TestApplicationSL.dll.config
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\Bin\Debug\TestApplicationSL.dll
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\Bin\Debug\TestApplicationSL.pdb
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\Bin\Debug\AppManifest.xaml
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\Bin\Debug\TestApplicationSL.xap
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\Bin\Debug\TestApplicationSLTestPage.html
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\Bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\Bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\obj\Debug\TestApplicationSL.csprojResolveAssemblyReference.cache
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\obj\Debug\App.g.cs
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\obj\Debug\MainPage.g.cs
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\obj\Debug\TestApplicationSL.g.resources
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\obj\Debug\TestApplicationSL.dll
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\obj\Debug\TestApplicationSL.pdb
+D:\TFSPreview\Source\SPCAFMetro\TestApplicationSL\obj\Debug\XapCacheFile.xml
+D:\TFS2010\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSL.dll.config
+D:\TFS2010\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSL.dll
+D:\TFS2010\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSL.pdb
+D:\TFS2010\MetroChart\TestApplicationSL\Bin\Debug\AppManifest.xaml
+D:\TFS2010\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSL.xap
+D:\TFS2010\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSLTestPage.html
+D:\TFS2010\MetroChart\TestApplicationSL\Bin\Debug\De.TorstenMandelkow.MetroChart.dll
+D:\TFS2010\MetroChart\TestApplicationSL\Bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+D:\TFS2010\MetroChart\TestApplicationSL\obj\Debug\TestApplicationSL.csprojResolveAssemblyReference.cache
+D:\TFS2010\MetroChart\TestApplicationSL\obj\Debug\App.g.cs
+D:\TFS2010\MetroChart\TestApplicationSL\obj\Debug\MainPage.g.cs
+D:\TFS2010\MetroChart\TestApplicationSL\obj\Debug\TestApplicationSL.g.resources
+D:\TFS2010\MetroChart\TestApplicationSL\obj\Debug\TestApplicationSL.dll
+D:\TFS2010\MetroChart\TestApplicationSL\obj\Debug\TestApplicationSL.pdb
+D:\TFS2010\MetroChart\TestApplicationSL\obj\Debug\XapCacheFile.xml
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSL.dll.config
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSL.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSL.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\Bin\Debug\AppManifest.xaml
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSL.xap
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\Bin\Debug\TestApplicationSLTestPage.html
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\Bin\Debug\De.TorstenMandelkow.MetroChart.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\Bin\Debug\De.TorstenMandelkow.MetroChart.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\obj\Debug\TestApplicationSL.csprojResolveAssemblyReference.cache
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\obj\Debug\App.g.cs
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\obj\Debug\MainPage.g.cs
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\obj\Debug\TestApplicationSL.g.resources
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\obj\Debug\TestApplicationSL.dll
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\obj\Debug\TestApplicationSL.pdb
+C:\Users\Enrike\Desktop\De Ariel\WPFGraphs\MetroChart\TestApplicationSL\obj\Debug\XapCacheFile.xml

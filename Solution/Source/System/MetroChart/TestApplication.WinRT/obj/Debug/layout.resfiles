@@ -1,0 +1,14 @@
+Shared\Fonts\seguisym.ttf
+Shared\Images\torsten.png
+Assets\DarkGray.png
+Assets\LightGray.png
+Assets\Logo.png
+Assets\MediumGray.png
+Assets\SmallLogo.png
+Assets\SplashScreen.png
+Assets\StoreLogo.png
+App.xaml
+Common\StandardStyles.xaml
+GroupDetailPage.xaml
+Skins\MainSkin.xaml
+Themes\Generic.xaml

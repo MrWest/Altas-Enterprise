@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.WorkCapitalComponent">
+    <Position X="0.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\WorkCapitalComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.Budget">
+    <Position X="15.25" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAALAAAAAAAAAAAAAEIAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\Budget.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.BudgetComponentBase">
+    <Position X="4.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAgAAAgAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\BudgetComponentBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.BudgetComponentItemBase">
+    <Position X="3.75" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAgAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\BudgetComponentItemBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.ConstructionComponent">
+    <Position X="3.25" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\ConstructionComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.EquipmentComponent">
+    <Position X="6" Y="3.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\EquipmentComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.InvestmentElement">
+    <Position X="18.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQQAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\InvestmentElement.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.OtherExpensesComponent">
+    <Position X="8.5" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\OtherExpensesComponent.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.PlannedBudgetComponentItemBase">
+    <Position X="2" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\PlannedBudgetComponentItemBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.PlannedResource">
+    <Position X="0.5" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\PlannedResource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.PlannedActivity">
+    <Position X="3.5" Y="9.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\PlannedActivity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.ExecutedBudgetComponentItemBase">
+    <Position X="6.5" Y="7.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAQgAAAFAAAgAAQAAAAAAAAAAAAAgAAgAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\ExecutedBudgetComponentItemBase.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompanyName.Atlas.Investments.Implementation.Domain.Entities.ExecutedResource">
+    <Position X="6.75" Y="11.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Implementation\Domain\Entities\ExecutedResource.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

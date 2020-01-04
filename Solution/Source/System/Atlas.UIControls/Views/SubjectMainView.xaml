@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="CompanyName.Atlas.UIControls.Views.SubjectMainView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CompanyName.Atlas.UIControls"
+             xmlns:properties="clr-namespace:CompanyName.Atlas.UIControls.Properties"
+             xmlns:views="clr-namespace:CompanyName.Atlas.UIControls.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary Source="../Assets/TabControls.xaml"></ResourceDictionary>
+        </UserControl.Resources>
+        <Grid>
+            <local:AtlasTabControl x:Name="AtlasTabControl" d:LayoutOverrides="LeftPosition, RightPosition, TopPosition, BottomPosition" 
+               Style="{DynamicResource ButtonlessTabControlStyle}" FilterCommand="{Binding SubjectConcepts.SimpleFilterCommand,Mode=OneWay}" View="{x:Static local:ConceptView.Definition}" Margin="0,0,0,0">
+           
+            <!-- This is the tab controls group of the equipment component items -->
+            <TabItem Header="{x:Static properties:Resources.Concepts}" Style="{DynamicResource PlanningExecutionTabItemStyle}" >
+                    <Grid>
+                    <views:ConceptsView IsVisibleChanged="UIElement_OnIsVisibleChanged"/>
+                    </Grid>
+            </TabItem>
+
+            <TabItem Header="{x:Static properties:Resources.RelatedDocuments}" Style="{DynamicResource PlanningExecutionTabItemStyle}" >
+                <Grid>
+                    <views:SubjectRelatedDocument />
+                </Grid>
+            </TabItem>
+
+
+        </local:AtlasTabControl>
+        </Grid>
+</UserControl>
