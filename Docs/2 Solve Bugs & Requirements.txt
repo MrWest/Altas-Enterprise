@@ -1,2 +1,0 @@
-- las especielidades no se actualizan del sistema de precios a planificacion y ejecucion
-- a veces no actualiza bien el cambio de periodo o sea no se trasmiten las actuaizaciones en ocaciones.
