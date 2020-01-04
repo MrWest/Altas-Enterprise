@@ -1,0 +1,50 @@
+<Window x:Class="ExcelInWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="VitoshAcademy" Height="350" Width="525">
+    <Grid>
+        <Button Width="Auto" Margin="50" Click="GenerateExcelFile">Generate Excel File</Button>
+    </Grid>
+</Window>
+
+using System;
+using System.Windows;
+using System.Windows.Controls;
+using Microsoft.Office.Interop.Excel;
+
+namespace ExcelInWPF
+{
+    /// <summary>
+    /// Interaction logic for MainWindow.xaml
+    /// </summary>
+    public partial class MainWindow : System.Windows.Window
+    {
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void GenerateExcelFile(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application app = new Microsoft.Office.Interop.Excel.Application();
+            app.Visible = true;
+            app.WindowState = XlWindowState.xlMaximized;
+
+            Workbook wb = app.Workbooks.Add(XlWBATemplate.xlWBATWorksheet);
+            Worksheet ws = wb.Worksheets[1];
+            DateTime currentDate = DateTime.Now;
+
+            ws.Range["A1:A3"].Value = "Who is number one? :)";
+            ws.Range["A4"].Value = "vitoshacademy.com";
+            ws.Range["A5"].Value = currentDate;
+            ws.Range["B6"].Value = "Tommorow's date is: =>";
+            ws.Range["C6"].FormulaLocal = "= A5 + 1";
+            ws.Range["A7"].FormulaLocal = "=SUM(D1:D10)";
+            for (int i = 1; i <= 10; i++)
+                ws.Range["D" + i].Value = i * 2;
+
+            wb.SaveAs("C:\\Temp\\vitoshacademy.xlsx");
+
+        }
+    }
+}

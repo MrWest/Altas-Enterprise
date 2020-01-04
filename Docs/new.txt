@@ -1,0 +1,45 @@
+revisar que pasa en la ejecucion
+capital de trabajoo no suma en  los reportes
+separar los piecharts 
+aligerar la letra de los piecharts
+poner colores distintos
+separar el grafico de barra del piechart
+hacerlo imprimible
+
+***** heredar en genesis las referencias
+expresar la moneda
+
+partio el inicio
+
+timeline siempre mostrar lineas de tiempo generadas
+
+CIERTAS combinaciones y que te guerde el estado.
+
+header del timeline estilo comun 
+
+poner equipos const
+
+cambiar timeline de estado pra modelador grafico
+darle cultura similar a grafico de barra normal metrochart
+mira a ver si puedes tiraarlo en treeview
+
+ponerle animacion al timeline detailded y al otro
+
+ponerle escalonamiento al timeline visual
+ponerle dias de duracion
+
+la parte del reporte personalizado darle cultura
+
+revisar el pase a budget
+
+escalonar el reporte tambien
+
+spaceholder en subspecilty row
+eliminar lo de chash flow
+correr a  la derecha
+ver lo de la actualizacion
+hacer la c con nuna bollit en el medio
+
+optimozar todo todo
+
+centrar los modulos de la presentacion
