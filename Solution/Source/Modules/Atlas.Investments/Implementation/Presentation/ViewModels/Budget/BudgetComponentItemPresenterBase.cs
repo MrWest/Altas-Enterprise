@@ -365,15 +365,15 @@ namespace CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.B
         {
             get
             {
-                if (isUnitaryPriceCalculated)
+                if (CalculatedUnitaryPrice > 0 && isUnitaryPriceCalculated)
                     return CalculatedUnitaryPrice;
 
-                if (_realUnitaryCost >= 0 )
-                    return _realUnitaryCost;
+                //if (_realUnitaryCost >= 0 )
+                //    return _realUnitaryCost;
                 // var crap = Math.Round(Object.UnitaryCost, 2);
                 // GetRealUnitaryCost();
                // StatusBarServices.ForceSignalLoading();
-                if (Quantity > 0 && Currency != null)
+                if (Quantity > 0)
                 {
                     //if (!_isAwaiting)
                     //{
@@ -385,7 +385,7 @@ namespace CompanyName.Atlas.Investments.Implementation.Presentation.ViewModels.B
                       
                     //}
                         
-                    _realUnitaryCost = CreateServices().GetMyCost(Object, Currency.Object) / Quantity; ;
+                    _realUnitaryCost = CreateServices().GetMyCost(Object, Currency?.Object) / Quantity; ;
                     //StatusBarServices.SignalReady();
                 }
                   

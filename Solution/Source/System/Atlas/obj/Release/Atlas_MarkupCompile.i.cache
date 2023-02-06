@@ -4,7 +4,7 @@
 winexe
 C#
 .cs
-D:\Enrike\Programming\Atlas\Solution\Source\System\Atlas\obj\Release\
+D:\Enrike\Programming\Repos\Atlas\Solution\Source\System\Atlas\obj\Release\
 CompanyName.Atlas
 none
 false
@@ -13,7 +13,7 @@ CODE_ANALYSIS;TRACE
 31355958583
 
 13-1355895874
-88691944138
+88710255964
 App.xaml;Views\Shell.xaml;Views\TestWindow.xaml;
 
 True

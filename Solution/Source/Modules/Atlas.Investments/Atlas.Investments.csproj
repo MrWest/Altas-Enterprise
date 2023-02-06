@@ -252,8 +252,8 @@
     <Compile Include="Domain\Entities\IWorkCapitalComponent.cs" />
     <Compile Include="Domain\Entities\IWorkForce.cs" />
     <Compile Include="Domain\Entities\ResourceKind.cs" />
-    <Compile Include="Domain\Services\Budget\WorkCapital\ IWorkCapitalCashFlowDomainServices.cs" />
     <Compile Include="Domain\Services\Budget\WorkCapital\ICashFlowCashMovementCategoryDomainService.cs" />
+    <Compile Include="Domain\Services\Budget\WorkCapital\IWorkCapitalCashFlowDomainServices.cs" />
     <Compile Include="Domain\Services\IActivityDomainServices.cs" />
     <Compile Include="Domain\Services\IActivityExecutorDomainServicesBase.cs" />
     <Compile Include="Domain\Services\ICashMovementCategoryDomainService.cs" />

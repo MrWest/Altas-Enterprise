@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Enrike\Programming\Atlas\Solution\Source\Instalation\AtlasInstall\obj\Release\
+D:\Enrike\Programming\Repos\Atlas\Solution\Source\Instalation\AtlasInstall\obj\Release\
 AtlasInstall
 none
 false
 TRACE
-D:\Enrike\Programming\Atlas\Solution\Source\Instalation\AtlasInstall\App.xaml
-101703851288
+D:\Enrike\Programming\Repos\Atlas\Solution\Source\Instalation\AtlasInstall\App.xaml
+11-861684883
 
 12628574588
-18621981028
-MainWindow.xaml;Themes\Button.xaml;Themes\CheckBox.xaml;Themes\Light.xaml;Themes\ModernUI.Dark.xaml;Themes\ProgressBar.xaml;Themes\ScrollBar.xaml;Themes\TabControls.xaml;Themes\TextBox.xaml;Themes\ToolTip.xaml;
+181818929793
+MainWindow.xaml;Themes\Button.xaml;Themes\CheckBox.xaml;Themes\Light.xaml;Themes\ModernUI.Dark.xaml;Themes\ProgressBar.xaml;Themes\ScrollBar.xaml;Themes\TabControls.xaml;Themes\TextBlock.xaml;Themes\TextBox.xaml;Themes\ToolTip.xaml;
 
-False
+True
 

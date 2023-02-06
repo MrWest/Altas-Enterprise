@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:AtlasInstall"
         xmlns:logic="clr-namespace:AtlasInstall.Logic"
         mc:Ignorable="d"
-        Title="Atlas Enterprise" Height="350" Width="525">
+        Title="ATLAS ENTERPRISE" Height="350" Width="525">
     <Window.Resources>
         <Storyboard x:Key="SlideIn">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Opacity)" >
@@ -193,13 +193,13 @@
                                     <Button.Content>
                                         <Grid Width="13" Height="12" RenderTransform="1,0,0,1,0,1">
                                             <Path Data="M0,6 L8,6 Z" Width="8" Height="7" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                         Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="2"  />
+                                                         Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="0.8"  />
                                         </Grid>
                                     </Button.Content>
                                 </Button>
 
-                                <Grid Margin="1,0">
-                                    <!-- Restore -->
+                                <!--<Grid Margin="1,0">
+                                    --><!-- Restore --><!--
                                     <Button TabIndex="-1" x:Name="Restore"  Command="{x:Static SystemCommands.RestoreWindowCommand}"
                                                     ToolTip="Restore" 
                                                     FocusVisualStyle="{x:Null}" Focusable="False" >
@@ -221,7 +221,7 @@
                                             
                                         </Button.Style>
                                     </Button>
-                                    <!-- Maximize -->
+                                    --><!-- Maximize --><!--
                                     <Button x:Name="Maximize" TabIndex="-1" Focusable="False" 
                                                      Command="{x:Static SystemCommands.MaximizeWindowCommand}"
                                                     ToolTip="Maximize" FocusVisualStyle="{x:Null}" >
@@ -243,7 +243,7 @@
 
                                         </Button.Style>
                                     </Button>
-                                </Grid>
+                                </Grid>-->
 
                                 <!-- Close -->
                                 <Button  Command="{x:Static SystemCommands.CloseWindowCommand}" Focusable="False" 
@@ -252,26 +252,27 @@
                                     <Button.Content>
                                         <Grid Width="13" Height="12" RenderTransform="1,0,0,1,0,1">
                                             <Path Data="M0,0 L8,7 M8,0 L0,7 Z" Width="8" Height="7" VerticalAlignment="Center" HorizontalAlignment="Center"
-                                                          Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="1.5"  />
+                                                          Stroke="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Button}}" StrokeThickness="0.8"  />
                                         </Grid>
                                     </Button.Content>
                                 </Button>
                             </StackPanel>
 
                             <Border  Grid.Row="0" Grid.RowSpan="2" Background="#0059b3" Padding="5,35">
-                            <StackPanel   HorizontalAlignment="Stretch"  >
-                                <Path x:Name="path"    Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center"
+                            <StackPanel   HorizontalAlignment="Stretch" VerticalAlignment="Center" >
+                                    <Image Source="Atlas-Enterprise.jpeg" />
+                                    <!--<Path x:Name="path"    Width="100" Height="100" HorizontalAlignment="Center" VerticalAlignment="Center"
                                                   Data="M23.79661,7.3220339 L8.7457627,32.745763 C8.7457627,32.745763 20.967638,41.353691 39.457627,32.949153 40.016949,32.694916 23.79661,7.3220339 23.79661,7.3220339 z M24.147993,17.112616 L18.539078,26.748444 16.296807,25.750439 24.147993,12.654248 31.889651,25.764187 29.325452,26.748444 z M21.684987,27.079261 L24.028953,22.958628 26.296647,26.943419 C24.264925,27.391584 21.684987,27.079261 21.684987,27.079261 z M14.400201,28.659537 L16.947083,29.838223 15.307045,32.3936 12.693201,31.380069 z M20.509176,30.588291 C20.509176,30.588291 24.455545,30.870772 28.060024,30.512021 L29.33121,32.851005 C29.33121,32.851005 25.203222,34.132012 18.932905,33.003547 z M31.119327,29.811227 L32.390514,32.093841 35.034582,31.229434 33.788819,28.768854 z" 
                                                   Fill="{StaticResource Window.Default.Background}" StrokeThickness="0"
                                                   Stretch="Uniform">
 
                                 </Path>
-                                    <TextBlock Text="Atlas Enterprise" Foreground="{StaticResource Window.Default.Background}" TextAlignment="Center" FontSize="16"/>
-                                    <TextBlock Text="Looking into the Future" Foreground="{StaticResource Window.Default.Background}" TextAlignment="Center" />
+                                    <TextBlock Text="ATLAS ENTERPRISE" Foreground="{StaticResource Window.Default.Background}" TextAlignment="Center" FontSize="16"/>
+                                    <TextBlock Text="Looking into the Future" Foreground="{StaticResource Window.Default.Background}" TextAlignment="Center" />-->
                             </StackPanel>
                             </Border>
                             
-                            <Border  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Padding="10" >
+                            <Border  Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Padding="24,10,24,10" >
                                 <Grid >
                                    
                                     <Border >
@@ -296,10 +297,9 @@
                                         </Border.Style>
 
                                         <Grid>
-                                            <TextBlock Text="Welcome to Atlas Enterprise Installation Wizard."  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                            <TextBlock Text="Welcome to ATLAS ENTERPRISE Installation Wizard."  >
                                                 <TextBlock.Style>
-
-                                                    <Style TargetType="TextBlock">
+                                                    <Style TargetType="{x:Type TextBlock}"  BasedOn="{StaticResource {x:Type TextBlock}}">
                                                         <Setter Property="Visibility" Value="Collapsed"></Setter>
                                                         <Style.Triggers>
                                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="False">
@@ -309,10 +309,10 @@
                                                     </Style>
                                                 </TextBlock.Style>
                                             </TextBlock>
-                                            <TextBlock Text="You are about to uninstall Atlas Enterprise from your system."  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                            <TextBlock Text="You are about to uninstall ATLAS ENTERPRISE from your system." >
                                                 <TextBlock.Style>
 
-                                                    <Style TargetType="TextBlock">
+                                                    <Style TargetType="TextBlock"  BasedOn="{StaticResource {x:Type TextBlock}}">
                                                         <Setter Property="Visibility" Value="Collapsed"></Setter>
                                                         <Style.Triggers>
                                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="True">
@@ -354,12 +354,12 @@
                                                 <RowDefinition Height="Auto"></RowDefinition>
                                                 
                                             </Grid.RowDefinitions>
-                                            <TextBlock Text="Atlas Enterprise License Agreement:" Margin="2" FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" />
+                                            <TextBlock Text="ATLAS ENTERPRISE License Agreement:" Margin="2,2,2,8" />
 
 
-                                            <RichTextBox Grid.Row="1" x:Name="licenseRTb" Background="#f3f2e9"  Focusable="False" VerticalScrollBarVisibility="Auto" ></RichTextBox>
-                                            <DockPanel Grid.Row="2" HorizontalAlignment="Right" Margin="5">
-                                                <CheckBox  FontWeight="SemiBold" Content="I Agree"  Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Agreement}"></CheckBox>
+                                            <RichTextBox Grid.Row="1" x:Name="licenseRTb" Background="White"  Focusable="False" VerticalScrollBarVisibility="Auto" Padding="4,10" ></RichTextBox>
+                                            <DockPanel Grid.Row="2" HorizontalAlignment="Right" Margin="5,12,5,5">
+                                                <CheckBox Content="I Agree"  FontSize="14" Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Agreement}"></CheckBox>
                                                 
                                                 
                                             </DockPanel>
@@ -397,7 +397,7 @@
                                                 <RowDefinition Height="Auto"></RowDefinition>
 
                                             </Grid.RowDefinitions>
-                                            <TextBlock Text="Aditional Settings: " Margin="2" FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" />
+                                            <TextBlock Text="Aditional Settings: " Margin="2"  />
                                             <StackPanel Grid.Row="1" Margin="2,35">
                                                 <StackPanel.Style>
                                                     <Style TargetType="StackPanel">
@@ -409,9 +409,9 @@
                                                         </Style.Triggers>
                                                     </Style>
                                                 </StackPanel.Style>
-                                                <TextBlock Text="Install Atlas for:"></TextBlock>
-                                                <RadioButton Content="Current User" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=CurrentUser}"></RadioButton>
-                                                <RadioButton Content="All Users"    IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=AllUsers}"></RadioButton>
+                                                <TextBlock Text="Install Atlas for:" Margin="0,0,0,10"></TextBlock>
+                                                <RadioButton Content="Current User" Margin="0,0,0,6" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=CurrentUser}"></RadioButton>
+                                                <RadioButton Content="All Users" Margin="0,0,0,6"    IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=AllUsers}"></RadioButton>
                                             </StackPanel>
                                             <StackPanel Grid.Row="2" Margin="2,35">
                                                 <StackPanel.Style>
@@ -424,9 +424,9 @@
                                                         </Style.Triggers>
                                                     </Style>
                                                 </StackPanel.Style>
-                                                <TextBlock Text="Aditional shortcuts:"></TextBlock>
-                                                <CheckBox Content="Desktop" Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Desktop}"></CheckBox>
-                                                <CheckBox Content="Start Menu"  Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=StartMenu}"></CheckBox>
+                                                <TextBlock Text="Aditional shortcuts:" Margin="0,0,0,10"></TextBlock>
+                                                <CheckBox Content="Desktop" Margin="0,0,0,6" Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Desktop}"></CheckBox>
+                                                <CheckBox Content="Start Menu" Margin="0,0,0,6" Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=StartMenu}"></CheckBox>
                                             </StackPanel>
                                             <StackPanel Grid.Row="2" Margin="2,35">
                                                 <StackPanel.Style>
@@ -439,8 +439,8 @@
                                                         </Style.Triggers>
                                                     </Style>
                                                 </StackPanel.Style>
-                                                <TextBlock Text="Remove Data Options:"></TextBlock>
-                                                <CheckBox Content="Remove all application data." Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Desktop}"></CheckBox>
+                                                <TextBlock Text="Remove Data Options:" Margin="0,0,0,10"></TextBlock>
+                                                <CheckBox Content="Remove all application data." Margin="0,0,0,6"  Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Desktop}"></CheckBox>
                                                 <CheckBox Content="Keep Activation data."  Foreground="#252526" IsChecked="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=StartMenu}"></CheckBox>
                                             </StackPanel>
 
@@ -478,10 +478,9 @@
                                                 <RowDefinition Height="Auto"></RowDefinition>
 
                                             </Grid.RowDefinitions>
-                                            <TextBlock Text="Installation Progress: " Margin="2" FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                            <TextBlock Text="Installation Progress: " Margin="2"  >
                                                 <TextBlock.Style>
-
-                                                    <Style TargetType="TextBlock">
+                                                    <Style TargetType="TextBlock"  BasedOn="{StaticResource {x:Type TextBlock}}">
                                                         <Setter Property="Visibility" Value="Collapsed"></Setter>
                                                         <Style.Triggers>
                                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="False">
@@ -491,10 +490,9 @@
                                                     </Style>
                                                 </TextBlock.Style>
                                             </TextBlock>
-                                            <TextBlock Text="Uninstallation Progress: "  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                            <TextBlock Text="Uninstallation Progress: "   >
                                                 <TextBlock.Style>
-
-                                                    <Style TargetType="TextBlock">
+                                                    <Style TargetType="TextBlock"  BasedOn="{StaticResource {x:Type TextBlock}}">
                                                         <Setter Property="Visibility" Value="Collapsed"></Setter>
                                                         <Style.Triggers>
                                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="True">
@@ -512,8 +510,8 @@
                                                     <RowDefinition Height="*"></RowDefinition>
                                                 </Grid.RowDefinitions>
                                                 <ProgressBar Height="17" Value="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Progress}"></ProgressBar>
-                                                <TextBlock Text="Progress Details: " Grid.Row="1" Foreground="{StaticResource Window.Default.Foreground}" Margin="2,35,2,0"/>
-                                                <TextBox Background="Transparent" Grid.Row="2" VerticalAlignment="Stretch" x:Name="progressDetails" BorderThickness="0" Margin="2,2,2,10" Focusable="False" VerticalScrollBarVisibility="Auto" Text="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Details}"></TextBox>
+                                                <TextBlock Text="Progress Details: " Grid.Row="1"  Margin="2,24,2,0"/>
+                                                <TextBox Background="Transparent" Grid.Row="2" FontWeight="Light" VerticalAlignment="Stretch" x:Name="progressDetails" BorderThickness="0" Margin="2,0,2,10" Focusable="False" VerticalScrollBarVisibility="Auto" Text="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=Details}"></TextBox>
                                             </Grid>
                                             
 
@@ -546,10 +544,10 @@
                                         </Border.Style>
 
                                         <Grid>
-                                            <TextBlock Text="Atlas Enterprise has been succcessfully installed on your system."  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                            <TextBlock Text="ATLAS ENTERPRISE has been succcessfully installed on your system."   >
                                                 <TextBlock.Style>
 
-                                            <Style TargetType="TextBlock">
+                                                <Style TargetType="TextBlock"  BasedOn="{StaticResource {x:Type TextBlock}}">
                                                 <Setter Property="Visibility" Value="Collapsed"></Setter>
                                                 <Style.Triggers>
                                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="False">
@@ -559,10 +557,10 @@
                                             </Style>
                                         </TextBlock.Style>
                                             </TextBlock>
-                                            <TextBlock Text="Atlas Enterprise has been succcessfully uninstalled from your system."  FontWeight="Bold" Foreground="{StaticResource Window.Default.Foreground}" >
+                                            <TextBlock Text="ATLAS ENTERPRISE has been succcessfully uninstalled from your system."   >
                                                 <TextBlock.Style>
 
-                                                    <Style TargetType="TextBlock">
+                                                    <Style TargetType="TextBlock"  BasedOn="{StaticResource {x:Type TextBlock}}">
                                                         <Setter Property="Visibility" Value="Collapsed"></Setter>
                                                         <Style.Triggers>
                                                             <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=IsInstalled}" Value="True">
@@ -595,7 +593,7 @@
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-                                        <Button  Grid.Column="0"  Content="Back" Height="35" Margin="5" Command="{x:Static NavigationCommands.PreviousPage}">
+                                        <Button  Grid.Column="0" Height="35" Margin="0,5,5,5" Command="{x:Static NavigationCommands.PreviousPage}">
                                             <Button.Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource SystemButtonBase}">
                                                     <Setter Property="Background" Value="#0059b3"></Setter>
@@ -617,15 +615,23 @@
                                                        
                                                     </Style.Triggers>
                                                 </Style>
-                                                
+
                                             </Button.Style>
+                                            <Button.Content>
+                                                <TextBlock Foreground="White" Text="Back" />
+                                            </Button.Content>
                                         </Button>
-                                        <Button  Grid.Column="1"  Content="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=ButtonText}" Height="35" Margin="5" Command="{x:Static NavigationCommands.NextPage}">
+                                        <Button  Grid.Column="1" Height="35" Margin="5"  Command="{x:Static NavigationCommands.NextPage}">
                                             <Button.Style>
                                                 <Style TargetType="Button" BasedOn="{StaticResource SystemButtonBase}">
                                                     <Setter Property="Background" Value="#0059b3"></Setter>
                                                     <Setter Property="BorderBrush" Value="WhiteSmoke"></Setter>
                                                     <Setter Property="Foreground" Value="White"></Setter>
+                                                    <!--<Setter Property="Content">
+                                                        <Setter.Value>
+                                                            <TextBlock Foreground="{TemplateBinding Foreground}" Text="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=ButtonText}" />
+                                                        </Setter.Value>
+                                                    </Setter>-->
                                                     <Style.Triggers>
                                                         <Trigger Property="IsMouseOver" Value="True">
                                                             <!--<Setter Property="Background" Value="#252526"/>
@@ -633,16 +639,19 @@
                                                             <Setter Property="BorderThickness" Value="2"></Setter>
                                                         </Trigger>
                                                         <Trigger Property="IsEnabled" Value="False">
-                                                            <!--<Setter Property="Background" Value="#252526"/>
-                                                            <Setter Property="Foreground" Value="White"></Setter>-->
+                                                            <!--<Setter Property="Background" Value="#252526"/>-->
+                                                            <Setter Property="Foreground" Value="Gray"></Setter>
                                                             <Setter Property="BorderThickness" Value="0"></Setter>
                                                         </Trigger>
-                                                       
+
 
                                                     </Style.Triggers>
                                                 </Style>
 
                                             </Button.Style>
+                                            <Button.Content>
+                                                <TextBlock Foreground="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Foreground}" Text="{Binding RelativeSource={RelativeSource AncestorType=local:MainWindow}, Path=ButtonText}" />
+                                            </Button.Content>
                                         </Button>
                                     </Grid>
                                    

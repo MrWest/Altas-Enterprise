@@ -4,70 +4,70 @@
  <Namespaces>
   <Namespace Name="System.Collections.Generic">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'System.Collections.Generic' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="System.Cryptography">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'System.Cryptography' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="System.Enumable">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'System.Enumable' with another namespace.</Issue>
     </Message>
-    <Message Id="Enumable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message Id="Enumable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Name="Namespace" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Enumable' in namespace name 'System.Enumable'.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="System.Notifications">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'System.Notifications' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="System.Windows">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'System.Windows' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="System.Windows.Controls">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'System.Windows.Controls' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="System.Windows.Data">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'System.Windows.Data' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
   <Namespace Name="System.Windows.Input">
    <Messages>
-    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
      <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'System.Windows.Input' with another namespace.</Issue>
     </Message>
    </Messages>
   </Namespace>
  </Namespaces>
  <Targets>
-  <Target Name="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\bin\Release\Common.dll">
+  <Target Name="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\bin\Release\Common.dll">
    <Modules>
     <Module Name="common.dll">
      <Messages>
-      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
        <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Common.dll' with a strong name key.</Issue>
       </Message>
      </Messages>
@@ -78,8 +78,8 @@
          <Members>
           <Member Name="#GetMonthDelta(System.DateTime,System.DateTime)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="IncorrectMessage" Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="DateTimeExtensions.cs" Line="19">Method 'DateTimeExtensions.GetMonthDelta(this DateTime, DateTime)' passes parameter name 'to' as the 'message' argument to a 'ArgumentException' constructor. Replace this argument with a descriptive message and pass the parameter name in the correct position.</Issue>
+            <Message TypeName="InstantiateArgumentExceptionsCorrectly" Category="Microsoft.Usage" CheckId="CA2208" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="IncorrectMessage" Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="DateTimeExtensions.cs" Line="19">Method 'DateTimeExtensions.GetMonthDelta(this DateTime, DateTime)' passes parameter name 'to' as the 'message' argument to a 'ArgumentException' constructor. Replace this argument with a descriptive message and pass the parameter name in the correct position.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -87,35 +87,35 @@
         </Type>
         <Type Name="DateTimeScale" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="TimeScale" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message Id="TimeScale" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="TypeShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'TimeScale' in type name 'DateTimeScale' exists as a discrete term. If your usage is intended to be single word, case it as 'Timescale'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="EventHandlerManager`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldHaveCorrectSuffix" Category="Microsoft.Naming" CheckId="CA1710" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Certainty="95" Level="Error">Rename 'EventHandlerManager&lt;TEventArgs&gt;' to end in 'Collection'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#op_Addition(System.EventHandlerManager`1&lt;!0&gt;,System.EventHandler`1&lt;!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Certainty="50" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="EventHandlerManager.cs" Line="31">Provide a method named 'Add' as a friendly alternate for operator 'EventHandlerManager&lt;TEventArgs&gt;.operator +(EventHandlerManager&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)'.</Issue>
+            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="EventHandlerManager.cs" Line="31">Provide a method named 'Add' as a friendly alternate for operator 'EventHandlerManager&lt;TEventArgs&gt;.operator +(EventHandlerManager&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)'.</Issue>
             </Message>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="EventHandlerManager.cs" Line="36">In externally visible method 'EventHandlerManager&lt;TEventArgs&gt;.operator +(EventHandlerManager&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)', validate parameter 'manager' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="EventHandlerManager.cs" Line="36">In externally visible method 'EventHandlerManager&lt;TEventArgs&gt;.operator +(EventHandlerManager&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)', validate parameter 'manager' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#op_Subtraction(System.EventHandlerManager`1&lt;!0&gt;,System.EventHandler`1&lt;!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Certainty="50" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="EventHandlerManager.cs" Line="53">Provide a method named 'Subtract' as a friendly alternate for operator 'EventHandlerManager&lt;TEventArgs&gt;.operator -(EventHandlerManager&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)'.</Issue>
+            <Message TypeName="OperatorOverloadsHaveNamedAlternates" Category="Microsoft.Usage" CheckId="CA2225" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="50" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="EventHandlerManager.cs" Line="53">Provide a method named 'Subtract' as a friendly alternate for operator 'EventHandlerManager&lt;TEventArgs&gt;.operator -(EventHandlerManager&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)'.</Issue>
             </Message>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="EventHandlerManager.cs" Line="58">In externally visible method 'EventHandlerManager&lt;TEventArgs&gt;.operator -(EventHandlerManager&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)', validate parameter 'manager' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="EventHandlerManager.cs" Line="58">In externally visible method 'EventHandlerManager&lt;TEventArgs&gt;.operator -(EventHandlerManager&lt;TEventArgs&gt;, EventHandler&lt;TEventArgs&gt;)', validate parameter 'manager' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -125,8 +125,8 @@
          <Members>
           <Member Name="#FindProperties(System.Type,System.String[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="ObjectExtensions.cs" Line="105">In externally visible method 'ObjectExtensions.FindProperties(Type, params string[])', validate parameter 'type' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="ObjectExtensions.cs" Line="105">In externally visible method 'ObjectExtensions.FindProperties(Type, params string[])', validate parameter 'type' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -136,8 +136,8 @@
          <Members>
           <Member Name="#Capitalize(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="StringExtensions.cs" Line="73">Because the behavior of 'string.ToUpper()' could vary based on the current user's locale settings, replace this call in 'StringExtensions.Capitalize(this string)' with a call to 'string.ToUpper(CultureInfo)'. If the result of 'string.ToUpper(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="StringExtensions.cs" Line="73">Because the behavior of 'string.ToUpper()' could vary based on the current user's locale settings, replace this call in 'StringExtensions.Capitalize(this string)' with a call to 'string.ToUpper(CultureInfo)'. If the result of 'string.ToUpper(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -147,15 +147,15 @@
          <Members>
           <Member Name="#Implements(System.Type,System.Type)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="iface" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="TypeExtensions.cs" Line="32">In method 'TypeExtensions.Implements(this Type, Type)', correct the spelling of 'iface' in parameter name 'iface' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="iface" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="TypeExtensions.cs" Line="32">In method 'TypeExtensions.Implements(this Type, Type)', correct the spelling of 'iface' in parameter name 'iface' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Implements`1(System.Type)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="TypeExtensions.cs" Line="17">Consider a design where 'TypeExtensions.Implements&lt;T&gt;(this Type)' doesn't require explicit type parameter 'T' in any call to it.</Issue>
+            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="TypeExtensions.cs" Line="17">Consider a design where 'TypeExtensions.Implements&lt;T&gt;(this Type)' doesn't require explicit type parameter 'T' in any call to it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -163,15 +163,15 @@
         </Type>
         <Type Name="WeekDayNames" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="WeekDay" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message Id="WeekDay" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="TypeShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'WeekDay' in type name 'WeekDayNames' exists as a discrete term. If your usage is intended to be single word, case it as 'Weekday'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#Thurday" Kind="Property" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Thurday" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common" File="WeekDayNames.cs" Line="39">Correct the spelling of 'Thurday' in member name 'WeekDayNames.Thurday' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="Thurday" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common" File="WeekDayNames.cs" Line="39">Correct the spelling of 'Thurday' in member name 'WeekDayNames.Thurday' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -183,21 +183,21 @@
        <Types>
         <Type Name="IAppliable" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Appliable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message Id="Appliable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Appliable' in type name 'IAppliable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="IEnableable" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Enableable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message Id="Enableable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Enableable' in type name 'IEnableable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="IInitializable" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Initializable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message Id="Initializable" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Initializable' in type name 'IInitializable'.</Issue>
           </Message>
          </Messages>
@@ -206,7 +206,7 @@
          <Members>
           <Member Name="#End" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="End" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+            <Message Id="End" TypeName="IdentifiersShouldNotMatchKeywords" Category="Microsoft.Naming" CheckId="CA1716" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Rename virtual/interface member 'IInterval&lt;TValue&gt;.End' so that it no longer conflicts with the reserved language keyword 'End'. Using a reserved keyword as the name of a virtual/interface member makes it harder for consumers in other languages to override/implement the member.</Issue>
             </Message>
            </Messages>
@@ -215,14 +215,14 @@
         </Type>
         <Type Name="IIntervalCollection`1" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message TypeName="IdentifiersShouldNotHaveIncorrectSuffix" Category="Microsoft.Naming" CheckId="CA1711" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="TypeNoAlternate" Certainty="95" Level="CriticalError">Rename type name 'IIntervalCollection&lt;TValue&gt;' so that it does not end in 'Collection'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#Intervals" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalError">Consider a design where 'IIntervalCollection&lt;TValue&gt;.Intervals' doesn't nest generic type 'ICollection&lt;IInterval&lt;TValue&gt;&gt;'.</Issue>
             </Message>
            </Messages>
@@ -233,11 +233,11 @@
          <Members>
           <Member Name="#ValidateIntervals`1(System.ComponentModel.IIntervalCollection`1&lt;!!0&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\ComponentModel" File="IntervalCollectionExtensions.cs" Line="22">Consider a design where 'IntervalCollectionExtensions.ValidateIntervals&lt;TValue&gt;(this IIntervalCollection&lt;TValue&gt;)' doesn't nest generic type 'Tuple&lt;IInterval&lt;TValue&gt;, IInterval&lt;TValue&gt;&gt;'.</Issue>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\ComponentModel" File="IntervalCollectionExtensions.cs" Line="22">Consider a design where 'IntervalCollectionExtensions.ValidateIntervals&lt;TValue&gt;(this IIntervalCollection&lt;TValue&gt;)' doesn't nest generic type 'Tuple&lt;IInterval&lt;TValue&gt;, IInterval&lt;TValue&gt;&gt;'.</Issue>
             </Message>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\ComponentModel" File="IntervalCollectionExtensions.cs" Line="22">In externally visible method 'IntervalCollectionExtensions.ValidateIntervals&lt;TValue&gt;(this IIntervalCollection&lt;TValue&gt;)', validate parameter 'collection' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\ComponentModel" File="IntervalCollectionExtensions.cs" Line="22">In externally visible method 'IntervalCollectionExtensions.ValidateIntervals&lt;TValue&gt;(this IIntervalCollection&lt;TValue&gt;)', validate parameter 'collection' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -245,7 +245,7 @@
         </Type>
         <Type Name="IPaginator" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Paginator" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message Id="Paginator" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Paginator' in type name 'IPaginator'.</Issue>
           </Message>
          </Messages>
@@ -258,15 +258,15 @@
          <Members>
           <Member Name="#CopyOwnedCollection`2(System.ComponentModel.Edition.EditionOverCopyStrategy`1&lt;!!0&gt;,!!0,!!0,System.Collections.Generic.IEnumerable`1&lt;!!1&gt;,System.Action`2&lt;!!0,System.Collections.Generic.IEnumerable`1&lt;!!1&gt;&gt;,System.String[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\ComponentModel\Edition" File="EditionOverCopyStrategyExtensions.cs" Line="98">Consider a design where 'EditionOverCopyStrategyExtensions.CopyOwnedCollection&lt;T, TEntity&gt;(this EditionOverCopyStrategy&lt;T&gt;, T, T, IEnumerable&lt;TEntity&gt;, Action&lt;T, IEnumerable&lt;TEntity&gt;&gt;, string[])' doesn't nest generic type 'Action&lt;T, IEnumerable&lt;TEntity&gt;&gt;'.</Issue>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\ComponentModel\Edition" File="EditionOverCopyStrategyExtensions.cs" Line="98">Consider a design where 'EditionOverCopyStrategyExtensions.CopyOwnedCollection&lt;T, TEntity&gt;(this EditionOverCopyStrategy&lt;T&gt;, T, T, IEnumerable&lt;TEntity&gt;, Action&lt;T, IEnumerable&lt;TEntity&gt;&gt;, string[])' doesn't nest generic type 'Action&lt;T, IEnumerable&lt;TEntity&gt;&gt;'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#MergeOwnedCollection`2(System.ComponentModel.Edition.EditionOverCopyStrategy`1&lt;!!0&gt;,!!0,System.Func`2&lt;!!0,System.Collections.Generic.ICollection`1&lt;!!1&gt;&gt;,System.Collections.Generic.IEqualityComparer`1&lt;!!1&gt;,System.Func`2&lt;!!1,System.Boolean&gt;,System.Action`2&lt;!!1,!!0&gt;,System.String[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\ComponentModel\Edition" File="EditionOverCopyStrategyExtensions.cs" Line="47">Consider a design where 'EditionOverCopyStrategyExtensions.MergeOwnedCollection&lt;T, TEntity&gt;(this EditionOverCopyStrategy&lt;T&gt;, T, Func&lt;T, ICollection&lt;TEntity&gt;&gt;, IEqualityComparer&lt;TEntity&gt;, Func&lt;TEntity, bool&gt;, Action&lt;TEntity, T&gt;, string[])' doesn't nest generic type 'Func&lt;T, ICollection&lt;TEntity&gt;&gt;'.</Issue>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\ComponentModel\Edition" File="EditionOverCopyStrategyExtensions.cs" Line="47">Consider a design where 'EditionOverCopyStrategyExtensions.MergeOwnedCollection&lt;T, TEntity&gt;(this EditionOverCopyStrategy&lt;T&gt;, T, Func&lt;T, ICollection&lt;TEntity&gt;&gt;, IEqualityComparer&lt;TEntity&gt;, Func&lt;TEntity, bool&gt;, Action&lt;TEntity, T&gt;, string[])' doesn't nest generic type 'Func&lt;T, ICollection&lt;TEntity&gt;&gt;'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -276,8 +276,8 @@
          <Members>
           <Member Name="#OnCancelledEdition(System.Object,System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
            <Messages>
-            <Message Id="Cancelled" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="Member" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\ComponentModel\Edition" File="EditionStrategyBase.cs" Line="165">Replace the term 'Cancelled' in member name 'EditionStrategyBase&lt;T&gt;.OnCancelledEdition(object, EventArgs)' with the preferred alternate 'Canceled'.</Issue>
+            <Message Id="Cancelled" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\ComponentModel\Edition" File="EditionStrategyBase.cs" Line="165">Replace the term 'Cancelled' in member name 'EditionStrategyBase&lt;T&gt;.OnCancelledEdition(object, EventArgs)' with the preferred alternate 'Canceled'.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -287,7 +287,7 @@
          <Members>
           <Member Name="#CancelledEdition" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Cancelled" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+            <Message Id="Cancelled" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
              <Issue Name="Member" Certainty="95" Level="Error">Replace the term 'Cancelled' in member name 'IEditionStrategy&lt;T&gt;.CancelledEdition' with the preferred alternate 'Canceled'.</Issue>
             </Message>
            </Messages>
@@ -300,228 +300,228 @@
        <Types>
         <Type Name="Encripter" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Encripter" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message Id="Encripter" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Encripter' in type name 'Encripter'.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#DecryptFile(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In member 'Encripter.DecryptFile(string, string, string)', the discrete term 'Filename' in parameter name 'sInputFilename' should be expressed as a compound word, 'FileName'.</Issue>
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In member 'Encripter.DecryptFile(string, string, string)', the discrete term 'Filename' in parameter name 'sOutputFilename' should be expressed as a compound word, 'FileName'.</Issue>
+            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In member 'Encripter.DecryptFile(string, string, string)', the discrete term 'Filename' in parameter name 'sInputFilename' should be expressed as a compound word, 'FileName'.</Issue>
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In member 'Encripter.DecryptFile(string, string, string)', the discrete term 'Filename' in parameter name 'sOutputFilename' should be expressed as a compound word, 'FileName'.</Issue>
             </Message>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="317">In method 'Encripter.DecryptFile(string, string, string)', object 'new StreamWriter(sOutputFilename)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StreamWriter(sOutputFilename)' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In method 'Encripter.DecryptFile(string, string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="306">In method 'Encripter.DecryptFile(string, string, string)', call System.IDisposable.Dispose on object 'new FileStream(sInputFilename, FileMode.Open, FileAccess.Read)' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="317">In method 'Encripter.DecryptFile(string, string, string)', object 'new StreamWriter(sOutputFilename)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StreamWriter(sOutputFilename)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In method 'Encripter.DecryptFile(string, string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="306">In method 'Encripter.DecryptFile(string, string, string)', call System.IDisposable.Dispose on object 'new FileStream(sInputFilename, FileMode.Open, FileAccess.Read)' before all references to it are out of scope.</Issue>
             </Message>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In method 'Encripter.DecryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sInputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In method 'Encripter.DecryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In method 'Encripter.DecryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sOutputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In method 'Encripter.DecryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sInputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In method 'Encripter.DecryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">In method 'Encripter.DecryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sOutputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.DecryptFile(string, string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="298">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.DecryptFile(string, string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DecryptFile2(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">In member 'Encripter.DecryptFile2(string, string)', the discrete term 'Filename' in parameter name 'sInputFilename' should be expressed as a compound word, 'FileName'.</Issue>
+            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">In member 'Encripter.DecryptFile2(string, string)', the discrete term 'Filename' in parameter name 'sInputFilename' should be expressed as a compound word, 'FileName'.</Issue>
             </Message>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="424">In method 'Encripter.DecryptFile2(string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="441">In method 'Encripter.DecryptFile2(string, string)', call System.IDisposable.Dispose on object 'new FileStream(sInputFilename, FileMode.Open, FileAccess.Read)' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">In method 'Encripter.DecryptFile2(string, string)', call System.IDisposable.Dispose on object 'new StreamReader(sInputFilename, Encoding.Unicode)' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="424">In method 'Encripter.DecryptFile2(string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="441">In method 'Encripter.DecryptFile2(string, string)', call System.IDisposable.Dispose on object 'new FileStream(sInputFilename, FileMode.Open, FileAccess.Read)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">In method 'Encripter.DecryptFile2(string, string)', call System.IDisposable.Dispose on object 'new StreamReader(sInputFilename, Encoding.Unicode)' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="462">Modify 'Encripter.DecryptFile2(string, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="462">Modify 'Encripter.DecryptFile2(string, string)' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
             </Message>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">In method 'Encripter.DecryptFile2(string, string)', correct the spelling of 's' in parameter name 'sInputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">In method 'Encripter.DecryptFile2(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">In method 'Encripter.DecryptFile2(string, string)', correct the spelling of 's' in parameter name 'sInputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">In method 'Encripter.DecryptFile2(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.DecryptFile2(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="406">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.DecryptFile2(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DecryptFile4(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">In member 'Encripter.DecryptFile4(string, string)', the discrete term 'Filename' in parameter name 'Filename' should be expressed as a compound word, 'FileName'.</Issue>
+            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">In member 'Encripter.DecryptFile4(string, string)', the discrete term 'Filename' in parameter name 'Filename' should be expressed as a compound word, 'FileName'.</Issue>
             </Message>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="333">In method 'Encripter.DecryptFile4(string, string)', object 'new FileStream(Filename, FileMode.Open, FileAccess.Read)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream(Filename, FileMode.Open, FileAccess.Read)' before all references to it are out of scope.</Issue>
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="348">In method 'Encripter.DecryptFile4(string, string)', object 'new StreamWriter(Filename)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StreamWriter(Filename)' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">In method 'Encripter.DecryptFile4(string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="333">In method 'Encripter.DecryptFile4(string, string)', object 'new FileStream(Filename, FileMode.Open, FileAccess.Read)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream(Filename, FileMode.Open, FileAccess.Read)' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="348">In method 'Encripter.DecryptFile4(string, string)', object 'new StreamWriter(Filename)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StreamWriter(Filename)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">In method 'Encripter.DecryptFile4(string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
             </Message>
-            <Message Id="Filename" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">In member 'Encripter.DecryptFile4(string, string)', correct the casing of 'Filename' in parameter name 'Filename' by changing it to 'filename'.</Issue>
+            <Message Id="Filename" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">In member 'Encripter.DecryptFile4(string, string)', correct the casing of 'Filename' in parameter name 'Filename' by changing it to 'filename'.</Issue>
             </Message>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">In method 'Encripter.DecryptFile4(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">In method 'Encripter.DecryptFile4(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.DecryptFile4(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="325">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.DecryptFile4(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#DecryptText(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="473">In method 'Encripter.DecryptText(string, string)', call System.IDisposable.Dispose on object 'new DESCryptoServiceProvider()' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="473">In method 'Encripter.DecryptText(string, string)', call System.IDisposable.Dispose on object 'new DESCryptoServiceProvider()' before all references to it are out of scope.</Issue>
             </Message>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="473">In method 'Encripter.DecryptText(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="473">In method 'Encripter.DecryptText(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message Id="text" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="473">Parameter 'text' of 'Encripter.DecryptText(string, string)' is never used. Remove the parameter or use it in the method body.</Issue>
+            <Message Id="text" TypeName="ReviewUnusedParameters" Category="Microsoft.Usage" CheckId="CA1801" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="473">Parameter 'text' of 'Encripter.DecryptText(string, string)' is never used. Remove the parameter or use it in the method body.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EncryptFile(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In member 'Encripter.EncryptFile(string, string, string)', the discrete term 'Filename' in parameter name 'sInputFilename' should be expressed as a compound word, 'FileName'.</Issue>
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In member 'Encripter.EncryptFile(string, string, string)', the discrete term 'Filename' in parameter name 'sOutputFilename' should be expressed as a compound word, 'FileName'.</Issue>
+            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In member 'Encripter.EncryptFile(string, string, string)', the discrete term 'Filename' in parameter name 'sInputFilename' should be expressed as a compound word, 'FileName'.</Issue>
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In member 'Encripter.EncryptFile(string, string, string)', the discrete term 'Filename' in parameter name 'sOutputFilename' should be expressed as a compound word, 'FileName'.</Issue>
             </Message>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In method 'Encripter.EncryptFile(string, string, string)', object 'fsInput' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fsInput' before all references to it are out of scope.</Issue>
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="184">In method 'Encripter.EncryptFile(string, string, string)', object 'new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write)' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="187">In method 'Encripter.EncryptFile(string, string, string)', call System.IDisposable.Dispose on object 'new DESCryptoServiceProvider()' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In method 'Encripter.EncryptFile(string, string, string)', object 'fsInput' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fsInput' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="184">In method 'Encripter.EncryptFile(string, string, string)', object 'new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="187">In method 'Encripter.EncryptFile(string, string, string)', call System.IDisposable.Dispose on object 'new DESCryptoServiceProvider()' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="201">Object 'new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write)' can be disposed more than once in method 'Encripter.EncryptFile(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 201</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="201">Object 'new FileStream(sOutputFilename, FileMode.Create, FileAccess.Write)' can be disposed more than once in method 'Encripter.EncryptFile(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 201</Issue>
             </Message>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In method 'Encripter.EncryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sInputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In method 'Encripter.EncryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In method 'Encripter.EncryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sOutputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In method 'Encripter.EncryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sInputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In method 'Encripter.EncryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">In method 'Encripter.EncryptFile(string, string, string)', correct the spelling of 's' in parameter name 'sOutputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.EncryptFile(string, string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="180">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.EncryptFile(string, string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EncryptFile2(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="239">In member 'Encripter.EncryptFile2(string, string, string)', the discrete term 'Filename' in parameter name 'sOutputFilename' should be expressed as a compound word, 'FileName'.</Issue>
+            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="239">In member 'Encripter.EncryptFile2(string, string, string)', the discrete term 'Filename' in parameter name 'sOutputFilename' should be expressed as a compound word, 'FileName'.</Issue>
             </Message>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="257">In method 'Encripter.EncryptFile2(string, string, string)', object 'fsEncrypted' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fsEncrypted' before all references to it are out of scope.</Issue>
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="250">In method 'Encripter.EncryptFile2(string, string, string)', object 'fsInput' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fsInput' before all references to it are out of scope.</Issue>
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="243">In method 'Encripter.EncryptFile2(string, string, string)', object 'new StreamWriter("temp_key.key")' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StreamWriter("temp_key.key")' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="260">In method 'Encripter.EncryptFile2(string, string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="257">In method 'Encripter.EncryptFile2(string, string, string)', object 'fsEncrypted' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fsEncrypted' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="250">In method 'Encripter.EncryptFile2(string, string, string)', object 'fsInput' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fsInput' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="243">In method 'Encripter.EncryptFile2(string, string, string)', object 'new StreamWriter("temp_key.key")' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StreamWriter("temp_key.key")' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="260">In method 'Encripter.EncryptFile2(string, string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="287">Object 'fsEncrypted' can be disposed more than once in method 'Encripter.EncryptFile2(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 287</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="287">Object 'fsEncrypted' can be disposed more than once in method 'Encripter.EncryptFile2(string, string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 287</Issue>
             </Message>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="239">In method 'Encripter.EncryptFile2(string, string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="239">In method 'Encripter.EncryptFile2(string, string, string)', correct the spelling of 's' in parameter name 'sOutputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="239">In method 'Encripter.EncryptFile2(string, string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="239">In method 'Encripter.EncryptFile2(string, string, string)', correct the spelling of 's' in parameter name 'sOutputFilename' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="239">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.EncryptFile2(string, string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="239">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.EncryptFile2(string, string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="2" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="261">In externally visible method 'Encripter.EncryptFile2(string, string, string)', validate parameter 'sKey' before using it.</Issue>
+            <Message Id="2" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="261">In externally visible method 'Encripter.EncryptFile2(string, string, string)', validate parameter 'sKey' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EncryptFile4(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">In member 'Encripter.EncryptFile4(string, string)', the discrete term 'Filename' in parameter name 'Filename' should be expressed as a compound word, 'FileName'.</Issue>
+            <Message Id="Filename" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeCompoundWord" Certainty="80" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">In member 'Encripter.EncryptFile4(string, string)', the discrete term 'Filename' in parameter name 'Filename' should be expressed as a compound word, 'FileName'.</Issue>
             </Message>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="217">In method 'Encripter.EncryptFile4(string, string)', object 'new FileStream(Filename, FileMode.Create, FileAccess.Write)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream(Filename, FileMode.Create, FileAccess.Write)' before all references to it are out of scope.</Issue>
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">In method 'Encripter.EncryptFile4(string, string)', object 'new FileStream(Filename, FileMode.Open, FileAccess.Read)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream(Filename, FileMode.Open, FileAccess.Read)' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="213">In method 'Encripter.EncryptFile4(string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="217">In method 'Encripter.EncryptFile4(string, string)', object 'new FileStream(Filename, FileMode.Create, FileAccess.Write)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream(Filename, FileMode.Create, FileAccess.Write)' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">In method 'Encripter.EncryptFile4(string, string)', object 'new FileStream(Filename, FileMode.Open, FileAccess.Read)' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new FileStream(Filename, FileMode.Open, FileAccess.Read)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="213">In method 'Encripter.EncryptFile4(string, string)', call System.IDisposable.Dispose on object 'DES' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="231">Object 'new FileStream(Filename, FileMode.Create, FileAccess.Write)' can be disposed more than once in method 'Encripter.EncryptFile4(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 231</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="231">Object 'new FileStream(Filename, FileMode.Create, FileAccess.Write)' can be disposed more than once in method 'Encripter.EncryptFile4(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 231</Issue>
             </Message>
-            <Message Id="Filename" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">In member 'Encripter.EncryptFile4(string, string)', correct the casing of 'Filename' in parameter name 'Filename' by changing it to 'filename'.</Issue>
+            <Message Id="Filename" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="85" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">In member 'Encripter.EncryptFile4(string, string)', correct the casing of 'Filename' in parameter name 'Filename' by changing it to 'filename'.</Issue>
             </Message>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">In method 'Encripter.EncryptFile4(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">In method 'Encripter.EncryptFile4(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.EncryptFile4(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="206">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.EncryptFile4(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#EncryptText(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="361">In method 'Encripter.EncryptText(string, string)', object 'fsEncrypted' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fsEncrypted' before all references to it are out of scope.</Issue>
-             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="389">In method 'Encripter.EncryptText(string, string)', object 'new StreamReader("temp.tmp")' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StreamReader("temp.tmp")' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="365">In method 'Encripter.EncryptText(string, string)', call System.IDisposable.Dispose on object 'new DESCryptoServiceProvider()' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="361">In method 'Encripter.EncryptText(string, string)', object 'fsEncrypted' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'fsEncrypted' before all references to it are out of scope.</Issue>
+             <Issue Name="ExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="389">In method 'Encripter.EncryptText(string, string)', object 'new StreamReader("temp.tmp")' is not disposed along all exception paths. Call System.IDisposable.Dispose on object 'new StreamReader("temp.tmp")' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="365">In method 'Encripter.EncryptText(string, string)', call System.IDisposable.Dispose on object 'new DESCryptoServiceProvider()' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="387">Object 'fsEncrypted' can be disposed more than once in method 'Encripter.EncryptText(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 387</Issue>
+            <Message TypeName="Do not dispose objects multiple times" Category="Microsoft.Usage" CheckId="CA2202" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="387">Object 'fsEncrypted' can be disposed more than once in method 'Encripter.EncryptText(string, string)'. To avoid generating a System.ObjectDisposedException you should not call Dispose more than one time on an object.: Lines: 387</Issue>
             </Message>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="361">In method 'Encripter.EncryptText(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="361">In method 'Encripter.EncryptText(string, string)', correct the spelling of 's' in parameter name 'sKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="361">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.EncryptText(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="361">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.EncryptText(string, string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="374">In externally visible method 'Encripter.EncryptText(string, string)', validate parameter 'text' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="374">In externally visible method 'Encripter.EncryptText(string, string)', validate parameter 'text' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GenerateKey()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="170">In method 'Encripter.GenerateKey()', call System.IDisposable.Dispose on object 'DES.Create()' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="170">In method 'Encripter.GenerateKey()', call System.IDisposable.Dispose on object 'DES.Create()' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="170">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.GenerateKey()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="170">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.GenerateKey()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#PinKey(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="508">In method 'Encripter.PinKey(string)', correct the spelling of 's' in parameter name 'sSecretKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="s" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="508">In method 'Encripter.PinKey(string)', correct the spelling of 's' in parameter name 'sSecretKey' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="508">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.PinKey(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="508">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.PinKey(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#RemoveKey(System.Runtime.InteropServices.GCHandle,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="gch" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="514">In method 'Encripter.RemoveKey(GCHandle, int)', correct the spelling of 'gch' in parameter name 'gch' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            <Message Id="gch" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="514">In method 'Encripter.RemoveKey(GCHandle, int)', correct the spelling of 'gch' in parameter name 'gch' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="514">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.RemoveKey(GCHandle, int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="514">The 'this' parameter (or 'Me' in Visual Basic) of 'Encripter.RemoveKey(GCHandle, int)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ZeroMemory(System.IntPtr,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="Destination" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+            <Message Id="Destination" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="85" Level="Error">In member 'Encripter.ZeroMemory(IntPtr, int)', correct the casing of 'Destination' in parameter name 'Destination' by changing it to 'destination'.</Issue>
             </Message>
-            <Message Id="Length" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+            <Message Id="Length" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
              <Issue Name="MemberParameter" Certainty="85" Level="Error">In member 'Encripter.ZeroMemory(IntPtr, int)', correct the casing of 'Length' in parameter name 'Length' by changing it to 'length'.</Issue>
             </Message>
-            <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+            <Message TypeName="MarkBooleanPInvokeArgumentsWithMarshalAs" Category="Microsoft.Interoperability" CheckId="CA1414" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
              <Issue Name="Return" Certainty="95" Level="Warning">Add the MarshalAsAttribute to the return type of P/Invoke 'Encripter.ZeroMemory(IntPtr, int)'. If the corresponding unmanaged return type is a 4-byte Win32 'BOOL', use MarshalAs(UnmanagedType.Bool). For a 1-byte C++ 'bool', use MarshalAs(UnmanagedType.U1).</Issue>
             </Message>
-            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+            <Message TypeName="MovePInvokesToNativeMethodsClass" Category="Microsoft.Design" CheckId="CA1060" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
              <Issue Certainty="95" Level="CriticalWarning">Because it is a P/Invoke method, 'Encripter.ZeroMemory(IntPtr, int)' should be defined in a class named NativeMethods, SafeNativeMethods, or UnsafeNativeMethods.</Issue>
             </Message>
-            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+            <Message TypeName="PInvokesShouldNotBeVisible" Category="Microsoft.Interoperability" CheckId="CA1401" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
              <Issue Certainty="50" Level="CriticalError">Change the accessibility of P/Invoke 'Encripter.ZeroMemory(IntPtr, int)' so that it is no longer visible from outside its assembly.</Issue>
             </Message>
            </Messages>
@@ -532,58 +532,58 @@
          <Members>
           <Member Name="#Decrypt(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="70">In method 'RC2Crypt.Decrypt(string)', call System.IDisposable.Dispose on object 'new MemoryStream(encryptedBytes)' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="62">In method 'RC2Crypt.Decrypt(string)', call System.IDisposable.Dispose on object 'rc2CSP' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="70">In method 'RC2Crypt.Decrypt(string)', call System.IDisposable.Dispose on object 'new MemoryStream(encryptedBytes)' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="62">In method 'RC2Crypt.Decrypt(string)', call System.IDisposable.Dispose on object 'rc2CSP' before all references to it are out of scope.</Issue>
             </Message>
-            <Message Id="System.String.LastIndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="83">Because the behavior of 'string.LastIndexOf(string)' could vary based on the current user's locale settings, replace this call in 'RC2Crypt.Decrypt(string)' with a call to 'string.LastIndexOf(string, StringComparison)'. If the result of 'string.LastIndexOf(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
+            <Message Id="System.String.LastIndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="83">Because the behavior of 'string.LastIndexOf(string)' could vary based on the current user's locale settings, replace this call in 'RC2Crypt.Decrypt(string)' with a call to 'string.LastIndexOf(string, StringComparison)'. If the result of 'string.LastIndexOf(string, StringComparison)' will be displayed to the user, such as when sorting a list of items for display in a list box, specify 'StringComparison.CurrentCulture' or 'StringComparison.CurrentCultureIgnoreCase' as the 'StringComparison' parameter. If comparing case-insensitive identifiers, such as file paths, environment variables, or registry keys and values, specify 'StringComparison.OrdinalIgnoreCase'. Otherwise, if comparing case-sensitive identifiers, specify 'StringComparison.Ordinal'.</Issue>
             </Message>
-            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="60">Replace the call to 'string.operator ==(string, string)' in 'RC2Crypt.Decrypt(string)' with a call to 'String.IsNullOrEmpty'.</Issue>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="60">Replace the call to 'string.operator ==(string, string)' in 'RC2Crypt.Decrypt(string)' with a call to 'String.IsNullOrEmpty'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Encrypt(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="109">In method 'RC2Crypt.Encrypt(string)', call System.IDisposable.Dispose on object 'new MemoryStream()' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="98">In method 'RC2Crypt.Encrypt(string)', call System.IDisposable.Dispose on object 'rc2CSP' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="109">In method 'RC2Crypt.Encrypt(string)', call System.IDisposable.Dispose on object 'new MemoryStream()' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="98">In method 'RC2Crypt.Encrypt(string)', call System.IDisposable.Dispose on object 'rc2CSP' before all references to it are out of scope.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetBytes(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="143">The 'this' parameter (or 'Me' in Visual Basic) of 'RC2Crypt.GetBytes(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="143">The 'this' parameter (or 'Me' in Visual Basic) of 'RC2Crypt.GetBytes(string)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="System.Convert.ToByte(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="149">Because the behavior of 'Convert.ToByte(string)' could vary based on the current user's locale settings, replace this call in 'RC2Crypt.GetBytes(string)' with a call to 'Convert.ToByte(string, IFormatProvider)'. If the result of 'Convert.ToByte(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.Convert.ToByte(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="149">Because the behavior of 'Convert.ToByte(string)' could vary based on the current user's locale settings, replace this call in 'RC2Crypt.GetBytes(string)' with a call to 'Convert.ToByte(string, IFormatProvider)'. If the result of 'Convert.ToByte(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="148">Replace the call to 'string.operator !=(string, string)' in 'RC2Crypt.GetBytes(string)' with a call to 'String.IsNullOrEmpty'.</Issue>
+            <Message TypeName="TestForEmptyStringsUsingStringLength" Category="Microsoft.Performance" CheckId="CA1820" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="IsNullOrEmpty" Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="148">Replace the call to 'string.operator !=(string, string)' in 'RC2Crypt.GetBytes(string)' with a call to 'String.IsNullOrEmpty'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetString(System.Byte[])" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="125">The 'this' parameter (or 'Me' in Visual Basic) of 'RC2Crypt.GetString(byte[])' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="125">The 'this' parameter (or 'Me' in Visual Basic) of 'RC2Crypt.GetString(byte[])' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
-            <Message Id="System.Convert.ToString(System.Byte)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="129">Because the behavior of 'Convert.ToString(byte)' could vary based on the current user's locale settings, replace this call in 'RC2Crypt.GetString(byte[])' with a call to 'Convert.ToString(byte, IFormatProvider)'. If the result of 'Convert.ToString(byte, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.Convert.ToString(System.Byte)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="129">Because the behavior of 'Convert.ToString(byte)' could vary based on the current user's locale settings, replace this call in 'RC2Crypt.GetString(byte[])' with a call to 'Convert.ToString(byte, IFormatProvider)'. If the result of 'Convert.ToString(byte, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#Sample()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="26">In method 'RC2Crypt.Sample()', call System.IDisposable.Dispose on object 'new MemoryStream()' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="37">In method 'RC2Crypt.Sample()', call System.IDisposable.Dispose on object 'new MemoryStream(new MemoryStream().ToArray())' before all references to it are out of scope.</Issue>
-             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="15">In method 'RC2Crypt.Sample()', call System.IDisposable.Dispose on object 'rc2CSP' before all references to it are out of scope.</Issue>
+            <Message TypeName="Dispose objects before losing scope" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="26">In method 'RC2Crypt.Sample()', call System.IDisposable.Dispose on object 'new MemoryStream()' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="37">In method 'RC2Crypt.Sample()', call System.IDisposable.Dispose on object 'new MemoryStream(new MemoryStream().ToArray())' before all references to it are out of scope.</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="15">In method 'RC2Crypt.Sample()', call System.IDisposable.Dispose on object 'rc2CSP' before all references to it are out of scope.</Issue>
             </Message>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="12">The 'this' parameter (or 'Me' in Visual Basic) of 'RC2Crypt.Sample()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Cryptography" File="CryptoTools.cs" Line="12">The 'this' parameter (or 'Me' in Visual Basic) of 'RC2Crypt.Sample()' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -597,75 +597,75 @@
          <Members>
           <Member Name="#.ctor(System.Type,System.Resources.ResourceManager)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="216">In externally visible method 'ResourceEnumConverter.ResourceEnumConverter(Type, ResourceManager)', validate parameter 'type' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="216">In externally visible method 'ResourceEnumConverter.ResourceEnumConverter(Type, ResourceManager)', validate parameter 'type' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="235">'value', a parameter, is cast to type 'string' multiple times in method 'ResourceEnumConverter.ConvertFrom(ITypeDescriptorContext, CultureInfo, object)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
-             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="235">'value', a parameter, is cast to type 'string' multiple times in method 'ResourceEnumConverter.ConvertFrom(ITypeDescriptorContext, CultureInfo, object)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+            <Message TypeName="DoNotCastUnnecessarily" Category="Microsoft.Performance" CheckId="CA1800" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="235">'value', a parameter, is cast to type 'string' multiple times in method 'ResourceEnumConverter.ConvertFrom(ITypeDescriptorContext, CultureInfo, object)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
+             <Issue Name="Parameter" Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="235">'value', a parameter, is cast to type 'string' multiple times in method 'ResourceEnumConverter.ConvertFrom(ITypeDescriptorContext, CultureInfo, object)'. Cache the result of the 'as' operator or direct cast in order to eliminate the redundant castclass instruction.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ConvertToString(System.Enum)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="278">In externally visible method 'ResourceEnumConverter.ConvertToString(Enum)', validate parameter 'value' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="278">In externally visible method 'ResourceEnumConverter.ConvertToString(Enum)', validate parameter 'value' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetFlagValue(System.Globalization.CultureInfo,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Convert.ToUInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="202">Because the behavior of 'Convert.ToUInt32(object)' could vary based on the current user's locale settings, replace this call in 'ResourceEnumConverter.GetFlagValue(CultureInfo, string)' with a call to 'Convert.ToUInt32(object, IFormatProvider)'. If the result of 'Convert.ToUInt32(object, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.Convert.ToUInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="202">Because the behavior of 'Convert.ToUInt32(object)' could vary based on the current user's locale settings, replace this call in 'ResourceEnumConverter.GetFlagValue(CultureInfo, string)' with a call to 'Convert.ToUInt32(object, IFormatProvider)'. If the result of 'Convert.ToUInt32(object, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetFlagValueText(System.Globalization.CultureInfo,System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message Id="System.Convert.ToUInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="145">Because the behavior of 'Convert.ToUInt32(object)' could vary based on the current user's locale settings, replace this call in 'ResourceEnumConverter.GetFlagValueText(CultureInfo, object)' with a call to 'Convert.ToUInt32(object, IFormatProvider)'. If the result of 'Convert.ToUInt32(object, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
-             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="149">Because the behavior of 'Convert.ToUInt32(object)' could vary based on the current user's locale settings, replace this call in 'ResourceEnumConverter.GetFlagValueText(CultureInfo, object)' with a call to 'Convert.ToUInt32(object, IFormatProvider)'. If the result of 'Convert.ToUInt32(object, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.Convert.ToUInt32(System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="145">Because the behavior of 'Convert.ToUInt32(object)' could vary based on the current user's locale settings, replace this call in 'ResourceEnumConverter.GetFlagValueText(CultureInfo, object)' with a call to 'Convert.ToUInt32(object, IFormatProvider)'. If the result of 'Convert.ToUInt32(object, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="149">Because the behavior of 'Convert.ToUInt32(object)' could vary based on the current user's locale settings, replace this call in 'ResourceEnumConverter.GetFlagValueText(CultureInfo, object)' with a call to 'Convert.ToUInt32(object, IFormatProvider)'. If the result of 'Convert.ToUInt32(object, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
-            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="161">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'ResourceEnumConverter.GetFlagValueText(CultureInfo, object)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="161">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'ResourceEnumConverter.GetFlagValueText(CultureInfo, object)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetValues(System.Type)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="323">Change 'List&lt;KeyValuePair&lt;Enum, string&gt;&gt;' in 'ResourceEnumConverter.GetValues(Type)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="323">Change 'List&lt;KeyValuePair&lt;Enum, string&gt;&gt;' in 'ResourceEnumConverter.GetValues(Type)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="323">Consider a design where 'ResourceEnumConverter.GetValues(Type)' doesn't nest generic type 'List&lt;KeyValuePair&lt;Enum, string&gt;&gt;'.</Issue>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="323">Consider a design where 'ResourceEnumConverter.GetValues(Type)' doesn't nest generic type 'List&lt;KeyValuePair&lt;Enum, string&gt;&gt;'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#GetValues(System.Type,System.Globalization.CultureInfo)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="Error" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="298">Change 'List&lt;KeyValuePair&lt;Enum, string&gt;&gt;' in 'ResourceEnumConverter.GetValues(Type, CultureInfo)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="298">Change 'List&lt;KeyValuePair&lt;Enum, string&gt;&gt;' in 'ResourceEnumConverter.GetValues(Type, CultureInfo)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
             </Message>
-            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
-             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="298">Consider a design where 'ResourceEnumConverter.GetValues(Type, CultureInfo)' doesn't nest generic type 'List&lt;KeyValuePair&lt;Enum, string&gt;&gt;'.</Issue>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="298">Consider a design where 'ResourceEnumConverter.GetValues(Type, CultureInfo)' doesn't nest generic type 'List&lt;KeyValuePair&lt;Enum, string&gt;&gt;'.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#IsSingleBitValue(System.UInt64)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="117">The 'this' parameter (or 'Me' in Visual Basic) of 'ResourceEnumConverter.IsSingleBitValue(ulong)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="117">The 'this' parameter (or 'Me' in Visual Basic) of 'ResourceEnumConverter.IsSingleBitValue(ulong)' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ToString(System.Globalization.CultureInfo,System.Object)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
            <Messages>
-            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="101">'ResourceEnumConverter.ToString(CultureInfo, object)' appears to have no upstream public or protected callers.</Issue>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Enumable" File="ResourceEnumConverter.cs" Line="101">'ResourceEnumConverter.ToString(CultureInfo, object)' appears to have no upstream public or protected callers.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -677,7 +677,7 @@
        <Types>
         <Type Name="INotifiyer" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message Id="Notifiyer" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="Breaking">
+          <Message Id="Notifiyer" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="Breaking">
            <Issue Name="Type" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Notifiyer' in type name 'INotifiyer'.</Issue>
           </Message>
          </Messages>
@@ -690,8 +690,8 @@
          <Members>
           <Member Name="#FindCommandBinding(System.Windows.UIElement,System.Windows.Input.ICommand)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Windows" File="UIElementExtensions.cs" Line="27">In externally visible method 'UIElementExtensions.FindCommandBinding(this UIElement, ICommand)', validate parameter 'element' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Windows" File="UIElementExtensions.cs" Line="27">In externally visible method 'UIElementExtensions.FindCommandBinding(this UIElement, ICommand)', validate parameter 'element' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -705,8 +705,8 @@
          <Members>
           <Member Name="#Convert(System.Object,System.Type,System.Object,System.Globalization.CultureInfo)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="DependsOnFix">
-             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Atlas\Solution\Source\Libraries\Common\Windows\Data" File="EnumerationValuesConverter.cs" Line="22">In externally visible method 'EnumerationValuesConverter.Convert(object, Type, object, CultureInfo)', validate parameter 'value' before using it.</Issue>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Enrike\Programming\Repos\Atlas\Solution\Source\Libraries\Common\Windows\Data" File="EnumerationValuesConverter.cs" Line="22">In externally visible method 'EnumerationValuesConverter.Convert(object, Type, object, CultureInfo)', validate parameter 'value' before using it.</Issue>
             </Message>
            </Messages>
           </Member>
@@ -718,34 +718,34 @@
      <Resources>
       <Resource Name="System.Properties.Resources.resources">
        <Messages>
-        <Message Id="Anual" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Anual" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Yearly', correct the spelling of 'Anual' in string value 'Anual'.</Issue>
         </Message>
-        <Message Id="Diario" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Diario" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Daily', correct the spelling of 'Diario' in string value 'Diario'.</Issue>
         </Message>
-        <Message Id="Jueves" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Jueves" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Thurday', correct the spelling of 'Jueves' in string value 'Jueves'.</Issue>
         </Message>
-        <Message Id="Lunes" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Lunes" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Monday', correct the spelling of 'Lunes' in string value 'Lunes'.</Issue>
         </Message>
-        <Message Id="Martes" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Martes" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Tuesday', correct the spelling of 'Martes' in string value 'Martes'.</Issue>
         </Message>
-        <Message Id="Mensual" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Mensual" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Monthly', correct the spelling of 'Mensual' in string value 'Mensual'.</Issue>
         </Message>
-        <Message Id="Miércoles" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Miércoles" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Wednesday', correct the spelling of 'Miércoles' in string value 'Miércoles'.</Issue>
         </Message>
-        <Message Id="Renombrar" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Renombrar" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Rename', correct the spelling of 'Renombrar' in string value 'Renombrar'.</Issue>
         </Message>
-        <Message Id="Semanal" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Semanal" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Weekly', correct the spelling of 'Semanal' in string value 'Semanal'.</Issue>
         </Message>
-        <Message Id="Sábado" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2019-12-28 13:01:50Z" FixCategory="NonBreaking">
+        <Message Id="Sábado" TypeName="ResourceStringsShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1703" Status="Active" Created="2022-04-18 17:29:55Z" FixCategory="NonBreaking">
          <Issue Name="StringResource" Certainty="50" Level="CriticalWarning">In resource 'System.Properties.Resources.resx', referenced by name 'Saturday', correct the spelling of 'Sábado' in string value 'Sábado'.</Issue>
         </Message>
        </Messages>

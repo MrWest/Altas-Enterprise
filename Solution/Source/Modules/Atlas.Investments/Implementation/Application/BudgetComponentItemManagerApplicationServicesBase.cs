@@ -330,9 +330,13 @@ namespace CompanyName.Atlas.Investments.Implementation.Application
         {
             var resourceAppService = ServiceLocator.Current.GetInstance<IBudgetComponentResourceManagerApplicationServices<TItem>>();
             resourceAppService.Component = item;
-
-            if (resourceAppService.Items.Any())
-                return resourceAppService.Items.Sum(x => CurrencyConvert(currency, x, GetMyCostInResources(x, currency)));
+            var items = resourceAppService.Items;
+            if (items.Any())
+            {
+                var check  = items.Sum(x => CurrencyConvert(currency, x, GetMyCostInResources(x, currency)));
+                return check;
+            }
+               
             return item.Cost;
         }
 
@@ -340,9 +344,13 @@ namespace CompanyName.Atlas.Investments.Implementation.Application
         {
             var resourceAppService = ServiceLocator.Current.GetInstance<IBudgetComponentResourceManagerApplicationServices<IPlannedResource>>();
             resourceAppService.Component = resource;
-
+            var items = resourceAppService.Items;
             if (resourceAppService.Items.Any())
-                return resourceAppService.Items.Sum(x => CurrencyConvert(currency, x, GetMyCostInResources(x, currency)) );
+            {
+                var check = resourceAppService.Items.Sum(x => CurrencyConvert(currency, x, GetMyCostInResources(x, currency)));
+                return check;
+            }
+                
             return resource.Cost;
         }
 

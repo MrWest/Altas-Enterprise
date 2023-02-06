@@ -19,7 +19,7 @@
                         <Border x:Name="CheckBorder" Width="16" Height="16" Margin="0,1,4,0" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
                             <Path x:Name="CheckMark" Width="10" Height="10" Margin="2" Visibility="Collapsed" Stretch="Fill" Fill="{TemplateBinding Foreground}" Data="F1 M 15,21L 22,28L 32.9999,14.0001L 35.9999,17.0001L 22,34L 12.0001,24L 15,21 Z "/>
                         </Border>
-                        <TextBlock Text="{TemplateBinding Content}" VerticalAlignment="Center" />
+                        <TextBlock Text="{TemplateBinding Content}" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}" Margin="4,0,0,0" />
                     </StackPanel>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsEnabled" Value="False">

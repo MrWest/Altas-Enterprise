@@ -4,7 +4,7 @@
 library
 C#
 .cs
-D:\Enrike\Programming\Atlas\Solution\Source\Modules\Atlas.Configuration\obj\Release\
+D:\Enrike\Programming\Repos\Atlas\Solution\Source\Modules\Atlas.Configuration\obj\Release\
 CompanyName.Atlas.Configuration
 none
 false
@@ -13,7 +13,7 @@ TRACE
 11-696707
 
 18-1562719899
-811765040193
+81-2068908837
 Presentation\Views\Assets\Icons.xaml;Presentation\Views\Assets\TabControls.xaml;Presentation\Views\AtlasModuleManagementView.xaml;Presentation\Views\AtlasPreferenceSettings.xaml;Presentation\Views\AtlasUsersManagementView.xaml;Presentation\Views\AtlasSubSystemMenu.xaml;Presentation\Views\DefaultContent.xaml;Presentation\Views\ModuleSubjectPresentationView.xaml;Presentation\Views\ModuleSubjectView.xaml;Presentation\Views\Navigation.xaml;Presentation\Views\Themes\Light.xaml;
 
 True

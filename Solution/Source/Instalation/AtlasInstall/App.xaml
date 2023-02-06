@@ -11,8 +11,10 @@
                 <ResourceDictionary Source="/Themes/Light.xaml"/>
                 <ResourceDictionary Source="/Themes/ModernUI.Dark.xaml"/>
                 <ResourceDictionary Source="/Themes/CheckBox.xaml"/>
+                <ResourceDictionary Source="/Themes/Button.xaml"/>
                 <ResourceDictionary Source="/Themes/ProgressBar.xaml"/>
                 <ResourceDictionary Source="/Themes/ScrollBar.xaml"/>
+                <ResourceDictionary Source="/Themes/TextBlock.xaml"/>
                 <ResourceDictionary Source="/Themes/TabControls.xaml"/>
             </ResourceDictionary.MergedDictionaries>
 
